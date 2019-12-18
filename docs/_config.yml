@@ -1,1 +1,2 @@
-theme: jekyll-theme-slate
+remote_theme: tomjoht/documentation-theme-jekyll@gh-pages
+# theme: jekyll-theme-slate
