@@ -1,5 +1,7 @@
 ---
+layout: page
 title: "Campus Cloud Docs - Home"
+permalink: /
 ---
 
 Welcome
