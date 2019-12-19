@@ -1,4 +1,5 @@
-remote_theme: tomjoht/documentation-theme-jekyll@gh-pages
+remote_theme: vsoch/docsy-jekyll
+# remote_theme: tomjoht/documentation-theme-jekyll@gh-pages
 # theme: jekyll-theme-slate
 repository: ucsb/campus-cloud-docs
 
