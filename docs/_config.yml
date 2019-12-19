@@ -71,7 +71,7 @@ collections:
 # Defaults
 defaults:
   - scope:
-      path: "_docs"
+      path: "docs"
       type: "docs"
     values:
       layout: page
