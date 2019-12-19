@@ -33,7 +33,7 @@ github_repo: "campus-cloud-docs"
 # dockerhub: unknown
 
 # Should there be feedback buttons at the bottom of pages?
-feedback: true
+feedback: false
 
 # Link to a privacy policy in footer, uncomment and define if wanted
 privacy: http://www.policy.ucsb.edu/privacy-notification/
