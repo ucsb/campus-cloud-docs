@@ -19,7 +19,7 @@ Using an approved provider means that:
 
 Follow the instructions below to ensure that an AWS account for UCSB business is covered under this agreement and in compliance with UC policy and the law.
 
-You will only be able to access the AWS services after all steps below are completed and ITS Cloud Services receives approval and confirmation from AWS.
+You will only be able to access the AWS services after all steps below are completed and the UCSB Campus Cloud team creates your AWS account.
 
   1. Log in to the UCSB Gateway Procurement System
   2. Complete the Campus Cloud Form. Provide the requested information.
