@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Getting Started"
+permalink: /docs/getting-started
+---
+
 Getting Started
 
 The UCSB Campus Cloud allows faculty, researchers and staff to provision and use computing resources from approved vendors that have agreements in place with the University of California.
