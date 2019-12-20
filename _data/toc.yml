@@ -1,0 +1,28 @@
+- title: Documentation
+  url: docs
+  links:
+    - title: "Getting Started"
+      url: "docs/getting-started"
+      children:
+        - title: Procuring an Account
+          url: "docs/getting-started#procurement"
+        - title: Budgeting
+          url: "docs/getting-started#budgeting"
+        - title: Consultation
+          url: "docs/getting-started#consult"
+    - title: "Guidelines"
+      url: "docs/guidelines"
+      children:
+        - title: Security Guidelines
+          url: "docs/guidelines/security"
+        - title: Compliance Guidelines
+          url: "docs/guidelines/compliance"
+    - title: "Best Practices"
+      url: "docs/bestpractices"
+      children:
+        - title: Resource Tagging
+          url: "docs/bestpractices/tagging"
+        - title: Cost Models
+          url: "docs/bestpractices/costmodels"
+    - title: "News"
+      url: "news"
