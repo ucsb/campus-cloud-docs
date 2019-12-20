@@ -15,7 +15,7 @@ Using an approved provider means that:
   * Your vendor relationship falls under the University of California Terms & Conditions. This ensures that your agreement conforms to the UC Regents’ policies for procurement and business contracts, and reduces the financial risk to your department or division for agreements that are outside of Regental standing orders (especially with respect to third-party liability).
   
 
-## Procure an AWS Account
+## Procure an AWS Account (#procurement)
 
 Follow the instructions below to ensure that an AWS account for UCSB business is covered under this agreement and in compliance with UC policy and the law.
 
