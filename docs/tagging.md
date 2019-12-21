@@ -18,8 +18,8 @@ Table of Contents
 Tag			Type			Use Case	Cost Alloc	Namespace	LZ rev	Definition										Possible value(s)
 po-number		Account:Mandatory	Business	yes		ucsb:		1	Account tag made up of fund account string associated with vendor blanket in Gateway	PO # in GW		
 environment		Resource:Optional	Technical	yes		ucsb:		1	Resource tag to identify criticality of resource, support automation			prod, dev, test, other
-data-classification	Resource:Mandatory	Compliance		ucsb:		1	Resource tag to ensure compliance							p1, p2, p3, p4
-business-service	Resource:Required	Technical	yes	ucsb:		1	Resource tag to organize resources that support an application or service		any 
+data-classification	Resource:Mandatory	Compliance		ucsb:			1	Resource tag to ensure compliance							p1, p2, p3, p4
+business-service	Resource:Required	Technical	yes	ucsb:			1	Resource tag to organize resources that support an application or service		any 
 mission			Account:Mandatory	Business	yes		ucsb:		1	Resource tag to allow OCIO, executives breakdown by mission				academic, research, administrative, mixed
 contact			Account:Required	Business			ucsb:		1	Account tag to make business contact info easily available				ucsb:contact:business=jane@ucsb.edu, ucsb:contact:security=doe@ucsb.edu, ucsb:contact:technical=john@ucsb.edu
 costing			Resource:Optional	Business	yes		ucsb:		1	Tag to furtherbreakdown your invoice (FAU, cost center,...)				any
@@ -39,4 +39,4 @@ costing			Resource:Optional	Business	yes		ucsb:		1	Tag to furtherbreakdown your 
 * Reserved namespace prefix = aws:
 * Reserved namespace prefix = ucsb:
 * Local namespace prefix = ucsb:dept:\<CODE> with \<CODE> equal to 4 character Chart of Accounts code (capitalized)	
-	Example: ucsb\:dept:GSED
+* Example: ucsb:dept:GSED
