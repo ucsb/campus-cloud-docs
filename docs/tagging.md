@@ -14,7 +14,7 @@ Table of Contents
 * Tagging workgroup met 3 times in Sep and Oct.
 * Delivered LZ rev1 tagging vocabulary to the UCSB Cloud Teaam on Oct 22, 2019.
   
-## Vocabulary 
+## Vocabulary (LZ rev1)
 (abbreviated, see workgroup working Docs for more info)
 ```
 Tag			Type			Use Case	Cost Alloc	Namespace	LZ rev	Definition										Possible value(s)
@@ -27,7 +27,7 @@ contact			Account:Required	Business			ucsb:		1	Account tag to make business cont
 costing			Resource:Optional	Business	yes		ucsb:		1	Tag to furtherbreakdown your invoice (FAU, cost center,...)				any
 ```
 
-## Vocabulary Definitions (LZ rev1)
+## Vocabulary Definitions
 * Tag = key and value(s)
 * Max key length: 128 Unicode characters	
 * Max value length: 256 Unicode characters
