@@ -1,5 +1,6 @@
 # Tagging
-Campus Cloud Tagging Documentation.  Document will evolve over time as tagging needs, best practices and use cases develop.
+Campus Cloud Tagging Documentation.
+Document will evolve over time as tagging needs, best practices and use cases develop.
 
 Table of Contents
   * Workgroup
@@ -13,7 +14,8 @@ Table of Contents
 * Tagging workgroup met 3 times in Sep and Oct.
 * Delivered LZ rev1 tagging vocabulary to the UCSB Cloud Teaam on Oct 22, 2019.
   
-## Vocabulary (abbreviated, see workgroup working Docs for more info)
+## Vocabulary 
+(abbreviated, see workgroup working Docs for more info)
 ```
 Tag			Type			Use Case	Cost Alloc	Namespace	LZ rev	Definition										Possible value(s)
 po-number		Account:Mandatory	Business	yes		ucsb:		1	Account tag made up of fund account string associated with vendor blanket in Gateway	PO # in GW		
@@ -25,7 +27,7 @@ contact			Account:Required	Business			ucsb:		1	Account tag to make business cont
 costing			Resource:Optional	Business	yes		ucsb:		1	Tag to furtherbreakdown your invoice (FAU, cost center,...)				any
 ```
 
-## Vocabulary Definitions (as of LZ rev1)
+## Vocabulary Definitions (LZ rev1)
 * Tag = key and value(s)
 * Max key length: 128 Unicode characters	
 * Max value length: 256 Unicode characters
