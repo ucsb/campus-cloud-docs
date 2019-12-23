@@ -19,6 +19,6 @@ They offer their computers, storage and networking hardware as a service, throug
 They also provide higher-level “Platform as a Service” (PaaS) on top of those basic services, such as data management and networking tools that range from operating systems to databases and many more add-on services. 
 All these resources are maintained in secure data centers in multiple geographic locations. Customers access resources online, buying as little or as much as they need.
 
-The UC Santa Barbara Campus Cloud Team works closely with public cloud vendors to provide the campus with cost-effective cloud access, while allowing federal compliance regulations (HIPAA, FISMA, FERPA, PCI, FedRAMP, etc). 
-Read below for more information on the benefits of cloud computing for research, including cost, security, usability and scale. 
-The current focus is heavily on Amazon Web Services (AWS) as a primary Cloud Service Provider (CSP) for simplicity, ease of use, and cost savings.
+#The UC Santa Barbara Campus Cloud Team works closely with public cloud vendors to provide the campus with cost-effective cloud access, while allowing federal compliance regulations (HIPAA, FISMA, FERPA, PCI, FedRAMP, etc). 
+#Read below for more information on the benefits of cloud computing for research, including cost, security, usability and scale. 
+#The current focus is heavily on Amazon Web Services (AWS) as a primary Cloud Service Provider (CSP) for simplicity, ease of use, and cost savings.
