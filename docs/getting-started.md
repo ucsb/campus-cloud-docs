@@ -40,6 +40,7 @@ You will only be able to access the AWS services after all steps below are compl
   ![/assets/img/gatewaycart-objectcode.png](/assets/img/gatewaycart-objectcode.png)	 
 
    and submit your requisition.
+   
   4. The Campus Cloud team will receive your Purchase Order and contact you to schedule a meeting finalizing your account. 
   5. After this meeting you will receive an activation email from AWS:
      * Confirming that the account is set up for invoicing under the UC AWS agreement, and
