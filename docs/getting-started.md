@@ -22,7 +22,9 @@ Follow the instructions below to ensure that an AWS account for UCSB business is
 You will only be able to access the AWS services after all steps below are completed and the UCSB Campus Cloud team creates your AWS account.
 
   1. Log in to the UCSB Gateway Procurement System
-  2. Complete the Campus Cloud Form. Provide the requested information.
+  2. Complete the Campus Cloud Form. Provide the requested information. 
+  ![assets/img/gatewayhome.png](assets/img/gatewayhome.png)
+  ![assets/img/gatewayform.png](assets/img/gatewayform.png)
   3. Add the completed for to your Cart and submit your requisition.
   4. The Campus Cloud team will receive your Purchase Order and contact you to schedule a meeting finalizing your account. 
   5. After this meeting you will receive an activation email from AWS:
