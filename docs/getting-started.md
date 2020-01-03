@@ -23,8 +23,8 @@ You will only be able to access the AWS services after all steps below are compl
 
   1. Log in to the UCSB Gateway Procurement System
   2. Complete the Campus Cloud Form. Provide the requested information. 
-  ![assets/img/gatewayhome.png](assets/img/gatewayhome.png)
-  ![assets/img/gatewayform.png](assets/img/gatewayform.png)
+  ![/assets/img/gatewayhome.png](/assets/img/gatewayhome.png)
+  ![/assets/img/gatewayform.png](/assets/img/gatewayform.png)
   3. Add the completed for to your Cart and submit your requisition.
   4. The Campus Cloud team will receive your Purchase Order and contact you to schedule a meeting finalizing your account. 
   5. After this meeting you will receive an activation email from AWS:
