@@ -26,14 +26,20 @@ You will only be able to access the AWS services after all steps below are compl
 
   ![/assets/img/gatewayhome.png](/assets/img/gatewayhome.png)
 
-     Please note the instructions on the left side of the form. Provide the requested information. Build in lead time for your start date. The estimated expenditure is for the duration of the PO.
+   Please note the instructions on the left side of the form. Provide the requested information. Build in lead time for your start date. The estimated expenditure is for the duration of the PO.
+
   ![/assets/img/gatewayform.png](/assets/img/gatewayform.png)
+
   3. Add the completed form to your Cart. 
      Verify that you have set the correct Commodity Code 
+
   ![/assets/img/gatewaycart-commoditycode.png](/assets/img/gatewaycart-commoditycode.png)
-     and Object Code
+
+   and Object Code
+
   ![/assets/img/gatewaycart-objectcode.png](/assets/img/gatewaycart-objectcode.png)	 
-  and submit your requisition.
+
+   and submit your requisition.
   4. The Campus Cloud team will receive your Purchase Order and contact you to schedule a meeting finalizing your account. 
   5. After this meeting you will receive an activation email from AWS:
      * Confirming that the account is set up for invoicing under the UC AWS agreement, and
