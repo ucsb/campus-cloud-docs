@@ -28,16 +28,16 @@ You will only be able to access the AWS services after all steps below are compl
 
    Please note the instructions on the left side of the form. Provide the requested information. Build in lead time for your start date. The estimated expenditure is for the duration of the PO.
 
-  ![/assets/img/gatewayform.png](/assets/img/gatewayform.png)
+  ![assets/img/gatewayform.png]({{site.url}}assets/img/gatewayform.png)
 
   3. Add the completed form to your Cart. 
      Verify that you have set the correct Commodity Code 
 
-  ![/assets/img/gatewaycart-commoditycode.png](/assets/img/gatewaycart-commoditycode.png)
+  ![assets/img/gatewaycart-commoditycode.png]({{site.url}}assets/img/gatewaycart-commoditycode.png)
 
    and Object Code
 
-  ![/assets/img/gatewaycart-objectcode.png](/assets/img/gatewaycart-objectcode.png)	 
+  ![assets/img/gatewaycart-objectcode.png]({{site.url}}assets/img/gatewaycart-objectcode.png)	 
 
    and submit your requisition.
    
