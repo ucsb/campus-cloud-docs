@@ -1,6 +1,7 @@
 ---
 title: Guidelines
 description: A list of Guidelines
+permalink: /docs/guidelines
 ---
 
 # Guidelines

@@ -1,6 +1,7 @@
 ---
 title: Best Practices
 description: A list of Best Practices
+permalink: /docs/bestpractices
 ---
 
 # Best Practices
