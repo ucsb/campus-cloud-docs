@@ -1,13 +1,12 @@
 ---
-title: Guidelines
-description: A list of Guidelines
+title: Best Practices
+description: A list of Best Practices
 ---
 
-# Guidelines
+# Best Practices
 
 There are important considerations to take into account when defining and planning your cloud-based project. 
 Here, we look at some useful guidelines to follow when executing your project.
 
- - [Tagging Guidelines](tagging)
- - [Security Guidelines](security)
- - [Compliance Guidelines](compliance)
+ - [Cost Models](costmodels)
+ - [Tagging](tagging)
