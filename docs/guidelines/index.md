@@ -13,3 +13,11 @@ Here, we look at some useful guidelines to follow when executing your project.
  - [Compliance Guidelines](compliance)
 
 
+<div class="section-index">
+    <hr class="panel-line">
+    {% for post in site.docs.guidelines  %}        
+    <div class="entry">
+    <h5><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
+    <p>{{ post.description }}</p>
+    </div>{% endfor %}
+</div>
