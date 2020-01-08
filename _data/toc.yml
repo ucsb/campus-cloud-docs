@@ -12,7 +12,7 @@
     - title: "Guidelines"
       url: "docs/guidelines"
       children:
-        - title: Gvernance 
+        - title: Governance 
           url: "docs/guidelines/governance"
         - title: Compliance 
           url: "docs/guidelines/compliance"
