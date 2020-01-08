@@ -3,7 +3,7 @@ title: About
 permalink: /about/
 ---
 
-About UCSB Campus Cloud
+# About UCSB Campus Cloud
 
 Cloud computing, also known as the public cloud, the commercial cloud, or just “the cloud,” is a massive computing resource accessed via the internet. 
 Cloud computing has five major components:

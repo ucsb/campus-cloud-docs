@@ -12,10 +12,12 @@
     - title: "Guidelines"
       url: "docs/guidelines"
       children:
-        - title: Security Guidelines
-          url: "docs/guidelines/security"
-        - title: Compliance Guidelines
+        - title: Gvernance 
+          url: "docs/guidelines/governance"
+        - title: Compliance 
           url: "docs/guidelines/compliance"
+        - title: Security 
+          url: "docs/guidelines/security"
     - title: "Best Practices"
       url: "docs/bestpractices"
       children:
