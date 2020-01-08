@@ -2,14 +2,14 @@
   url: docs
   links:
     - title: "Getting Started"
-      url: "docs/getting-started"
+      url: "getting-started"
       children:
         - title: Procuring an Account
-          url: "docs/getting-started#procurement"
+          url: "getting-started#procurement"
         - title: Budgeting
-          url: "docs/getting-started#budgeting"
+          url: "getting-started#budgeting"
         - title: Consultation
-          url: "docs/getting-started#consult"
+          url: "getting-started#consult"
     - title: "Guidelines"
       url: "docs/guidelines"
       children:
