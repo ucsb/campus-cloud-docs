@@ -10,6 +10,8 @@ tags:
  - github
 ---
 
+# Getting Started
+
 The UCSB Campus Cloud allows faculty, researchers and staff to provision and use computing resources from approved vendors that have agreements in place with the University of California.
 
 For public cloud hosting, an approved provider is Amazon Web Services (AWS). 
