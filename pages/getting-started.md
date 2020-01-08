@@ -1,7 +1,13 @@
 ---
 layout: page
 title: "Getting Started"
-permalink: /docs/getting-started
+permalink: /getting-started/
+tags:
+ - cloud
+ - aws
+ - azure
+ - gcp
+ - github
 ---
 
 Getting Started
@@ -26,7 +32,7 @@ You will only be able to access the AWS services after all steps below are compl
 
   ![assets/img/gatewayhome.png]({{site.url}}assets/img/gatewayhome.png)
 
-   Please note the instructions on the left side of the form. Provide the requested information. Build in lead time for your start date. The estimated expenditure is for the duration of the PO.
+   Please note the instructions on the left side of the form. Provide the requested information. Build in lead time for your start date. The estimated expenditure is for the duration of the PO. The expected duration is one year. The purchase order should be renewed annually for multi-year accounts.
 
   ![assets/img/gatewayform.png]({{site.url}}assets/img/gatewayform.png)
 

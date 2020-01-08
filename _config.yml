@@ -63,10 +63,12 @@ markdown: kramdown
 exclude: [_site, CHANGELOG.md, LICENSE, README.md, vendor]
 
 # Collections
+#collections_dir: collections
 collections:
   docs:
-    output: true
+    title: Documentation
     permalink: /:collection/:path
+    output: true
 
 # Defaults
 defaults:

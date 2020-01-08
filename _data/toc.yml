@@ -24,5 +24,7 @@
           url: "docs/bestpractices/tagging"
         - title: Cost Models
           url: "docs/bestpractices/costmodels"
+    - title: "Glossary"
+      url: "glossary"
     - title: "News"
       url: "news"
