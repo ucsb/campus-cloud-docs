@@ -9,3 +9,6 @@ Welcome
 ## Purpose
 
 Provide documentation for the Campus Cloud Services.
+
+## Features and Benefits
+
