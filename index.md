@@ -6,9 +6,13 @@ permalink: /
 
 Welcome
 
-## Purpose
-
-Provide documentation for the Campus Cloud Services.
+## About the Campus Cloud
 
 ## Features and Benefits
+
+### AWS Campus Cloud
+
+## Getting Started
+
+## Questions/Contact
 
