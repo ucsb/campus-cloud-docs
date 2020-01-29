@@ -4,15 +4,36 @@ title: "Campus Cloud Docs - Home"
 permalink: /
 ---
 
-Welcome
+##Welcome
 
-## About the Campus Cloud
+### Features and Benefits
 
-## Features and Benefits
+Cloud services provide an efficient way to store data, access files, and develop and host applications.
+The UC system has negotiated contracts with some providers to ensure that UC employees have access to cloud services 
+that meet UC requirements for security, privacy and liability. 
 
-### AWS Campus Cloud
+Using a UC-authorized cloud service provider can help you:
 
-## Getting Started
+	* Keep data safe and secure, protecting it from unauthorized third party access
+	* Meet federal and state regulations about storing/managing sensitive data
+	* Reduce risk and liability for the university in the event of a data breach
+	* Access additional features and storage space
 
-## Questions/Contact
+#### AWS Campus Cloud
 
+The Campus Cloud AWS Landing Zone (LZ) is a participant in UC Enterprise Discount Program (EDP) 
+and provides an environment of curated products and service with the following key benefits:
+
+	* 11% Enterprise Discount
+	* [Guardrails](glossary#guardrails)
+	* NIST-800-171 Compliance Guardrails
+	* Networking connectivity to campus (VPC w Public and/or Private)
+	* Visibility & observability
+
+### Getting Started
+
+To get started using the Campus Cloud, please see the [Getting Started](/getting-started) guide
+
+### Questions/Contact
+
+Contact Info
