@@ -25,10 +25,12 @@
     - title: "Best Practices"
       url: "docs/bestpractices"
       children:
-        - title: Resource Tagging
-          url: "docs/bestpractices/tagging"
+        - title: Account Contacts
+          url: "docs/bestpractices/contacts"
         - title: Cost Models
           url: "docs/bestpractices/costmodels"
+        - title: Resource Tagging
+          url: "docs/bestpractices/tagging"
     - title: "Glossary"
       url: "glossary"
 
