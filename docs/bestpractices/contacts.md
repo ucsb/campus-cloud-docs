@@ -15,23 +15,16 @@ You should prepare and fill in the contact information associated with your acco
 Please see the following sample:
 The primary contact email address is also the login used as the [root account](/glossary#rootuser)
 
-> Full Name: My UCSB Account
-
-> Address: UC Santa Barbara, Bldg 434  
-
-> City: Santa Barbara
-
-> State: CA
-
-> Postal Code: 93106
-
-> Country: US
-
-> Phone Number: 805-893-XXXX
-
-> Company Name: University of California, Santa Barbara
-
-> Website URL: *.ucsb.edu
+```
+Full Name: My UCSB Account
+Address: UC Santa Barbara, Bldg 434  
+City: Santa Barbara
+State: CA
+Postal Code: 93106
+Country: US
+Phone Number: 805-893-XXXX
+Company Name: University of California, Santa Barbara
+Website URL: *.ucsb.edu
 
 For an individual user's aws account, using your @ucsb.edu email address as the primary email contact makes sense, 
 but for shared accounts it is recommended to use a [functional email address](https://www.connect.ucsb.edu/help/faq/what-functional-account) 
