@@ -1,3 +1,10 @@
+---
+title: Resource Tagging
+description: Security Guidelines
+permalink: /docs/bestpractices/tagging
+---
+
+
 # Tagging
 Campus Cloud Tagging Documentation.
 Document will evolve over time as tagging needs, best practices and use cases develop.

@@ -9,6 +9,6 @@ permalink: /docs/bestpractices
 There are important considerations to take into account when defining and planning your cloud-based project. 
 Here, we look at some useful guidelines to follow when executing your project.
 
- * [Contacts](contacts)
- * [Cost Models](costmodels)
- * [Tagging](tagging)
+ * [Contacts](bestpractices/contacts)
+ * [Cost Models](bestpractices/costmodels)
+ * [Tagging](bestpractices/tagging)
