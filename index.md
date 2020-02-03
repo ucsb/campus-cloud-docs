@@ -4,8 +4,6 @@ title: "Campus Cloud Docs - Home"
 permalink: /
 ---
 
-##Welcome
-
 ### Features and Benefits
 
 Cloud services provide an efficient way to store data, access files, and develop and host applications.

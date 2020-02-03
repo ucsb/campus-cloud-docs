@@ -9,20 +9,28 @@ permalink: /docs/bestpractices/contacts
 
 ### Primary Contact 
 
-Your AWS account will require detailed contact information. The primary contact email address is also the login used as the "root account"
+Your AWS account will require detailed contact information. The primary contact email address is also the login used as the "root user"
 You should prepare and fill in the contact information associated with your account, including your mailing address, telephone number, and website address.
 
 Please see the following sample:
-The primary contact email address is also the login used as the [root account](glossary#root account)
+The primary contact email address is also the login used as the [root account](/glossary#rootuser)
 
 > Full Name: My UCSB Account
+
 > Address: UC Santa Barbara, Bldg 434  
+
 > City: Santa Barbara
+
 > State: CA
+
 > Postal Code: 93106
+
 > Country: US
+
 > Phone Number: 805-893-XXXX
+
 > Company Name: University of California, Santa Barbara
+
 > Website URL: *.ucsb.edu
 
 For an individual user's aws account, using your @ucsb.edu email address as the primary email contact makes sense, 
