@@ -5,7 +5,7 @@ permalink: /docs/bestpractices/tagging
 ---
 
 
-# Tagging
+## Tagging
 Campus Cloud Tagging Documentation.
 Document will evolve over time as tagging needs, best practices and use cases develop.
 

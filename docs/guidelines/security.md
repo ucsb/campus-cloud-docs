@@ -4,10 +4,7 @@ description: Security Guidelines
 permalink: /docs/guidelines/security
 ---
 
-
-
-##Security Guidelines
-
+## Security Guidelines
 
 ### User Access
 
