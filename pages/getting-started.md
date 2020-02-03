@@ -67,5 +67,5 @@ You will only be able to access the AWS services after all steps below are compl
   
 ## Set your Account Contact Information
 
-The Campus Cloud team will ask for the contact information for you AWS Account. For details see the [Best Practices for Contacts](/docs/bestpractices/contacts). 
+The Campus Cloud team will ask for the contact information for you AWS Account. For details see the [Best Practices for Contacts]({{site.url}}/docs/bestpractices/contacts). 
   
