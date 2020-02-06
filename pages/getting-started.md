@@ -23,7 +23,7 @@ Using an approved provider means that:
 ## [Training and Consultation](#training)
 
 It is highly recommended to have an understanding of Cloud environment concepts and methodologies. Specifically, the [Well Architected Framework](https://aws.amazon.com/architecture/well-architected/) and 
-the[Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/).
+the [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/).
 
 ### Campus Training Resources
 
@@ -60,8 +60,10 @@ You will only be able to access the AWS services after all steps below are compl
 
   ![assets/img/gatewayhome.png]({{site.url}}assets/img/gatewayhome.png)
 
-   Please note the instructions on the left side of the form. Provide the requested information. Build in lead time for your start date. The estimated expenditure is for the duration of the PO. The expected duration is one year. The purchase order should then be renewed annually.
-   If your procurement group is willing to support multi-year blankets, please limit your max duration to three years. 
+   Please note the instructions on the left side of the form, and rovide the requested information. 
+		* Build in lead time for your start date. 
+		* The estimated expenditure is for the duration of the PO. The expected duration is one year. The purchase order should then be renewed annually. If your procurement group is willing to support multi-year blankets, please limit your max duration to three years. 
+		* The form is for the one Account. You can not request multiple accounts with a single form. You will want to fill out multiple forms and add them as line items in your cart.
 
   ![assets/img/gatewayform.png]({{site.url}}assets/img/gatewayform.png)
 
