@@ -3,12 +3,14 @@
     - title: "Getting Started"
       url: "getting-started"
       children:
-        - title: Procuring an Account
-          url: "getting-started#procurement"
-        - title: Budgeting
-          url: "getting-started#budgeting"
+        - title: Training 
+          url: "getting-started#training"
         - title: Consultation
           url: "getting-started#consult"
+        - title: Budgeting
+          url: "getting-started#budgeting"
+        - title: Procuring an Account
+          url: "getting-started#procurement"
     - title: "Guidelines"
       url: "docs/guidelines"
       children:

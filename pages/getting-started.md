@@ -20,6 +20,33 @@ Using an approved provider means that:
   * You have access to account management and solution architects — AWS staff who can assist with how to use AWS, and provide technical guidance on best practices.
   * Your vendor relationship falls under the University of California Terms & Conditions. This ensures that your agreement conforms to the UC Regents’ policies for procurement and business contracts, and reduces the financial risk to your department or division for agreements that are outside of Regental standing orders (especially with respect to third-party liability).
   
+## [Training and Consultation](#training)
+
+It is highly recommended to have an understanding of Cloud environment concepts and methodologies. Specifically, the [Well Architected Framework](https://aws.amazon.com/architecture/well-architected/) and 
+the[Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/).
+
+### Campus Training Resources
+
+ * The UCSB [Learning Center](https://www.learningcenter.ucsb.edu/) and more specifically, [Linkedin Learning](https://www.learningcenter.ucsb.edu/content/linkedin-learning) offers courses for Cloud Computing and AWS.
+	* [Cloud Computing Topic](https://www.linkedin.com/learning/topics/cloud-computing-5)
+	* [AWS Courses](https://www.linkedin.com/learning/search?keywords=aws)
+
+### AWS Training Resources
+
+ * Take the free [Cloud Practitioners Training](https://www.aws.training/Details/Curriculum?id=27076)
+
+### [Consultation](#consult) 
+
+ * Consult with your local IT staff. They may have processes and protocols in place for sharing responsibility for your AWS Account.
+ * Consult with the Campus Cloud Team.
+
+## [Budgeting](#budgeting)
+
+Before you start the procurement process, you will ned to estimate your monthly spend. 
+
+ * AWS Cost Calculator 
+	* [Simple Monthly Calculator](https://calculator.s3.amazonaws.com/index.html)
+	* The new [Pricing Calculator](https://calculator.aws/#/)
 
 ## [Procure an AWS Account](#procurement)
 
