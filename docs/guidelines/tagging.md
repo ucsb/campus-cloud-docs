@@ -1,3 +1,9 @@
+---
+title: Tagging Guidelines
+description: Tagging Guidelines
+permalink: /docs/guidelines/tagging
+---
+
 ## Tagging
 AWS allows customers to add a helpful labels to AWS resources. These labels are technically called Tags and help manage your resources.  The UCSB Campus Cloud team will utilize Tags to organize the AWS Campus Cloud Landing Zone (LZ) environment and to make invoicing efficient and user friendly.
 
@@ -8,7 +14,7 @@ Tags are custom attributes to your AWS resources that make it easier to identify
   2. ***value***  (for example, kronos-webserver). An optional field. Tag values are also case sensitive.
 
 You can use tags to categorize resources by po-number, environment, data-classification, business-service, mission, contact, costing, or other criteria.
- 
+
 For more information, see [AWS Tagging Strategies](https://aws.amazon.com/answers/account-management/aws-tagging-strategies/)
 
 
@@ -17,9 +23,9 @@ For more information, see [AWS Tagging Strategies](https://aws.amazon.com/answer
   * Vocabulary
   * Vocabulary Definitions
   * Namespace
-  
 
-  
+
+
 ## Vocabulary (LZ rev1)
 (abbreviated, see workgroup working Docs for more info)
 ```
@@ -27,7 +33,7 @@ Tag			Type			Use Case	Cost Alloc	Namespace	LZ rev	Definition										Possible v
 po-number		Account:Mandatory	Business	yes		ucsb:		1	Account tag made up of fund account string associated with vendor blanket in Gateway	PO # in GW		
 environment		Resource:Optional	Technical	yes		ucsb:		1	Resource tag to identify criticality of resource, support automation			prod, dev, test, other
 data-classification	Resource:Mandatory	Compliance			ucsb:		1	Resource tag to ensure compliance							p1, p2, p3, p4
-business-service	Resource:Required	Technical	yes		ucsb:		1	Resource tag to organize resources that support an application or service		any 
+business-service	Resource:Required	Technical	yes		ucsb:		1	Resource tag to organize resources that support an application or service		any
 mission			Account:Mandatory	Business	yes		ucsb:		1	Resource tag to allow OCIO, executives breakdown by mission				academic, research, administrative, mixed
 contact			Account:Required	Business			ucsb:		1	Account tag to make business contact info easily available				ucsb:contact:business=jane@ucsb.edu, ucsb:contact:security=doe@ucsb.edu, ucsb:contact:technical=john@ucsb.edu
 costing			Resource:Optional	Business	yes		ucsb:		1	Tag to furtherbreakdown your invoice (FAU, cost center,...)				any
@@ -35,7 +41,7 @@ costing			Resource:Optional	Business	yes		ucsb:		1	Tag to furtherbreakdown your 
 
 ## Vocabulary Definitions
 * Tag = key and value(s)
-* Max key length: 128 Unicode characters	
+* Max key length: 128 Unicode characters
 * Max value length: 256 Unicode characters
 * Tags should not contain sensitive or private information
 * Cost Allocation tags are only visible in Master Payee Account
@@ -47,5 +53,5 @@ costing			Resource:Optional	Business	yes		ucsb:		1	Tag to furtherbreakdown your 
 ## Namespace
 * Reserved namespace prefix = aws:
 * Reserved namespace prefix = ucsb:
-* Local namespace prefix = ucsb:dept:\<CODE> with \<CODE> equal to 4 character Chart of Accounts code (capitalized)	
+* Local namespace prefix = ucsb:dept:\<CODE> with \<CODE> equal to 4 character Chart of Accounts code (capitalized)
 * Example: ucsb:dept:GSED

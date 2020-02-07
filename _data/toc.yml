@@ -3,7 +3,7 @@
     - title: "Getting Started"
       url: "getting-started"
       children:
-        - title: Training 
+        - title: Training
           url: "getting-started#training"
         - title: Consultation
           url: "getting-started#consult"
@@ -14,15 +14,17 @@
     - title: "Guidelines"
       url: "docs/guidelines"
       children:
-        - title: Description 
+        - title: Description
           url: "docs/guidelines/description"
-        - title: Networking 
+        - title: Networking
           url: "docs/guidelines/networking"
-        - title: Governance 
+        - title: Tagging 
+          url: "docs/guidelines/tagging"
+        - title: Governance
           url: "docs/guidelines/governance"
-        - title: Compliance 
+        - title: Compliance
           url: "docs/guidelines/compliance"
-        - title: Security 
+        - title: Security
           url: "docs/guidelines/security"
     - title: "Best Practices"
       url: "docs/bestpractices"
@@ -35,4 +37,3 @@
           url: "docs/bestpractices/tagging"
     - title: "Glossary"
       url: "glossary"
-
