@@ -25,7 +25,7 @@ You can think of the tag namespace as a container for a set of tag keys. AWS has
 * Example: ucsb:dept:GSED
   
 ## Vocabulary (LZ rev1)
-(abbreviated, see workgroup working Docs for more info)
+Abbreviated vocabulary shown below. See CCC Tagging workgroup Documentation for more info.
 ```
 Tag			Type			Use Case	Cost Alloc	Namespace	LZ rev	Definition										Possible value(s)
 po-number		Account:Mandatory	Business	yes		ucsb:		1	Account tag made up of fund account string associated with vendor blanket in Gateway	PO # in GW		
