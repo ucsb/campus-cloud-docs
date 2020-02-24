@@ -9,11 +9,11 @@ permalink: /about/
 Cloud computing, also known as the public cloud, the commercial cloud, or just “the cloud,” is a massive computing resource accessed via the internet.
 Cloud computing has five major components:
 
-  * Compute: Virtual machines ranging from small to extremely powerful
-  * Storage: Effectively infinite
-  * Networking: Connectivity both local and with the internet
-  * Data management: Databases and related structure
-  * Services: Special features such as streaming data analytics
+*   Compute: Virtual machines ranging from small to extremely powerful
+*   Storage: Effectively infinite
+*   Networking: Connectivity both local and with the internet
+*   Data management: Databases and related structure
+*   Services: Special features such as streaming data analytics
 
 Microsoft, Amazon Web Services, and Google are among the largest Cloud Service Providers (CSPs).
 They offer their computers, storage and networking hardware as a service, through the web, known as “Infrastructure as a Service” (IaaS).
