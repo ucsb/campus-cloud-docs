@@ -93,4 +93,4 @@ You will only be able to access the AWS services after all steps below are compl
   * Commodity Code __81110000__
   * Object Code __7185__.
 
-## Proceed to the [First Steps](({{site.url}}/docs/bestpractices/firststeps)) to set up your Account
+### Proceed to the [First Steps](({{site.url}}/docs/bestpractices/firststeps)) to set up your Account
