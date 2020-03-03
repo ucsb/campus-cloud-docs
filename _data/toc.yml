@@ -30,7 +30,7 @@
       url: "docs/bestpractices"
       children:
         - title: First Steps
-          url: "docs/bestpractice/firststeps"
+          url: "docs/bestpractices/firststeps"
         - title: Account Contacts
           url: "docs/bestpractices/contacts"
         - title: Cost Models
