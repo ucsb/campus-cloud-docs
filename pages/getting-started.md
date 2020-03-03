@@ -42,7 +42,7 @@ the [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-respo
 
 ## [Budgeting](#budgeting)
 
-Before you start the procurement process, you will need to estimate your monthly spend. 
+Before you start the procurement process, you will need to estimate your monthly spend.
 
  * AWS Cost Calculator
 	* [Simple Monthly Calculator](https://calculator.s3.amazonaws.com/index.html)
@@ -93,6 +93,4 @@ You will only be able to access the AWS services after all steps below are compl
   * Commodity Code __81110000__
   * Object Code __7185__.
 
-## Set your Account Contact Information
-
-The Campus Cloud team will ask for the contact information for you AWS Account. For details see the [Best Practices for Contacts]({{site.url}}/docs/bestpractices/contacts).
+## Proceed to the [First Steps](({{site.url}}/docs/bestpractices/firststeps)) to set up your Account

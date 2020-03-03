@@ -6,9 +6,10 @@ permalink: /docs/bestpractices
 
 ## Best Practices
 
-There are important considerations to take into account when defining and planning your cloud-based project. 
+There are important considerations to take into account when defining and planning your cloud-based project.
 Here, we look at some useful guidelines to follow when executing your project.
 
- * [Contacts](bestpractices/contacts)
- * [Cost Models](bestpractices/costmodels)
- * [Tagging](bestpractices/tagging)
+*  [First Steps](bestpractice/firststeps)
+*  [Contacts](bestpractices/contacts)
+*  [Cost Models](bestpractices/costmodels)
+*  [Tagging](bestpractices/tagging)
