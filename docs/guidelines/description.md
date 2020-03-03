@@ -1,7 +1,7 @@
 ---
 title: Service Descriptions
 description: Service Descriptions
-permalink: /docs/guidelines/descriptions
+permalink: /docs/guidelines/description
 ---
 
 ## Campus Cloud Amazon Web Services (AWS) Environment
