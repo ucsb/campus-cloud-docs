@@ -1,10 +1,10 @@
 ---
-title: Security Guidelines
-description: Security Guidelines
-permalink: /docs/guidelines/security
+title: Service Descriptions
+description: Service Descriptions
+permalink: /docs/guidelines/descriptions
 ---
 
-## Campus Cloud AWS Environment
+## Campus Cloud Amazon Web Services (AWS) Environment
 
 ### Global Infrastructure
 
@@ -21,3 +21,7 @@ Amazon maintains over 20 [Regions](https://aws.amazon.com/about-aws/global-infra
 ### Campus Connectivity
 
 ### Legacy
+
+## Campus Cloud Microsoft Azure Environment
+
+## Campus Cloud Google Cloud Platform (GCP) Environment
