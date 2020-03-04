@@ -9,7 +9,7 @@ permalink: /docs/guidelines/tagging
 ### Tagging
 AWS allows customers to add a helpful labels to AWS resources. These labels are technically called Tags and help manage your resources.  The UCSB Campus Cloud team will utilize Tags to organize the AWS Campus Cloud Landing Zone (LZ) environment and to make invoicing efficient and user friendly.
 
-Tags can also be used independently by account holders in the AWS Campus Cloud LZ.  In order to user Tags effectively we will define a namespace, vocabulary, and [best practices](docs/bestpractices/).
+Tags can also be used independently by account holders in the AWS Campus Cloud LZ.  In order to user Tags effectively we will define a namespace, vocabulary, and [best practices]({{ site.baseurl }}/docs/bestpractices).
 
 Tags are custom attributes to your AWS resources that make it easier to identify, organize, and search for resources. Each tag has two parts:
   1.  ***key***  (for example, business-service). Tag keys are case sensitive.
@@ -21,16 +21,16 @@ For more information, see [AWS Tagging Strategies](https://aws.amazon.com/answer
 
 
 #### Table of Contents
-*  Namespace
-*  Vocabulary
-*  Vocabulary Definitions
+*   Namespace
+*   Vocabulary
+*   Vocabulary Definitions
 
 ### Namespace
 You can think of the tag namespace as a container for a set of tag keys. AWS has their own reserved namespace for tags. The Campus Cloud Team also requires its own namespace. Local account holders may also use a namespace,
-*  Reserved namespace prefix = aws:
-*  Reserved namespace prefix = ucsb:
-*  Local namespace prefix = ucsb:dept:\<CODE> with \<CODE> equal to 4 character Chart of Accounts code (capitalized)
-*  Example: ucsb:dept:GSED
+*   Reserved namespace prefix = aws:
+*   Reserved namespace prefix = ucsb:
+*   Local namespace prefix = ucsb:dept:\<CODE> with \<CODE> equal to 4 character Chart of Accounts code (capitalized)
+*   Example: ucsb:dept:GSED
 
 ### Vocabulary (LZ rev1)
 Abbreviated vocabulary shown below. See CCC Tagging workgroup Documentation for more info.
@@ -46,11 +46,11 @@ costing			Resource:Optional	Business	yes		ucsb:		1	Tag to furtherbreakdown your 
 ```
 
 ### Vocabulary Definitions
-*  Tag = key and value(s)
-*  Max key length: 128 Unicode characters
-*  Max value length: 256 Unicode characters
-*  Tags should not contain sensitive or private information
-*  Cost Allocation tags are only visible in Master Payee Account
-*  Use each Key only once for each resource
-*  Allowed characters:  letters, numbers, spaces representable in UTF-8, and the following characters: + - = . _ : / @
-*  Case sensitive
+*   Tag = key and value(s)
+*   Max key length: 128 Unicode characters
+*   Max value length: 256 Unicode characters
+*   Tags should not contain sensitive or private information
+*   Cost Allocation tags are only visible in Master Payee Account
+*   Use each Key only once for each resource
+*   Allowed characters:  letters, numbers, spaces representable in UTF-8, and the following characters: + - = . _ : / @
+*   Case sensitive
