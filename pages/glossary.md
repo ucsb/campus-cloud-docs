@@ -7,7 +7,7 @@ permalink: /glossary/
 
 *   [Guardrails](#guardrails) A guardrail is a high-level rule that provides ongoing governance for your overall AWS environment. It's expressed in plain language. When users perform work in an AWS account in your landing zone, they're subject to guardrails.
 
-*   [Landing Zone](#landingzone) Landing Zone is a solution that helps usrs more quickly set up a secure, multi-account AWS environment based on AWS best practices. The UCSB Campus Cloud uses a landing zone solution to provide a multi-account environment.
+*   [Landing Zone](#landingzone) Landing Zone is a solution that helps users more quickly set up a secure, multi-account AWS environment based on AWS best practices. The UCSB Campus Cloud uses a landing zone solution to provide a multi-account environment.
 
 *   [Namespace](#namespace) Define a namespace.
 
