@@ -15,7 +15,7 @@ saying your account is now ready for use.
   *  Administrator: This role has full access and can delegate permissions to every service and resource in AWS. Provides full access to AWS services and resources.
   *  PowerUser: Provides full access to AWS services and resources, but does not allow management of [IAM](https://docs.aws.amazon.com/iam/index.html). This user performs application development tasks and can create and configure resources and services that support AWS aware application development.
   *  ReadOnly: Provides read-only access to AWS services and resources. This user can view a list of AWS resources and basic metadata in the account across all services. The user cannot read resource content or metadata that goes beyond the quota and list information for resources.
-  *  Billing: This user has access to view billing information, The user can monitor the costs accumulated for the entire AWS service.
+  *  Billing: This user has access to view billing information, The user can monitor the costs accumulated for the entire AWS service.  
 
   You will use the "Manage Group Tags" tool available at [im.ucsb.edu](https://im.ucsb.edu) to add and remove members from the above groups. Please note, you must Log in first to access the tool.
 
