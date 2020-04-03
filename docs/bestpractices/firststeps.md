@@ -21,18 +21,18 @@ saying your account is now ready for use.
 
 2. Verify your Billing Alert  
 
-  When you created your Purchase Order through [Gateway](https://gateway.procurement.ucsb.edu), you provided a budget and duration for your account. The Campus Cloud team has configured your account for a billing alert based on your provided budget and estimated monthly spend. If your monthly bill is forecasted to go over your budget you will get a notification. Please verify that you have an email address subscribed to the configured billing alert.
+    When you created your Purchase Order through [Gateway](https://gateway.procurement.ucsb.edu), you provided a budget and duration for your account. The Campus Cloud team has configured your account for a billing alert based on your provided budget and estimated monthly spend. If your monthly bill is forecasted to go over your budget you will get a notification. Please verify that you have an email address subscribed to the configured billing alert.
 
 3. Verify [CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html),
 [Security Hub](https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html), and
 [GuardDuty](https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html) are enabled.  
 
-  The Campus Cloud team has configured your account to have CloudTrail, Securty Hub, and Guard Duty enabled. All three services will send findings to the AWS Logging Account for inspection.
-  Cloud Trail logs every AWS API call, so all actions done in the AWS console will be logged. Cloud Trail is your audit log for all activities done by those whom are granted access.
+    The Campus Cloud team has configured your account to have CloudTrail, Securty Hub, and Guard Duty enabled. All three services will send findings to the AWS Logging Account for inspection.
+    Cloud Trail logs every AWS API call, so all actions done in the AWS console will be logged. Cloud Trail is your audit log for all activities done by those whom are granted access.
 
 4. Enable MFA on the Root User  
 
-  If you have been provided with root user credentials; you goal should be to enable MFA on the root user and stop using the root user for day to day tasks.
+    If you have been provided with root user credentials; you goal should be to enable MFA on the root user and stop using the root user for day to day tasks.
 
     *  Create a strong root account password
     *  enable physical MFA on the root account
