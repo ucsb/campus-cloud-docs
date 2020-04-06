@@ -12,4 +12,4 @@ You can find out more about the AWS Service Catalog at https://docs.aws.amazon.c
 ### Create Shiboleth Group to Role Mapping
 * This will create an Empty IAM Role and map it to a group in UCSB Identity. Configure your role permissions after creation. Manage your shiboleth group membership via UCSB IM Group Tagger
 
-![UCSB Service Catalog](https://../../assets/img/ucsb-servicecatalog.png)
+![UCSB Service Catalog](/assets/img/ucsb-servicecatalog.png)
