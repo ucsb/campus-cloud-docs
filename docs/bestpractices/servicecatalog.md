@@ -6,7 +6,7 @@ A Service Catalog created by a local Administrator is scoped to that account onl
 
 It is also possible for Account holders to submit services they have created for use in the campus Service Catalog.
 
-Find out more about the [AWS Service Catalog] (https://docs.aws.amazon.com/servicecatalog/latest/dg/what-is-service-catalog.html).
+Find out more about the [AWS Service Catalog](https://docs.aws.amazon.com/servicecatalog/latest/dg/what-is-service-catalog.html).
 
 ## Key Service Catalog items
 The Service Catalog Products below are essential to building out your AWS projects as they provide network connectivity and initialize Group/Role use with UCSB Identity.
