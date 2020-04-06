@@ -6,15 +6,15 @@ A Service Catalog created by a local Administrator is scoped to that account onl
 
 It is also possible for Account holders to submit services they have created for use in the campus Service Catalog.
 
-Find out more about the AWS Service Catalog at https://docs.aws.amazon.com/servicecatalog/latest/dg/what-is-service-catalog.html
+Find out more about the [AWS Service Catalog] (https://docs.aws.amazon.com/servicecatalog/latest/dg/what-is-service-catalog.html).
 
 ## Key Service Catalog items
-The Service Catalog Products below are essential to building out your AWS projects as they provide network connectivity and initialize Group/Role use with UCSB Identity
+The Service Catalog Products below are essential to building out your AWS projects as they provide network connectivity and initialize Group/Role use with UCSB Identity.
 
 ### Simple VPC with Campus Connectivity
 * Create a simple VPC with allocated private IP space. Connectivity between account and back to campus provided by transit gateway and vpn.
 
 ### Create Shiboleth Group to Role Mapping
-* This will create an Empty IAM Role and map it to a group in UCSB Identity. Configure your role permissions after creation. Manage your shiboleth group membership via UCSB IM Group Tagger
+* This will create an Empty IAM Role and map it to a group in UCSB Identity. Configure your role permissions after creation. Manage your shiboleth group membership via UCSB IM Group Tagger.
 
 ![UCSB Service Catalog](/assets/img/ucsb-servicecatalog.png)
