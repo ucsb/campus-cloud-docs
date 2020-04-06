@@ -1,10 +1,15 @@
 ## AWS Service Catalog
 
-The AWS Service Catalog enables organizations to create and manage catalogs of products that are approved for use on AWS. The Campus Cloud Team and or the local Admininstrator of an Account may create a Service Catalog. One create in the account is scoped to that account only.  A Service CAtalog from the Campus Cloud Team is meant to provide features (or services) that you can add to your account by choosing them from a menu. It is also possible for Account holders to submit services they have created for use in the campus Service Catalog.
+The AWS Service Catalog enables organizations to create and manage catalogs of products that are approved for use on AWS. The Campus Cloud Team and or the local Admininstrator of an Account may create a Service Catalog. 
 
-You can find out more about the AWS Service Catalog at https://docs.aws.amazon.com/servicecatalog/latest/dg/what-is-service-catalog.html
+A Service Catalog created by a local Administrator is scoped to that account only.  A Service Catalog from the Campus Cloud Team is meant to provide features available to the Organization that can simply be applied to an account by selecting a Product from a menu. 
+
+It is also possible for Account holders to submit services they have created for use in the campus Service Catalog.
+
+Find out more about the AWS Service Catalog at https://docs.aws.amazon.com/servicecatalog/latest/dg/what-is-service-catalog.html
 
 ## Key Service Catalog items
+The Service Catalog Products below are essential to building out your AWS projects as they provide network connectivity and initialize Group/Role use with UCSB Identity
 
 ### Simple VPC with Campus Connectivity
 * Create a simple VPC with allocated private IP space. Connectivity between account and back to campus provided by transit gateway and vpn.
