@@ -10,6 +10,7 @@ There are important considerations to take into account when defining and planni
 Here, we look at some useful guidelines to follow when executing your project.
 
 *  [First Steps](bestpractice/firststeps)
+*  [Service Catalog](bestpractice/servicecatalog)
 *  [Contacts](bestpractices/contacts)
 *  [Cost Models](bestpractices/costmodels)
 *  [Tagging](bestpractices/tagging)
