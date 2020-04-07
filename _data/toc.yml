@@ -31,6 +31,8 @@
       children:
         - title: First Steps
           url: "docs/bestpractices/firststeps"
+        - title: Service Catalog
+          url: "docs/bestpractices/servicecatalog"
         - title: Account Contacts
           url: "docs/bestpractices/contacts"
         - title: Cost Models
