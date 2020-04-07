@@ -11,6 +11,6 @@ Here, we look at some useful guidelines to follow when executing your project.
 
 *  [First Steps](bestpractices/firststeps)
 *  [Service Catalog](bestpractices/servicecatalog)
-*  [Contacts](bestpractices/contacts)
+*  [Account Contacts](bestpractices/contacts)
 *  [Cost Models](bestpractices/costmodels)
-*  [Tagging](bestpractices/tagging)
+*  [Resource Tagging](bestpractices/tagging)
