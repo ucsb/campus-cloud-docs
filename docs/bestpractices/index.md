@@ -9,8 +9,8 @@ permalink: /docs/bestpractices
 There are important considerations to take into account when defining and planning your cloud-based project.
 Here, we look at some useful guidelines to follow when executing your project.
 
-*  [First Steps](bestpractice/firststeps)
-*  [Service Catalog](bestpractice/servicecatalog)
+*  [First Steps](bestpractices/firststeps)
+*  [Service Catalog](bestpractices/servicecatalog)
 *  [Contacts](bestpractices/contacts)
 *  [Cost Models](bestpractices/costmodels)
 *  [Tagging](bestpractices/tagging)
