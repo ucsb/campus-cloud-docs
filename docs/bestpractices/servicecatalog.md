@@ -8,7 +8,7 @@ It is also possible for Account holders to submit services they have created for
 
 Find out more about the [AWS Service Catalog](https://docs.aws.amazon.com/servicecatalog/latest/dg/what-is-service-catalog.html).
 
-## Key Service Catalog items
+## Key UCSB Service Catalog Products
 The Service Catalog Products below are essential to building out your AWS projects as they provide network connectivity and initialize Group/Role use with UCSB Identity.
 
 ### Simple VPC with Campus Connectivity
