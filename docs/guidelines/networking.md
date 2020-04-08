@@ -21,7 +21,7 @@ The Campus Landing Zone provides a set of functionality
 
 
 
-![assets/img/UCSB-AWS-LZ-Network-Architecture-Production-Organization.png]({{site.url}}assets/img/gatewayhome.png)
+![assets/img/UCSB-AWS-LZ-Network-Architecture-Production-Organization.png]({{site.url}}assets/img/UCSB-AWS-LZ-Network-Architecture-Production-Organization.png)
 
 
 AWS Production Landing Zone
