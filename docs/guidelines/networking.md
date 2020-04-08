@@ -40,4 +40,4 @@ The [AWS Site-to-Site VPN](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN
 
 ### Campus Cloud Service Catalog VPC Product
 
-To make it simpler to get started. [Service Catalog](bestpractices/servicecatalog#VPC)
+To make it simpler to get started, [VPC Service Catalog Product]({{ site.baseurl }}/docs/bestpractices/servicecatalog#VPC)
