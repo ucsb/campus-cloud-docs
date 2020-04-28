@@ -8,6 +8,14 @@ permalink: /docs/guidelines/security
 
 ### AWS Security
 
+#### AWS Shared Responsibility Model
+
+Security is a shared responsibility between AWS, the Campus Cloud Team, and individual users. The [shared responsibility model](https://aws.amazon.com/compliance/shared-responsibility-model/) describes this as security of the cloud and security in the cloud:
+
+Security of the cloud – AWS is responsible for protecting the infrastructure that runs AWS services in the AWS Cloud. AWS also provides you with services that you can use securely. The effectiveness of our security is regularly tested and verified by third-party auditors as part of the [AWS compliance programs](https://aws.amazon.com/compliance/programs/). To learn about the compliance programs that apply to AWS Control Tower, see AWS Services in Scope by Compliance Program.
+
+Security in the cloud – Your responsibility is determined by the AWS services that you use. You are also responsible for other factors including the sensitivity of your data, your organization's requirements, and applicable laws and regulations.
+
 #### User Access
 
 We strongly recommend that you do not use the [root user](/glossary#rootuser) for your everyday tasks, even the administrative ones.

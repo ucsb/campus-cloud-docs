@@ -20,8 +20,6 @@
           url: "docs/guidelines/networking"
         - title: Tagging
           url: "docs/guidelines/tagging"
-        - title: Governance
-          url: "docs/guidelines/governance"
         - title: Compliance
           url: "docs/guidelines/compliance"
         - title: Security
