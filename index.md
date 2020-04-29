@@ -22,7 +22,7 @@ Using a UC-authorized cloud service provider can help you:
 The Campus Cloud AWS Landing Zone (LZ) is a participant in UC Enterprise Discount Program (EDP)
 and provides an environment of curated products and service with the following key benefits:
 
-*   11% Enterprise Discount
+*   UC-wide Enterprise Discount
 *   [Guardrails](glossary#guardrails)
 *   NIST-800-171 Compliance Guardrails
 *   Networking connectivity to campus (VPC w Public and/or Private)
