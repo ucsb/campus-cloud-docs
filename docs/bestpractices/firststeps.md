@@ -18,6 +18,8 @@ This guide assumes your account is a UCSB Campus Cloud account and that you have
 
     You will use the "Manage Group Tags" tool available at [im.ucsb.edu](https://im.ucsb.edu) to add and remove members from the above groups. Please note, you must Log in first to access the tool.
 
+    Be sure to select one of the supported Campus Cloud Regions, *US-West-2 (Oregon) or US-West-1 (N.Virginia). We recommend starting in US-West-2.*
+
 2. **Verify your Billing Alert**
 
     When you created your Purchase Order through [Gateway](https://gateway.procurement.ucsb.edu), you provided a budget and duration for your account. The Campus Cloud team has configured your account for a billing alert based on your provided budget and estimated monthly spend. If your monthly bill is forecasted to go over your budget you will get a notification. Please verify that you have an email address subscribed to the configured billing alert.
@@ -29,7 +31,7 @@ This guide assumes your account is a UCSB Campus Cloud account and that you have
     The Campus Cloud team has configured your account to have CloudTrail, Securty Hub, and Guard Duty enabled. All three services will send findings to the AWS Logging Account for inspection.
     Cloud Trail logs every AWS API call, so all actions done in the AWS console will be logged. Cloud Trail is your audit log for all activities done by those whom are granted access.
 
-4. **Enable MFA on the Root User** 
+4. **Enable MFA on the Root User**
 
     If you have been provided with root user credentials; you goal should be to enable MFA on the root user and stop using the root user for day to day tasks.
 
