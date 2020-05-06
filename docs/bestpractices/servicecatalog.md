@@ -26,7 +26,7 @@ This Product provides connectivity between the account and back to campus via a 
 Description of the VPC Families offered:
 
 |  VPC Name          |  # of Subnets  |  VPC CIDR Size  |  Type of Subnets     |  # of Availability Zones  |
-|--------------------|----------------|-----------------|----------------------|---------------------------|
+|:------------------:|:--------------:|:---------------:|:--------------------:|:-------------------------:|
 |  n1.small.public   |       1        |     32 IPs      |       1 public       |             1             |
 |  n1.small.private  |       1        |     32 IPs      |       1 private      |             1             |
 |  n1.medium.public  |       1        |     64 IPs      |       1 public       |             1             |
