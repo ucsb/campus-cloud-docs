@@ -21,7 +21,26 @@ The Service Catalog Products below are essential to building out your AWS projec
 ### [Simple VPC with Campus Connectivity](#VPC)
 * Create a simple VPC with allocated private IP space.
 
-This Product provides connectivity between the account and back to campus via a Transit Gateway (TG) and supports VPN connectivity as needed.  Not only does this save the time and configuration to set up a VPC independently but, the Campus Cloud Team is covering the costs of traffice across the TG and VPN.
+This Product provides connectivity between the account and back to campus via a Transit Gateway (TG) and supports VPN connectivity as needed.  Not only does this save the time and configuration to set up a VPC independently, but the costs of the NAT Gateways and VPN are a shared service instead of per account.
+
+Description of the VPC Families offered:
+
+|  VPC Name          |  # of Subnets  |  VPC CIDR Size  |  Type of Subnets     |  # of Availability Zones  |
+|--------------------|----------------|-----------------|----------------------|---------------------------|
+|  n1.small.public   |       1        |     32 IPs      |       1 public       |             1             |
+|  n1.small.private  |       1        |     32 IPs      |       1 private      |             1             |
+|  n1.medium.public  |       1        |     64 IPs      |       1 public       |             1             |
+|  n1.medium.private |       1        |     64 IPs      |       1 private      |             1             |
+|  n1.large.public   |       1        |     128 IPs     |       1 public       |             1             |
+|  n1.large.private  |       1        |     128 IPs     |       1 public       |             1             |
+|  n2.medium.public  |       2        |     64 IPs      |       2 public       |             2             |
+|  n2.medium.private |       2        |     64 IPs      |       2 private      |             2             |
+|  n2.medium.mixed   |       2        |     64 IPs      |  1 public 1 private  |             1             |
+|  n2.large.public   |       2        |     128 IPs     |       2 public       |             2             |
+|  n2.large.private  |       2        |     128 IPs     |       2 private      |             2             |
+|  n2.large.mixed    |       2        |     128 IPs     |  1 public 1 private  |             1             |
+|  n4.large.mixed    |       4        |     128 IPs     |  2 public 2 private  |             2             |
+
 
 ### [Create Shiboleth Group to Role Mapping](#rolemapping)
 * This Product creates an empty IAM Role (AWS) and map it to a group in the UCSB Identity system (LDAP).
