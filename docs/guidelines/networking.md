@@ -32,6 +32,8 @@ RFC 1918 Allocation
 Campus-side VPN Endpoints (us-west-2)
 128.111.38.197
 
+You will need to allow traffic from the subnets allocated to your VPC, but the larger ranges are specified above.
+
 Transit Gateway
 The [AWS Transit Gateway](https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html) is the networking hub for the organization.  Each VPC in a child account has one Transit Gateway Attachment allowing traffic to route between VPCs.  The Transit Gateway also provides routes for private subnets in child accounts to reach UCSB (via a VPN) or the general internet (via NAT).  Transit Gateways are region-wide assets.
 
