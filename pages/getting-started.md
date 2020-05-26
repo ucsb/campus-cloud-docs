@@ -85,6 +85,7 @@ You will only be able to access the AWS services after all steps below are compl
     *  Providing final instructions to activate your account
 6.  Assign users to your Account Groups.
 7.  Your account will be billed through the Master Payer Account with consolidated billing. Any monthly costs will be charged against the Purchase Order you submitted.
+8.  NOTE: As of May 16th 2020, you may use Sub 5 or Sub 7 in additional to the original requirement of Sub 3. 
 
 ### Troubleshooting the Procurement Process
 
