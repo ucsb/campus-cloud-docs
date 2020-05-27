@@ -17,7 +17,7 @@ The following are critical compliance requirements for each Campus Cloud account
 - [Data privacy classification Tagging](/campus-cloud-docs/guidelines/tagging) on account and per resource
 - Use of account must be in accordance with UC Policy IS-3
 
-### How we audit and maintain compliance?
+### How we audit and maintain compliance
 
 AWS Control Tower and  Guardrails work together to provide ongoing goverance for the Campus AWS environment. Control Tower implements preventive or detective controls that help govern resources and monitor compliance across groups of AWS accounts.  [Tagging](/campus-cloud-docs/glassoary/tags) of accounts and individual resources support compliance efforts. 
 
