@@ -25,8 +25,6 @@ Strongly Recommended Guardrails that have been enabled
 
 [Disallow Creation of Access Keys for the Root User](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#disallow-root-access-keys)
 
-[Disallow Actions as a Root User](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#disallow-root-auser-actions)
-
 [Enable Encryption for Amazon EBS Volumes Attached to Amazon EC2 Instances](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#ebs-enable-encryption)
 
 [Disallow Internet Connection Through RDP](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#rdp-disallow-internet)
