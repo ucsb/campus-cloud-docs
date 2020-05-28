@@ -8,38 +8,50 @@ permalink: /docs/guidelines/networking
 
 Introduction
 
-Start with a basic understanding of [AWS networking and VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) concepts.
+While AWS allows you to create a resouce (e.g. EC2 instance) that can be assigned a random public IP addresss in the ASW address space an Amazon VPC allows you to create an isolated portion of the AWS cloud for public and/or private subnets in UCSB Campus cloud address space. A VPC provides a number of benefits and is an elementary piece of secruity in the Cloud. 
 
-The Campus Landing Zone provides a set of functionality
+Review the basic concepts of [AWS networking and VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html).
 
+### Campus Landing Zone Network Architecture
+The Landing Zone has a presence in two Regions currently, us-west-2 (Oregon), and, us-east-1 (Virgina).  These regions have advantages in pricing and early AWS feature releases.
 
-  *   Visibility for the Network Operations Group for traffic through the transit gateway and to collect and view VPC Flow Logs from individual sub accounts.
+#### Production Landing Zone, RFC 1918 Allocation
+  - 10.226.0.0/16 (us-west-2)
+  - 10.227.0.0/16 (us-east-1)
 
-  *   VPN Connectivity back to the Campus Network.
+The Campus Cloud is using the RFC 1918 **PRIVATE** address space within its Organization structure to provide Landing Zone services to the campus community.  This private address space is also being routed over the UCSB campus networks via a VPN Gateway.
 
-  *   Inter Account connectivity and NAT Gateway access for private subnets using the transit gateway.
+The Campus Landing Zone's Network Account is at the center of most of the traffic flow. This design provides:
 
+  - Visibility for the Network Operations Center (NOC) for 
+     - traffic through the transit gateway and to 
+     - collect and view VPC Flow Logs from individual sub accounts
+  - VPN connectivity back to the campus network
+  - Inter account connectivity and NAT gateway access for private subnets using the transit gateway.
+  - Centralizing the cost for some of the traffic flow
 
+#### Landing Zone Network Diagram
+[assets/img/UCSB-AWS-LZ-Network-Architecture-Production-Organization.png]({{site.url}}assets/img/UCSB-AWS-LZ-Network-Architecture-Production-Organization.png)
 
-![assets/img/UCSB-AWS-LZ-Network-Architecture-Production-Organization.png]({{site.url}}assets/img/UCSB-AWS-LZ-Network-Architecture-Production-Organization.png)
+#### How does traffic flow ?
+Public and/or private subnets in child account VPCs are using a private address space and therefore require additional networking resources to move traffic between the general internet and campus.  
 
+Public subnet traffic in a child account utilizes the local Internet Gateway unless it is destined for campus.  So to be more precise all traffic in a public subnet NOT destined for campus used the default route to the local Internet Gateway.
 
-AWS Production Landing Zone
-RFC 1918 Allocation
-10.226.0.0/16 (us-west-2)
-10.227.0.0/16 (us-east-1)
+All other traffic in a child account will need to use the Transit Gateway, NAT Gateway or the VPN Gateway. Next, lets define these items:
 
-Campus-side VPN Endpoints (us-west-2)
-128.111.38.197
+**Transit Gateway**
+The [AWS Transit Gateway](https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html) is the networking hub for the Organization.  Each VPC in a child account has one Transit Gateway Attachment allowing traffic to route between VPCs.  The Transit Gateway also provides routes for private subnets in child accounts to reach UCSB (via a VPN) or the general internet (via NAT).  Transit Gateways are region-wide assets.
 
-You will need to allow traffic from the subnets allocated to your VPC, but the larger ranges are specified above.
+**NAT Gateway**
+The [AWS NAT Gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) provides a similar function to a normal NAT gateway in that in enables connectivity for account resources in private subnet while preventing the internet for initiating connections to those resources.
 
-Transit Gateway
-The [AWS Transit Gateway](https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html) is the networking hub for the organization.  Each VPC in a child account has one Transit Gateway Attachment allowing traffic to route between VPCs.  The Transit Gateway also provides routes for private subnets in child accounts to reach UCSB (via a VPN) or the general internet (via NAT).  Transit Gateways are region-wide assets.
+**VPN Gateway** (VPN connection to campus)
+The [AWS Site-to-Site VPN](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html) connection to UCSB is attached to the Transit Gateway.  This link is the default route for traffic from any private subnet in a child account to UCSB.  Note: Resources on public subnets route to UCSB over their own internet gateway.
+  - Campus-side VPN Endpoints (us-west-2):  128.111.38.197
 
-Campus VPN Connection
-The [AWS Site-to-Site VPN](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html) connection to UCSB is attached to the Transit Gateway.  This link is the default route for traffic from any private subnet on a child account to UCSB.  Note: Resources on public subnets route to UCSB over their own internet gateway.
+IF you are having trouble getting traffic from your child account back to campus please see our Best Practice for Enabling VPN traffic back to campus (coming soon)
 
 ### Campus Cloud Service Catalog VPC Product
 
-To make it simpler to get started, [VPC Service Catalog Product]({{ site.baseurl }}/docs/bestpractices/servicecatalog#VPC)
+These network resources need to be available to child account. To create a VPC we these resources configured the Cloud Team has created a, [VPC Service Catalog Product]({{ site.baseurl }}/docs/bestpractices/servicecatalog#VPC) that you run from your child account.  The outcome is that you will have a functional VPC with private and or public subnets and the required connectivity. Note: If this VPC product is not used you will need to setup these resources on your own.
