@@ -6,9 +6,9 @@ permalink: /docs/guidelines/networking
 
 ## AWS Networking Architecture
 
-Introduction
+###Introduction
 
-While AWS allows you to create a resouce (e.g. EC2 instance) that can be assigned a random public IP addresss in the AWS address space, an Amazon VPC allows you to create an isolated portion of the AWS cloud for public and/or private subnets in UCSB Campus cloud address space. A VPC provides a number of benefits and is an elementary piece of secruity in the Cloud. 
+While AWS allows you to create a resource (e.g. EC2 instance) that can be assigned a random public IP address in the AWS address space, an Amazon VPC allows you to create an isolated portion of the AWS cloud for public and/or private subnets in UCSB Campus cloud address space. A VPC provides a number of benefits and is an elementary piece of security in the Cloud.
 
 Review the basic concepts of [AWS networking and VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html).
 
@@ -23,8 +23,8 @@ The Campus Cloud is using the RFC 1918 **PRIVATE** address space within its Orga
 
 The Campus Landing Zone's Network Account is at the center of most of the traffic flow. This design provides:
 
-  - Visibility for the Network Operations Center (NOC) for 
-     - traffic through the transit gateway and to 
+  - Visibility for the Network Operations Center (NOC) for
+     - traffic through the transit gateway and to
      - collect and view VPC Flow Logs from individual sub accounts
   - VPN connectivity back to the campus network
   - Inter account connectivity and NAT gateway access for private subnets using the transit gateway.
@@ -36,9 +36,9 @@ The Campus Landing Zone's Network Account is at the center of most of the traffi
 #### How does traffic flow ?
 Public and/or private subnets in child account VPCs are using a private address space and therefore require additional networking resources to move traffic between the general internet and campus.  
 
-Public subnet traffic in a child account utilizes the local account Internet Gateway unless it is destined for campus.  So to be more precise, all traffic in a public subnet NOT destined for campus uses the default route to the local Internet Gateway.
+Public subnet traffic in a child account utilizes the local account Internet Gateway.
 
-All other traffic in a child account will need to use the Transit Gateway, NAT Gateway or the VPN Gateway. Next, lets define these items:
+Private subnet traffic in a child account will use the Transit Gateway, and then either the NAT Gateway or the VPN Gateway depending on the destination. Next, lets define these items:
 
 **Transit Gateway**
 The [AWS Transit Gateway](https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html) is the networking hub for the Organization.  Each VPC in a child account has one Transit Gateway Attachment allowing traffic to route between VPCs.  The Transit Gateway also provides routes for private subnets in child accounts to reach UCSB (via a VPN) or the general internet (via NAT).  Transit Gateways are region-wide assets.
