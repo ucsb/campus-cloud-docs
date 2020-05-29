@@ -47,11 +47,14 @@ The [AWS Transit Gateway](https://docs.aws.amazon.com/vpc/latest/tgw/what-is-tra
 The [AWS NAT Gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) provides a similar function to a normal NAT gateway in that in enables connectivity for account resources in private subnet while preventing the internet for initiating connections to those resources.
 
 **VPN Gateway** (VPN connection to campus)
-The [AWS Site-to-Site VPN](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html) connection to UCSB is attached to the Transit Gateway.  This link is the default route for traffic from any private subnet in a child account to UCSB.  Note: Resources on public subnets route to UCSB over their own internet gateway.
-  - Campus-side VPN Endpoints (us-west-2):  128.111.38.197
+The [AWS Site-to-Site VPN](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html) connection to UCSB is attached to the Transit Gateway.  This link is the default route for traffic from any private subnet in a child account to UCSB.  The VPN link is not intended for commodity traffic and should be used when secure network protocols are unavailable.
+
+Note: Resources on public subnets route to UCSB over their own internet gateway.
+ 
+ - Campus-side VPN Endpoints (us-west-2):  128.111.38.197
 
 
-IF you are having trouble getting traffic from your child account back to campus please see our Best Practice for Enabling VPN traffic back to campus (coming soon).
+*IF you are having trouble getting traffic from a private subnet back to campus please see our Best Practice for Enabling VPN traffic back to campus (coming soon).*
 
 ### Campus Cloud Service Catalog VPC Product
 The above network resources need to be available to a child account. To simplify the creation of a VPC with these resources configured the Cloud Team has created a, [VPC Service Catalog Product]({{ site.baseurl }}/docs/bestpractices/servicecatalog#VPC) that you run from your child account.  
