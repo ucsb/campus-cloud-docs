@@ -6,7 +6,7 @@ permalink: /docs/guidelines/networking
 
 ## AWS Networking Architecture
 
-###Introduction
+### Introduction
 
 While AWS allows you to create a resource (e.g. EC2 instance) that can be assigned a random public IP address in the AWS address space, an Amazon VPC allows you to create an isolated portion of the AWS cloud for public and/or private subnets in UCSB Campus cloud address space. A VPC provides a number of benefits and is an elementary piece of security in the Cloud.
 
@@ -21,11 +21,11 @@ The Landing Zone has a presence in two Regions currently, us-west-2 (Oregon), an
 
 The Campus Cloud is using the RFC 1918 **PRIVATE** address space within its Organization structure to provide Landing Zone services to the campus community.  This private address space is also being routed over the UCSB campus networks via a VPN Gateway.
 
-The Campus Landing Zone's Network Account is at the center of most of the traffic flow. This design provides:
+The Campus Landing Zone's Network account is at the center of most of the traffic flow. This design provides:
 
   - Visibility for the Network Operations Center (NOC) for
      - traffic through the transit gateway and to
-     - collect and view VPC Flow Logs from individual sub accounts
+     - collect and view VPC Flow Logs from individual child accounts
   - VPN connectivity back to the campus network
   - Inter account connectivity and NAT gateway access for private subnets using the transit gateway.
   - Centralizing the cost for some of the traffic flow
@@ -38,7 +38,7 @@ Public and/or private subnets in child account VPCs are using a private address 
 
 Public subnet traffic in a child account utilizes the local account Internet Gateway.
 
-Private subnet traffic in a child account will use the Transit Gateway, and then either the NAT Gateway or the VPN Gateway depending on the destination. Next, lets define these items:
+Private subnet traffic in a child account will use the Transit Gateway in the Network account, and then either the NAT Gateway or the VPN Gateway depending on the destination. Next, lets define these items:
 
 **Transit Gateway**
 The [AWS Transit Gateway](https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html) is the networking hub for the Organization.  Each VPC in a child account has one Transit Gateway Attachment allowing traffic to route between VPCs.  The Transit Gateway also provides routes for private subnets in child accounts to reach UCSB (via a VPN) or the general internet (via NAT).  Transit Gateways are region-wide assets.
@@ -51,7 +51,7 @@ The [AWS Site-to-Site VPN](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN
   - Campus-side VPN Endpoints (us-west-2):  128.111.38.197
 
 
-IF you are having trouble getting traffic from your child account back to campus please see our Best Practice for Enabling VPN traffic back to campus (coming soon)
+IF you are having trouble getting traffic from your child account back to campus please see our Best Practice for Enabling VPN traffic back to campus (coming soon).
 
 ### Campus Cloud Service Catalog VPC Product
 The above network resources need to be available to a child account. To simplify the creation of a VPC with these resources configured the Cloud Team has created a, [VPC Service Catalog Product]({{ site.baseurl }}/docs/bestpractices/servicecatalog#VPC) that you run from your child account.  
