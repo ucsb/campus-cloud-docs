@@ -44,7 +44,7 @@ While many security principles are similar in a IaaS environment, like the idea 
 - Encryption & Key Management 
    - Protect data at rest and in transit - encrypt by default is a best practice
    - Key Management - storage, backup, revokation, recovery ("you left your Key on the image!"). Got a secret, store it in AWS Secrets Mnanger
-- Managed and Monitor your environment
+- Manage and Monitor your environment
    - Configuration Managment - everything can be looked at as a software object. Automate IaaS and Dev processes where possible
    - Event Managment: Logging & Monitoring.  Logging is critical! (i.e VPC flow logs)
    - Alarms & Notifications
