@@ -29,12 +29,25 @@ To view the tasks that require you to sign in as the root user, see [AWS Tasks T
 #### Key Security Areas
 While many security principles are similar in a IaaS environment, like the idea of "defense in depth" and the use firewalls, they have evolved and are applied differently in the cloud. The cloud security model has evolved to a layered stack of integrated tools and components that are largely software-defined.
 
-- Network Security: VPC - an isolation tool, Security Groups, NACLs 
-- Encryption & Key Management - key storage,backup, revokation, recovery ("you left your Key on the image!")
-- Configuration Managment - everything can be looked at as a software object
-- Event Managment: Logging & Monitoring.  Logging is critical! (i.e VPC flow logs)
-- Identity Access & Managmeent:  IAM accounts, roles, groups, policy
-- Data life cycle - ownership, classification, rentention, disposal, ...
+- Define & categorize your data:
+  - Policy needs to be continually reviewed and updated to define, idenitfy, analyze and address risks
+  - Data privacy classification is required to be identified by resource with the use of Tags 
+  - Data life cycle - ownership, classification, rentention, disposal, ...
+- Manage AWS accounts, IAM users, Groups, Roles:
+  - AWS accounts and IAM accounts should be given least priviledge and use MFA where available, additionally use separate accounts for diffent functions or environments
+  - Groups are a powerful tool for managing access to resources.  It is a best practice to use Groups even for one or two users
+  - Roles are an extremely useful way to delegate access to users or services in an secure/temporary way
+- Network Security: 
+  - VPC - is an isolation tool and elementary part of security in the Cloud, 
+  - Security Groups (SG) are analogous to a stateful host based firewall
+  - Network ACLs are applied to a subnet and are stateless.
+- Encryption & Key Management 
+   - Protect data at rest and in transit - encrypt by default is a best practice
+   - Key Management - storage, backup, revokation, recovery ("you left your Key on the image!"). Got a secret, store it in AWS Secrets Mnanger
+- Managed and Monitor your environment
+   - Configuration Managment - everything can be looked at as a software object. Automate IaaS and Dev processes where possible
+   - Event Managment: Logging & Monitoring.  Logging is critical! (i.e VPC flow logs)
+   - Alarms & Notifications
 
 For more info see:
   [Security, Identity, and Compliance on AWS](https://aws.amazon.com/products/security/?nc=sn&loc=2)
