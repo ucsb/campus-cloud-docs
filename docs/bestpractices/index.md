@@ -14,4 +14,4 @@ Here, we look at some useful guidelines to follow when executing your project.
 *  [Account Contacts](bestpractices/contacts)
 *  [Cost Models](bestpractices/costmodels)
 *  [Resource Tagging](bestpractices/tagging)
-*  [Resource Tagging](bestpractices/vpn)
+*  [VPN traffic](bestpractices/vpn)
