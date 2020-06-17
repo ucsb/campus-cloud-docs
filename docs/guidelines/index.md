@@ -10,8 +10,9 @@ There are important considerations to take into account when defining and planni
 Here, we look at some useful guidelines to follow when executing your project.
 
 *  [Service Descriptions](guidelines/description)
-*  [Security Guidelines](guidelines/security)
-*  [Service Catalog](guidelines/servicecatalog)
+*  [Networking](guidelines/networking)
 *  [Tagging](guidelines/tagging)
+*  [Compliance](guidelines/compliance)
+*  [Security Guidelines](guidelines/security)
 
 [//]: # (This may be the most platform independent comment)
