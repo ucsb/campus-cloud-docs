@@ -15,7 +15,7 @@ NOTE: Only traffic that is unable to use secure network protocols should be rout
 
 Most cases have been resolved by modifying a campus host based firewall to except traffic from the specific IP address/subnets being used in your Campus Cloud account.  
 
-**REMEMBER these RFC 1918 private addresses (e.g. 10.x.x.x) are being routed back to campus**
+**Remember these RFC 1918 private addresses (e.g. 10.x.x.x) are being routed back to campus**
 
 If the above items are all true then the issue is likely to be local to your service or host.  We suggest you check the folowing in this order:
 
