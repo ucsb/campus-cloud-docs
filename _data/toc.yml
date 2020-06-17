@@ -37,5 +37,7 @@
           url: "docs/bestpractices/costmodels"
         - title: Resource Tagging
           url: "docs/bestpractices/tagging"
+        - title: VPN Traffic
+          url: "docs/bestpractices/vpn"
     - title: "Glossary"
       url: "glossary"
