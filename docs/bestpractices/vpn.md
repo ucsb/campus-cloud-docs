@@ -1,6 +1,7 @@
 ## Troublehsooting VPN Traffic
 
 In order to troubleshoot traffic issues to or from the Campus VPN we need to validate a few things.
+
 NOTE: Only traffic that is unable to use secure network protocols should be routed over the VPN.  The VPN path is not intended for commodity traffic. 
 
 ### FIRST - Check the Following
@@ -10,9 +11,11 @@ NOTE: Only traffic that is unable to use secure network protocols should be rout
 - AWS Security Group (SG) is allowing your specific traffic
 - AWS network ACL configured for the subnet is allowing your specific traffic IN and OUT (optional)
 
-###  Campus-centric issues - Common Solution  
+###  Common Solution - Campus-centric issues  
 
-Most cases have been resolved by modifying a host based firewall to except traffic from the specific IP address/subnets being used in your Campus Cloud account.  **REMEMBER these RFC 1918 private addresses (e.g. 10.x.x.x) are being routed back to campus **
+Most cases have been resolved by modifying a campus host based firewall to except traffic from the specific IP address/subnets being used in your Campus Cloud account.  
+
+**REMEMBER these RFC 1918 private addresses (e.g. 10.x.x.x) are being routed back to campus**
 
 If the above items are all true then the issue is likely to be local to your service or host.  We suggest you check the folowing in this order:
 
