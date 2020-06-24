@@ -18,10 +18,10 @@ Find more information, see [AWS Service Catalog](https://docs.aws.amazon.com/ser
 The Service Catalog Products below are essential to building out your AWS projects as they provide network connectivity and initialize Group/Role use with UCSB Identity. Using these products will save you time and money. Goto the "Service Catalog" service in the AWS Console and click on the "Product List" to see the Products available.
 ![UCSB Service Catalog](/campus-cloud-docs/assets/img/ucsb-servicecatalog.png)
 
-### [Create Shiboleth Group to Role Mapping](#rolemapping)
+### [Create Shibboleth Group to Role Mapping](#rolemapping)
 * This Product creates an empty IAM Role (AWS) and map it to a group in the UCSB Identity system (LDAP).
 
-After creation of the empty Role configure your role permissions by attaching an existing policy or writing a new policiy in the [AWS IAM Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html). Next manage your Shiboleth group membership via UCSB IM group tagger - https://im.ucsb.edu (Be sure to login via SSO).
+After creation of the empty Role configure your role permissions by attaching an existing policy or writing a new policiy in the [AWS IAM Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html). Next manage your Shibboleth group membership via UCSB IM group tagger - https://im.ucsb.edu (Be sure to login via SSO).
 
 Learn more about Access Management, see [Permissions and Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html)
 
