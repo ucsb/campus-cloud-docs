@@ -18,8 +18,19 @@ Find more information, see [AWS Service Catalog](https://docs.aws.amazon.com/ser
 The Service Catalog Products below are essential to building out your AWS projects as they provide network connectivity and initialize Group/Role use with UCSB Identity. Using these products will save you time and money. Goto the "Service Catalog" service in the AWS Console and click on the "Product List" to see the Products available.
 ![UCSB Service Catalog](/campus-cloud-docs/assets/img/ucsb-servicecatalog.png)
 
+
+### [Local Security Notifications](#localsecurity)
+  * This Product will create a local security SNS topic, subscribe an email, and enable notifications for AWS Config compliance (Guardrails).
+
+
+### [Fixed Monthly Budget with Notification](#monthlybudget)
+  * This Product will create a fixed cost monthly budget, and notification based on forecasted threshold.
+
+Learn more about Budgets, see [Managing your costs with AWS Budgets](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html)
+
+
 ### [Create Shiboleth Group to Role Mapping](#rolemapping)
-* This Product creates an empty IAM Role (AWS) and map it to a group in the UCSB Identity system (LDAP).
+  * This Product will create an empty IAM Role (AWS) and map it to a group in the UCSB Identity system (LDAP).
 
 After creation of the empty Role configure your role permissions by attaching an existing policy or writing a new policiy in the [AWS IAM Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html). Next manage your Shiboleth group membership via UCSB IM group tagger - https://im.ucsb.edu (Be sure to login via SSO).
 
@@ -27,7 +38,7 @@ Learn more about Access Management, see [Permissions and Policies](https://docs.
 
 
 ### [Simple VPC with Campus Connectivity](#VPC)
-* Create a simple VPC with allocated private IP space.
+  * This Product will create a simple VPC with allocated private IP space.
 
 This Product provides connectivity between the account and back to campus via a Transit Gateway (TG) and supports VPN connectivity as needed.  Not only does this save the time and configuration to set up a VPC independently, but the costs of the NAT Gateways and VPN are a shared service instead of per account.
 
