@@ -18,16 +18,13 @@ Find more information, see [AWS Service Catalog](https://docs.aws.amazon.com/ser
 The Service Catalog Products below are essential to building out your AWS projects as they provide network connectivity and initialize Group/Role use with UCSB Identity. Using these products will save you time and money. Goto the "Service Catalog" service in the AWS Console and click on the "Product List" to see the Products available.
 ![UCSB Service Catalog](/campus-cloud-docs/assets/img/ucsb-servicecatalog.png)
 
-
 ### [Local Security Notifications](#localsecurity)
   * This Product will create a local security SNS topic, subscribe an email, and enable notifications for AWS Config compliance (Guardrails).
-
 
 ### [Fixed Monthly Budget with Notification](#monthlybudget)
   * This Product will create a fixed cost monthly budget, and notification based on forecasted threshold.
 
 Learn more about Budgets, see [Managing your costs with AWS Budgets](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html)
-
 
 ### [Create Shiboleth Group to Role Mapping](#rolemapping)
   * This Product will create an empty IAM Role (AWS) and map it to a group in the UCSB Identity system (LDAP).
