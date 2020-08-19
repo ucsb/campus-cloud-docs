@@ -35,7 +35,7 @@ You can think of the tag namespace as a container for a set of tag keys. AWS has
 ### Vocabulary (LZ rev1)
 Abbreviated vocabulary shown below. See CCC Tagging workgroup Documentation for more info.
 ```
-Tag			Type			  Use Case	Cost Alloc	Namespace	LZ rev	Definition										Possible value(s)
+Tag			Type			 Use Case	Cost Alloc	Namespace	LZ rev	Definition										Possible value(s)
 ucsb:po-number		 Account:Mandatory	Business	yes		ucsb:		1	Account tag made up of fund account string associated with vendor blanket in Gateway	PO # in GW		
 ucsb:environment	 Resource:Optional	Technical	yes		ucsb:		1	Resource tag to identify criticality of resource, support automation			prod, dev, test, other
 ucsb:data-classification Resource:Mandatory	Compliance			ucsb:		1	Resource tag to ensure compliance							p1, p2, p3, p4
