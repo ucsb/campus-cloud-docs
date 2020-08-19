@@ -54,7 +54,7 @@ Note: Resources on public subnets route to UCSB over their own internet gateway.
  - Campus-side VPN Endpoints (us-west-2):  128.111.38.197
 
 
-*IF you are having trouble getting traffic from a private subnet back to campus please see our Best Practice for Enabling VPN traffic back to campus (coming soon).*
+*IF you are having trouble getting traffic from a private subnet back to campus please see our Best Practice for enabling [VPN traffic]({{ site.baseurl }}/docs/bestpractices/vpn/) back to campus.*
 
 ### Campus Cloud Service Catalog VPC Product
 The above network resources need to be available to a child account. To simplify the creation of a VPC with these resources configured the Cloud Team has created a, [VPC Service Catalog Product]({{ site.baseurl }}/docs/bestpractices/servicecatalog#VPC) that you run from your child account.  
