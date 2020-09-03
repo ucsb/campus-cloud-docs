@@ -18,6 +18,8 @@ This guide assumes your account is a UCSB Campus Cloud account and that you have
 
     You will use the "Manage Group Tags" tool available at [im.ucsb.edu](https://im.ucsb.edu) to add and remove members from the above groups. Please note, you must Log in first to access the tool.
 
+    The Campus Single Sign On page for AWS is [aws.cloud.ucsb.edu](https://aws.cloud.ucsb.edu) 
+
     Be sure to select one of the supported Campus Cloud Regions, *US-West-2 (Oregon) or US-East-1 (N.Virginia). We recommend starting in US-West-2.*
 
 2. **Verify your Billing Alert**
