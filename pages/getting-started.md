@@ -17,7 +17,7 @@ The UCSB Campus Cloud allows faculty, researchers and staff to provision and use
 For public cloud hosting, approved providers are Amazon Web Services (AWS) and Microsoft Azure.
 Using an approved provider means that:
 
-*   You have access to account management and solution architects — AWS and Zaure staff who can assist with how to use, and provide technical guidance on best practices.
+*   You have access to account management and solution architects — AWS and Azure staff who can assist with how to use, and provide technical guidance on best practices.
 *   Your vendor relationship falls under the University of California Terms & Conditions. This ensures that your agreement conforms to the UC Regents’ policies for procurement and business contracts, and reduces the financial risk to your department or division for agreements that are outside of Regental standing orders (especially with respect to third-party liability).
 
 ## [Training and Consultation](#training)
@@ -32,6 +32,7 @@ Azure recomendations Coming Soon.
 *   The UCSB [Learning Center](https://www.learningcenter.ucsb.edu/) and more specifically, [Linkedin Learning](https://www.learningcenter.ucsb.edu/content/linkedin-learning) offers courses for Cloud Computing and AWS.
 *   [Cloud Computing Topic](https://www.linkedin.com/learning/topics/cloud-computing-5)
 *   [AWS Courses](https://www.linkedin.com/learning/search?keywords=aws)
+*   [Azure Courses](https://www.linkedin.com/learning/search?keywords=azure)
 
 ### AWS Training Resources
 
@@ -39,7 +40,8 @@ Azure recomendations Coming Soon.
 
 ### Azure Training Resources
 
-* Coming Soon
+* [Azure on Microsoft Learn](https://docs.microsoft.com/en-us/learn/azure/)
+* More Coming Soon
 
 ### [Consultation](#consult)
 
