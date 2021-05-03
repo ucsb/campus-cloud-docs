@@ -14,16 +14,18 @@ tags:
 
 The UCSB Campus Cloud allows faculty, researchers and staff to provision and use computing resources from approved vendors that have agreements in place with the University of California.
 
-For public cloud hosting, an approved provider is Amazon Web Services (AWS).
+For public cloud hosting, approved providers are Amazon Web Services (AWS) and Microsoft Azure.
 Using an approved provider means that:
 
-*   You have access to account management and solution architects — AWS staff who can assist with how to use AWS, and provide technical guidance on best practices.
+*   You have access to account management and solution architects — AWS and Zaure staff who can assist with how to use, and provide technical guidance on best practices.
 *   Your vendor relationship falls under the University of California Terms & Conditions. This ensures that your agreement conforms to the UC Regents’ policies for procurement and business contracts, and reduces the financial risk to your department or division for agreements that are outside of Regental standing orders (especially with respect to third-party liability).
 
 ## [Training and Consultation](#training)
 
 It is highly recommended to have an understanding of Cloud environment concepts and methodologies. Specifically, the [Well Architected Framework](https://aws.amazon.com/architecture/well-architected/) and
 the [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/).
+
+Azure recomendations Coming Soon.
 
 ### Campus Training Resources
 
@@ -35,9 +37,13 @@ the [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-respo
 
 *   Take the free [Cloud Practitioners Training](https://www.aws.training/Details/Curriculum?id=27076)
 
+### Azure Training Resources
+
+* Coming Soon
+
 ### [Consultation](#consult)
 
-*   Consult with your local IT staff. They may have processes and protocols in place for sharing responsibility for your AWS Account.
+*   Consult with your local IT staff. They may have processes and protocols in place for sharing responsibility for your AWS or Azure Account(s).
 *   Consult with the Campus Cloud Team.
 
 ## [Budgeting](#budgeting)
@@ -47,13 +53,15 @@ Before you start the procurement process, you will need to estimate your monthly
 *   AWS Cost Calculator
     *   [Simple Monthly Calculator](https://calculator.s3.amazonaws.com/index.html)
 	  *   The new [Pricing Calculator](https://calculator.aws/#/)
+*   Azure Pricing Calculator
+	  * [Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/?&ef_id=Cj0KCQjwvr6EBhDOARIsAPpqUPHPjtVqbRjubykatJR6m_x7p-TMY9WOmVU-YjF-LqNc4-ambKzOU8AaAk02EALw_wcB:G:s&OCID=AID2100131_SEM_Cj0KCQjwvr6EBhDOARIsAPpqUPHPjtVqbRjubykatJR6m_x7p-TMY9WOmVU-YjF-LqNc4-ambKzOU8AaAk02EALw_wcB:G:s&gclid=Cj0KCQjwvr6EBhDOARIsAPpqUPHPjtVqbRjubykatJR6m_x7p-TMY9WOmVU-YjF-LqNc4-ambKzOU8AaAk02EALw_wcB)   	  
 
-## [Procure an AWS Account](#procurement)
+## [Procure an AWS/Azure Account](#procurement)
 
-This is the first step for both new AWS accounts and existing AWS accounts that you wish to migrate to the Campus Cloud.
-Follow the instructions below to ensure that an AWS account for UCSB business is covered under this agreement and in compliance with UC policy and applicable laws.
+This is the first step for Azure accounts, new AWS accounts and existing AWS accounts that you wish to migrate to the Campus Cloud.
+Follow the instructions below to ensure that an AWS/Azure account for UCSB business is covered under this agreement and in compliance with UC policy and applicable laws.
 
-You will only be able to access the AWS services after all steps below are completed and the UCSB Campus Cloud team creates your AWS account.
+You will only be able to access the AWS/Azure services after all steps below are completed and the UCSB Campus Cloud team creates your AWS/Azure account.
 
 1.  Log in to the UCSB Gateway Procurement System
 2.  Complete the Campus Cloud Form.
@@ -80,8 +88,8 @@ You will only be able to access the AWS services after all steps below are compl
    and submit your requisition.
 
 4.  The Campus Cloud team will receive your Purchase Order and contact you to schedule a meeting finalizing your account.
-5.  After this meeting you will receive an activation email from AWS:
-    *  Confirming that the account is set up for invoicing under the UC AWS agreement, and
+5.  After this meeting you will receive an activation email from AWS/Azure:
+    *  Confirming that the account is set up for invoicing under the UC AWS or Azure agreement, and
     *  Providing final instructions to activate your account
 6.  Assign users to your Account Groups.
 7.  Your account will be billed through the Master Payer Account with consolidated billing. Any monthly costs will be charged against the Purchase Order you submitted.
