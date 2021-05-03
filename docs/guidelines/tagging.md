@@ -34,7 +34,7 @@ You can think of the tag namespace as a container for a set of tag keys. AWS has
 *   Local namespace prefix = ucsb:dept:\<CODE> with \<CODE> equal to 4 character Chart of Accounts code (capitalized)
 *   Example: ucsb:dept:GSED
 
-### Vocabulary (LZ rev1)
+### Vocabulary (LZ rev2)
 Abbreviated vocabulary shown below. See CCC Tagging workgroup Documentation for more info.
 ```
 Tag			Type			 Use Case	Cost Alloc	Namespace	LZ rev	Definition										Possible value(s)
