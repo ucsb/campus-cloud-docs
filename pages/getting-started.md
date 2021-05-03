@@ -14,7 +14,8 @@ tags:
 
 The UCSB Campus Cloud allows faculty, researchers and staff to provision and use computing resources from approved vendors that have agreements in place with the University of California.
 
-For public cloud hosting, approved providers are Amazon Web Services (AWS) and Microsoft Azure.
+For public cloud hosting, approved providers are Amazon Web Services (AWS), Microsoft Azure and coming soon Google Cloud Platform (GCP). Each cloud provider provides an Account, a Subscription or a Project, respectively.  These Campus Cloud Docs will collectively refer to these resources as a "Campus Cloud Account" when specificity is not required. 
+
 Using an approved provider means that:
 
 *   You have access to account management and solution architects — AWS and Azure staff who can assist with how to use, and provide technical guidance on best practices.
@@ -22,10 +23,9 @@ Using an approved provider means that:
 
 ## [Training and Consultation](#training)
 
-It is highly recommended to have an understanding of Cloud environment concepts and methodologies. Specifically, the [Well Architected Framework](https://aws.amazon.com/architecture/well-architected/) and
-the [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/).
+It is highly recommended to have an understanding of Cloud environment concepts and methodologies. Specifically, AWS' [Well Architected Framework](https://aws.amazon.com/architecture/well-architected/) and [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/).
 
-Azure recomendations Coming Soon.
+[Microsoft's Cloud Adoption Framework for Azure](https://azure.microsoft.com/en-us/cloud-adoption-framework/#:~:text=The%20Cloud%20Adoption%20Framework%20provides,the%20framework%20is%20updated%20regularly.) is similiarly recomended for Azure.
 
 ### Campus Training Resources
 
@@ -45,7 +45,7 @@ Azure recomendations Coming Soon.
 
 ### [Consultation](#consult)
 
-*   Consult with your local IT staff. They may have processes and protocols in place for sharing responsibility for your AWS or Azure Account(s).
+*   Consult with your local IT staff. They may have processes and protocols in place for sharing responsibility for your Campus Cloud Account(s).
 *   Consult with the Campus Cloud Team.
 
 ## [Budgeting](#budgeting)
@@ -58,12 +58,12 @@ Before you start the procurement process, you will need to estimate your monthly
 *   Azure Pricing Calculator
 	  * [Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/?&ef_id=Cj0KCQjwvr6EBhDOARIsAPpqUPHPjtVqbRjubykatJR6m_x7p-TMY9WOmVU-YjF-LqNc4-ambKzOU8AaAk02EALw_wcB:G:s&OCID=AID2100131_SEM_Cj0KCQjwvr6EBhDOARIsAPpqUPHPjtVqbRjubykatJR6m_x7p-TMY9WOmVU-YjF-LqNc4-ambKzOU8AaAk02EALw_wcB:G:s&gclid=Cj0KCQjwvr6EBhDOARIsAPpqUPHPjtVqbRjubykatJR6m_x7p-TMY9WOmVU-YjF-LqNc4-ambKzOU8AaAk02EALw_wcB)   	  
 
-## [Procure an AWS/Azure Account](#procurement)
+## [Procure a Campus Cloud Account](#procurement)
 
-This is the first step for Azure accounts, new AWS accounts and existing AWS accounts that you wish to migrate to the Campus Cloud.
-Follow the instructions below to ensure that an AWS/Azure account for UCSB business is covered under this agreement and in compliance with UC policy and applicable laws.
+This is the first step for an Azure Subscription, new AWS Accounts and existing AWS Accounts that you wish to migrate to the Campus Cloud.
+Follow the instructions below to ensure that you Campus Cloud Account used for UCSB business is covered under this agreement and in compliance with UC policy and applicable laws.
 
-You will only be able to access the AWS/Azure services after all steps below are completed and the UCSB Campus Cloud team creates your AWS/Azure account.
+You will only be able to access the Campus Cloud Account and its resources after all steps below are completed and the UCSB Campus Cloud team creates your account.
 
 1.  Log in to the UCSB Gateway Procurement System
 2.  Complete the Campus Cloud Form.
