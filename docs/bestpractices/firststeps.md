@@ -48,7 +48,7 @@ This guide assumes your account is a UCSB Campus Cloud account and that you have
 
 6. **AWS Enterprise Support**
    *  [Enterprise support](https://aws.amazon.com/premiumsupport/features/) is available to all child accounts. To get started use the Support drop-dwon at the top right when logged in to your Landing Zone account.
-   *  Plan provides web, email,chat, and phone access to support
+   *  Plan provides web, email, chat, and phone access to support
    *  A Technical Account Manager (TAM) and Concierge Team is provided and shared across the participating UCs
    *  Single support charge billed at the EDP AWS Organization Payer account
 
