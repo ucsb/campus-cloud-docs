@@ -46,10 +46,9 @@ This guide assumes your account is a UCSB Campus Cloud account and that you have
 
 5. **Configure your account’s [alternate contacts](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-account-payment.html#account-contacts)** to point to a group rather than an individual. For example, create separate email distribution lists for billing, operations, and security and configure these as Billing, Security, and Operations contacts in each active AWS account. This ensures that multiple people will receive AWS notifications and be able to respond, even if someone is on vacation, changes roles, or leaves the company. For details see the [Best Practices for Contacts]({{site.url}}/docs/bestpractices/contacts).
 
-<!-- **For critical production services, you should sign up for an [AWS support plan](https://aws.amazon.com/premiumsupport/features/)** that aligns with your organization’s support expectations. Business and Enterprise support plans provide additional contact mechanisms (web, chat, and phone) that are especially useful when a customer needs an immediate response from AWS. -->
-
 6. **AWS Enterprise Support**
    *  [Enterprise support](https://aws.amazon.com/premiumsupport/features/) is available to all child accounts. To get started use the Support drop-dwon at the top right when logged in to your Landing Zone account.
+   *  Plan provides web, email,chat, and phone access to support
    *  A Technical Account Manager (TAM) and Concierge Team is provided and shared across the participating UCs
    *  Single support charge billed at the EDP AWS Organization Payer account
 
