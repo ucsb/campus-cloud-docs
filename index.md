@@ -23,6 +23,7 @@ The Campus Cloud AWS Landing Zone (LZ) is a participant in UC Enterprise Discoun
 and provides an environment of curated products and service with the following key benefits:
 
 *   UC-wide Enterprise [Discount](https://cio.ucop.edu/uc-gets-discount-for-amazon-web-services/)
+*   Enterprise Support Program
 *   [Guardrails](glossary#guardrails)
 *   NIST-800-171 Compliance Guardrails
 *   Networking connectivity to campus (VPC w Public and/or Private)
