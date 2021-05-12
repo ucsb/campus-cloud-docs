@@ -49,7 +49,7 @@ This guide assumes your account is a UCSB Campus Cloud account and that you have
 <!-- **For critical production services, you should sign up for an [AWS support plan](https://aws.amazon.com/premiumsupport/features/)** that aligns with your organization’s support expectations. Business and Enterprise support plans provide additional contact mechanisms (web, chat, and phone) that are especially useful when a customer needs an immediate response from AWS. -->
 
 6. **AWS Enterprise Support**
-   *  [Enterprise support](https://aws.amazon.com/premiumsupport/features/) is available to all child accounts
+   *  [Enterprise support](https://aws.amazon.com/premiumsupport/features/) is available to all child accounts. To get started use the Support drop-dwon at the top right when logged in to your Landing Zone account.
    *  A Technical Account Manager (TAM) and Concierge Team is provided and shared across the participating UCs
    *  Single support charge billed at the EDP AWS Organization Payer account
 
