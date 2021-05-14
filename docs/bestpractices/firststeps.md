@@ -13,14 +13,15 @@ These First Steps are unique to each Cloud Provider.
 Please follow the First Step best practices below for the relevant Cloud Provider after you access you Campus Cloud Account.
 
 ## First Steps:
+
 ## * [AWS Cloud Account](bestpractices/awsfirststeps)
 
    Follow these steps for your AWS Cloud Account
 
-* [Azure Cloud Account](bestpractices/azurefirststeps)
+## * [Azure Cloud Account](bestpractices/azurefirststeps)
 
 Follow these steps for your AWS Cloud Account
 
-* GCP Cloud Account
+## * GCP Cloud Account
 
    Coming Soon
