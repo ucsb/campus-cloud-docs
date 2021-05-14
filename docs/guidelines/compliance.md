@@ -17,7 +17,7 @@ In order to receive Federal funding the Campus needs to comply with NIST 800-171
 The following are critical compliance requirements for each Campus Cloud account:
 - Enable MFA for the root user
 - Define contact information for the account owner and for incident response
-- [Data privacy classification Tagging](guidelines/tagging) on account and per resource
+- [Data privacy classification Tagging](tagging) on account and per resource
 - Use of account must be in accordance with UC Policy IS-3
 
 ### How we audit and maintain compliance
@@ -27,13 +27,12 @@ The Campus Cloud Providers - AWS, Azure, GCP - may differ in the specific termin
 * ### AWS Guardrails
     In AWS Control Tower and  Guardrails work together to provide ongoing goverance for the Campus AWS environment. Control Tower implements preventive or detective controls that help govern resources and monitor compliance across groups of AWS accounts.  [Tagging](/campus-cloud-docs/glassoary/tags) of accounts and individual resources support compliance efforts. In AWS Gurdrails are rules that define policy. 
     
-    * ### [AWS Active Guardrails as of May 2020](guidelines/guardrails.aws)
-
+    * ### [AWS Active Guardrails as of May 2020](guardrails.aws)
 
 
 * ### Azure Guardrails
     Azure utilized built-in and custom policies to set guardrails in your subscriptions. Guardrails for Azure are built using Azure Policy and RBAC to enforce and audit policies for any Azure service.
     
-    * ### [Azure Active Guardrails as of May 2020](guidelines/guardrails.azure)
+    * ### [Azure Active Guardrails as of May 2020](guardrails.azure)
 
 
