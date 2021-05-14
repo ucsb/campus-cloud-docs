@@ -8,10 +8,10 @@ permalink: /docs/guidelines/compliance
 In order to receive Federal funding the Campus needs to comply with NIST 800-171 Federal standards.  UC Policy, IS-3, mandates our requirements for Information Security. The Campus Cloud environment is designed to comply with these standards.
 
 ### NIST 800-171
-* [NIST 800-171 Rev 2](https://csrc.nist.gov/publications/detail/sp/800-171/rev-2/final)
+* ### [NIST 800-171 Rev 2](https://csrc.nist.gov/publications/detail/sp/800-171/rev-2/final)
 
 ### IS-3 UC Information Security
-* [IS-3](https://security.ucop.edu/policies/it-policies.html)
+* ### [IS-3](https://security.ucop.edu/policies/it-policies.html)
 
 ### Account Compliance
 The following are critical compliance requirements for each Campus Cloud account:
@@ -26,6 +26,7 @@ The Campus Cloud Providers - AWS, Azure, GCP - may differ in the specific termin
 
 * ### AWS Guardrails
     In AWS Control Tower and  Guardrails work together to provide ongoing goverance for the Campus AWS environment. Control Tower implements preventive or detective controls that help govern resources and monitor compliance across groups of AWS accounts.  [Tagging](/campus-cloud-docs/glassoary/tags) of accounts and individual resources support compliance efforts. In AWS Gurdrails are rules that define policy. 
+    
     * ### [AWS Active Guardrails as of May 2020](compliance/guardrails.aws)
 
 
