@@ -16,10 +16,10 @@ Please follow the First Step best practices below for the relevant Cloud Provide
 
 ## First Steps:
 
-* ### [AWS Cloud Account](bestpractices/awsfirststeps)
+* ### [AWS Cloud Account](awsfirststeps)
     Follow these steps for your AWS Cloud Account
 
-* ### [Azure Cloud Account](bestpractices/azurefirststeps)
+* ### [Azure Cloud Account](azurefirststeps)
     Follow these steps for your Azure Cloud Account
 
 * ### GCP Cloud Account
