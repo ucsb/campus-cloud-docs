@@ -29,6 +29,7 @@ The Campus Cloud Providers - AWS, Azure, GCP - may differ in the specific termin
 
 * ### Azure
     Azure utilized built-in and custom policies to set guardrails in your subscriptions. Guardrails for Azure are built using Azure Policy and RBAC to enforce and audit policies for any Azure service
+    
     ### [Azure Active Guardrails as of May 2020](compliance/guardrails.azure)
 
 
