@@ -4,11 +4,11 @@ description: Tagging Guidelines
 permalink: /docs/guidelines/tagging
 ---
 
-## AWS & Azure Tagging
+## Tagging Guidelines
 NOTE: Tagging guidelines have been updated as of 4/29/21 Cloud Champions meeting. See included notes below
 
-### Tagging
-Tagging allows customers to add a helpful labels to AWS resources. These labels are technically called Tags and help manage your resources.  The UCSB Campus Cloud team will utilize Tags to organize the AWS Campus Cloud Landing Zone (LZ) environment and to make invoicing efficient and user friendly.
+### What are Tags ?
+Tagging allows customers to add a helpful labels to Cloud resources. These labels are technically called Tags and help manage your resources in AWS, Azure adn GCP.  The UCSB Campus Cloud team will utilize Tags to organize the AWS Campus Cloud Landing Zone (LZ) environment and to make invoicing efficient and user friendly.
 
 Tags can also be used independently by account holders in the AWS Campus Cloud LZ.  In order to user Tags effectively we will define a namespace, vocabulary, and [best practices]({{ site.baseurl }}/docs/bestpractices).
 
@@ -21,7 +21,7 @@ You can use tags to categorize resources by po-number, environment, ~~data-class
 For more information, see [AWS Tagging Strategies](https://aws.amazon.com/answers/account-management/aws-tagging-strategies/) and [Azure Tagging Best Practices](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging)
 
 
-#### Table of Contents
+#### Campus Cloud Tagging
 *   Namespace
 *   Vocabulary
 *   Vocabulary Definitions
