@@ -10,6 +10,6 @@ This guide assumes your account is a UCSB Campus Cloud account and that you have
 
 1. **Log in to your Azure (Subscription)Account**. The Campus Cloud team has configured new accounts to use the UCSB Identity system  (netid credentials) for user authentication. Your account will come with a few pre-defined roles.
 2. **Verify Billing**
-3. **Verify Security.Compliance/Gurdrails**
+3. **Verify Security/Compliance/Guardrails**
 4. **Support for Production Services**. Groups running productions services may want to consider an [Azure support plan](https://portal.azure.com/#blade/Microsoft_Azure_Support/SupportPlansBlade) beyond the included Basic plan.
 5. **Network Connectivity**
