@@ -23,8 +23,8 @@ The Campus Cloud Providers - AWS, Azure, GCP - may differ in the specific termin
 
 * ### AWS
     In AWS Control Tower and  Guardrails work together to provide ongoing goverance for the Campus AWS environment. Control Tower implements preventive or detective controls that help govern resources and monitor compliance across groups of AWS accounts.  [Tagging](/campus-cloud-docs/glassoary/tags) of accounts and individual resources support compliance efforts. In AWS Gurdrails are rules that define policy. 
-** ### [AWS Active Guardrails as of May 2020](compliance/guardrails.aws)
-
+    * test
+    [AWS Active Guardrails as of May 2020](compliance/guardrails.aws)
 
 * ### Azure
     Azure utilized built-in and custom policies to set guardrails in your subscriptions. Guardrails for Azure are built using Azure Policy and RBAC to enforce and audit policies for any Azure service
