@@ -5,7 +5,7 @@ Guardrails are categorized according to their behavior and their guidance. The b
 
 The CAF Enterprise Scale for Terraform includes a MVP list of guardrails
 
-### Active Azure Guardrails as of Dec 2020
+### Azure Active Guardrails as of Dec 2020
 
 -   ES-Allowed-Resource-Locations - Enabled
     Specifies the allowed locations (regions) where resources can be deployed
