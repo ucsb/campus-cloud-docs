@@ -1,4 +1,12 @@
-#### AWS Active Guardrails as of May 2020
+The Campus Cloud uses the AWS Control Tower Service as the primary tool for creating, maintaining, and implementing policies and controls.
+Guardrails are the high-level rules that help define AWS policy.
+
+Guardrails are categorized according to their behavior and their guidance. The behavior of each guardrail is either preventive or detective. Guardrail guidance refers to the recommended practice for how to apply each guardrail to your OUs. The guidance of a guardrail is independent of whether its behavior is preventive or detective.
+
+See AWS Documentation for a complete [Guardrail Reference](https://docs.aws.amazon.com/controltower/latest/userguide/guardrails-reference.html)
+
+
+### AWS Active Guardrails as of May 2020
 
 Mandatory Guardrails are enabled by default when you set up Control Tower Landing Zone and can't be disabled. AWS Maintains the list of [Mandatory Guardrails](https://docs.aws.amazon.com/controltower/latest/userguide/mandatory-guardrails.html).
 
