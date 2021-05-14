@@ -20,7 +20,7 @@ The following are critical compliance requirements for each Campus Cloud account
 - [Data privacy classification Tagging](tagging) on account and per resource
 - Use of account must be in accordance with UC Policy IS-3
 
-### How we audit and maintain compliance
+### How we Audit and Maintain Compliance
 
 The Campus Cloud Providers - AWS, Azure, GCP - may differ in the specific terminology and tools used to audit and maintain compliance. However, each Cloud Provider offers resources to help maintain compliance.  One important resource is Guardrails.  
 
@@ -30,9 +30,8 @@ The Campus Cloud Providers - AWS, Azure, GCP - may differ in the specific termin
     * ### [AWS Active Guardrails as of May 2020](guardrails.aws)
 
 <br>
+
 * ### Azure Guardrails
     Azure utilized built-in and custom policies to set guardrails in your subscriptions. Guardrails for Azure are built using Azure Policy and RBAC to enforce and audit policies for any Azure service.
     
     * ### [Azure Active Guardrails as of May 2020](guardrails.azure)
-
-
