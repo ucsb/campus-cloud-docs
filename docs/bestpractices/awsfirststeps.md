@@ -1,7 +1,7 @@
 ---
 title: AWS First Steps
 description: First Steps after you access your AWS Cloud Account
-permalink: /docs/bestpractices/firststeps
+permalink: /docs/bestpractices/awsfirststeps
 ---
 
 ## AWS Account First Steps
