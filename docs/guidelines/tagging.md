@@ -21,7 +21,7 @@ You can use tags to categorize resources by po-number, environment, ~~data-class
 For more information, see [AWS Tagging Strategies](https://aws.amazon.com/answers/account-management/aws-tagging-strategies/) and [Azure Tagging Best Practices](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging)
 
 
-#### Campus Cloud Tagging
+## Campus Cloud Tagging
 *   Namespace
 *   Vocabulary
 *   Vocabulary Definitions
