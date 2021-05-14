@@ -10,6 +10,8 @@ This guide assumes your account is a UCSB Campus Cloud account and that you have
 
 These First Steps are unique to each Cloud Provider. 
 
+
+
 Please follow the First Step best practices below for the relevant Cloud Provider after you access you Campus Cloud Account.
 
 ## First Steps:
