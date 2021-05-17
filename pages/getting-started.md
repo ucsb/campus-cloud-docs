@@ -14,7 +14,7 @@ tags:
 
 The UCSB Campus Cloud allows faculty, researchers and staff to provision and use computing resources from approved vendors that have agreements in place with the University of California.
 
-For public cloud hosting, approved providers are Amazon Web Services (AWS), Microsoft Azure and coming soon Google Cloud Platform (GCP). Each cloud provider provides an Account, a Subscription or a Project, respectively.  These Campus Cloud Docs will collectively refer to these resources as a "Campus Cloud Account" when specificity is not required. 
+For public cloud hosting, approved providers are Amazon Web Services (AWS), Microsoft Azure and coming soon Google Cloud Platform (GCP). Each cloud provider provides an Account, a Subscription or a Project, respectively.  These Campus Cloud Docs will collectively refer to these resources as a [Campus Cloud Account](campuscloudaccount) when specificity is not required. 
 
 Using an approved provider means that:
 
