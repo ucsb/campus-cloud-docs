@@ -25,7 +25,7 @@ The following are critical compliance requirements for each Campus Cloud account
 The Campus Cloud Providers - AWS, Azure, GCP - may differ in the specific terminology and tools used to audit and maintain compliance. However, each Cloud Provider offers resources to help maintain compliance.  One important resource is Guardrails.  
 
 * ### AWS Guardrails
-    In AWS Control Tower and  Guardrails work together to provide ongoing goverance for the Campus AWS environment. Control Tower implements preventive or detective controls that help govern resources and monitor compliance across groups of AWS accounts.  [Tagging](/campus-cloud-docs/glassoary/tags) of accounts and individual resources support compliance efforts. In AWS Gurdrails are rules that define policy. 
+    In AWS Control Tower and  Guardrails work together to provide ongoing goverance for the Campus AWS environment. Control Tower implements preventive or detective controls that help govern resources and monitor compliance across groups of AWS accounts.  [Tagging](/campus-cloud-docs/glossary/#tags) of accounts and individual resources support compliance efforts. In AWS Gurdrails are rules that define policy. 
     
     * ### [AWS Active Guardrails as of May 2020](guardrails.aws)
 
