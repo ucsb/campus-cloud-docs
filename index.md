@@ -3,6 +3,7 @@ layout: page
 title: "Campus Cloud Docs - Home"
 permalink: /
 ---
+## UCSB Campus Cloud
 
 ### Features and Benefits
 
@@ -10,7 +11,7 @@ Cloud services provide an efficient way to store data, access files, and develop
 The UC system has negotiated contracts with some providers to ensure that UC employees have access to cloud services
 that meet UC requirements for security, privacy and liability.
 
-Using a UC-authorized cloud service provider can help you:
+Using a UC-authorized cloud service provider in the Campus Cloud can help you:
 
 *   Keep data safe and secure, protecting it from unauthorized third party access
 *   Meet federal and state regulations about storing/managing sensitive data
@@ -19,15 +20,19 @@ Using a UC-authorized cloud service provider can help you:
 
 #### AWS Campus Cloud
 
-The Campus Cloud AWS Landing Zone (LZ) is a participant in UC Enterprise Discount Program (EDP)
+The Campus Cloud's AWS Landing Zone (LZ) is a participant in UC Enterprise Discount Program (EDP)
 and provides an environment of curated products and service with the following key benefits:
 
 *   UC-wide Enterprise [Discount](https://cio.ucop.edu/uc-gets-discount-for-amazon-web-services/)
+*   S3 Storage Discount (S3, S3-IA, S3 one-zone IA, Glacier)
 *   Enterprise Support Program
 *   [Guardrails](glossary#guardrails)
 *   NIST-800-171 Compliance Guardrails
-*   Networking connectivity to campus (VPC w Public and/or Private)
+*   Networking connectivity to campus (VPC w Public and/or Private subnet options)
 *   Visibility & observability
+
+#### Microsoft Azure Campus Cloud
+The Campus Cloud's Azure Environment provides a discount program as well as compliance, networking, visibility and analysis.
 
 ### Getting Started
 
@@ -35,4 +40,4 @@ To get started using the Campus Cloud, please see the [Getting Started](getting-
 
 ### Questions/Contact
 
-Contact Info
+info@cloud.ucsb.edu
