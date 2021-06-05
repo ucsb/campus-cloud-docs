@@ -36,11 +36,11 @@ The Campus Cloud's Azure Environment provides a discount program, compliance "gu
 
 ### Getting Started
 
-To get started using the Campus Cloud, please see the [Getting Started](getting-started) guide
+To get started using the Campus Cloud, please see the [Getting Started](getting-started) guide.
 
 ### Questions/Contact
 
-#### For general questions - info@cloud.ucsb.edu
-#### For problems or quesions involving your Campus Cloud Account please submit a Service Now ticket
+For general questions - info@cloud.ucsb.edu
+For problems or quesions involving your Campus Cloud Account please submit a Service Now ticket.
 
 ![assets/img/service-now.png]({{site.url}}assets/img/service-now.png)
