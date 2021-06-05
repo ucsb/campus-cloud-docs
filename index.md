@@ -21,7 +21,7 @@ Using a UC-authorized cloud service provider in the Campus Cloud can help you:
 #### AWS Campus Cloud
 
 The Campus Cloud's AWS Landing Zone (LZ) is a participant in UC Enterprise Discount Program (EDP)
-and provides an environment of curated products and service with the following key benefits:
+and provides an environment of curated products and services with the following key benefits:
 
 *   UC-wide Enterprise [Discount](https://cio.ucop.edu/uc-gets-discount-for-amazon-web-services/)
 *   S3 Storage Discount (S3, S3-IA, S3 one-zone IA, Glacier)
@@ -32,7 +32,7 @@ and provides an environment of curated products and service with the following k
 *   Visibility & observability
 
 #### Microsoft Azure Campus Cloud
-The Campus Cloud's Azure Environment provides a discount program as well as compliance, networking, visibility and analysis.
+The Campus Cloud's Azure Environment provides a discount program, compliance "guardrails", networking connectivity to campus plus visibility and observability resources.
 
 ### Getting Started
 
@@ -40,4 +40,6 @@ To get started using the Campus Cloud, please see the [Getting Started](getting-
 
 ### Questions/Contact
 
-info@cloud.ucsb.edu
+For general questions - info@cloud.ucsb.edu
+For problems or quesions involving your Campus Cloud Account please submit a Service Now ticket
+![assets/img/service-now.png]({{site.url}}assets/img/service-now.png)
