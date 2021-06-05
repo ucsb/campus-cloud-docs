@@ -40,6 +40,7 @@ To get started using the Campus Cloud, please see the [Getting Started](getting-
 
 ### Questions/Contact
 
-For general questions - info@cloud.ucsb.edu
-For problems or quesions involving your Campus Cloud Account please submit a Service Now ticket
+#### For general questions - info@cloud.ucsb.edu
+#### For problems or quesions involving your Campus Cloud Account please submit a Service Now ticket
+
 ![assets/img/service-now.png]({{site.url}}assets/img/service-now.png)
