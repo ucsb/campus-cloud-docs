@@ -78,13 +78,15 @@ You will only be able to access the Campus Cloud Account and its resources after
 
 3.  Add the completed form to your Cart.
 	
-	Verify that you have set the correct Commodity Code **81110000**
+	Verify that you have set the correct Commodity Code: **81110000**
 	
 	![assets/img/gatewaycart-commoditycode.png]({{site.url}}assets/img/gatewaycart-commoditycode.png)
-	and Object Code **7185**
+	
+	and Object Code: **7185**
+	
 	![assets/img/gatewaycart-objectcode.png]({{site.url}}assets/img/gatewaycart-objectcode.png)	 
-	when you finalize your cart, check the Special Handling Code **GCT**
-	and submit your requisition.
+	
+	when you finalize your cart, check the Special Handling Cod:e **GCT** and submit your requisition.
 
 4.  The Campus Cloud team will receive your Purchase Order and contact you to schedule a meeting finalizing your account.
 5.  After this meeting you will receive an activation email from AWS/Azure:
@@ -92,7 +94,8 @@ You will only be able to access the Campus Cloud Account and its resources after
     *  Providing final instructions to activate your account
 6.  Assign users to your Account Groups.
 7.  Your account will be billed through the Master Payer Account with consolidated billing. Any monthly costs will be charged against the Purchase Order you submitted.
-8.  NOTE: As of May 16th 2020, you may use Sub 5 or Sub 7 in additional to the original requirement of Sub 3. 
+
+NOTE: As of May 16th 2020, you may use Sub 5 or Sub 7 in additional to the original requirement of Sub 3. 
 
 ### Troubleshooting the Procurement Process
 
