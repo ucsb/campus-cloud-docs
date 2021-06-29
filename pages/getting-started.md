@@ -77,7 +77,9 @@ You will only be able to access the Campus Cloud Account and its resources after
 	![assets/img/gatewayform.png]({{site.url}}assets/img/gatewayform.png)
 
 3.  Add the completed form to your Cart.
+	
 	Verify that you have set the correct Commodity Code **81110000**
+	
 	![assets/img/gatewaycart-commoditycode.png]({{site.url}}assets/img/gatewaycart-commoditycode.png)
 	and Object Code **7185**
 	![assets/img/gatewaycart-objectcode.png]({{site.url}}assets/img/gatewaycart-objectcode.png)	 
