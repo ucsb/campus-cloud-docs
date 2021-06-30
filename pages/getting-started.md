@@ -86,7 +86,7 @@ You will only be able to access the Campus Cloud Account and its resources after
 	
 	![assets/img/gatewaycart-objectcode.png]({{site.url}}assets/img/gatewaycart-objectcode.png)	 
 	
-	when you finalize your cart, check the Special Handling Cod:e **GCT** and submit your requisition.
+	when you finalize your cart, check the Special Handling Code: **GCT** and submit your requisition.
 
 4.  The Campus Cloud team will receive your Purchase Order and contact you to schedule a meeting finalizing your account.
 5.  After this meeting you will receive an activation email from AWS/Azure:
