@@ -40,6 +40,7 @@ Abbreviated vocabulary shown below. See CCC Tagging workgroup Documentation for 
 Tag			Type			 Use Case	Cost Alloc	Namespace	LZ rev	Definition										Possible value(s)
 ucsb:po-number		 Account:Mandatory	Business	yes		ucsb:		1	Account tag made up of fund account string associated with vendor blanket in Gateway	PO # in GW		
 ucsb:environment	 Resource:Optional	Technical	yes		ucsb:		1	Resource tag to identify criticality of resource, support automation			prod, dev, test, other
+ucsb:environment:name	 Resource:Optional	Technical	yes		ucsb:		1	Resource tag to describe the environment			(Less than 16 Alphanumeric characters)
 ucsb:protection-level    Resource:Mandatory	Compliance			ucsb:		2	Resource tag to ensure compliance							p1, p2, p3, p4
 ucsb:availability-level  Resource:Optional	Compliance			ucsb:		2	Resource tag to ensure compliance							a1, a2, a3, a4
 ucsb:business-service	 Resource:Required	Technical	yes		ucsb:		1	Resource tag to organize resources that support an application or service		any
