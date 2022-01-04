@@ -14,20 +14,20 @@ Strongly Recommended Guardrails that have been enabled:
 
 - [Disallow Creation of Access Keys for the Root User](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#disallow-root-access-keys) September 5, 2019
 
-- [Detect whether encryption is enabled for Amazon EBS volumes attached to Amazon EC2 instances/Enable Encryption for Amazon EBS Volumes Attached to Amazon EC2 Instances](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#ebs-enable-encryption)  August 25, 2019 (name updated)
+- [Detect whether encryption is enabled for Amazon EBS volumes attached to Amazon EC2 instances (Enable Encryption for Amazon EBS Volumes Attached to Amazon EC2 Instances)](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#ebs-enable-encryption)  August 25, 2019 (name updated)
 
 - ~~[Disallow Internet Connection Through RDP](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#rdp-disallow-internet)~~
 
-- [Detect whether unrestricted internet connection through SSH is allowed/Disallow Internet Connection Through SSH](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#ssh-disallow-internet) June 24, 2019
+- [Detect whether unrestricted internet connection through SSH is allowed (Disallow Internet Connection Through SSH)](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#ssh-disallow-internet) June 24, 2019
 
-- [Detect whether MFA for the root user is enabled/Enable MFA for the Root User](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#enable-root-mfa)  June 24, 2019
+- [Detect whether MFA for the root user is enabled (Enable MFA for the Root User)](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#enable-root-mfa)  June 24, 2019
 
-- [Detect whether public read access to Amazon S3 buckets is allowed/Disallow Public Write Access to Amazon S3 Buckets](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#s3-disallow-public-write) June 24, 2019
+- [Detect whether public read access to Amazon S3 buckets is allowed(Disallow Public Write Access to Amazon S3 Buckets)](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#s3-disallow-public-write) June 24, 2019
 
-- [Detect whether public access to Amazon RDS database snapshots is enabled/Disallow Public Access to Amazon RDS Database Snapshots](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#disallow-rds-snapshot-public-access) August 25, 2019
+- [Detect whether public access to Amazon RDS database snapshots is enabled (Disallow Public Access to Amazon RDS Database Snapshots)](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#disallow-rds-snapshot-public-access) August 25, 2019
 
-- [Detect whether storage encryption is enabled for Amazon RDS database instances/Disallow Amazon RDS Database Instances That Are Not Storage Encrypted](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#disallow-rds-storage-unencrypted) August 25, 2019
+- [Detect whether storage encryption is enabled for Amazon RDS database instances (Disallow Amazon RDS Database Instances That Are Not Storage Encrypted)](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#disallow-rds-storage-unencrypted) August 25, 2019
 
 Elective Guardrails that have been enabled
 
-- [Detect whether MFA is enabled for AWS IAM users/Disallow Console Access to IAM Users Without MFA](https://docs.aws.amazon.com/controltower/latest/userguide/elective-guardrails.html#disallow-console-access-mfa) August 25, 2019
+- [Detect whether MFA is enabled for AWS IAM users (Disallow Console Access to IAM Users Without MFA)](https://docs.aws.amazon.com/controltower/latest/userguide/elective-guardrails.html#disallow-console-access-mfa) August 25, 2019
