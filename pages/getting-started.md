@@ -110,4 +110,4 @@ Q2. Were you able to enter the commodity code, but **NOT** the object code and s
 *   You may NOT have the required permissions to enter those codes and/or the account string
 *   Forward the cart on to a Departmental procurement person who does and finish entering in the required information
 
-### Proceed to the [First Steps]({{ site.baseurl }}/docs/bestpractices/firststeps) to set up your Account
+### Proceed to the [First Steps]({{ site.baseurl }}/docs/firststeps) to set up your Account
