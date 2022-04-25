@@ -15,9 +15,9 @@
       url: "first-steps"
       children:
         - title: First Steps - AWS
-          url: "docs/bestpractices/firststeps-aws"
+          url: "docs/bestpractices/awsfirststeps"
         - title: First Steps - Azure
-          url: "docs/bestpractices/firststeps-azure"          
+          url: "docs/bestpractices/azurefirststeps"          
     - title: "Guidelines"
       url: "docs/guidelines"
       children:
