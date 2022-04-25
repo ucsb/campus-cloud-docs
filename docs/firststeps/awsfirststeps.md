@@ -1,11 +1,10 @@
-### Campus Single Sign On for AWS: https://aws.cloud.ucsb.edu
+### Campus Single Sign On for AWS: [https://aws.cloud.ucsb.edu](https://aws.cloud.ucsb.edu)
    * Supported Campus Cloud Regions, *US-West-2 (Oregon) & US-East-1 (N.Virginia)* 
    * We recommend starting in *US-West-2*
 
 ## AWS Account First Steps
 
-For teams or individuals that are creating an AWS account, here are some essential first steps that you should take.  
-This guide assumes your account is a UCSB Campus Cloud account and that you have received an email from the Campus Cloud team detailing your account is now ready for use.
+For teams or individuals that are creating an AWS account, here are some essential first steps that you should take. This guide assumes your account is a UCSB Campus Cloud account and that you have received an email from the Campus Cloud team detailing your account is now ready for use.
 
 
 1. **Log in to your AWS Account**. The Campus Cloud team has configured new accounts to use campus single sign on for user authentication and a mapping of identity groups to [AWS Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) for authorization. Your account will come with four pre-defined roles:  
@@ -21,7 +20,7 @@ This guide assumes your account is a UCSB Campus Cloud account and that you have
 
 2. **Setup Monthly Billing Alert**
 
-    Use the Service Catalog Product, *Fixed Monthly Budget with Notification¶*, provided by the UCSB Campus Cloud Team to create a fixed cost monthly budget, and notification based on a forecasted threshold in your account. See [Service Catalog](servicecatalog) for more info.
+    Use the Service Catalog Product, *Fixed Monthly Budget with Notification*, provided by the UCSB Campus Cloud Team to create a fixed cost monthly budget, and notification based on a forecasted threshold in your account. See [Service Catalog](servicecatalog) for more info.
 
     
     <!---When you created your Purchase Order through [Gateway](https://gateway.procurement.ucsb.edu), you provided a budget and duration for your account. The Campus Cloud team has configured your account for a billing alert based on your provided budget and estimated monthly spend. If your monthly bill is forecasted to go over your budget you will get a notification. Please verify that you have an email address subscribed to the configured billing alert. -->
@@ -34,7 +33,7 @@ This guide assumes your account is a UCSB Campus Cloud account and that you have
     Cloud Trail logs every AWS API call, so all actions done in the AWS console will be logged. Cloud Trail is your audit log for all activities done by those whom are granted access.
    
    
-   **Security Hub** - check regulalry for Findings. ENABLE other integrations so Secuirty Hub can be the centralized tool for Findings, Security Checks, Recomendations and Threads
+   **Security Hub** - Check regulalry for Findings. ENABLE other integrations so Secuirty Hub can be the centralized tool for Findings, Security Checks, Recomendations and Threads
     * Enable Guard Duty Integration
     * Enable Trusted Advisor Integration  (now available with Enterprise Support)
     * Enable AWS Foundational Security Best Practices v1.0.0 and/or CIS AWS Foundations Benchmark v1.2.0
@@ -59,14 +58,14 @@ This guide assumes your account is a UCSB Campus Cloud account and that you have
 
 6. **Create Network Connectivity**
 
-    Use the Service Catalog Product, *Simple VPC with Campus Connectivity*, provided by the UCSB Campus Cloud Team to create a VPC that will quickly provide internet and VPN (if needed) access in your account. See [Service Catalog](servicecatalog) for more info.
+    Use the Service Catalog Product, *Simple VPC with Campus Connectivity*, provided by the UCSB Campus Cloud Team to create a VPC that will quickly provide internet and VPN (if needed) access in your account. See [Service Catalog]({{site.url}}/docs/bestpractices/contacts) for more info.
 
 
 7. **ADD Additional User Access**
 
     You will use the "Manage Group Tags" tool available at [im.ucsb.edu](https://im.ucsb.edu) to add and remove members from the above groups. Please note, you must Log in first to access the tool.
 
-      ###  https://im.ucsb.edu   (Manage Group Tags)
+      #### Manage Group Tags [https://im.ucsb.edu](https://im.ucsb.edu)  
 
 ## AWS Enterprise Support
     
