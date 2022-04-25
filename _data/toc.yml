@@ -34,8 +34,6 @@
     - title: "Best Practices"
       url: "docs/bestpractices"
       children:
-        - title: First Steps
-          url: "docs/bestpractices/firststeps"
         - title: Service Catalog
           url: "docs/bestpractices/servicecatalog"
         - title: Account Contacts
