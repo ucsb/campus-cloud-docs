@@ -58,14 +58,14 @@ For teams or individuals that are creating an AWS account, here are some essenti
 
 6. **Create Network Connectivity**
 
-    Use the Service Catalog Product, *Simple VPC with Campus Connectivity*, provided by the UCSB Campus Cloud Team to create a VPC that will quickly provide internet and VPN (if needed) access in your account. See [Service Catalog]({{site.url}}/docs/bestpractices/contacts) for more info.
+    Use the Service Catalog Product, *Simple VPC with Campus Connectivity*, provided by the UCSB Campus Cloud Team to create a VPC that will quickly provide internet and VPN (if needed) access in your account. See [Service Catalog]({{site.url}}/docs/bestpractices/servicecatalog) for more info.
 
 
 7. **ADD Additional User Access**
 
     You will use the "Manage Group Tags" tool available at [im.ucsb.edu](https://im.ucsb.edu) to add and remove members from the above groups. Please note, you must Log in first to access the tool.
 
-    #### Manage Group Tags [https://im.ucsb.edu](https://im.ucsb.edu)  
+    #### Manage Group Tags: [https://im.ucsb.edu](https://im.ucsb.edu)  
 
 ## AWS Enterprise Support
     
