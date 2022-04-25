@@ -11,6 +11,13 @@
           url: "getting-started#budgeting"
         - title: Procuring an Account
           url: "getting-started#procurement"
+    - title: "First Steps"
+      url: "first-steps"
+      children:
+        - title: First Steps - AWS
+          url: "docs/bestpractices/firststeps-aws"
+        - title: First Steps - Azure
+          url: "docs/bestpractices/firststeps-azure"          
     - title: "Guidelines"
       url: "docs/guidelines"
       children:
