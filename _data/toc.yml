@@ -12,12 +12,12 @@
         - title: Procuring an Account
           url: "getting-started#procurement"
     - title: "First Steps"
-      url: "first-steps"
+      url: "firststeps"
       children:
         - title: First Steps - AWS
-          url: "docs/first-steps/awsfirststeps"
+          url: "docs/firststeps/awsfirststeps"
         - title: First Steps - Azure
-          url: "docs/first-steps/azurefirststeps"          
+          url: "docs/firststeps/azurefirststeps"          
     - title: "Guidelines"
       url: "docs/guidelines"
       children:
