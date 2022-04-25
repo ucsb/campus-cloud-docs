@@ -1,5 +1,5 @@
 ## Campus Cloud Account First Steps
-For teams or individuals that have created a [Campus Cloud Account](/glossary#campuscloudaccount), there are some essential first steps that you should take.
+For teams or individuals that have created a [Campus Cloud Account]({{ site.baseurl }}/glossary#campuscloudaccount), there are some essential first steps that you should take.
 This guide assumes your account is a UCSB Campus Cloud account and that you have received an email from the Campus Cloud team saying your account is now ready for use.  
 
 These first steps are unique to each Cloud Provider. 
