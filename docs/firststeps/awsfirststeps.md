@@ -64,6 +64,7 @@ For teams or individuals that are creating an AWS account, here are some essenti
 7. **ADD Additional User Access**
 
     You will use the "Manage Group Tags" tool available at [im.ucsb.edu](https://im.ucsb.edu) to add and remove members from the above groups. Please note, you must Log in first to access the tool.
+
   * **Manage Group Tags: [https://im.ucsb.edu](https://im.ucsb.edu)**
 
 ## AWS Enterprise Support
