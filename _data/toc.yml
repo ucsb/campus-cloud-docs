@@ -14,10 +14,10 @@
     - title: "First Steps"
       url: "docs/firststeps"
       children:
-        - title: First Steps - AWS
+        - title: AWS
           url: "docs/firststeps/awsfirststeps"
-        - title: First Steps - Azure
-          url: "docs/firststeps/azurefirststeps"          
+        - title: Azure
+          url: "docs/firststeps/azurefirststeps" 
     - title: "Guidelines"
       url: "docs/guidelines"
       children:
