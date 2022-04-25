@@ -12,7 +12,7 @@
         - title: Procuring an Account
           url: "getting-started#procurement"
     - title: "First Steps"
-      url: "firststeps"
+      url: "docs/firststeps"
       children:
         - title: First Steps - AWS
           url: "docs/firststeps/awsfirststeps"
