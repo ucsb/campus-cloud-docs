@@ -1,5 +1,7 @@
 ### Campus Single Sign On for AWS: [https://aws.cloud.ucsb.edu](https://aws.cloud.ucsb.edu)
-   * Supported Campus Cloud Regions, *US-West-2 (Oregon) & US-East-1 (N.Virginia)* 
+   * Supported Campus Cloud Regions: 
+     * **US-West-2 (Oregon)** 
+     * **US-East-1 (N.Virginia)** 
    * We recommend starting in *US-West-2*
 
 ## AWS Account First Steps
