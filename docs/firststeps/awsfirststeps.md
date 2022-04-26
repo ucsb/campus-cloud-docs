@@ -35,7 +35,7 @@ For teams or individuals that are creating an AWS account, here are some essenti
     Cloud Trail logs every AWS API call, so all actions done in the AWS console will be logged. Cloud Trail is your audit log for all activities done by those whom are granted access.
    
    
-   **Security Hub** - Check regulalry for Findings. ENABLE other integrations so Secuirty Hub can be the centralized tool for Findings, Security Checks, Recomendations and Threads
+   **Security Hub** - Check regulalry for Findings. ENABLE other integrations so Secuirty Hub can be the centralized tool for Findings, Security Checks, Recomendations and Threats.
     * Enable Guard Duty Integration
     * Enable Trusted Advisor Integration  (now available with Enterprise Support)
     * Enable AWS Foundational Security Best Practices v1.0.0 and/or CIS AWS Foundations Benchmark v1.2.0
