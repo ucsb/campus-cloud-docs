@@ -71,7 +71,9 @@ For teams or individuals that are creating an AWS account, here are some essenti
 
 ## AWS Enterprise Support
     
-  *  [Enterprise support](https://aws.amazon.com/premiumsupport/features/) is available to all child accounts. To create a support ticket click the Support/Help icon (orange circle w questions mark inside) at the top right when logged in to your Landing Zone account.
+  *  [Enterprise support](https://aws.amazon.com/premiumsupport/features/) is available to all child accounts.
   *  Plan provides web, email, chat, and phone access to support
   *  A Technical Account Manager (TAM) and Concierge Team is provided and shared across the participating UCs
   *  Single support charge billed at the EDP AWS Organization Payer account
+
+  To create a support ticket click the support/help icon (orange circle w question mark inside) at the top right when logged in to your Landing Zone account.
