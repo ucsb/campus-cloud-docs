@@ -28,7 +28,7 @@ Strongly Recommended Guardrails that have been enabled:
 
 - [Detect whether storage encryption is enabled for Amazon RDS database instances (Previously Disallow Amazon RDS Database Instances That Are Not Storage Encrypted)](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#disallow-rds-storage-unencrypted) August 25, 2019
 
-Elective Guardrails that have been enabled
+Elective Guardrails that have been enabled:
 
 - [Detect whether replication instances for AWS Database Migration Service are public](https://docs.aws.amazon.com/controltower/latest/userguide/data-residency-guardrails.html#dms-replication-not-public)  November 30, 2021
 
