@@ -6,7 +6,7 @@ Guardrails are categorized according to their behavior and their guidance. The b
 See AWS Documentation for a complete [Guardrail Reference](https://docs.aws.amazon.com/controltower/latest/userguide/guardrails-reference.html)
 
 
-### AWS Active Guardrails as of May 2020
+### AWS Active Guardrails as of Apr 2022
 
 Mandatory Guardrails are enabled by default when you set up Control Tower Landing Zone and can't be disabled. AWS Maintains the list of [Mandatory Guardrails](https://docs.aws.amazon.com/controltower/latest/userguide/mandatory-guardrails.html).
 
@@ -29,5 +29,23 @@ Strongly Recommended Guardrails that have been enabled:
 - [Detect whether storage encryption is enabled for Amazon RDS database instances (Previously Disallow Amazon RDS Database Instances That Are Not Storage Encrypted)](https://docs.aws.amazon.com/controltower/latest/userguide/strongly-recommended-guardrails.html#disallow-rds-storage-unencrypted) August 25, 2019
 
 Elective Guardrails that have been enabled
+
+- [Detect whether replication instances for AWS Database Migration Service are public](https://docs.aws.amazon.com/controltower/latest/userguide/data-residency-guardrails.html#dms-replication-not-public)  November 30, 2021
+
+- [Detect whether Amazon EBS snapshots are restorable by all AWS accounts](https://docs.aws.amazon.com/controltower/latest/userguide/data-residency-guardrails.html#ebs-snapshot-public-restorable-check)  November 30, 2021
+
+- [Detect whether any Amazon EMR cluster master nodes have public IP addresses](https://docs.aws.amazon.com/controltower/latest/userguide/data-residency-guardrails.html#emr-master-no-public-ip)   November 30, 2021
+
+- [Detect whether the AWS Lambda function policy attached to the Lambda resource blocks public access](https://docs.aws.amazon.com/controltower/latest/userguide/data-residency-guardrails.html#lambda-function-public-access-prohibited)   November 30, 2021
+
+- [Detect whether public routes exist in the route table for an Internet Gateway (IGW)](https://docs.aws.amazon.com/controltower/latest/userguide/data-residency-guardrails.html#no-unrestricted-route-to-igw)   November 30, 2021 (Currenlty being re-evaluate in DEV)
+
+- [Detect whether Amazon Redshift clusters are blocked from public access](https://docs.aws.amazon.com/controltower/latest/userguide/data-residency-guardrails.html#redshift-cluster-public-access-check)   November 30, 2021
+
+- [Deny access to AWS based on the requested AWS Region](https://docs.aws.amazon.com/controltower/latest/userguide/data-residency-guardrails.html#primary-region-deny-policy)   November 30, 2021 (Currenlty being re-evaluate in DEV)
+
+-  [Detect whether Amazon S3 settings to block public access are set as true for the account](https://docs.aws.amazon.com/controltower/latest/userguide/data-residency-guardrails.html#s3-account-level-public-access-blocks-periodic)   November 30, 2021
+
+- [Detect whether AWS Systems Manager documents owned by the account are public](https://docs.aws.amazon.com/controltower/latest/userguide/data-residency-guardrails.html#ssm-document-not-public)  November 30, 2021
 
 - [Detect whether MFA is enabled for AWS IAM users (Previously Disallow Console Access to IAM Users Without MFA)](https://docs.aws.amazon.com/controltower/latest/userguide/elective-guardrails.html#disallow-console-access-mfa) August 25, 2019
