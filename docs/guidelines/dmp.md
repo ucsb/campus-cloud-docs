@@ -1,4 +1,5 @@
-## Data Management Plan (DMP) Guidleines when using UCSB's Campus Cloud
+## Data Management Plan (DMP) Guidelines 
+### when using UCSB's Campus Cloud for Research
 Granting agencies usually require a Data Management Plan (DMP) that addresses types of data, data and metadata standards, policies for access/sharing, provisions for appropriate protection/privacy, policies and provisions for re-use and re-distribution and plans for archiving and preserving access.
 
 Each granting agency has its own requirements, standards and practices limiting the applicability of a generic Cloud informed DMP.
