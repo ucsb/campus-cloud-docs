@@ -86,7 +86,7 @@ You will only be able to access the Campus Cloud Account and its resources after
 	
 	![assets/img/gatewaycart-objectcode.png]({{site.url}}assets/img/gatewaycart-objectcode.png)	 
 	
-	when you finalize your cart, check the Special Handling Code: **GCT** and submit your requisition.
+	and Sub **3, 5 or 7**. Your requisition will be returned if these codes are not correct. SUBMIT your requisition.
 
 4.  The Campus Cloud team will receive your Purchase Order and contact you to schedule a meeting finalizing your account.
 5.  After this meeting you will receive an activation email from AWS/Azure:
@@ -99,15 +99,15 @@ NOTE: As of May 16th 2020, you may use Sub 5 or Sub 7 in additional to the origi
 
 ### Troubleshooting the Procurement Process
 
- Q1. Did you requisition get returned with an error? 
+ Q1. Did your requisition get returned with an error? 
  
  Gateway will auto-return the requistion if any of the following is incorrect:
-*   Special Handling Code __GCT__
 *   Commodity Code __81110000__
-*   Object Code __7185__.
+*   Object Code __7185__
+*   Sub __3, 5 or 7__
 
-Q2. Were you able to enter the commodity code, but **NOT** the object code and special handling code?
-*   You may NOT have the required permissions to enter those codes and/or the account string
+Q2. Were you able to enter the commodity code, but **NOT** the object code?
+*   You may NOT have the required permissions to enter the object code and/or the account string
 *   Forward the cart on to a Departmental procurement person who does and finish entering in the required information
 
 ### Proceed to the [First Steps]({{ site.baseurl }}/docs/firststeps) to set up your Account
