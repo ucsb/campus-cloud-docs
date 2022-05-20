@@ -1,4 +1,10 @@
-## UCSB AWS Spend
+---
+layout: page
+title: UCSB AWS Spend
+permalink: /awsspend/
+---
+
+# UCSB AWS Spend
 Current data set includes Nov 2019 - Sep 2021
 
 
