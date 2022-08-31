@@ -35,7 +35,7 @@ For teams or individuals that are creating an AWS account, here are some essenti
     Cloud Trail logs every AWS API call, so all actions done in the AWS console will be logged. Cloud Trail is your audit log for all activities done by those whom are granted access.
     
     
-    Config and CloudTrail are pre-requisites for a Control Tower based Landing Zone (LZ). Audit, compliance and security tools are utilized in the LZ. These tools may use one or more of these services thereby generating costs in your account.  It is important that you account for these costs in your budgeting.  For a busy account it may be a small percentage of monthly costs.
+    [Config](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html) and CloudTrail are pre-requisites for a Control Tower based Landing Zone (LZ). Audit, compliance and security tools are utilized in the LZ. These tools may use one or more of these services thereby generating costs in your account.  It is important that you account for these costs in your budgeting.  For a busy account it may be a small percentage of monthly costs.
    
    
    **Security Hub** - Check regulalry for Findings. ENABLE other integrations so Secuirty Hub can be the centralized tool for Findings, Security Checks, Recomendations and Threats.
