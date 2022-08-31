@@ -30,9 +30,9 @@ It is highly recommended to have an understanding of Cloud environment concepts 
 ### Campus Training Resources
 
 *   The UCSB [Learning Center](https://www.learningcenter.ucsb.edu/) and more specifically, [Linkedin Learning](https://www.learningcenter.ucsb.edu/content/linkedin-learning) offers courses for Cloud Computing and AWS.
-*   [Cloud Computing Topic](https://www.linkedin.com/learning/topics/cloud-computing-5)
-*   [AWS Courses](https://www.linkedin.com/learning/search?keywords=aws)
-*   [Azure Courses](https://www.linkedin.com/learning/search?keywords=azure)
+	*   [Cloud Computing Topic](https://www.linkedin.com/learning/topics/cloud-computing-5)
+	*   [AWS Courses](https://www.linkedin.com/learning/search?keywords=aws)
+	*   [Azure Courses](https://www.linkedin.com/learning/search?keywords=azure)
 
 ### AWS Training Resources
 
@@ -41,7 +41,6 @@ It is highly recommended to have an understanding of Cloud environment concepts 
 ### Azure Training Resources
 
 * [Azure on Microsoft Learn](https://docs.microsoft.com/en-us/learn/azure/)
-* More Coming Soon
 
 ### [Consultation](#consult)
 
