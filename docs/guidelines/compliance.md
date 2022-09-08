@@ -29,9 +29,19 @@ The Campus Cloud Providers - AWS, Azure, GCP - may differ in the specific termin
     
     * ### [AWS Active Guardrails as of Apr 2022](guardrails.aws)
 
-<br>
 
 * ### Azure Guardrails
     Azure utilized built-in and custom policies to set guardrails in your subscriptions. Guardrails for Azure are built using Azure Policy and RBAC to enforce and audit policies for any Azure service.
     
     * ### [Azure Active Guardrails as of May 2020](guardrails.azure)
+
+<br>
+
+* ### Prisma Cloud from Palo Alto
+    Prisma Cloud is a cloud native security platform that provides a unified view of security and compliance across the Campus Cloud's three Cloud Providers.  The product was deployed in the Campus Cloud LZ in the summer of 2022.
+    
+    Prisma Cloud allows us to audit compliance to NIS 800-171, generate account owner reports, centralize Alerts and to optionaly remedeiate findings. It is expected that AWS account owners will continue to use Security Hub to get Prisma Cloud Alerts as well as most other security related findings. The Cloud team, NOC, SOC and other groups may use the the Prisma Cloud App for a unified view os security and compliance.
+     
+     * **Costs** - AWS Accounts currently experience a cost from GuardDuty that correlates to the number of CloudTrail events in their accounts per Region. For a busy account it may be a small percentage of monthly costs.  We are actively investigating options to lower costs for account owners.
+     * **Audit Compliance Reports** - While we are still early in the implenmentation if you are interested in recieving a regulary report on your AWS account compliance please reach out to the Cloud Team.
+     * **Security & Compliance Findings** - To view Prisma Cloud Findings in AWS go to Security Hub/Inegrations and search from 'prisma' in the Integrations seach box at the top. The click on 'See finding' from the Palo Alto Netwoks: Prisma Cloud Enterprise integration.  You can also seach in Security Hub/Findings with the proper filters.
