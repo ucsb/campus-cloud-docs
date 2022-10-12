@@ -59,7 +59,7 @@ Before you start the procurement process, you will need to estimate your monthly
 
 Audit, compliance and security tools are utilized in the Campus Cloud that generate costs in every account. It is important that you are aware of these costs. For a busy account it may be a small percentage of monthly costs.
 
-## [Procure a Campus Cloud Account](#procurement)
+## [Procure a Campus Cloud Account](#procure-a-campus-cloud-account)
 
 This is the first step for an Azure Subscription, new AWS Accounts and existing AWS Accounts that you wish to migrate to the Campus Cloud.
 Follow the instructions below to ensure that you Campus Cloud Account used for UCSB business is covered under this agreement and in compliance with UC policy and applicable laws.
