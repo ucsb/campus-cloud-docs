@@ -10,7 +10,7 @@
         - title: Budgeting
           url: "getting-started#budgeting"
         - title: Procuring an Account
-          url: "getting-started#procurement"
+          url: "getting-started#procure-a-campus-cloud-account"
     - title: "First Steps"
       url: "docs/firststeps"
       children:
