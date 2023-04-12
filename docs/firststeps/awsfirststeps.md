@@ -45,7 +45,7 @@ For teams or individuals that are creating an AWS account, here are some essenti
         
         *(be AWARE of potential cost for resource checks IF you have substantial resources or turnover)*
 
-4. **Enable MFA on the Root User**
+<!---4. **Enable MFA on the Root User**
 
     If you have been provided with root user credentials; you goal should be to enable MFA on the root user and stop using the root user for day to day tasks.
 
@@ -55,18 +55,19 @@ For teams or individuals that are creating an AWS account, here are some essenti
         *  It is advised to purchase two physical based MFAs for the root user, one will be a backup.
     *  Create a process for storing and retrieving these credentials only when absolutely necessary.
         *  There are rare [tasks](https://docs.aws.amazon.com/general/latest/gr/aws_tasks-that-require-root.html) where using the root user is required.
+--->
 
-5. **Configure Account Alternate Contacts**    
+4. **Configure Account Alternate Contacts**    
 
     Configure your account’s [alternate contacts](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-account-payment.html#account-contacts) to point to a group rather than an individual. For example, create separate email distribution lists for billing, operations, and security and configure these as Billing, Security, and Operations contacts in each active AWS account. This ensures that multiple people will receive AWS notifications and be able to respond, even if someone is on vacation, changes roles, or leaves the company. For details see the [Best Practices for Contacts]({{site.url}}/docs/bestpractices/contacts).
 
 
-6. **Create Network Connectivity**
+5. **Create Network Connectivity**
 
     Use the Service Catalog Product, *Simple VPC with Campus Connectivity*, provided by the UCSB Campus Cloud Team to create a VPC that will quickly provide internet and VPN (if needed) access in your account. See [Service Catalog]({{site.url}}/docs/bestpractices/servicecatalog) for more info.
 
 
-7. **ADD Additional User Access**
+6. **ADD Additional User Access**
 
     You will use the "Manage Group Tags" tool available at [im.ucsb.edu](https://im.ucsb.edu) to add and remove members from the above groups. Please note, you must Log in first to access the tool.
 
