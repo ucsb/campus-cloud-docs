@@ -11,10 +11,16 @@ A request to close a Campus Cloud account is NOT completed until all Resrouces c
 1. Destroy Resources - Owner of account Destroys all Resources created in account.
 2. Backup DATA - Owner of account backups/downloads all Data that needs to be saved or archived.
 3. Create Service Now (SN) ticket to close account. (https://ucsb.service-now.com/).
-4. Data sources - Confirm all regulated data, Datasets, etc. have been removed [In SN Ticket]
-5. Data created - Confirm all data, reports, analysis, etc have been removed from the account or can be deleted. **This is confirmation for ALL users of the account**. [In SN Ticket]
-6. Resources - Confirm all owner created resources have been destroyed. [In SN Ticket]
-7. If Owner does not or can not shut down ALL Resources they authorize the Cloud Team to Destroy all Resources.  [In SN Ticket]
+
+   Include Account #, PO# and date for account to be closed.
+ 
+4. Remove Data sources - Confirm all regulated data, Datasets, etc. have been removed [In SN Ticket]
+5. Remove Data created - Confirm all data, reports, analysis, etc have been removed from the account or can be deleted. [In SN Ticket]
+6. Destroy Resources - Confirm all owner created resources have been destroyed. [In SN Ticket]
+
+   **Above confirmations are for *ALL* users of the account**.
+
+7. If Owner does not or can not shut down ALL Resources they authorize the Cloud Team to Destroy all Resources and data.
 8. Cloud Team will wait 15 days to Destroy all remaining Resources, Data, etc.
 9. Cloud Team will wait 5 additional days to remove access to Account.
 
