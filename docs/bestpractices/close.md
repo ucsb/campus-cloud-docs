@@ -12,7 +12,7 @@ A request to close a Campus Cloud account is NOT completed until all Resrouces c
 2. Backup DATA - Owner of account backups/downloads all Data that needs to be saved or archived.
 3. Create Service Now (SN) ticket to close account. (https://ucsb.service-now.com/).
 
-   Include Account #, PO# and date for account to be closed.
+   Include **Account#**, **PO#** and **date** for account to be closed.
  
 4. Remove Data sources - Confirm all regulated data, Datasets, etc. have been removed [In SN Ticket]
 5. Remove Data created - Confirm all data, reports, analysis, etc have been removed from the account or can be deleted. [In SN Ticket]
@@ -25,4 +25,4 @@ A request to close a Campus Cloud account is NOT completed until all Resrouces c
 9. Cloud Team will wait 5 additional days to remove access to Account.
 
 
-The Service Now Ticket will be closed after access has been removed from the account.  All corespondence regarding an account closure should be included in Ticket.
+The Service Now Ticket will be closed after access has been removed from the account.  All corespondence regarding an account closure should be included in the Service Now Ticket.
