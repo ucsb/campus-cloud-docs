@@ -16,7 +16,7 @@ A request to close a Campus Cloud account is NOT completed until all Resources c
 
    Include **Account#**, **PO#** and **date** for account to be closed.
  
-4. CONFIRM in the ServiceNow Ticket each list item below to authorize the account to be closed.
+4. CONFIRM in the ServiceNow Ticket each list item below to authorize the closure of the account.
    * Remove Data sources - Confirm all regulated data, Datasets, etc. have been removed.
    * Remove Data created - Confirm all data, reports, analysis, etc have been removed from the account or can be deleted.
    * Destroy Resources - Confirm all owner created resources have been destroyed.
