@@ -68,5 +68,6 @@ For teams or individuals that are creating an AWS account, here are some essenti
   *  Plan provides web, email, chat, and phone access to support
   *  A Technical Account Manager (TAM) and Concierge Team is provided and shared across the participating UCs
   *  Single support charge billed at the EDP AWS Organization Payer account
+  *  Twice per month new accounts in the Organization are automatically added to Enterprise Support (Boyd, Sep 2023)
 
   To create a support ticket click the support/help icon (orange circle w question mark inside) at the top right when logged in to your Landing Zone account.
