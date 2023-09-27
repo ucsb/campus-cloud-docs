@@ -46,16 +46,23 @@ The Campus Cloud Providers - AWS, Azure, GCP - may differ in the specific termin
      * **Audit Compliance Reports** - While we are still early in the implenmentation if you are interested in recieving a regulary report on your AWS account compliance please reach out to the Cloud Team.
      * **Security & Compliance Findings** - To view Prisma Cloud Findings in AWS go to Security Hub/Integrations and search for 'prisma' in the Integrations search box at the top. Then click on 'See finding' from the "Palo Alto Networks: Prisma Cloud Enterprise" integration.  You can also search in Security Hub/Findings with the proper filters.
 
-* ### NIST 800-171 Controls Evaluation for AWS
-    The Cloud Team in coordination with the SOC has mapped the NIST 800-171 requirements to controls that are relevent to the Campus Cloud LZ for AWS.  Tracking the details of a control can help inform an accounts level of compliance. The compliance level of an account is dynamic in that the resources used may be changing, Controls/Guardrails may change (detective, protective, newly added or removed) and campus / System Compliance goals continue to evolve.  The Campus Cloud Team can provide a tool to help track Cloud account compliance.
+<br>
 
-    The Cloud Team has created a Sheet that allows an account owner (or resposible party) to track the current state, type, priority and scope of a control.  The Sheet provides and documents thae baseline compliance that is provided by the Campus Cloud LZ and defines a number of "Local Controls" that an account owner may use to examine, interview and test compliance for each requirement.  The account owner has the ability to and probably should create their own controls that assist in assuring compliance per requirment.  The Sheet provices color-coded tracking of progress and other automation along with Sheet Tabs to provide supporting information, dashboards, references in additon to the assemment.
+### NIST 800-171 Controls Evaluation for AWS - A tool to help track compliance
+The Cloud Team in coordination with the SOC has mapped the NIST 800-171 requirements to controls to help define, highlight and document responsiblitites relevent to the Campus Cloud LZ for AWS. In this context a "control" is a process, system or product that asserts compliance with a requirement. Tracking controls cans help detail an accounts level of compliance. The compliance level of an account is dynamic in that the resources used may be changing, Controls/Guardrails may change (detective, proventive, newly added or removed) and Campus / System Compliance goals continue to evolve.  The Campus Cloud Team can provide a tool to help track Cloud account compliance.
 
-    To request  a copy of the Sheet please send an email to info@cloud.ucsb.edu.  After access has been provided a copy of the Sheet should be made a kept locally and edited to track your compliance.  For more background information on the NIST 800-171 please see the following information
+The Cloud Team has created a Controls Evaluation spreadsheet that allows an account owner (or resposible party) to track the responsiblity, current state, type, priority and scope of a control.  The Sheet documents baseline compliance provided by the Campus Cloud LZ and defines a number of "Local Controls" an account owner may use to examine, interview, test or assert compliance for each requirement.  The account owner has the ability to (and probably should) create their own controls that assist in assuring compliance per requirment.  The Sheet provices color-coded tracking of progress and other automation along with additional Sheet Tabs to provide supporting information, dashboards and references in additon to the assemment.
 
+To request  a copy of the Sheet please send an email to info@cloud.ucsb.edu.  After access has been provided a copy of the Sheet should be made a kept locally and edited to track your compliance.  For more background information on the NIST 800-171 please, see the following information:
 
-    The NIST requirements are organized into 14 families and within the family are specific requirements related to that family. For example, in the  "Access Control" family (3.1) the thrid requirement is "Control the flow of CUI in accordance with approved authorizations" (3.1.3). So the family sub-number for this requirement is 3.1.1.  This numbering system is utilized for each requirement family.  The 14th requirement family, "System and Information Integrity" can be referenced by its number, 3.14. Every requirement in this Family would have that prefix. Each requirement includes one or more assessment objectives labeled with the family sub-number and a letter (3.1.1[a])
-
-    * NIST Special Publication 800-171A - 
+NIST Special Publication 800-171A - 
 [Assessing Security Requirements for
 Controlled Unclassified Information](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-171A.pdf)
+
+* Family - The NIST requirements are organized into 14 families. Within the family are specific requirements related to that family.
+    * The 14th requirement family, "System and Information Integrity" can be referenced by its number, 3.14. Every requirement in this Family would have that prefix. 
+* sub-Family number - A sub number is ennumerated for each requirement in a family.  
+    *  For example, in the  "Access Control" family (3.1) the third requirement is "Control the flow of CUI in accordance with approved authorizations" (3.1.3). 
+* Objective - Each requirement includes one or more assessment objectives labeled with the family sub-number and a letter (3.1.1[a])
+
+
