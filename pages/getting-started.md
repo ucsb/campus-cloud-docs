@@ -74,6 +74,7 @@ You will only be able to access the Campus Cloud Account and its resources after
     * Please note the instructions on the left side of the form, and provide the requested information. Build in lead time for your start date. The estimated expenditure is for the duration of the PO.
     * The expected duration is one year. The purchase order should then be renewed annually. If your procurement group is willing to support multi-year blankets, please limit your max duration to three years.
     * The form is for the one Account. You can not request multiple accounts with a single form. You will want to fill out multiple forms and add them as line items in your cart.
+    * _NOTE: Your Gateway Admin may be needed to input Object Code and Sub Number (See Troubleshooting Section below)_
 
 	![assets/img/gatewayform.png]({{site.url}}assets/img/gatewayform.png)
 
@@ -88,7 +89,6 @@ You will only be able to access the Campus Cloud Account and its resources after
 	![assets/img/gatewaycart-objectcode.png]({{site.url}}assets/img/gatewaycart-objectcode.png)	 
 	
 	and Sub **3, 5 or 7**. Your requisition will be returned if these codes are not correct. SUBMIT your requisition.
-	_NOTE: Your Gateway Admin may be needed to input Object Code and Sub Number (See Troubleshooting Section below)_
 
 5.  The Campus Cloud team will receive your Purchase Order and contact you to schedule a meeting finalizing your account.
 6.  After this meeting you will receive an activation email from AWS/Azure:
