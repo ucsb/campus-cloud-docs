@@ -88,13 +88,14 @@ You will only be able to access the Campus Cloud Account and its resources after
 	![assets/img/gatewaycart-objectcode.png]({{site.url}}assets/img/gatewaycart-objectcode.png)	 
 	
 	and Sub **3, 5 or 7**. Your requisition will be returned if these codes are not correct. SUBMIT your requisition.
+	_NOTE: Your Gateway Admin may be needed to input Object Code and Sub Number (See Troubleshooting Section below)_
 
-4.  The Campus Cloud team will receive your Purchase Order and contact you to schedule a meeting finalizing your account.
-5.  After this meeting you will receive an activation email from AWS/Azure:
+5.  The Campus Cloud team will receive your Purchase Order and contact you to schedule a meeting finalizing your account.
+6.  After this meeting you will receive an activation email from AWS/Azure:
     *  Confirming that the account is set up for invoicing under the UC AWS or Azure agreement, and
     *  Providing final instructions to activate your account
-6.  Assign users to your Account Groups.
-7.  Your account will be billed through the Master Payer Account with consolidated billing. Any monthly costs will be charged against the Purchase Order you submitted.
+7.  Assign users to your Account Groups.
+8.  Your account will be billed through the Master Payer Account with consolidated billing. Any monthly costs will be charged against the Purchase Order you submitted.
 
 NOTE: As of May 16th 2020, you may use Sub 5 or Sub 7 in additional to the original requirement of Sub 3. 
 
