@@ -48,7 +48,8 @@ The Campus Cloud Providers - AWS, Azure, GCP - may differ in the specific termin
 
 <br>
 
-### NIST 800-171 Controls Evaluation for AWS - A tool to help track compliance
+### NIST 800-171 Controls Evaluation for AWS
+#### A tool to help track compliance
 The Cloud Team in coordination with the SOC has mapped the NIST 800-171 requirements to controls to help define, highlight and document responsiblitites relevent to the Campus Cloud LZ for AWS. In this context a "control" is a process, system or product that asserts compliance with a requirement. Tracking controls cans help detail an accounts level of compliance. The compliance level of an account is dynamic in that the resources used may be changing, Controls/Guardrails may change (detective, proventive, newly added or removed) and Campus / System Compliance goals continue to evolve.  The Campus Cloud Team can provide a tool to help track Cloud account compliance.
 
 The Cloud Team has created a Controls Evaluation spreadsheet that allows an account owner (or resposible party) to track the responsiblity, current state, type, priority and scope of a control.  The Sheet documents baseline compliance provided by the Campus Cloud LZ and defines a number of "Local Controls" an account owner may use to examine, interview, test or assert compliance for each requirement.  The account owner has the ability to (and probably should) create their own controls that assist in assuring compliance per requirment.  The Sheet provices color-coded tracking of progress and other automation along with additional Sheet Tabs to provide supporting information, dashboards and references in additon to the assemment.
