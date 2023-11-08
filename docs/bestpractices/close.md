@@ -30,7 +30,7 @@ A request to close a Campus Cloud account is NOT completed until all Resources c
 
 <br>
 
-### Final Invoice on Purchase Order (PO)
+### Final Invoice for Purchase Order (PO)
 
 ℹ️ IMPORTANT - The PO associated with the account should not be closed for 30 days after the final invoicing to ensure Accounting has time to process the invoice. The Cloud team invoices for the previous months costs about 3 weeks after the end of the month.
 
