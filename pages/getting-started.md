@@ -27,20 +27,21 @@ It is highly recommended to have an understanding of Cloud environment concepts 
 
 [Microsoft's Cloud Adoption Framework for Azure](https://azure.microsoft.com/en-us/cloud-adoption-framework/#:~:text=The%20Cloud%20Adoption%20Framework%20provides,the%20framework%20is%20updated%20regularly.) is similiarly recomended for Azure.
 
+
 ### Campus Training Resources
 
 *   The UCSB [Learning Center](https://www.learningcenter.ucsb.edu/) and more specifically, [Linkedin Learning](https://www.learningcenter.ucsb.edu/content/linkedin-learning) offers courses for Cloud Computing and AWS.
 	*   [Cloud Computing Topic](https://www.linkedin.com/learning/topics/cloud-computing-5)
-	*   [AWS Courses](https://www.linkedin.com/learning/search?keywords=aws)
-	*   [Azure Courses](https://www.linkedin.com/learning/search?keywords=azure)
+	* [AWS Courses](https://www.linkedin.com/learning/search?keywords=aws)
+	* [Azure Courses](https://www.linkedin.com/learning/search?keywords=azure)
 
-### AWS Training Resources
+* ### AWS Training Resources
 
-*   Take the free [Cloud Practitioners Training](https://www.aws.training/Details/Curriculum?id=27076)
+	*   Take the free [Cloud Practitioners Training](https://www.aws.training/Details/Curriculum?id=27076)
 
-### Azure Training Resources
+* ### Azure Training Resources
 
-* [Azure on Microsoft Learn](https://docs.microsoft.com/en-us/learn/azure/)
+	* [Azure on Microsoft Learn](https://docs.microsoft.com/en-us/learn/azure/)
 
 ### [Consultation](#consult)
 
@@ -57,7 +58,7 @@ Before you start the procurement process, you will need to estimate your monthly
 *   Azure Pricing Calculator
 	  * [Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/?&ef_id=Cj0KCQjwvr6EBhDOARIsAPpqUPHPjtVqbRjubykatJR6m_x7p-TMY9WOmVU-YjF-LqNc4-ambKzOU8AaAk02EALw_wcB:G:s&OCID=AID2100131_SEM_Cj0KCQjwvr6EBhDOARIsAPpqUPHPjtVqbRjubykatJR6m_x7p-TMY9WOmVU-YjF-LqNc4-ambKzOU8AaAk02EALw_wcB:G:s&gclid=Cj0KCQjwvr6EBhDOARIsAPpqUPHPjtVqbRjubykatJR6m_x7p-TMY9WOmVU-YjF-LqNc4-ambKzOU8AaAk02EALw_wcB)   	  
 
-Audit, compliance and security tools are utilized in the Campus Cloud that generate costs in every account. It is important that you are aware of these costs. For a busy account it may be a small percentage of monthly costs.
+ℹ️ IMPORTANT - Audit, compliance and security tools are utilized in the Campus Cloud that generate costs in every account. It is important that you are aware of these costs. For a busy account it may be a small percentage of monthly costs.
 
 ## [Procure a Campus Cloud Account](#procure-a-campus-cloud-account)
 
