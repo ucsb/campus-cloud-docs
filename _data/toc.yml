@@ -44,5 +44,7 @@
           url: "docs/bestpractices/tagging"
         - title: VPN Traffic
           url: "docs/bestpractices/vpn"
+        - title: Close Account
+          url: "docs/bestpractices/close"
     - title: "Glossary"
       url: "glossary"
