@@ -6,7 +6,7 @@ It is imperative that you destroy all resources that you have created AFTER back
 
 A request to close a Campus Cloud account is NOT completed until all Resources created by the Owner have been destroyed. A good indicator that this has been accomplished is the account charges are minimal ($5-20/mo).  A nominal dollar amount per month is normal to maintain an account in the Landing Zone.
 
-:warning: IMPORTANT - once you CONFIRM your account for closure in step 4 below, you are confirming there is nothing in the account that you need and ALL resources, data, etc can be destroyed.  This is not a reversible process. There is no "undo".
+⚠️ IMPORTANT - once you CONFIRM your account for closure in step 4 below, you are confirming there is nothing in the account that you need and ALL resources, data, etc can be destroyed.  This is not a reversible process. There is no "undo".
 
 ### Procedure for Account Closure
 
