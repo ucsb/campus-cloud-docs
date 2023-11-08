@@ -14,3 +14,4 @@ Here, we look at some best practices to follow when executing your project.
 *  [Cost Models](bestpractices/costmodels)
 *  [Resource Tagging](bestpractices/tagging)
 *  [VPN traffic](bestpractices/vpn)
+*  [Close Account](bestpractices/close)
