@@ -50,10 +50,14 @@ The Campus Cloud Providers - AWS, Azure, GCP - may differ in the specific termin
 ## Do you need a NIST 800-171 compliant Cloud Account ? ##
 If you require a NIST 800-171 compliant Cloud account or need to audit compliance in an existing Cloud account the Cloud team has a few options to get you started.
 
-### New NIST-800-171 Compliant Account - OU = UCSB Baseline v2 ###
+### New NIST-800-171 Compliant Account ###
+**OU = UCSB Baseline v2**
+
 You can request a compliant AWS Cloud account buy following our normal process for [requesting an AWS account](getting-started/#procure-a-campus-cloud-account) but requesting a "NIST Complaint Account" which will allow us to create your AWS account in a special Organization Unit (OU) that has a special Security Standard and additional Controls applied to accounts.  These Controls detect and prevent certain actions to help your stay in compliance.  There may be cases where certain tasks or services need to be engaged in an alternative way to maintain compliance.  For example, instead of creating a unencrypted S3 bucket you could be required to create an encypted S3 bucket.
 
-### Make Exisiting AWS Account NIST-800-171 Compliant -  currently in OU = UCSB Baseline v1 ###
+### Make Exisiting AWS Account NIST-800-171 Compliant ###
+**currently in OU = UCSB Baseline v1**
+
 If you already have an AWS account in the UCSB Cloud LZ that is NOT in the NIST Compliant OU you have TWO options:
 1. Migrate your account to the NIST Compliant OU
 2. Enable Controls / Security Standard to  make your existing account more compliant
@@ -79,6 +83,8 @@ The Cloud Team has created a Controls Evaluation spreadsheet that allows an acco
 
 
 To request  a copy of the Google Sheet please send an email to info@cloud.ucsb.edu.  After access has been provided a copy of the Sheet should be made and kept locally and upated reqularly to track your compliance.  For more background information on NIST 800-171 assessment please, see the following information:
+
+<br>
 
 NIST Special Publication 800-171A - 
 [Assessing Security Requirements for
