@@ -34,8 +34,7 @@ The Campus Cloud Providers - AWS, Azure, GCP - may differ in the specific termin
     Azure utilizes built-in and custom policies to set guardrails in Subscriptions. Guardrails for Azure are built using Azure Policy and RBAC to enforce and audit policies for any Azure service.
     
     * ### [Azure Active Guardrails](guardrails.azure)
-
-
+<br>
 * ### Prisma Cloud from Palo Alto
     Prisma Cloud is a cloud native security platform that provides a unified view of security and compliance across the Campus Cloud's three Cloud Providers.  The product was deployed in the Campus Cloud LZ in the summer of 2022.
     
