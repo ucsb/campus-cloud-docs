@@ -56,3 +56,10 @@ Description of the VPC Families offered:
 |  n2.large.private  |       2        |     128 IPs     |       2 private      |             2             |
 |  n2.large.mixed    |       2        |     128 IPs     |  1 public 1 private  |             1             |
 |  n4.large.mixed    |       4        |     128 IPs     |  2 public 2 private  |             2             |
+
+### [Automation DocDB](#automate)
+  * This Product will create two Lambda functions that automate the starting and stopping of a DocumentDB Cluster. IAM Roles are also created for a managed policy and two inline policies. Two CloudWatch Rules are created to map to the corresponding Lambda functions to trigger the start and stop of the DocdB.
+
+The parameter 'ExistingDBCluster' is the existing DocumentDB cluster you would like to automate.<br /> 
+The CRON expressions in the CloudWatch Rules are automatically set for 9AM PST to start the DocDB and 5PM PST to stop the DocDB. To edit them, go to Amazon EventBridge or CloudWatch Rules after the deployment of this product. 
+
