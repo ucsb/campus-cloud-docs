@@ -22,7 +22,7 @@ For teams or individuals that are creating an AWS account, here are some essenti
 
 2. **Setup Monthly Billing Alert**
 
-    Use the Service Catalog Product, *Fixed Monthly Budget with Notification*, provided by the UCSB Campus Cloud Team to create a fixed cost monthly budget, and notification based on a forecasted threshold in your account. See [Service Catalog](servicecatalog) for more info.
+    Use the Service Catalog Product, *Fixed Monthly Budget with Notification*, provided by the UCSB Campus Cloud Team to create a fixed cost monthly budget, and notification based on a forecasted threshold in your account. See [Service Catalog]({{site.url}}docs/bestpractices/servicecatalog) for more info.
 
     
     <!---When you created your Purchase Order through [Gateway](https://gateway.procurement.ucsb.edu), you provided a budget and duration for your account. The Campus Cloud team has configured your account for a billing alert based on your provided budget and estimated monthly spend. If your monthly bill is forecasted to go over your budget you will get a notification. Please verify that you have an email address subscribed to the configured billing alert. -->
@@ -53,7 +53,7 @@ For teams or individuals that are creating an AWS account, here are some essenti
 
 5. **Create Network Connectivity**
 
-    Use the Service Catalog Product, *Simple VPC with Campus Connectivity*, provided by the UCSB Campus Cloud Team to create a VPC that will quickly provide internet and VPN (if needed) access in your account. See [Service Catalog]({{site.url}}/docs/bestpractices/servicecatalog) for more info.
+    Use the Service Catalog Product, *Simple VPC with Campus Connectivity*, provided by the UCSB Campus Cloud Team to create a VPC that will quickly provide internet and VPN (if needed) access in your account. See [Service Catalog]({{site.url}}docs/bestpractices/servicecatalog) for more info.
 
 
 6. **ADD Additional User Access**
