@@ -11,13 +11,14 @@ For teams or individuals that are creating an AWS account, here are some essenti
 
 1. **Log in to your AWS Account**. The Campus Cloud team has configured new accounts to use campus single sign on for user authentication and a mapping of identity groups to [AWS Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) for authorization. Your account will come with four pre-defined roles:  
 
-    *  Administrator: This role has full access and can delegate permissions to every service and resource in AWS. Provides full access to AWS services and resources.
-    *  PowerUser: Provides full access to AWS services and resources, but does not allow management of [IAM](https://docs.aws.amazon.com/iam/index.html). This user performs application development tasks and can create and configure resources and services that support AWS aware application development.
-    *  ReadOnly: Provides read-only access to AWS services and resources. This user can view a list of AWS resources and basic metadata in the account across all services. The user cannot read resource content or metadata that goes beyond the quota and list information for resources.
-    *  Billing: This user has access to view billing information, The user can monitor the costs accumulated for the entire AWS service.  
+    *  _Administrator(ucsb-idp-administrator)_: This role has full access and can delegate permissions to every service and resource in AWS. Provides full access to AWS services and resources.
+    *  _PowerUser(ucsb-idp-poweruser)_: Provides full access to AWS services and resources, but does not allow management of [IAM](https://docs.aws.amazon.com/iam/index.html). This user performs application development tasks and can create and configure resources and services that support AWS aware application development.
+    *  _ReadOnly(ucsb-idp-readonly)_: Provides read-only access to AWS services and resources. This user can view a list of AWS resources and basic metadata in the account across all services. The user cannot read resource content or metadata that goes beyond the quota and list information for resources.
+    *  _Billing(ucsb-idp-billing)_: This user has access to view billing information, The user can monitor the costs accumulated for the entire AWS service.  
 
     
-    Need to ADD/REMOVE user access to these Roles? Please see **Step 7**.
+    ℹ️ IMPORTANT - Need to ADD/REMOVE user access to these Roles? Please see **Step 6 below**.
+    
    
 
 2. **Setup Monthly Billing Alert**
@@ -43,7 +44,7 @@ For teams or individuals that are creating an AWS account, here are some essenti
     * Enable Trusted Advisor Integration  (now available with Enterprise Support)
     * Enable AWS Foundational Security Best Practices v1.0.0 and/or CIS AWS Foundations Benchmark v1.2.0
         
-        *(be AWARE of potential cost for resource checks IF you have substantial resources or turnover)*
+        _(be AWARE of potential cost for resource checks IF you have substantial resources or turnover)_
 
 
 4. **Configure Account Alternate Contacts**    
@@ -58,9 +59,12 @@ For teams or individuals that are creating an AWS account, here are some essenti
 
 6. **ADD Additional User Access**
 
-    You will use the "Manage Group Tags" tool available at [im.ucsb.edu](https://im.ucsb.edu) to add and remove members from the above groups. Please note, you must Log in first to access the tool.
+    You will use the "Manage Group Tags" tool available at [im.ucsb.edu](https://im.ucsb.edu) to add and remove members to/from the pre-defined identity groups.
+   *  OWNERS have access to add/remove MEMBERS.
+   *  Only MEMBERS are authorized for an Identity Group (Not OWNERS)
 
     **Manage Group Tags: [https://im.ucsb.edu](https://im.ucsb.edu)**
+    (Note, you must Log in first to access the tool)
 
 ## AWS Enterprise Support
     
