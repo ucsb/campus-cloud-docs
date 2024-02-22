@@ -64,6 +64,7 @@ For teams or individuals that are creating an AWS account, here are some essenti
    *  Only MEMBERS are authorized for an Identity Group (Not OWNERS)
 
 
+
     **Manage Group Tags: [https://im.ucsb.edu](https://im.ucsb.edu)**
     (Note, you must Log in first to access the tool)
 
