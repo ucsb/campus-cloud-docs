@@ -57,6 +57,6 @@ Note: Resources on public subnets route to UCSB over their own internet gateway.
 *IF you are having trouble getting traffic from a private subnet back to campus please see our Best Practice for enabling [VPN traffic]({{ site.baseurl }}/docs/bestpractices/vpn/) back to campus.*
 
 ### Campus Cloud Service Catalog VPC Product
-The above network resources need to be available to a child account. To simplify the creation of a VPC with these resources configured the Cloud Team has created a, [VPC Service Catalog Product]({{ site.baseurl }}/docs/bestpractices/servicecatalog#VPC) that you run from your child account.  
+The above network resources need to be available to a child account. To simplify the creation of a VPC with these resources configured the Cloud Team has created a, [Simple VPC Service Catalog Product]({{ site.baseurl }}/docs/bestpractices/servicecatalog#VPC) that you "Launch" from your child account.  
 
-The outcome is that you will have a functional VPC with private and or public subnets and the required connectivity. Note: If this VPC Product is not used you will need to setup these resources on your own.
+The outcome is a functional VPC with private and or public subnets and the required connectivity to the Internet and or Campus. Note: If this VPC Product is not used you will need to setup these resources on your own.
