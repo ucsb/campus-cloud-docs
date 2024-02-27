@@ -37,7 +37,9 @@ Learn more about Access Management, see [Permissions and Policies](https://docs.
 ### [Simple VPC with Campus Connectivity](#VPC)
   * This Product will create a simple VPC with allocated private IP space.
 
-This Product provides connectivity between the account and back to campus via a Transit Gateway (TG) and supports VPN connectivity as needed.  Not only does this save the time and configuration to set up a VPC independently, but the costs of the NAT Gateways and VPN are a shared service instead of per account.
+This Product provides connectivity between the account and back to campus via a Transit Gateway (TGW) and supports VPN connectivity as needed.  Not only does this save the time and configuration to set up a VPC independently, but the costs of the NAT Gateways and VPN are a shared service instead of per account.
+
+Feb 2024 added support for "xlarge" VPC sizes supporting 256 IP addresses.
 
 Description of the VPC Families offered:
 
@@ -56,3 +58,12 @@ Description of the VPC Families offered:
 |  n2.large.private  |       2        |     128 IPs     |       2 private      |             2             |
 |  n2.large.mixed    |       2        |     128 IPs     |  1 public 1 private  |             1             |
 |  n4.large.mixed    |       4        |     128 IPs     |  2 public 2 private  |             2             |
+|  n2.xlarge.public   |       2        |     256 IPs     |       2 public       |             2             |
+|  n2.xlarge.private  |       2        |     256 IPs     |       2 private      |             2             |
+|  n2.xlarge.mixed    |       2        |     256 IPs     |  1 public 1 private  |             1             |
+|  n4.xlarge.mixed    |       4        |     256 IPs     |  2 public 2 private  |             2             |
+
+### [Advance VPC with Campus Connectivity](#VPC)
+  * This Product will create an advanced VPC supporting allocation of a large private IP address space. Provides the foundation for Campus Connectivity via the TGW.
+
+This Product does not create Transit Gateway (TGW) attachments nor subnets nor associated Route Tables.  It creates an empty VPC with a Main Route Table offering VPC sizes of small, medium, large and xlarge.  Owner will be reponsible creating desired network connectivity.
