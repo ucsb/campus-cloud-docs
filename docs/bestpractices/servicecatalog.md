@@ -43,7 +43,7 @@ Feb 2024 added support for "xlarge" VPC sizes supporting 256 IP addresses.
 
 Description of the VPC Families offered:
 
-|  VPC Name          |  # of Subnets  |  VPC CIDR Size  |  Type of Subnets     |  # of Availability Zones  |
+|  VPC Family          |  # of Subnets  |  VPC CIDR Size  |  Type of Subnets     |  # of Availability Zones  |
 |:------------------:|:--------------:|:---------------:|:--------------------:|:-------------------------:|
 |  n1.small.public   |       1        |     32 IPs      |       1 public       |             1             |
 |  n1.small.private  |       1        |     32 IPs      |       1 private      |             1             |
