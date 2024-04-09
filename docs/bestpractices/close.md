@@ -1,10 +1,10 @@
 ## Cloud Account Closure
 
-When you are ready to close your Campus Cloud account(AWS, Azure) please follow the steps below.  It is important to understand that once the account is CLOSED any data, analysis, reports, objects in S3 buckets and all other resources will be unavailable. The associated PO should NOT be closed until 1 month AFTER the final invoicing from the Campus Cloud Team.
+When you are ready to close your Campus Cloud account(AWS, Azure) please follow the steps below.  It is important to understand that once the account is CLOSED any data, analysis, reports, objects in S3 buckets or Azure storage and all other resources will be unavailable. The associated PO should NOT be closed until 1 month AFTER the final invoicing from the Campus Cloud Team.
 
 It is imperative that you destroy all resources that you have created AFTER backing up any/all data you wish to maintain.
 
-A request to close a Campus Cloud account is NOT completed until all Resources created by the Owner have been destroyed. A good indicator that this has been accomplished is the account charges are minimal ($5-20/mo).  A nominal dollar amount per month is normal to maintain an account in the Landing Zone.
+A request to close a Campus Cloud account is NOT completed until all Resources created by the Owner have been destroyed. A good indicator that this has been accomplished is the account charges are minimal (<$5-10/mo).  A nominal dollar amount per month is normal to maintain an account in the Landing Zone.
 
 ⚠️ WARNING - once you CONFIRM your account for closure in step 4 below, you are confirming there is nothing in the account that you need and ALL resources, data, etc can be destroyed.  This is not a reversible process. There is no "undo".
 
@@ -15,9 +15,9 @@ A request to close a Campus Cloud account is NOT completed until all Resources c
 3. Create ServiceNow (SN) ticket to close account. (https://ucsb.service-now.com/).
 
    * Home -> Information Technology Services -> Advanced Technical Services -> Cloud Services -> Cloud Question
-   * Include **Account#**, **PO#** and **date** for account to be closed.
+   * Include **Account#/Subscription#**, **PO#** and **date** for account to be closed.
  
-5. CONFIRM in the ServiceNow Ticket each list item below to authorize the closure of the account.
+5. CONFIRM in the ServiceNow Ticket each list item below is complete to authorize the closure of the account.
    * Remove Data sources - Confirm all regulated data, Datasets, etc. have been removed.
    * Remove Data created - Confirm all data, reports, analysis, etc have been removed from the account or can be deleted.
    * Destroy Resources - Confirm all owner created resources have been destroyed.
