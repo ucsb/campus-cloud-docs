@@ -14,5 +14,6 @@ Here, we look at some useful guidelines to follow when executing your project.
 *  [Tagging](guidelines/tagging)
 *  [Compliance](guidelines/compliance)
 *  [Security Guidelines](guidelines/security)
+*  [Migrate to the Cloud](guidelines/migrate)
 
 [//]: # (This may be the most platform independent comment)
