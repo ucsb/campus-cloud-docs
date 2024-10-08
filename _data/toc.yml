@@ -33,6 +33,8 @@
           url: "docs/guidelines/compliance"
         - title: Security
           url: "docs/guidelines/security"
+        - title: Migrate
+          url: "docs/guidelines/migrate"
     - title: "Best Practices"
       url: "docs/bestpractices"
       children:
