@@ -17,7 +17,9 @@
         - title: AWS
           url: "docs/firststeps/awsfirststeps"
         - title: Azure
-          url: "docs/firststeps/azurefirststeps" 
+          url: "docs/firststeps/azurefirststeps"
+        - title: GCP
+          url: "docs/firststeps/gcpfirststeps"          
     - title: "Guidelines"
       url: "docs/guidelines"
       children:
