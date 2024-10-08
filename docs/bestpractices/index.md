@@ -15,4 +15,4 @@ Here, we look at some best practices to follow when executing your project.
 *  [Resource Tagging](bestpractices/tagging)
 *  [VPN traffic](bestpractices/vpn)
 *  [Close Account](bestpractices/close)
-*  [Reserach](bestpractices/research)
+*  [Research](bestpractices/research)
