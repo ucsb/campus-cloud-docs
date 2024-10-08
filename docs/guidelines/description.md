@@ -4,17 +4,22 @@ description: Service Descriptions
 permalink: /docs/guidelines/description
 ---
 
-## Campus Cloud Amazon Web Services (AWS) Environment
+## Service Desriptions - UCSB Campus Cloud
+The UCSB Campus Cloud includes:
+*  AWS Campus Cloud
+*  Azure Campus Cloud
+*  GCP Campus Cloud
 
-### Global Infrastructure
+### AWS Campus Cloud
+#### Global Infrastructure
 
 An overview of the Amazon Web Services Global Infrastructure can be found [here](https://aws.amazon.com/about-aws/global-infrastructure/?p=ngi&loc=1).
 
-### Regions
+#### Regions
 
 Amazon maintains over 20 [Regions](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/). The UCSB Campus Cloud is currently deployed in two regions, Oregon (US-West-2) and North Virginia(US-East-1). We limit our support to these two regions based on the availability of services.
 
-### Control Tower
+#### Control Tower
 
 [AWS Control Tower](https://aws.amazon.com/controltower/) is a service that provides a way to set up and govern a secure, compliant, multi-account AWS environment based on best practices established by AWS. Cloud administrators will know that accounts are aligned with centrally established, company-wide compliance policies. Control Tower is built on top of other AWS services including AWS Service Catalog, AWS Config, Cloudwatch, CloudTrail, CloudFormation, and AWS Organizations.
 
@@ -27,12 +32,12 @@ AWS Control Tower has the following features:
  *  Account Factory – An Account Factory is a configurable account template that helps to standardize the provisioning of new accounts with pre-approved account configurations. AWS Control Tower offers a built-in Account Factory that helps automate the account provisioning workflow in your organization.
 
 
-### Core and Shared Services Accounts
+#### Core and Shared Services Accounts
 
-### Campus Connectivity
+#### Campus Connectivity
 
-### Legacy
+#### Legacy
 
-## Campus Cloud Microsoft Azure Environment
+### Azure Campus Cloud
 
-## Campus Cloud Google Cloud Platform (GCP) Environment
+### GCP Campus Cloud
