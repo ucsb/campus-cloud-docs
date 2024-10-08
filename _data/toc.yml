@@ -50,5 +50,7 @@
           url: "docs/bestpractices/vpn"
         - title: Close Account
           url: "docs/bestpractices/close"
+        - title: Research
+          url: "docs/bestpractices/research"          
     - title: "Glossary"
       url: "glossary"
