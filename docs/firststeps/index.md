@@ -16,7 +16,7 @@ Please follow the first step best practices below for the relevant Cloud Provide
 * ### [Azure Cloud Account](azurefirststeps)
     Follow these steps for your Azure Cloud Account
 
-* ### GCP Cloud Account
-    Coming Soon
+* ### [GCP Cloud Account](gcpfirststeps)
+    Follow these steps for your GCP Cloud Account
 
 
