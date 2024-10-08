@@ -21,9 +21,9 @@ There are some additional benefits of using the UCSB Campus Cloud for AWS.
 ### Amazon Research Awards (ARA)
 The awards program oﬀers unrestricted funds and AWS Promotional Credits to support research at academic institutions and non-profit organizations in areas that align with our mission to advance customer-obsessed science.  
 
-UCSB research awarded ARA credits are expected (must) to create a new Campus Cloud LZ account or migrate an existing AWS personal account to access ARA credits.
+UCSB research awarded ARA credits are expected to create a new Campus Cloud LZ account or migrate an existing AWS personal account to access ARA credits.
 
-https://www.amazon.science/research-awards
+* https://www.amazon.science/research-awards
 
 ### FAQ - Research
 
