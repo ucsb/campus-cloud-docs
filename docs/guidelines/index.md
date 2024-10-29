@@ -15,5 +15,6 @@ Here, we look at some useful guidelines to follow when executing your project.
 *  [Compliance](guidelines/compliance)
 *  [Security Guidelines](guidelines/security)
 *  [Migrate to the Cloud](guidelines/migrate)
+*  [Quicksight Dashboards](guidelines/quicksight.dashboards)
 
 [//]: # (This may be the most platform independent comment)
