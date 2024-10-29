@@ -35,6 +35,8 @@
           url: "docs/guidelines/security"
         - title: Migrate
           url: "docs/guidelines/migrate"
+        - title: QS Dashboards
+          url: "docs/guidelines/quicksight.dashboards"
     - title: "Best Practices"
       url: "docs/bestpractices"
       children:
