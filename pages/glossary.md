@@ -18,3 +18,7 @@ permalink: /glossary/
    To view the tasks that require you to sign in as the root user, see [AWS Tasks That Require Root User](https://docs.aws.amazon.com/general/latest/gr/aws_tasks-that-require-root.html).
 
 *   [Tags](#tags). A tag is a simple label consisting of a customer-defined key and an optional value that can make it easier to manage, search for, and filter resources. Although there are no inherent types of tags, they enable customers to categorize resources by purpose, owner, environment, or other criteria.
+
+
+### Cloud Docs Chatbot
+[Chatbot](https://byipksv4p8.execute-api.us-west-2.amazonaws.com/api/$api_key=LvVZcBZHjZ1jI51hFlAQ4WUwTyVH8BlF2i3Efda0)
