@@ -16,9 +16,10 @@
 
         // Make the API call using Fetch
         fetch(apiUrl, {
-            method: 'POST',  // or 'POST' depending on the API
+            method: 'GET',  // or 'POST' depending on the API
             headers: {
-                'Authorization': `Bearer ${apiKey}`,  // or whatever the API requires
+                //'Authorization': `Bearer ${apiKey}`,  // or whatever the API requires
+                'X-Api-Key': `${apiKey}`,  // or whatever the API requires
                 'Content-Type': 'application/json'  // or other content types based on API requirements
             }
         })
