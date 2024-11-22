@@ -11,15 +11,15 @@
 
     <script>
         // Set the API URL and your API Key (replace with your actual API key)
-        const apiUrl = 'https://rymbdabr8f.execute-api.us-west-2.amazonaws.com/api';  // API endpoint
+        const apiUrl = 'https://rymbdabr8f.execute-api.us-west-2.amazonaws.com/api/health';  // API endpoint
         const apiKey = 'd4t8B58WNE6mhH5ycoSpE1EOq60Jfruw4r13Bi1o';  // Your API key
 
         // Make the API call using Fetch
         fetch(apiUrl, {
             method: 'GET',  // or 'POST' depending on the API
             headers: {
-                'Authorization': `Bearer ${apiKey}`,  // or whatever the API requires
-                //'X-Api-Key': `${apiKey}`,  // or whatever the API requires
+                //'Authorization': `Bearer ${apiKey}`,  // or whatever the API requires
+                'X-Api-Key': `${apiKey}`,  // or whatever the API requires
                 'Content-Type': 'application/json'  // or other content types based on API requirements
             }
         })
