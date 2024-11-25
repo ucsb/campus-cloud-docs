@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Message to API</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    textarea, button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    #response {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Send Message to Claude API</h1>
+
+  <label for="messageInput">Enter your message:</label>
+  <textarea id="messageInput" rows="5" placeholder="Type your message here..."></textarea>
+
+  <button id="sendMessageBtn">Send Message</button>
+
+  <div id="response"></div>
+
+  <script>
+    // Set up the API endpoint and headers (You'll need an API Key for authentication)
+    const apiEndpoint = 'https://rymbdabr8f.execute-api.us-west-2.amazonaws.com/api/conversation';
+    const apiKey = 'd4t8B58WNE6mhH5ycoSpE1EOq60Jfruw4r13Bi1o'; // Replace with your API key or token
+
+    // Handle the button click event
+    document.getElementById('sendMessageBtn').addEventListener('click', async () => {
+      const message = document.getElementById('messageInput').value;
+      if (!message) {
+        alert('Please enter a message!');
+        return;
+      }
+
+      try {
+        const response = await fetch(apiEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${apiKey}`, // Add the API Key here (if required)
+          },
+          body: JSON.stringify({
+            // The body should be according to the API specification, including required parameters
+            message: message,
+            conversation_id: 'unique-conversation-id', // Replace with your unique conversation ID
+            // Add any other parameters the API requires
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error('Error in API response: ' + response.statusText);
+        }
+
+        const responseData = await response.json();
+        // Display the response in the div below
+        document.getElementById('response').innerHTML = `
+          <strong>Response:</strong><br>
+          ${JSON.stringify(responseData, null, 2)}
+        `;
+      } catch (error) {
+        // Display error message if something goes wrong
+        document.getElementById('response').innerHTML = `
+          <strong>Error:</strong><br>
+          ${error.message}
+        `;
+      }
+    });
+  </script>
+
+</body>
+</html>
