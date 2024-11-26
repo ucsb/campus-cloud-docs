@@ -32,11 +32,11 @@
 
             try {
                 // Send the POST request to the API
-                const response = await fetch('${apiEndpoint}', {  // Replace with the actual API URL
+                const response = await fetch('https://rymbdabr8f.execute-api.us-west-2.amazonaws.com/api/conversation', {  // Replace with the actual API URL
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'X-Api-Key': `${apiKey}`,  // or whatever the API requires
+                        'X-Api-Key': '${apiKey}',  // or whatever the API requires
                     },
                     body: JSON.stringify(requestBody)
                 });
