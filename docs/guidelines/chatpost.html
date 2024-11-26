@@ -25,7 +25,7 @@
 </head>
 <body>
 
-  <h1>Send Message to Claude API</h1>
+  <h1>Send Message to Campus Cloud Claude Chatbot API</h1>
 
   <label for="messageInput">Enter your message:</label>
   <textarea id="messageInput" rows="5" placeholder="Type your message here..."></textarea>
@@ -52,7 +52,8 @@
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${apiKey}`, // Add the API Key here (if required)
+            //'Authorization': `Bearer ${apiKey}`, // Add the API Key here (if required)
+            'X-Api-Key': `${apiKey}`,  // or whatever the API requires
           },
           body: JSON.stringify({
             // The body should be according to the API specification, including required parameters
