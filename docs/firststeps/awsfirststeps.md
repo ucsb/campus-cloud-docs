@@ -49,7 +49,7 @@ For teams or individuals that are creating an AWS account, here are some essenti
 
 4. **Configure Account Alternate Contacts**    
 
-    Configure your account’s [alternate contacts](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-account-payment.html#account-contacts) to point to a group rather than an individual. For example, create separate email distribution lists for billing, operations, and security and configure these as Billing, Security, and Operations contacts in each active AWS account. This ensures that multiple people will receive AWS notifications and be able to respond, even if someone is on vacation, changes roles, or leaves the company. For details see the [Best Practices for Contacts]({{site.url}}/docs/bestpractices/contacts).
+    Configure your account’s [alternate contacts](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-account-payment.html#account-contacts) to point to a group rather than an individual. For example, create separate email distribution lists for billing, operations, and security and configure these as Billing, Security, and Operations contacts in each active AWS account. This ensures that multiple people will receive AWS notifications and be able to respond, even if someone is on vacation, changes roles, or leaves the University. For details see the [Best Practices for Contacts]({{site.url}}/docs/bestpractices/contacts).
 
 
 5. **Create Network Connectivity**
