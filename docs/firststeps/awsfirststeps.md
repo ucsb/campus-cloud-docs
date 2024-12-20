@@ -62,6 +62,7 @@ For teams or individuals that are creating an AWS account, here are some essenti
     You will use the "Manage Group Tags" tool available at [im.ucsb.edu](https://im.ucsb.edu) to add and remove members to/from the pre-defined identity groups.
    *  OWNERS have access to add/remove MEMBERS.
    *  Only MEMBERS are authorized for an Identity Group (Not OWNERS)
+   *  [How To: Add User to AWS Account (Confluence)](https://ucsb-atlas.atlassian.net/wiki/spaces/CCID/pages/18265964605/How+To+Add+User+to+AWS+Account+Subscription)
 
 
         **Manage Group Tags: [https://im.ucsb.edu](https://im.ucsb.edu)**
