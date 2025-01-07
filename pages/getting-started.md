@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Getting Started"
-permalink: /getting-started/
+permalink: getting-started/
 tags:
  - cloud
  - aws
@@ -9,6 +9,8 @@ tags:
  - gcp
  - github
 ---
+> [!NOTE]
+> AWS accounts created wtih @ucsb.edu email addresses must be created in the Campus Cloud
 
 # Getting Started
 
