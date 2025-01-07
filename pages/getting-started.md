@@ -12,7 +12,7 @@ tags:
 
 > [!NOTE]
 > 
-> AWS accounts created wtih @ucsb.edu email addresses must be created in the Campus Cloud.
+> AWS accounts created wtih @ucsb.edu emails must be created in the Campus Cloud.
 
 # Getting Started
 
