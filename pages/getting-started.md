@@ -66,8 +66,8 @@ Before you start the procurement process, you will need to estimate your monthly
 > 
 > AWS accounts created wtih @ucsb.edu emails must be created in the Campus Cloud.
 
-This is the first step for an Azure Subscription, new AWS Accounts and existing AWS Accounts that you wish to migrate to the Campus Cloud.
-Follow the instructions below to ensure that you Campus Cloud Account used for UCSB business is covered under this agreement and in compliance with UC policy and applicable laws.
+Creating a Purchase Order is the first step to procuring a new Azure Subscription, a new AWS Accounts or migrating an existing AWS Accounts to the Campus Cloud.
+A Campus Cloud Account is used for UCSB business is covered under an enterprise agreement and in compliance with UC policy and applicable laws. Follow the instructions below to create the Purchase Order.
 
 You will only be able to access the Campus Cloud Account and its resources after all steps below are completed and the UCSB Campus Cloud team creates your account.
 
