@@ -24,17 +24,15 @@ The following are critical compliance requirements for each Campus Cloud account
 
 The Campus Cloud Providers - AWS, Azure, GCP - may differ in the specific terminology and tools used to audit and maintain compliance. However, each Cloud Provider offers resources to help maintain compliance.  One important resource is Guardrails.  
 
-    ### AWS Guardrails
+* ### AWS Guardrails
     In AWS, Control Tower and Guardrails work together to provide ongoing goverance for the Campus AWS environment. Control Tower implements preventive or detective controls that help govern resources and monitor compliance across groups of AWS accounts.  [Tagging](/campus-cloud-docs/glossary/#tags) of accounts and individual resources support compliance efforts. In AWS Gurdrails are rules that define policy. 
-    
-    * ### [AWS Active Guardrails](guardrails.aws)
 
+    ### [AWS Active Guardrails](guardrails.aws)
 
 * ### Azure Guardrails
     Azure utilizes built-in and custom policies to set guardrails in Subscriptions. Guardrails for Azure are built using Azure Policy and RBAC to enforce and audit policies for any Azure service.
     
-    * ### [Azure Active Guardrails](guardrails.azure)
-
+    ### [Azure Active Guardrails](guardrails.azure)
 
 * ### Prisma Cloud from Palo Alto
     Prisma Cloud is a cloud native security platform that provides a unified view of security and compliance across the Campus Cloud's three Cloud Providers.  The product was deployed in the Campus Cloud LZ in the summer of 2022.
