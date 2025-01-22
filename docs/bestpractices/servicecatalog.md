@@ -13,6 +13,7 @@ A Service Catalog created by a local Administrator is scoped to that account onl
 It is also possible for Account holders to submit services they have created for use in the campus Service Catalog.
 
 Find more information, see [AWS Service Catalog](https://docs.aws.amazon.com/servicecatalog/latest/dg/what-is-service-catalog.html).
+help
 
 {% include alert.html type="primary" title="Local Portfolio deprecated June 5th, 2024" content="The local Service Catalog Portfolio, Local Campus Cloud Self Service Portfolio, has been deprecated and removed June 5th, 2024. It was replaced with a Shared portfolio that is maintained in a delegated administrator account and can be updated easily. The Products are Launched and utilized the same way as the local Products. The Shared portfolio has 7 Products listed below." %}
 
