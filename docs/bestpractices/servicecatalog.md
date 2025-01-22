@@ -19,6 +19,7 @@ Find more information, see [AWS Service Catalog](https://docs.aws.amazon.com/ser
 ## UCSB Service Catalog Products
 The Service Catalog Products below are essential to building out your AWS projects as they provide network connectivity and initialize Group/Role use with UCSB Identity. Using these products will save you time and money. Goto the "Service Catalog" service in the AWS Console and click on the "Product List" to see the Products available.
 
+![assets/img/ucsb-servicecatalog.png]({{site.url}}assets/img/ucsb-servicecatalog.png)
 ![UCSB Service Catalog](/campus-cloud-docs/assets/img/ucsb-servicecatalog.png)
 
 ### [Local Security Notifications](#localsecurity)
