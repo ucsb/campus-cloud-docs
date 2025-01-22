@@ -15,10 +15,8 @@ For teams or individuals that are creating an AWS account, here are some essenti
     *  _PowerUser (ucsb-idp-poweruser)_: Provides full access to AWS services and resources, but does not allow management of [IAM](https://docs.aws.amazon.com/iam/index.html). This user performs application development tasks and can create and configure resources and services that support AWS aware application development.
     *  _ReadOnly (ucsb-idp-readonly)_: Provides read-only access to AWS services and resources. This user can view a list of AWS resources and basic metadata in the account across all services. The user cannot read resource content or metadata that goes beyond the quota and list information for resources.
     *  _Billing (ucsb-idp-billing)_: This user has access to view billing information, The user can monitor the costs accumulated for the entire AWS service.  
-    
-         {::comment}ℹ️ _IMPORTANT - To ADD/REMOVE user access to these Roles, please see Step 6 below_.{:/comment}
 
-{% include alert.html type="info" title="To ADD/REMOVE user access to these Roles, please see Step 6 below" %}
+{% include alert.html type="info" title="Information" content="To ADD/REMOVE user access to these Roles, please see Step 6 below" %}
 
 3. **Setup Monthly Billing Alert**
 
