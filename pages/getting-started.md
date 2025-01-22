@@ -28,10 +28,10 @@ It is highly recommended to have an understanding of Cloud environment concepts 
 [Microsoft's Cloud Adoption Framework for Azure](https://azure.microsoft.com/en-us/cloud-adoption-framework/#:~:text=The%20Cloud%20Adoption%20Framework%20provides,the%20framework%20is%20updated%20regularly.) is similiarly recomended for Azure.
 
 
-### Campus Training Resources
 
-*   The UCSB [Learning Center](https://www.learningcenter.ucsb.edu/) and more specifically, [Linkedin Learning](https://www.learningcenter.ucsb.edu/content/linkedin-learning) offers courses for Cloud Computing and AWS.
-	*   [Cloud Computing Topic](https://www.linkedin.com/learning/topics/cloud-computing-5)
+* ### Campus Training Resources
+	The UCSB [Learning Center](https://www.learningcenter.ucsb.edu/) and more specifically, [Linkedin Learning](https://www.learningcenter.ucsb.edu/content/linkedin-learning) offers courses for Cloud Computing and AWS.
+	* [Cloud Computing Topic](https://www.linkedin.com/learning/topics/cloud-computing-5)
 	* [AWS Courses](https://www.linkedin.com/learning/search?keywords=aws)
 	* [Azure Courses](https://www.linkedin.com/learning/search?keywords=azure)
 
@@ -43,10 +43,10 @@ It is highly recommended to have an understanding of Cloud environment concepts 
 
 	* [Azure on Microsoft Learn](https://docs.microsoft.com/en-us/learn/azure/)
 
-## [Consultation](#consult)
+## [Consultation](#consultation)
 
-*   Consult with your local IT staff. They may have processes and protocols in place for sharing responsibility for your Campus Cloud Account(s).
-*   Consult with the Campus Cloud Team.
+*  Consult with your local IT staff. They may have processes or protocols in place for sharing responsibility for your Campus Cloud Account(s).  
+*  Consult with the Campus Cloud Team.
 
 ## [Budgeting](#budgeting)
 {% include alert.html type="warning" title="Warning" content="Audit, compliance and security tools are utilized in the Campus Cloud that generate costs in every account. It is important that you are aware of these costs. For a busy account it may be a small percentage of monthly costs." %}
