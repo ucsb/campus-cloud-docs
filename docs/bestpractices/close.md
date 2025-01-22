@@ -1,4 +1,5 @@
 ## Cloud Account Closure
+{% include alert.html type="warning" title="Warning" content="Once you CONFIRM your account for closure in step 4 below, you are confirming there is nothing in the account that you need and ALL resources, data, etc can be destroyed.  This is not a reversible process. There is no "undo"." %}
 
 When you are ready to close your Campus Cloud account(AWS, Azure) please follow the steps below.  It is important to understand that once the account is CLOSED any data, analysis, reports, objects in S3 buckets or Azure storage and all other resources will be unavailable. The associated PO should NOT be closed until 1 month AFTER the final invoicing from the Campus Cloud Team.
 
@@ -6,7 +7,6 @@ It is imperative that you destroy all resources that you have created AFTER back
 
 A request to close a Campus Cloud account is NOT completed until all Resources created by the Owner have been destroyed. A good indicator that this has been accomplished is the account charges are minimal (<$5-10/mo).  A nominal dollar amount per month is normal to maintain an account in the Landing Zone.
 
-⚠️ WARNING - once you CONFIRM your account for closure in step 4 below, you are confirming there is nothing in the account that you need and ALL resources, data, etc can be destroyed.  This is not a reversible process. There is no "undo".
 
 ### Procedure for Account Closure
 
@@ -31,12 +31,8 @@ A request to close a Campus Cloud account is NOT completed until all Resources c
 <br>
 
 ### Final Invoice for Purchase Order (PO)
-
-ℹ️ IMPORTANT - The PO associated with the account should not be closed for 30 days after the final invoicing to ensure Accounting has time to process the invoice. The Cloud team invoices for the previous months costs about 3 weeks after the end of the month.
-
 {% include alert.html type="warning" title="Warning" content="The PO associated with the account should not be closed for 30 days after the final invoicing to ensure Accounting has time to process the invoice. The Cloud team invoices for the previous months costs about 3 weeks after the end of the month." %}
 
 
-<br>
 
 The Service Now Ticket will be closed after the final invoice has been submitted.  All corespondence regarding an account closure should be included in the Service Now Ticket.
