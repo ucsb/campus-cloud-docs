@@ -29,17 +29,17 @@ It is highly recommended to have an understanding of Cloud environment concepts 
 
 
 
-* ### Campus Training Resources
+* #### Campus Training Resources
 	The UCSB [Learning Center](https://www.learningcenter.ucsb.edu/) and more specifically, [Linkedin Learning](https://www.learningcenter.ucsb.edu/content/linkedin-learning) offers courses for Cloud Computing and AWS.
 	* [Cloud Computing Topic](https://www.linkedin.com/learning/topics/cloud-computing-5)
 	* [AWS Courses](https://www.linkedin.com/learning/search?keywords=aws)
 	* [Azure Courses](https://www.linkedin.com/learning/search?keywords=azure)
 
-* ### AWS Training Resources
+* #### AWS Training Resources
 
 	*   Take the free [Cloud Practitioners Training](https://www.aws.training/Details/Curriculum?id=27076)
 
-* ### Azure Training Resources
+* #### Azure Training Resources
 
 	* [Azure on Microsoft Learn](https://docs.microsoft.com/en-us/learn/azure/)
 
@@ -52,10 +52,10 @@ It is highly recommended to have an understanding of Cloud environment concepts 
 {% include alert.html type="warning" title="Warning" content="Audit, compliance and security tools are utilized in the Campus Cloud that generate costs in every account. It is important that you are aware of these costs. For a busy account it may be a small percentage of monthly costs." %}
 Before you start the procurement process, you will need to estimate your monthly spend.
 
-*   AWS Cost Calculator
+*   #### AWS Cost Calculator
     *   [Simple Monthly Calculator](https://calculator.s3.amazonaws.com/index.html)
 	  *   The new [Pricing Calculator](https://calculator.aws/#/)
-*   Azure Pricing Calculator
+*   #### Azure Pricing Calculator
 	  * [Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/?&ef_id=Cj0KCQjwvr6EBhDOARIsAPpqUPHPjtVqbRjubykatJR6m_x7p-TMY9WOmVU-YjF-LqNc4-ambKzOU8AaAk02EALw_wcB:G:s&OCID=AID2100131_SEM_Cj0KCQjwvr6EBhDOARIsAPpqUPHPjtVqbRjubykatJR6m_x7p-TMY9WOmVU-YjF-LqNc4-ambKzOU8AaAk02EALw_wcB:G:s&gclid=Cj0KCQjwvr6EBhDOARIsAPpqUPHPjtVqbRjubykatJR6m_x7p-TMY9WOmVU-YjF-LqNc4-ambKzOU8AaAk02EALw_wcB)   	  
 
 {::comment} ℹ️ IMPORTANT - Audit, compliance and security tools are utilized in the Campus Cloud that generate costs in every account. It is important that you are aware of these costs. For a busy account it may be a small percentage of monthly costs.{:/comment} 
