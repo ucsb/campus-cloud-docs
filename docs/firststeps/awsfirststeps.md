@@ -17,10 +17,10 @@ For teams or individuals that are creating an AWS account, here are some essenti
     *  _Billing (ucsb-idp-billing)_: This user has access to view billing information, The user can monitor the costs accumulated for the entire AWS service.  
 
     
-        ℹ️ _IMPORTANT - To ADD/REMOVE user access to these Roles, please see Step 6 below_.
+         {::comment}ℹ️ _IMPORTANT - To ADD/REMOVE user access to these Roles, please see Step 6 below_.{:/comment}; 
 
-        {% include alert.html type="warning" title="Here is a warning!" %}
-tet
+{% include alert.html type="info" title="To ADD/REMOVE user access to these Roles, please see Step 6 below" %}
+t
 
 3. **Setup Monthly Billing Alert**
 
