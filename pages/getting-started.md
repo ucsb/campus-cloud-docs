@@ -62,13 +62,10 @@ Before you start the procurement process, you will need to estimate your monthly
 
 {% include alert.html type="warning" title="Warning" content="Audit, compliance and security tools are utilized in the Campus Cloud that generate costs in every account. It is important that you are aware of these costs. For a busy account it may be a small percentage of monthly costs." %}
 
-yeah
 
 ## [Procure a Campus Cloud Account](#procure-a-campus-cloud-account)
 
-> [!NOTE]
-> 
-> AWS accounts created wtih @ucsb.edu emails must be created in the Campus Cloud.
+{% include alert.html type="info" title="Information" content="AWS accounts created wtih @ucsb.edu emails must be created in the Campus Cloud." %}
 
 Creating a Purchase Order is the first step to procuring a new Azure Subscription, a new AWS Accounts or migrating an existing AWS Accounts to the Campus Cloud.
 A Campus Cloud Account is used for UCSB business is covered under an enterprise agreement and in compliance with UC policy and applicable laws. Follow the instructions below to create the Purchase Order.
