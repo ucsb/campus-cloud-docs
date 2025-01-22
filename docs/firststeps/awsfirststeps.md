@@ -19,8 +19,8 @@ For teams or individuals that are creating an AWS account, here are some essenti
     
         ℹ️ _IMPORTANT - To ADD/REMOVE user access to these Roles, please see Step 6 below_.
 
-{% include alert.html type="info" title="Here is another!" %}
-test
+{% include alert.html type="warning" title="Here is a warning!" %}
+te
 
 3. **Setup Monthly Billing Alert**
 
