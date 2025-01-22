@@ -16,7 +16,7 @@ For teams or individuals that are creating an AWS account, here are some essenti
     *  _ReadOnly (ucsb-idp-readonly)_: Provides read-only access to AWS services and resources. This user can view a list of AWS resources and basic metadata in the account across all services. The user cannot read resource content or metadata that goes beyond the quota and list information for resources.
     *  _Billing (ucsb-idp-billing)_: This user has access to view billing information, The user can monitor the costs accumulated for the entire AWS service.  
 
-{% include alert.html type="info" title="Information" content="To ADD/REMOVE user access to these Roles, please see Step 6 below" %}
+{% include alert.html type="info" title="Information" content="To ADD/REMOVE user access to these Roles, please see Step 5 below" %}
 
 3. **Setup Monthly Billing Alert**
 
