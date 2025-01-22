@@ -59,7 +59,8 @@ Before you start the procurement process, you will need to estimate your monthly
 	  * [Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/?&ef_id=Cj0KCQjwvr6EBhDOARIsAPpqUPHPjtVqbRjubykatJR6m_x7p-TMY9WOmVU-YjF-LqNc4-ambKzOU8AaAk02EALw_wcB:G:s&OCID=AID2100131_SEM_Cj0KCQjwvr6EBhDOARIsAPpqUPHPjtVqbRjubykatJR6m_x7p-TMY9WOmVU-YjF-LqNc4-ambKzOU8AaAk02EALw_wcB:G:s&gclid=Cj0KCQjwvr6EBhDOARIsAPpqUPHPjtVqbRjubykatJR6m_x7p-TMY9WOmVU-YjF-LqNc4-ambKzOU8AaAk02EALw_wcB)   	  
 
 {::comment} ℹ️ IMPORTANT - Audit, compliance and security tools are utilized in the Campus Cloud that generate costs in every account. It is important that you are aware of these costs. For a busy account it may be a small percentage of monthly costs.{:/comment} 
-{% include alert.html type="warning" title="Audit, compliance and security tools are utilized in the Campus Cloud that generate costs in every account. It is important that you are aware of these costs. For a busy account it may be a small percentage of monthly costs." %}
+
+{% include alert.html type="warning" title="Warning" %}Audit, compliance and security tools are utilized in the Campus Cloud that generate costs in every account. It is important that you are aware of these costs. For a busy account it may be a small percentage of monthly costs.
 
 ## [Procure a Campus Cloud Account](#procure-a-campus-cloud-account)
 
