@@ -16,7 +16,7 @@ Find more information, see [AWS Service Catalog](https://docs.aws.amazon.com/ser
 
 {% include alert.html type="primary" title="Local Portfolio deprecated June 5th, 2024" content="The local Service Catalog portfolio named “Local Campus Cloud Self Service Portfolio” has been deprecated and weill be removed June 5th, 2024. It will be replaced with a "Shared" portfolio that is maintained in a delegated administrator account and can be updated easily. These are Launched and utilized the same way as the local Products. The Shared portfolio has 7 Products listed below." %}
 
-## Local Portfolio deprecated June 5th, 2024
+## Local Portfolio deprecated June 5th, 2024  yip
 The local Service Catalog portfolio named “Local Campus Cloud Self Service Portfolio” has been deprecated and weill be removed June 5th, 2024. It will be replaced with a "Shared" portfolio that is maintained in a delegated administrator account and can be updated easily. These are Launched and utilized the same way as the local Products. The Shared portfolio has 7 Products listed below. 
 
 
