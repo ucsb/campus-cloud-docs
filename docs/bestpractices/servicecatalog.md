@@ -14,13 +14,12 @@ It is also possible for Account holders to submit services they have created for
 
 Find more information, see [AWS Service Catalog](https://docs.aws.amazon.com/servicecatalog/latest/dg/what-is-service-catalog.html).
 
-
+{% include alert.html type="primary" title="Local Portfolio deprecated June 5th, 2024" content="The local Service Catalog Portfolio, Local Campus Cloud Self Service Portfolio, has been deprecated and removed June 5th, 2024. It was replaced with a Shared portfolio that is maintained in a delegated administrator account and can be updated easily. The Products are Launched and utilized the same way as the local Products. The Shared portfolio has 7 Products listed below." %}
 
 ## UCSB Service Catalog Products
 The Service Catalog Products below are essential to building out your AWS projects as they provide network connectivity and initialize Group/Role use with UCSB Identity. Using these products will save you time and money. Goto the "Service Catalog" service in the AWS Console and click on the "Product List" to see the Products available.
 
 ![assets/img/ucsb-servicecatalog.png]({{site.url}}assets/img/ucsb-servicecatalog.png)
-![UCSB Service Catalog](/campus-cloud-docs/assets/img/ucsb-servicecatalog.png)
 
 ### [Local Security Notifications](#localsecurity)
   * This Product will create a local security SNS topic, subscribe an email, and enable notifications for AWS Config compliance (Guardrails).
