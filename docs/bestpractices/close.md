@@ -1,5 +1,5 @@
 ## Cloud Account Closure
-{% include alert.html type="warning" title="Warning" content="Once you CONFIRM your account for closure in step 4 below, you are confirming there is nothing in the account that you need and ALL resources, data, etc can be destroyed.  This is not a reversible process. There is no "undo"." %}
+{% include alert.html type="warning" title="Warning" content="Once you CONFIRM your account for closure in step 4 below, you are confirming there is nothing in the account that you need and ALL resources, data, etc can be destroyed.  This is not a reversible process. There is no 'undo'." %}
 
 When you are ready to close your Campus Cloud account(AWS, Azure) please follow the steps below.  It is important to understand that once the account is CLOSED any data, analysis, reports, objects in S3 buckets or Azure storage and all other resources will be unavailable. The associated PO should NOT be closed until 1 month AFTER the final invoicing from the Campus Cloud Team.
 
