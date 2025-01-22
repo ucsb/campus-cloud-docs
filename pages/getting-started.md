@@ -21,7 +21,7 @@ Using an approved provider means that:
 *   You have access to account management and solution architects — AWS and Azure staff who can assist with how to use, and provide technical guidance on best practices.
 *   Your vendor relationship falls under the University of California Terms & Conditions. This ensures that your agreement conforms to the UC Regents’ policies for procurement and business contracts, and reduces the financial risk to your department or division for agreements that are outside of Regental standing orders (especially with respect to third-party liability).
 
-## [Training and Consultation](#training)
+## [Training](#training)
 
 It is highly recommended to have an understanding of Cloud environment concepts and methodologies. Specifically, AWS' [Well Architected Framework](https://aws.amazon.com/architecture/well-architected/) and [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/).
 
@@ -43,7 +43,7 @@ It is highly recommended to have an understanding of Cloud environment concepts 
 
 	* [Azure on Microsoft Learn](https://docs.microsoft.com/en-us/learn/azure/)
 
-### [Consultation](#consult)
+## [Consultation](#consult)
 
 *   Consult with your local IT staff. They may have processes and protocols in place for sharing responsibility for your Campus Cloud Account(s).
 *   Consult with the Campus Cloud Team.
