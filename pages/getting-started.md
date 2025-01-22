@@ -62,6 +62,8 @@ Before you start the procurement process, you will need to estimate your monthly
 
 {% include alert.html type="warning" title="Warning" %}Audit, compliance and security tools are utilized in the Campus Cloud that generate costs in every account. It is important that you are aware of these costs. For a busy account it may be a small percentage of monthly costs.
 
+teset
+
 ## [Procure a Campus Cloud Account](#procure-a-campus-cloud-account)
 
 > [!NOTE]
