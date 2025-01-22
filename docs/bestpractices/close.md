@@ -34,10 +34,8 @@ A request to close a Campus Cloud account is NOT completed until all Resources c
 
 ℹ️ IMPORTANT - The PO associated with the account should not be closed for 30 days after the final invoicing to ensure Accounting has time to process the invoice. The Cloud team invoices for the previous months costs about 3 weeks after the end of the month.
 
-{% include alert.html type="warning" title="Warning" %}
+{% include alert.html type="warning" title="Warning" content="The PO associated with the account should not be closed for 30 days after the final invoicing to ensure Accounting has time to process the invoice. The Cloud team invoices for the previous months costs about 3 weeks after the end of the month." %}
 
-
-The PO associated with the account should not be closed for 30 days after the final invoicing to ensure Accounting has time to process the invoice. The Cloud team invoices for the previous months costs about 3 weeks after the end of the month.
 
 <br>
 
