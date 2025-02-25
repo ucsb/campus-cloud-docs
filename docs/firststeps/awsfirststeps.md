@@ -4,13 +4,14 @@
      * **US-East-1 (N.Virginia)** 
    * We recommend starting in *US-West-2*
 
-     {% include alert.html type="info" title="Information" content="To ADD/REMOVE user access to these Roles, please see Step 5 below" %}
+{% include alert.html type="info" title="Information" content="To ADD/REMOVE user access to these Roles, please see Step 5 below" %}
 
-## AWS Account First Steps C
+## AWS Account First Steps D
 
 For teams or individuals that are creating an AWS account, here are some essential first steps that you should take. This guide assumes your account is a UCSB Campus Cloud account and that you have received an email from the Campus Cloud team detailing your account is now ready for use.
 
 1. **Logging in to your AWS Account**
+
     The Campus Cloud team has configured new accounts to use campus single sign on for user authentication and a mapping of identity groups to [AWS Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) for authorization. Your account will come with four pre-defined roles:
     * _Administrator (ucsb-idp-administrator)_: This role has full access and can delegate permissions to every service and resource in AWS. Provides full access to AWS services and resources.
     * _PowerUser (ucsb-idp-poweruser)_: Provides full access to AWS services and resources, but does not allow management of [IAM](https://docs.aws.amazon.com/iam/index.html). This user performs application development tasks and can create and configure resources and services that support AWS aware application development.
