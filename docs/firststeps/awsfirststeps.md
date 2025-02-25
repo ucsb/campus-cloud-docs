@@ -4,9 +4,9 @@
      * **US-East-1 (N.Virginia)** 
    * We recommend starting in *US-West-2*
 
-{% include alert.html type="info" title="Information" content="To ADD/REMOVE user access to these Roles, please see Step 5 below" %}
+{% include alert.html type="info" title="Information" content="To ADD/REMOVE user access to an account, see Step 5 below" %}
 
-## AWS Account First Steps D
+## AWS Account First Steps
 
 For teams or individuals that are creating an AWS account, here are some essential first steps that you should take. This guide assumes your account is a UCSB Campus Cloud account and that you have received an email from the Campus Cloud team detailing your account is now ready for use.
 
