@@ -4,7 +4,7 @@
      * **US-East-1 (N.Virginia)** 
    * We recommend starting in *US-West-2*
 
-## AWS Account First Steps L
+## AWS Account First Steps M
 
 For teams or individuals that are creating an AWS account, here are some essential first steps that you should take. This guide assumes your account is a UCSB Campus Cloud account and that you have received an email from the Campus Cloud team detailing your account is now ready for use.
 
@@ -15,7 +15,7 @@ For teams or individuals that are creating an AWS account, here are some essenti
     *  _PowerUser (ucsb-idp-poweruser)_: Provides full access to AWS services and resources, but does not allow management of [IAM](https://docs.aws.amazon.com/iam/index.html). This user performs application development tasks and can create and configure resources and services that support AWS aware application development.
     *  _ReadOnly (ucsb-idp-readonly)_: Provides read-only access to AWS services and resources. This user can view a list of AWS resources and basic metadata in the account across all services. The user cannot read resource content or metadata that goes beyond the quota and list information for resources.
     *  _Billing (ucsb-idp-billing)_: This user has access to view billing information, The user can monitor the costs accumulated for the entire AWS service.  
-    {% include alert.html type="info" title="Information" content="To ADD/REMOVE user access to these Roles, please see Step 4 below" %}
+
 2. **Setup Monthly Billing Alert**
 
     Use the Service Catalog Product, *Fixed Monthly Budget with Notification*, provided by the UCSB Campus Cloud Team to create a fixed cost monthly budget, and notification based on a forecasted threshold in your account. See [Service Catalog]({{site.url}}docs/bestpractices/servicecatalog) for more info.
