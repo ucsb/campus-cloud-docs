@@ -4,7 +4,7 @@
      * **US-East-1 (N.Virginia)** 
    * We recommend starting in *US-West-2*
 
-## AWS Account First Steps T
+## AWS Account First Steps U
 
 For teams or individuals that are creating an AWS account, here are some essential first steps that you should take. This guide assumes your account is a UCSB Campus Cloud account and that you have received an email from the Campus Cloud team detailing your account is now ready for use.
 
@@ -24,6 +24,7 @@ For teams or individuals that are creating an AWS account, here are some essenti
     * _Billing (ucsb-idp-billing)_: This user has access to view billing information, The user can monitor the costs accumulated for the entire AWS service.
 
     {% include alert.html type="info" title="Information" content="To ADD/REMOVE user access to these Roles, please see Step 5 below" %}
+
 3. **Setup Monthly Billing Alert**
 
     Use the Service Catalog Product, *Fixed Monthly Budget with Notification*, provided by the UCSB Campus Cloud Team to create a fixed cost monthly budget, and notification based on a forecasted threshold in your account. See [Service Catalog]({{site.url}}docs/bestpractices/servicecatalog) for more info.
