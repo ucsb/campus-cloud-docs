@@ -4,7 +4,7 @@
      * **US-East-1 (N.Virginia)** 
    * We recommend starting in *US-West-2*
 
-{% include alert.html type="info" title="Add/Remove user access too account" content="See Step 6 below" %}
+{% include alert.html type="info" title="Information" content="To Add/Remove user access to an account, see Step 6 below" %}
 
 ## AWS Account First Steps
 
@@ -58,7 +58,7 @@ For teams or individuals there are some essential first steps that you should ta
    *  MEMBERS are authorized for an Identity Group (Not OWNERS)
    *  [How To: Add User to AWS Account](https://ucsb-atlas.atlassian.net/wiki/spaces/CCID/pages/18265964605/How+To+Add+User+to+AWS+Account+Subscription) - Requires Confluence Access.
 
-        ### Manage Group Tags: [https://im.ucsb.edu](https://im.ucsb.edu)
+### Manage Group Tags: [https://im.ucsb.edu](https://im.ucsb.edu)
 
 
 ## AWS Enterprise Support
