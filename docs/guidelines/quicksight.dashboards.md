@@ -2,7 +2,7 @@
 
 The Campus Cloud LZ has a variety of DataSets available for visualizing in the AWS buisness intelligence tool, Quicksight (QS). QS presents rich data visualizations via shared Dashboards. 
 
-### Quicksight Login Information
+### Quicksight Login Information   (CURv1.0 in Master)
 
 {% include alert.html type="warning" title="Warning" content="Use an Incognito browser window (or logout of the AWS Console) before logging directly in the Quicksight Portal. Othwerwise, you may errantly be authenticated to the Quicksight portal associated with the AWS account and Role you are currently logged into." %}
 
