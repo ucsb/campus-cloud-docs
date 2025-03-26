@@ -4,7 +4,7 @@ The Campus Cloud LZ has a variety of DataSets available for visualizing in the A
 
 ### Quicksight Login Information   (CURv1.0 in Master)
 
-{% include alert.html type="warning" title="Warning" content="Use an Incognito browser window (or logout of the AWS Console) before logging directly in the Quicksight Portal. Othwerwise, you may errantly be authenticated to the Quicksight portal associated with the AWS account and Role you are currently logged into." %}
+{% include alert.html type="warning" title="Warning-Use Incognito window" content="or logout of the AWS Console, before logging directly in the Quicksight Portal. Othwerwise, you may errantly be authenticated to the Quicksight portal associated with the AWS account and Role you are currently logged into." %}
 
 #### [https://quicksight.aws.amazon.com/](https://quicksight.aws.amazon.com/) ####
 
