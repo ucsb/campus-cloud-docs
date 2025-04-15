@@ -15,4 +15,4 @@ This is a broader attempt to ensure that UCSB activity is conducted in a safe, c
 ### Request an AWS Account in the Campus Cloud LZ
 Please see the following information:
 
-[Request AWS account in Campus Cloud LZ]({{ site.baseurl }}/docs/account-request)
+**[Request AWS account in Campus Cloud LZ](account-request)**
