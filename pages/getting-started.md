@@ -62,7 +62,7 @@ Before you start the procurement process, you will need to estimate your monthly
 
 
 ## [Procure a Campus Cloud Account](#procure-a-campus-cloud-account)
-{% include alert.html type="info" title="Information" content="AWS accounts requested wtih @ucsb.edu emails must be created in the Campus Cloud. You will receive an \"error processing your request\" when requesting a AWS Account with a @ucsb.edu email unless it is in the Campus Cloud LZ ." link="apple.com"  %}
+{% include alert.html type="info" title="Information" content="AWS accounts requested wtih @ucsb.edu emails must be created in the Campus Cloud. You will receive an \"error processing your request\" when requesting a AWS Account with a @ucsb.edu email unless it is in the Campus Cloud LZ. <a href="https://www.w3schools.com">Visit W3Schools.com!</a>" %}
 
 [More Info]({{ site.baseurl }}/docs/guidelines/account-request)
 
