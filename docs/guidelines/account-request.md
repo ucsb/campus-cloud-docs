@@ -15,6 +15,6 @@ This is a broader attempt to ensure that UCSB activity is conducted in a safe, c
 ### Request an AWS Account in the Campus Cloud LZ
 
 
-Please see the following information:
+Please see the following information :
 
-[Get Started - Request a Campus Cloud Account](/getting-started/#procure-a-campus-cloud-account)
+[Get Started - Request a Campus Cloud Account](getting-started/#procure-a-campus-cloud-account/)
