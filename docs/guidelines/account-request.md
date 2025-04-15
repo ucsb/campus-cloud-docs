@@ -13,8 +13,10 @@ The Campus Cloud Team in early 2025 setup restrictions on AWS account requests m
 This is a broader attempt to ensure that UCSB activity is conducted in a safe, compliant environment and receives discounted pricing under the University of California Education Discount Program (EDP). This ensures that UCSB activity falls under the University of California Terms & Conditions, conforms to the UC Regents’ policies for procurement and business contracts, and reduces the financial risk to your department or division for agreements that are outside of Regental standing orders (especially with respect to third-party liability).
 
 ### Request an AWS Account in the Campus Cloud LZ
-Please see the following information :
+Please see the following information:
 
 **[Request AWS account in Campus Cloud LZ](getting-started)**
-**[Request AWS account in Campus Cloud LZ](/campus-cloud-docs/getting-started/)**
+
+
+**[Request AWS account in Campus Cloud LZ](/campus-cloud-docs/getting-started/#procure-a-campus-cloud-account)**
 
