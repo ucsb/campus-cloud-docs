@@ -1,7 +1,7 @@
 ---
 title: AWS Account Request Error
 description: AWS Account Request Error
-permalink: /docs/guidelines/compliance
+permalink: /docs/guidelines/account-request
 ---
 
 ## AWS Account Request ERROR
