@@ -1,3 +1,9 @@
+---
+title: AWS Account Request Error
+description: AWS Account Request Error
+permalink: /docs/guidelines/compliance
+---
+
 ## AWS Account Request ERROR
 
 AWS accounts requested using @ucsb.edu emails must be created in the Campus Cloud Landing Zone (LZ). You will revcieve an "error processing your request" notice when requesting a new AWS Account directly from AWS.
