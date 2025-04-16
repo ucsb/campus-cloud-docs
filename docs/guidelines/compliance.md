@@ -51,7 +51,7 @@ If you require a NIST 800-171 compliant Cloud account or need to audit complianc
 ### New NIST-800-171 Compliant Account ###
 **OU = UCSB Baseline v2**
 
-Request a compliant account by following our normal process for [requesting an AWS account](/getting-started/#procure-a-campus-cloud-account) ,but select a "NIST Complaint Account" on the form you get from the Cloud Team. This allows us to create your AWS account in an Organization Unit (OU) that supports a NIST Security Standard and additional Controls applied to accounts.  These Controls detect and prevent certain actions to help you stay in compliance.  There may be cases where certain tasks or services need to be engaged in an alternative way to maintain compliance.  For example, instead of creating a unencrypted S3 bucket you could be required to create an encypted S3 bucket.
+Request a compliant account by following our normal process for [requesting an AWS account](/campus-cloud-docs//getting-started/#procure-a-campus-cloud-account) ,but select a "NIST Complaint Account" on the form you get from the Cloud Team. This allows us to create your AWS account in an Organization Unit (OU) that supports a NIST Security Standard and additional Controls applied to accounts.  These Controls detect and prevent certain actions to help you stay in compliance.  There may be cases where certain tasks or services need to be engaged in an alternative way to maintain compliance.  For example, instead of creating a unencrypted S3 bucket you could be required to create an encypted S3 bucket.
 
 ### Make Exisiting AWS Account NIST-800-171 Compliant ###
 **currently in OU = UCSB Baseline v1**
