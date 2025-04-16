@@ -16,6 +16,6 @@ This is a broader attempt to ensure that UCSB activity is conducted in a safe, c
 
 
 Please see the following information:
-Follow this process [requesting an AWS account](/getting-started/#procure-a-campus-cloud-account)
+Follow this process [requesting an AWS account](getting-started/#procure-a-campus-cloud-account)
 
-[Get Started - Request a Campus Cloud Account](docs/getting-started)
+[Get Started - Request a Campus Cloud Account](/getting-started)
