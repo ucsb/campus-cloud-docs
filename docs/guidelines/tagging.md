@@ -18,7 +18,7 @@ Tags are custom attributes to your AWS resources that make it easier to identify
 
 You can use tags to categorize resources by po-number, environment, ~~data-classification~~ (changed 4/29/21) protection-level, ~~business-service~~ (changed 1/26/22) service, mission, contact, costing, availability-level (added 4/29/21), recovery-level (added 1/26/22) or other criteria.
 
-For more information, see [AWS Tagging Strategies](https://aws.amazon.com/answers/account-management/aws-tagging-strategies/) and [Azure Tagging Best Practices](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging)
+For more information, see [AWS Tagging Strategies](https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/tagging-best-practices.html) and [Azure Tagging Best Practices](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging)
 
 
 ## Campus Cloud Tagging
