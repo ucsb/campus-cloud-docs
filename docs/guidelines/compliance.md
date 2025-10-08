@@ -8,7 +8,7 @@ permalink: /docs/guidelines/compliance
 In order to receive Federal funding the Campus needs to comply with NIST 800-171 Federal standards.  UC Policy, IS-3, mandates our requirements for Information Security. The Campus Cloud environment is designed to comply with these standards.
 
 ### NIST 800-171
-* [NIST 800-171 Rev 2](https://csrc.nist.gov/publications/detail/sp/800-171/rev-2/final)
+* [NIST 800-171 Rev 3](https://csrc.nist.gov/pubs/sp/800/171/r3/final)
 
 ### IS-3 UC Information Security
 * [IS-3](https://security.ucop.edu/policies/it-policies.html)
