@@ -86,7 +86,7 @@ To request  a copy of the Google Sheet please send an email to info@cloud.ucsb.e
 
 NIST Special Publication 800-171A - 
 [Assessing Security Requirements for
-Controlled Unclassified Information](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-171A.pdf)
+Controlled Unclassified Information](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-171Ar3.pdf)
 
 * Family - The NIST requirements are organized into 14 families. Within the family are specific requirements related to that family.
     * The 14th requirement family, "System and Information Integrity" can be referenced by its number, 3.14. Every requirement in this Family would have that prefix. 
