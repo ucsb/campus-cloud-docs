@@ -45,6 +45,10 @@ The [AWS Transit Gateway](https://docs.aws.amazon.com/vpc/latest/tgw/what-is-tra
 
 **NAT Gateway**
 The [AWS NAT Gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) provides a similar function to a normal NAT gateway in that in enables connectivity for account resources in private subnet while preventing the internet for initiating connections to those resources.
+Note: the resource IPs can change, but rarely have
+ - US-West-2
+   - 44.231.186.204
+   - 44.232.156.254
 
 **VPN Gateway** (VPN connection to campus)
 The [AWS Site-to-Site VPN](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html) connection to UCSB is attached to the Transit Gateway.  This link is the default route for traffic from any private subnet in a child account to UCSB.  The VPN link is not intended for commodity traffic and should be used when secure network protocols are unavailable.
