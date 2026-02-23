@@ -8,7 +8,7 @@ permalink: /docs/guidelines/compliance
 In order to receive Federal funding the Campus needs to comply with NIST 800-171 Federal standards.  UC Policy, IS-3, mandates our requirements for Information Security. The Campus Cloud environment is designed to comply with these standards.
 
 ### NIST 800-171
-* [NIST 800-171 Rev 2](https://csrc.nist.gov/publications/detail/sp/800-171/rev-2/final)
+* [NIST 800-171 Rev 3](https://csrc.nist.gov/pubs/sp/800/171/r3/final)
 
 ### IS-3 UC Information Security
 * [IS-3](https://security.ucop.edu/policies/it-policies.html)
@@ -86,7 +86,7 @@ To request  a copy of the Google Sheet please send an email to info@cloud.ucsb.e
 
 NIST Special Publication 800-171A - 
 [Assessing Security Requirements for
-Controlled Unclassified Information](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-171A.pdf)
+Controlled Unclassified Information](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-171Ar3.pdf)
 
 * Family - The NIST requirements are organized into 14 families. Within the family are specific requirements related to that family.
     * The 14th requirement family, "System and Information Integrity" can be referenced by its number, 3.14. Every requirement in this Family would have that prefix. 
