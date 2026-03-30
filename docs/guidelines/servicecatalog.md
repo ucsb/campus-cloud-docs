@@ -4,4 +4,6 @@ description: Service Catalog Offerings
 permalink: /docs/guidelines/servicecatalog
 ---
 
-### AWS Service Catalog
+{% include alert.html type="warning" title="This page has moved" content="AWS Service Catalog guidance has moved to the AWS section." %}
+
+**[Go to AWS Service Catalog &rarr;](/docs/aws/service-catalog)**
