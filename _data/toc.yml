@@ -4,13 +4,11 @@
       url: "getting-started"
       children:
         - title: Training
-          url: "getting-started#training"
-        - title: Consultation
-          url: "getting-started#consultation"
+          url: "getting-started/training"
         - title: Budgeting
-          url: "getting-started#budgeting"
+          url: "getting-started/budgeting"
         - title: Procuring an Account
-          url: "getting-started#procure-a-campus-cloud-account"
+          url: "getting-started/procurement"
  
     - title: "Glossary"
       url: "glossary"
