@@ -1,18 +1,20 @@
 ---
 title: Best Practices
-description: A list of Best Practices
+description: Best practices for Campus Cloud accounts
 permalink: /docs/bestpractices
 ---
 
-## Best Practices
+{% include alert.html type="warning" title="This section has moved" content="Best practices content has been merged into the General Guidance and provider-specific sections." %}
 
-There are important considerations to take into account when defining and planning your cloud-based project.
-Here, we look at some best practices to follow when executing your project.
+## Where to Find This Content Now
 
-*  [Service Catalog](bestpractices/servicecatalog)
-*  [Account Contacts](bestpractices/contacts)
-*  [Cost Models](bestpractices/costmodels)
-*  [Resource Tagging](bestpractices/tagging)
+* [Tagging](/docs/general/tagging)
+* [Cost Management](/docs/general/cost-management)
+* [Research in the Cloud](/docs/general/research)
+* [Close an Account](/docs/general/close-account)
+* [AWS Service Catalog](/docs/aws/service-catalog)
+* [AWS Account Contacts](/docs/aws/contacts)
+* [AWS VPN & Campus Connectivity](/docs/aws/vpn)
 *  [VPN traffic](bestpractices/vpn)
 *  [Close Account](bestpractices/close)
 *  [Research](bestpractices/research)

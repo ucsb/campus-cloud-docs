@@ -1,18 +1,23 @@
 ---
 title: Guidelines
-description: A list of Guidelines
+description: Guidelines for Campus Cloud accounts
 permalink: /docs/guidelines
 ---
 
-## Guidelines
+{% include alert.html type="warning" title="This section has moved" content="The Guidelines have been reorganized into General Guidance (applies to all providers) and provider-specific sections." %}
 
-There are important considerations to take into account when defining and planning your cloud-based project.
-Here, we look at some useful guidelines to follow when executing your project.
+## General Guidance
 
-*  [Service Descriptions](guidelines/description)
-*  [Networking](guidelines/networking)
-*  [Tagging](guidelines/tagging)
-*  [Compliance](guidelines/compliance)
+* [Security](/docs/general/security)
+* [Identity & Access](/docs/general/identity)
+* [Tagging](/docs/general/tagging)
+* [Compliance](/docs/general/compliance)
+* [Cost Management](/docs/general/cost-management)
+
+## Provider-Specific Topics
+
+* [AWS Networking](/docs/aws/networking) · [Azure Networking](/docs/azure/networking) · [GCP Networking](/docs/gcp/networking)
+* [AWS Guardrails](/docs/aws/guardrails) · [Azure Guardrails](/docs/azure/guardrails) · [GCP Guardrails](/docs/gcp/guardrails)
 *  [Security Guidelines](guidelines/security)
 *  [Migrate to the Cloud](guidelines/migrate)
 *  [Quicksight Dashboards](guidelines/quicksight.dashboards)

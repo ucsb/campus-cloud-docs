@@ -1,0 +1,55 @@
+/* ===========================================
+   UCSB Brand - Light-touch overrides
+   Fonts: https://brand.ucsb.edu/tools-and-templates/web-fonts
+   Colors: https://brand.ucsb.edu/visual-identity/color
+   =========================================== */
+
+/* --- Typography: Nunito Sans (replaces Docsy-Jekyll defaults) --- */
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  color: #3D4952;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 800;
+  color: #003660;
+}
+
+.td-navbar .navbar-brand span {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 800;
+}
+
+.td-sidebar-nav a,
+.td-toc a {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+code, pre {
+  font-family: "Roboto Mono", "SFMono-Regular", Menlo, monospace;
+}
+
+/* --- Colors --- */
+
+a {
+  color: #003660;
+}
+
+a:hover {
+  color: #047C91; /* UCSB Aqua Web */
+}
+
+/* Sidebar active link */
+.td-sidebar-nav a.active,
+.td-sidebar-nav .td-sidebar-link.active > a {
+  color: #003660;
+  font-weight: 700;
+}
+
+/* Footer background to Navy */
+footer.bg-dark {
+  background-color: #003660 !important;
+}

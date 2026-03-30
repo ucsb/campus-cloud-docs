@@ -5,16 +5,42 @@ permalink: /glossary/
 
 ## Glossary
 
-*   [Campus Cloud Account](#campuscloudaccount). A Campus Cloud Account is the basic resource that is provided to users of the UCSB Campus Cloud. Strictly speaking AWS refers to this as an account, Azure as a Subscription and GCP as a Project in their Cloud environments.  The Cloud Team will refer generally to these as an Account in the Campus Cloud.
+For general cloud terminology, these authoritative references stay current
+without our maintenance:
 
-*   [Guardrails](#guardrails). A guardrail is a high-level rule that provides ongoing governance for your overall Cloud environment. It's expressed in plain language. When users perform work in an AWS account, Azure subscription or GCP project in the Campus Cloud, they're subject to guardrails. The Cloud Team will use the term "Guardrail" to generalize this governace feature that is implemented differently in each Cloud Provider.
+- [AWS Glossary](https://docs.aws.amazon.com/glossary/latest/reference/glos-chap.html)
+- [AWS ↔ Azure ↔ GCP service comparison](https://cloud.google.com/docs/get-started/aws-azure-gcp-service-comparison) (Google)
+- [AWS ↔ Azure service comparison](https://learn.microsoft.com/en-us/azure/architecture/aws-professional/services) (Microsoft)
 
-*   [Landing Zone](#landingzone). Landing Zone is a solution that helps users more quickly set up a secure, multi-account AWS environment based on AWS best practices. The UCSB Campus Cloud uses a landing zone solution to provide a multi-account environment.
+The table below covers terms that are specific to the UCSB Campus Cloud or
+that need a campus-specific definition.
 
-*   [Namespace](#namespace). Define a namespace.
+---
 
-*   [Root User](#rootuser). When you first create an Amazon Web Services (AWS) account, you begin with a single identity that has complete access to all AWS services and resources in the account. This identity is called the AWS account __root__ __user__ and is accessed by signing in with the email address that you used when creating the account.
-   We strongly recommend that you do not use the root user for your everyday tasks, even the administrative ones. Instead, adhere to the best practice of using the UCSB Single Sign On Account. Securely lock away the root user credentials and use them to perform only a few account and service management tasks.
-   To view the tasks that require you to sign in as the root user, see [AWS Tasks That Require Root User](https://docs.aws.amazon.com/general/latest/gr/aws_tasks-that-require-root.html).
+| Term | Definition |
+|---|---|
+| **Allowed Regions** | US regions where you can deploy resources: AWS (us-east-1, us-west-2), Azure (West US 2, West Central US), GCP (us-central1, us-west1). |
+| **Availability Level (A1–A4)** | How critical uptime is for your resources. Set via the `availability-level` tag. See [Tagging](/docs/general/tagging). |
+| **Baseline** | The standard security configuration applied to every new account — audit logging, guardrails, budget alerts. |
+| **Campus Cloud Account** | General term for your cloud workspace. AWS calls it an *Account*, Azure a *Subscription*, GCP a *Project*. |
+| **Campus SSO** | Sign in with your UCSB NetID. AWS uses Shibboleth SAML; Azure and GCP use Entra ID federation. |
+| **Cloud Team** | The ITS team (ITS-CCID) that operates the Campus Cloud. Reachable via [ServiceNow](https://ucsb.service-now.com/). |
+| **CUI** | Controlled Unclassified Information — sensitive federal research data requiring NIST 800-171 protections. |
+| **Data Management Plan (DMP)** | Documentation of how research data will be stored and managed. Use UC's [DMPTool](https://dmptool.org/). |
+| **Essential Contacts** | Emails that receive billing alerts, security warnings, and suspension notices. GCP-specific term; the concept applies to all providers. |
+| **FAU** | Fund Account Unit — UCSB financial tracking code used in procurement. |
+| **Functional Email** | A shared group address (e.g., `mylab-cloud@ucsb.edu`) rather than a personal address — preferred so access survives staff changes. |
+| **Gateway** | UCSB procurement portal at [gateway.procurement.ucsb.edu](https://gateway.procurement.ucsb.edu). Used to create Purchase Orders for cloud accounts. |
+| **Guardrails** | Policy controls enforced across all provider accounts. Implemented as SCPs (AWS), Azure Policy (Azure), or Org Policies (GCP). |
+| **Landing Zone** | The secure, pre-configured multi-account environment the Cloud Team maintains for each cloud provider. |
+| **NIST 800-171** | Federal security standard for protecting CUI. Accounts handling CUI receive additional guardrails aligned to this standard. |
+| **Protection Level (P1–P4)** | Data sensitivity: P1 = public, P2 = internal university data, P3 = sensitive (PII/FERPA), P4 = regulated (HIPAA/CUI). |
+| **Purchase Order (PO)** | Funding authorization from UCSB Gateway. Required before a cloud account is created. |
+| **Quarantine** | When the Cloud Team isolates a compromised or policy-violating account — network access cut, credentials disabled. |
+| **Recovery Level (R1–R4)** | Backup and disaster-recovery requirements for your workload. Set via the `recovery-level` tag. |
+| **Service Catalog** | Pre-approved infrastructure templates you can deploy yourself (VPCs, budgets, EC2 instances, etc.). Currently available in AWS. |
+| **Tags / Labels** | Key-value pairs attached to resources for billing attribution, compliance, and governance. AWS and Azure call them *Tags*; GCP calls them *Labels*. |
+| **UC Enterprise Discount** | UC system-wide pricing agreements with cloud providers (AWS EDP, Azure EA, GCP negotiated rates). Applied automatically to Campus Cloud accounts. |
+| **UC Policy IS-3** | University of California Electronic Information Security Policy. Requires data classification and appropriate protections. |
+| **Wiz** | The cloud security posture management (CSPM) tool used across all Campus Cloud environments for agentless vulnerability and misconfiguration scanning. |
 
-*   [Tags](#tags). A tag is a simple label consisting of a customer-defined key and an optional value that can make it easier to manage, search for, and filter resources. Although there are no inherent types of tags, they enable customers to categorize resources by purpose, owner, environment, or other criteria.

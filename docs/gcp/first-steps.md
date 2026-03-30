@@ -1,0 +1,110 @@
+---
+title: GCP First Steps
+description: What to do after your GCP project is provisioned — sign in, verify setup, deploy your first resource.
+permalink: /docs/gcp/first-steps
+last_reviewed: 2026-03-30
+---
+
+## Getting Started With Your GCP Project
+
+Your project is ready when you receive the provisioning confirmation from the
+Cloud Team. Follow the steps below to get set up.
+
+---
+
+## Step 1 — Sign In
+
+1. Go to [console.cloud.google.com](https://console.cloud.google.com).
+2. Sign in with your UCSB email address (`yournetid@ucsb.edu`).
+   * UCSB uses Google Workspace managed through Microsoft Entra ID — your
+     UCSB NetID and password work here.
+   * Complete Duo MFA if prompted.
+3. After signing in, click the project selector at the top of the page (next to
+   the Google Cloud logo) and find your project by name or ID.
+
+{% include alert.html type="info" title="Use your @ucsb.edu account" content="Do not sign in with a personal Gmail account. All Campus Cloud resources are in the ucsb.edu Google Workspace domain. Only @ucsb.edu accounts can access Campus Cloud GCP projects." %}
+
+---
+
+## Step 2 — Verify Your IAM Role
+
+1. Navigate to **IAM & Admin → IAM** in the left menu.
+2. Confirm your `@ucsb.edu` account is listed with the appropriate role:
+   * **Editor** — create and manage most resources
+   * **Viewer** — read-only
+   * **Project IAM Admin** — manage IAM for the project (if needed)
+
+If you are not listed or your role is incorrect, contact the Cloud Team.
+
+---
+
+## Step 3 — Review Org Policy Constraints
+
+Organization policies are applied at the folder level and inherited by your
+project. Before creating resources, review the key constraints on the
+[Guardrails](/docs/gcp/guardrails) page to understand what is allowed and
+what will be blocked.
+
+Key constraints to know:
+* **No external IP addresses** — VMs cannot have public IPs by default
+* **Custom-mode VPCs only** — Auto-mode VPC networks are blocked
+* **Allowed regions:** us-central1 and us-west1 (other regions may be blocked)
+
+---
+
+## Step 4 — Configure Networking
+
+If your project needs VPC connectivity:
+
+1. Check **VPC Network** in the console — a default VPC may have been
+   pre-created by the Cloud Team.
+2. If no VPC exists, you will need to create one (custom mode — auto mode is
+   blocked by org policy). See [Networking](/docs/gcp/networking) for details.
+3. If you need to reach UCSB campus resources, open a ServiceNow ticket to
+   request VPN or interconnect routing.
+
+---
+
+## Step 5 — Enable Required APIs
+
+GCP services must be enabled via the API before you can use them. Most
+common APIs are pre-enabled, but check:
+
+1. Navigate to **APIs & Services → Enabled APIs and Services**.
+2. Confirm the APIs you need are enabled.
+3. To enable a new API: **+ Enable APIs and Services** → search and enable.
+
+Note: Some APIs require billing to be enabled. Org policies may block specific
+APIs — if you get an org policy error, see [Guardrails](/docs/gcp/guardrails).
+
+---
+
+## Step 6 — Set Required Labels
+
+All resources should be labeled with the required label keys. Label enforcement
+is active — unlabeled resources may be flagged by Security Command Center.
+
+See [Labels & Tags](/docs/gcp/tagging) for the required labels and allowed values.
+
+---
+
+## Step 7 — Verify Budget Alert (Funded Projects)
+
+1. Navigate to **Billing → Budgets & alerts**.
+2. Confirm a billing budget exists for your project.
+3. The budget notifies you at 50%, 90%, and 100% of the budget by default.
+4. To change thresholds or recipients, edit the budget.
+
+See [Billing](/docs/gcp/billing) for more information.
+
+---
+
+## Getting Help
+
+| Issue | Where to go |
+|---|---|
+| Access problems | [Identity & Access](/docs/general/identity) |
+| Networking issues | [Networking](/docs/gcp/networking) |
+| Org policy violations | [Guardrails](/docs/gcp/guardrails) |
+| Billing questions | [Billing](/docs/gcp/billing) |
+| Everything else | ServiceNow → Cloud Services |

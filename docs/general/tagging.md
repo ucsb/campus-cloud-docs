@@ -1,0 +1,105 @@
+---
+title: Tagging & Labels
+description: Required tags across AWS, Azure, and GCP
+permalink: /docs/general/tagging
+last_reviewed: 2026-03-30
+---
+
+## Tagging & Labels
+
+Tags (called Labels in GCP) are key-value pairs you attach to cloud resources.
+The Campus Cloud uses them for billing attribution, compliance monitoring, and
+operational automation.
+
+Some tags are required — the Cloud Team enforces them. Others are set by you.
+
+---
+
+## Why Tags Matter
+
+* **Billing:** Tags appear in cost reports so you can break down charges by
+  project, department, or environment.
+* **Compliance:** Tags like `protection-level` drive security policy scoping
+  and audit requirements.
+* **Operations:** Tags like `expiry-date` (GCP) drive automated lifecycle
+  management.
+
+---
+
+## Required Tags — All Providers
+
+The following tags are required across all three providers. AWS and Azure use a
+`ucsb:` namespace prefix. GCP does not (tags are already scoped to the UCSB
+organization).
+
+| What It Tracks | AWS Tag | Azure Tag | GCP Tag | Set By |
+|---|---|---|---|---|
+| Purchase Order number | `ucsb:po-number` | `ucsb:po-number` | — | Cloud Team |
+| Environment type | `ucsb:environment` | `ucsb:environment` | `environment` | You |
+| Mission area | `ucsb:mission` | `ucsb:mission` | `mission` | You |
+| Data sensitivity | `ucsb:protection-level` | `ucsb:protection-level` | `protection-level` | You |
+| Uptime requirement | `ucsb:availability-level` | `ucsb:availability-level` | `availability-level` | You |
+| Backup requirement | `ucsb:recovery-level` | — | `recovery-level` | You |
+| Department | `ucsb:dept` | — | `dept` | You |
+
+### GCP-only platform tags (set by Cloud Team)
+
+| Tag | Purpose |
+|---|---|
+| `billing-limit` | Maximum monthly spend cap |
+| `expiry-date` | Project lifecycle end date (ISO week, e.g. `2026-W52`) |
+| `wiz-scanning` | Whether this project is included in Wiz security scanning |
+
+---
+
+## Allowed Values
+
+### `environment`
+`dev`, `test`, `prod`, `other`
+
+### `mission`
+`academic`, `research`, `administrative`, `mixed`
+
+### `protection-level`
+| Value | Meaning |
+|---|---|
+| `P1` | Public — no confidentiality requirement |
+| `P2` | Internal — university internal data |
+| `P3` | Sensitive — PII, FERPA, proprietary research |
+| `P4` | Regulated — HIPAA, CUI, ITAR, export-controlled |
+
+### `availability-level`
+`A1` (best-effort) through `A4` (99.9%+ uptime)
+
+### `recovery-level`
+`R1` (rebuild acceptable) through `R4` (near-zero RPO/RTO)
+
+### `dept`
+4-character UCSB Chart of Accounts department code (e.g., `COMS`, `PHYS`, `MCDB`).
+
+---
+
+## What Happens If You Don't Tag
+
+| Provider | Consequence |
+|---|---|
+| AWS | Compliance alert in Security Hub; resource may show as non-compliant |
+| Azure | Resource group deployment may be **blocked** (Deny effect on policy) |
+| GCP | Audit finding; platform automation skips untagged projects |
+
+For Azure, the five required tags on **resource groups** are enforced at
+deployment time: `ucsb:po-number`, `ucsb:environment`, `ucsb:mission`,
+`ucsb:protection-level`, and `ucsb:availability-level`. A resource group
+without these tags cannot be created.
+
+---
+
+## Tag Namespace
+
+AWS and Azure tags use the `ucsb:` namespace to avoid collisions with provider
+reserved namespaces (`aws:`, `Microsoft:`).
+
+Example: `ucsb:environment = prod`
+
+GCP Resource Manager Tags are already scoped to the UCSB organization, so no
+namespace prefix is needed.

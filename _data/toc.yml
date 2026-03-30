@@ -11,48 +11,88 @@
           url: "getting-started#budgeting"
         - title: Procuring an Account
           url: "getting-started#procure-a-campus-cloud-account"
-    - title: "First Steps"
-      url: "docs/firststeps"
+
+    - title: "General Guidance"
+      url: "docs/general"
       children:
-        - title: AWS
-          url: "docs/firststeps/awsfirststeps"
-        - title: Azure
-          url: "docs/firststeps/azurefirststeps"
-        - title: GCP
-          url: "docs/firststeps/gcpfirststeps"          
-    - title: "Guidelines"
-      url: "docs/guidelines"
-      children:
-        - title: Description
-          url: "docs/guidelines/description"
-        - title: Networking
-          url: "docs/guidelines/networking"
-        - title: Tagging
-          url: "docs/guidelines/tagging"
-        - title: Compliance
-          url: "docs/guidelines/compliance"
         - title: Security
-          url: "docs/guidelines/security"
-        - title: Migrate
-          url: "docs/guidelines/migrate"
-        - title: QS Dashboards
-          url: "docs/guidelines/quicksight.dashboards"
-    - title: "Best Practices"
-      url: "docs/bestpractices"
-      children:
-        - title: Service Catalog
-          url: "docs/bestpractices/servicecatalog"
-        - title: Account Contacts
-          url: "docs/bestpractices/contacts"
-        - title: Cost Models
-          url: "docs/bestpractices/costmodels"
-        - title: Resource Tagging
-          url: "docs/bestpractices/tagging"
-        - title: VPN Traffic
-          url: "docs/bestpractices/vpn"
-        - title: Close Account
-          url: "docs/bestpractices/close"
+          url: "docs/general/security"
+        - title: Identity & Access
+          url: "docs/general/identity"
+        - title: Tagging
+          url: "docs/general/tagging"
+        - title: Compliance
+          url: "docs/general/compliance"
+        - title: Cost Management
+          url: "docs/general/cost-management"
         - title: Research
-          url: "docs/bestpractices/research"          
+          url: "docs/general/research"
+        - title: Data Management
+          url: "docs/general/data-management"
+        - title: Migrate Personal Account
+          url: "docs/general/migrate"
+        - title: Close an Account
+          url: "docs/general/close-account"
+
+    - title: "AWS"
+      url: "docs/aws"
+      children:
+        - title: Overview
+          url: "docs/aws"
+        - title: First Steps
+          url: "docs/aws/first-steps"
+        - title: Account Request
+          url: "docs/aws/account-request"
+        - title: Networking
+          url: "docs/aws/networking"
+        - title: VPN & Campus Connectivity
+          url: "docs/aws/vpn"
+        - title: Guardrails & SCPs
+          url: "docs/aws/guardrails"
+        - title: Service Catalog
+          url: "docs/aws/service-catalog"
+        - title: Cost Dashboards (QuickSight)
+          url: "docs/aws/quicksight"
+        - title: Account Contacts
+          url: "docs/aws/contacts"
+
+    - title: "Azure"
+      url: "docs/azure"
+      children:
+        - title: Overview
+          url: "docs/azure"
+        - title: First Steps
+          url: "docs/azure/first-steps"
+        - title: Networking
+          url: "docs/azure/networking"
+        - title: Guardrails & Policies
+          url: "docs/azure/guardrails"
+        - title: Security
+          url: "docs/azure/security"
+        - title: Roles & Access
+          url: "docs/azure/roles"
+        - title: Account Contacts
+          url: "docs/azure/contacts"
+
+    - title: "GCP"
+      url: "docs/gcp"
+      children:
+        - title: Overview
+          url: "docs/gcp"
+        - title: First Steps
+          url: "docs/gcp/first-steps"
+        - title: Networking
+          url: "docs/gcp/networking"
+        - title: Guardrails & Org Policies
+          url: "docs/gcp/guardrails"
+        - title: Security
+          url: "docs/gcp/security"
+        - title: Labels & Tags
+          url: "docs/gcp/tagging"
+        - title: Billing
+          url: "docs/gcp/billing"
+        - title: Project Contacts
+          url: "docs/gcp/contacts"
+
     - title: "Glossary"
       url: "glossary"

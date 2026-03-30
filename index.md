@@ -3,44 +3,50 @@ layout: page
 title: "Campus Cloud Docs - Home"
 permalink: /
 ---
+
 ## UCSB Campus Cloud
 
-### Features and Benefits
+The UCSB Campus Cloud gives faculty, researchers, staff, and students access to
+Amazon Web Services, Microsoft Azure, and Google Cloud Platform under UC
+enterprise agreements — with security guardrails, compliance tooling, and campus
+network connectivity built in from day one.
 
-Cloud services provide an efficient way to store data, access files, and develop and host applications.
-The UC system has negotiated contracts with some providers to ensure that UC employees have access to cloud services
-that meet UC requirements for security, privacy and liability.
+New here? Start with the [Getting Started](getting-started) guide.
 
-Using a UC-authorized cloud service provider in the Campus Cloud can help you:
+---
 
-*   Keep data safe and secure, protecting it from unauthorized third party access
-*   Meet federal and state regulations about storing/managing sensitive data
-*   Reduce risk and liability for the university in the event of a data breach
-*   Access additional features and storage space
+### Amazon Web Services (AWS)
 
-#### AWS Campus Cloud
+Your AWS account includes campus SSO login, networking connected to UCSB, a
+Service Catalog of self-service products (VPCs, budgets, IAM roles), and
+security monitoring pre-configured. UC enterprise pricing and Enterprise Support
+are included automatically.
 
-The Campus Cloud's AWS Landing Zone (LZ) is a participant in UC Enterprise Discount Program (EDP)
-and provides an environment of curated products and services with the following key benefits:
+[AWS Overview](docs/aws) · [AWS First Steps](docs/aws/first-steps)
 
-*   UC-wide Enterprise [Discount](https://cio.ucop.edu/uc-gets-discount-for-amazon-web-services/)
-*   S3 Storage Discount (S3, S3-IA, S3 one-zone IA, Glacier)
-*   Enterprise Support Program
-*   [Guardrails](glossary#guardrails)
-*   NIST-800-171 Compliance Guardrails
-*   Networking connectivity to campus (VPC w Public and/or Private subnet options)
-*   Visibility & observability
+---
 
-#### Microsoft Azure Campus Cloud
-The Campus Cloud's Azure Environment provides a discount program, compliance "guardrails", networking connectivity to campus plus visibility and observability resources.
+### Microsoft Azure
 
-### Getting Started
+Your Azure Subscription is placed inside the UCSB management hierarchy with
+pre-configured policies, Defender for Cloud monitoring, and network connectivity
+via Virtual WAN. UC enterprise pricing through the Azure EA applies automatically.
 
-To get started using the Campus Cloud, please see the [Getting Started](getting-started) guide.
+[Azure Overview](docs/azure) · [Azure First Steps](docs/azure/first-steps)
 
-### Questions/Contact
+---
 
-* General questions - info@cloud.ucsb.edu
-* Problems or quesions involving your Campus Cloud Account, please submit a [Service Now ticket](http://servicenow.ucsb.edu/).
+### Google Cloud Platform (GCP)
 
-![assets/img/service-now.png]({{site.url}}assets/img/service-now.png)
+Your GCP Project lives in the UCSB organization with org-wide policies,
+centralized audit logging, Security Command Center monitoring, and billing
+sub-accounts for cost attribution. UC enterprise pricing is included.
+
+[GCP Overview](docs/gcp) · [GCP First Steps](docs/gcp/first-steps)
+
+---
+
+### Questions / Contact
+
+* General questions — [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu)
+* Account issues — open a [ServiceNow ticket](https://ucsb.service-now.com/)
