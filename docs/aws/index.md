@@ -61,12 +61,9 @@ When your account is provisioned, the Cloud Team will:
 
 ## Regions
 
-All workloads must run in **us-east-1 or us-west-2**. Other regions are
-blocked by SCP. Attempting to launch resources in any other region will
-produce an `Access Denied` error from the SCP.
-
-The region restriction does not apply to AWS global services such as IAM,
-Route 53, and STS.
+All workloads must run in **us-east-1 or us-west-2** (with a limited exception
+for Amazon Bedrock). See [Guardrails & SCPs](/docs/aws/guardrails) for details
+and exceptions.
 
 ---
 

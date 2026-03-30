@@ -41,8 +41,7 @@ pricing.
 2. **Choose your provider.** Most research groups use AWS. Azure and GCP are
    good choices for teams already using Microsoft or Google tools, or for
    specific services (e.g., Google BigQuery, Azure ML).
-3. **Request an account.** Follow the [Getting Started](../../getting-started)
-   procurement guide. Indicate on your form if you need NIST 800-171 compliance.
+3. **Request an account.** Follow the [procurement guide](/getting-started/procurement). Indicate on your form if you need NIST 800-171 compliance.
 4. **Set up your environment.** Follow the First Steps guide for your provider.
 
 ---

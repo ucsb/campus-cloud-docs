@@ -43,7 +43,7 @@ federally funded research with export controls, or data subject to ITAR, HIPAA,
 or similar frameworks — you should request a NIST-compliant account.
 
 This applies to **all three providers**. The request process is the same:
-follow the standard [Getting Started](../../getting-started) procurement process
+follow the standard [procurement process](/getting-started/procurement)
 and select **"NIST Compliant Account"** on the Campus Cloud form.
 
 A NIST-compliant account is placed in an Organizational Unit (AWS), Management

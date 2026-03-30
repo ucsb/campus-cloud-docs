@@ -92,7 +92,7 @@ listed here.
 
 ## Next Steps
 
-* [Request a Subscription](/getting-started)
+* [Request a Subscription](/getting-started/procurement)
 * [First Steps](/docs/azure/first-steps)
 * [Networking](/docs/azure/networking)
 * [Roles & Access](/docs/azure/roles)

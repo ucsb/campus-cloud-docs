@@ -47,7 +47,7 @@ compute in your account, the recommended approaches are:
 
 ## How to Request an Account
 
-1. Go to the [Getting Started](/getting-started) page for procurement
+1. Go to the [Procurement](/getting-started/procurement) page for
    instructions.
 2. Complete a Gateway (Marketplace) purchase request for the desired cloud
    provider and account type.
