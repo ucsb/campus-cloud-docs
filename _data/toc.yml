@@ -5,8 +5,6 @@
       children:
         - title: Training
           url: "getting-started/training"
-        - title: Budgeting
-          url: "getting-started/budgeting"
         - title: Procuring an Account
           url: "getting-started/procurement"
  

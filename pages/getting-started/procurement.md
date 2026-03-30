@@ -7,6 +7,20 @@ last_reviewed: 2026-03-30
 
 ## Procure a Campus Cloud Account
 
+### Budgeting
+
+{% include alert.html type="warning" title="Warning" content="Audit, compliance and security tools are utilized in the Campus Cloud that generate costs in every account. It is important that you are aware of these costs. For a busy account it may be a small percentage of monthly costs." %}
+
+Before you start the procurement process, you will need to estimate your monthly spend.
+
+* [AWS Pricing Calculator](https://calculator.aws/)
+* [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
+* [GCP Pricing Calculator](https://cloud.google.com/products/calculator)
+
+---
+
+### Gateway Procurement Process
+
 {% include alert.html type="info" title="Information" content="AWS accounts requested with @ucsb.edu emails must be created in the Campus Cloud. You will receive an \"error processing your request\" when requesting a AWS Account with a @ucsb.edu email unless it is in the Campus Cloud Landing Zone. <a href='/docs/guidelines/account-request'> &nbsp;&nbsp;More Info</a>" %}
 
 All three providers use the same Gateway procurement process. Creating a Purchase Order (PO) is the first step for a new AWS account, Azure subscription, or GCP project — as well as for migrating an existing account.

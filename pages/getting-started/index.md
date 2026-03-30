@@ -28,8 +28,7 @@ Using an approved provider means that:
 | Step | Description |
 |---|---|
 | [Training](/getting-started/training) | Free courses and resources to get up to speed on cloud concepts |
-| [Budgeting](/getting-started/budgeting) | Estimate your monthly spend before starting procurement |
-| [Procure an Account](/getting-started/procurement) | Gateway procurement process, required codes, and what happens next |
+| [Procure an Account](/getting-started/procurement) | Budgeting, Gateway procurement process, required codes, and what happens next |
 
 ---
 
