@@ -8,7 +8,7 @@ last_reviewed: 2026-03-30
 ## Azure at UCSB
 
 The UCSB Campus Cloud Azure platform is built using the **Cloud Adoption
-Framework (CAF) Enterprise Scale** reference architecture with a landing zone
+Framework (CAF) Enterprise Scale** reference architecture with a Campus Cloud Landing Zone
 deployed via Terraform. Every subscription is provisioned inside a shared
 management group hierarchy with pre-applied policies, networking, and security
 monitoring so teams can start building quickly with a consistent security

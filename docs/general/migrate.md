@@ -8,7 +8,7 @@ last_reviewed: 2026-03-30
 ## Migrate to Campus Cloud
 
 If you have an existing personal or free cloud account in AWS, Azure, or GCP,
-you can migrate it to the UCSB Campus Cloud Landing Zone. Migrating gives you
+you can migrate it into the Campus Cloud Landing Zone. Migrating gives you
 UC enterprise discounts, compliance guardrails, and campus network connectivity.
 
 ---
@@ -40,7 +40,7 @@ a valid Purchase Order from Gateway before migration can begin.
 ### What Happens During Migration
 
 * **AWS:** Your existing account is moved into the Campus Cloud organization.
-  Landing zone controls (guardrails, logging, SSO) are applied automatically.
+  Campus Cloud Landing Zone controls (guardrails, logging, SSO) are applied automatically.
 * **Azure:** Your existing subscription is imported into the UCSB management
   group hierarchy. Policies and monitoring are applied.
 * **GCP:** Your existing project is imported into the appropriate folder in the

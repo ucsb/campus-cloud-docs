@@ -72,7 +72,7 @@ Open a [ServiceNow ticket](https://ucsb.service-now.com/) or email
 
 The Cloud Team has developed a NIST 800-171 Controls Evaluation Spreadsheet that
 maps each NIST requirement to controls available in the Campus Cloud. It
-documents what the landing zone provides, what local controls you own, and
+documents what the Campus Cloud Landing Zone provides, what local controls you own, and
 provides progress tracking with color-coded dashboards.
 
 To request a copy: [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu)

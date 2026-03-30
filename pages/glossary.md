@@ -23,6 +23,7 @@ that need a campus-specific definition.
 | **Availability Level (A1–A4)** | How critical uptime is for your resources. Set via the `availability-level` tag. See [Tagging](/docs/general/tagging). |
 | **Baseline** | The standard security configuration applied to every new account — audit logging, guardrails, budget alerts. |
 | **Campus Cloud Account** | General term for your cloud workspace. AWS calls it an *Account*, Azure a *Subscription*, GCP a *Project*. |
+| **Campus Cloud Landing Zone** | The secure, pre-configured multi-account environment the Cloud Team maintains for each cloud provider. |
 | **Campus SSO** | Sign in with your UCSB NetID. AWS uses Shibboleth SAML; Azure and GCP use Entra ID federation. |
 | **Cloud Team** | The ITS team (ITS-CCID) that operates the Campus Cloud. Reachable via [ServiceNow](https://ucsb.service-now.com/). |
 | **CUI** | Controlled Unclassified Information — sensitive federal research data requiring NIST 800-171 protections. |
@@ -32,7 +33,6 @@ that need a campus-specific definition.
 | **Functional Email** | A shared group address (e.g., `mylab-cloud@ucsb.edu`) rather than a personal address — preferred so access survives staff changes. |
 | **Gateway** | UCSB procurement portal at [gateway.procurement.ucsb.edu](https://gateway.procurement.ucsb.edu). Used to create Purchase Orders for cloud accounts. |
 | **Guardrails** | Policy controls enforced across all provider accounts. Implemented as SCPs (AWS), Azure Policy (Azure), or Org Policies (GCP). |
-| **Landing Zone** | The secure, pre-configured multi-account environment the Cloud Team maintains for each cloud provider. |
 | **NIST 800-171** | Federal security standard for protecting CUI. Accounts handling CUI receive additional guardrails aligned to this standard. |
 | **Protection Level (P1–P4)** | Data sensitivity: P1 = public, P2 = internal university data, P3 = sensitive (PII/FERPA), P4 = regulated (HIPAA/CUI). |
 | **Purchase Order (PO)** | Funding authorization from UCSB Gateway. Required before a cloud account is created. |

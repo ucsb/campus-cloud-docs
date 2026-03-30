@@ -8,7 +8,7 @@ last_reviewed: 2026-03-30
 ## Security & Shared Responsibility
 
 Cloud security is a shared responsibility. The cloud provider secures the
-underlying infrastructure. The Campus Cloud Team secures the landing zone
+underlying infrastructure. The Campus Cloud Team secures the Campus Cloud Landing Zone
 configuration, policies, and platform tooling. You are responsible for how you
 configure and use the resources in your account.
 
@@ -25,7 +25,7 @@ This model applies across all three providers.
 
 ### What the Campus Cloud Team Is Responsible For
 
-* Landing zone configuration: guardrails, org policies, management group
+* Campus Cloud Landing Zone configuration: guardrails, org policies, management group
   structure
 * Centralized audit logging and security monitoring
 * Campus network connectivity

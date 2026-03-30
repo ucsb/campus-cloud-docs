@@ -24,7 +24,7 @@ multiple geographic locations. You pay only for what you use.
 
 The UCSB Campus Cloud provides managed, policy-compliant cloud environments on
 AWS, Azure, and GCP for the campus community. The Cloud Team (ITS-CCID) operates
-a "Landing Zone" for each provider — a pre-configured, secure multi-account
+a Campus Cloud Landing Zone for each provider — a pre-configured, secure multi-account
 environment that gives you a head start on security, compliance, and networking.
 
 Using the Campus Cloud means:

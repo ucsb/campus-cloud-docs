@@ -61,7 +61,7 @@ allowed.
 ## IAM Deny Policies (Organization-Wide)
 
 IAM deny policies operate before role bindings are evaluated — they are
-absolute restrictions. The landing zone uses 4 deny policies at the org level:
+absolute restrictions. The Campus Cloud Landing Zone uses 4 deny policies at the org level:
 
 | Policy | What It Blocks | Exceptions |
 |---|---|---|

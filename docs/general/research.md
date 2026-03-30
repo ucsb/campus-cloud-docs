@@ -62,7 +62,7 @@ Credits to academic institutions.
 ## Personal vs. Campus Cloud Accounts
 
 A personal cloud account uses a personal credit card and is outside the Campus
-Cloud Landing Zone. Personal accounts:
+Campus Cloud Landing Zone. Personal accounts:
 
 * Do not receive UC enterprise discounts
 * May not meet compliance requirements for federal grants
