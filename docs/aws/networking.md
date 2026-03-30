@@ -41,7 +41,7 @@ whether a Transit Gateway attachment is included.
 | Campus-connected | Access campus file systems, on-prem databases | Yes | /24 from enterprise range |
 | Internet-only | Public-facing apps with no campus dependency | No | /24 from RFC 1918 range |
 
-Specify which family you need in your account request or ServiceNow ticket. You
+Specify which family you need in your account request or [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5). You
 can have both types in the same account.
 
 ---
@@ -62,7 +62,7 @@ routing and cause VPN connectivity failures.
 
 Traffic leaving your account to the internet will appear to come from UCSB-managed
 NAT Gateway IP addresses. If you need to whitelist UCSB cloud egress IPs with an
-external vendor, open a ServiceNow ticket and the Cloud Team will provide the
+external vendor, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) and the Cloud Team will provide the
 current IP list.
 
 ---
@@ -113,5 +113,5 @@ workstation that is not on the UCSB campus network:
 ## Requesting Networking Changes
 
 All persistent networking changes (new CIDR, new TGW attachment, firewall rule
-changes at the TGW level) require a ServiceNow ticket. Day-to-day Security
+changes at the TGW level) require a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5). Day-to-day Security
 Group and NACL changes within your account do not require a ticket.

@@ -56,7 +56,7 @@ Download and configure the UCSB ConnectUCSB VPN client:
 
 * Direct Connect should show < 5 ms latency to us-west-2 and < 60 ms to us-east-1.
 * Latency significantly above these values may indicate the VPN failover path is
-  in use. Check the AWS Health Dashboard and open a ServiceNow ticket if the
+  in use. Check the AWS Health Dashboard and open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) if the
   issue persists.
 
 ### Issue: Resource Inside AWS Cannot Reach Campus

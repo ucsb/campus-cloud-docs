@@ -107,8 +107,8 @@ NIST-baseline account.
 
 ## Getting an Exception
 
-If a guardrail blocks something you believe is legitimate, open a ServiceNow
-ticket. Explain the use case and the specific SCP or control that is blocking
+If a guardrail blocks something you believe is legitimate, open a [ServiceNow
+ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5). Explain the use case and the specific SCP or control that is blocking
 you. The Cloud Team will evaluate the request and, if appropriate, grant a
 targeted exception or suggest an alternative approach.
 

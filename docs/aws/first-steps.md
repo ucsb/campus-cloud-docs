@@ -35,7 +35,7 @@ specified in your account request. Confirm it is in place:
 2. Verify a billing alarm exists and the threshold is correct.
 3. Confirm the SNS subscription is set to email you or your team.
 
-If no alarm is present, open a ServiceNow ticket to request one.
+If no alarm is present, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) to request one.
 
 ---
 
@@ -64,7 +64,7 @@ If your request included campus network connectivity:
 
 1. Navigate to **VPC → Your VPCs** to confirm your VPC exists.
 2. Check **VPC → Transit Gateway Attachments** to confirm it is attached.
-3. Contact the Cloud Team (ServiceNow) if the VPC or attachment is missing.
+3. Contact the Cloud Team ([ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)) if the VPC or attachment is missing.
 
 If you only need internet access and no campus connectivity, a standalone VPC
 can be deployed via the [Service Catalog](/docs/aws/service-catalog).
@@ -107,4 +107,4 @@ See the [Tagging](/docs/general/tagging) page for required tags and allowed valu
 | Missing VPC, networking issues | [Networking](/docs/aws/networking) |
 | Policy violations / Access Denied | [Guardrails](/docs/aws/guardrails) |
 | Billing questions | [Cost Management](/docs/general/cost-management) |
-| Everything else | ServiceNow → Cloud Services |
+| Everything else | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) → Cloud Services |

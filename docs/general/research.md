@@ -84,7 +84,7 @@ The Cloud Team offers consulting support for research projects. This includes:
 * Support for migrating on-premises HPC to the cloud
 
 Contact: [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu) or open a
-[ServiceNow ticket](https://ucsb.service-now.com/).
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
 
 ---
 

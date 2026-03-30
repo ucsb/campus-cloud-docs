@@ -99,7 +99,7 @@ policies above.
 ### You Can
 * Create VMs with private IP addresses only
 * Make outbound internet connections from VMs freely (outbound traffic is not restricted)
-* Request VPC and networking resources via ServiceNow (provisioned by Cloud Team)
+* Request VPC and networking resources via [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) (provisioned by Cloud Team)
 * Enable any GCP API not explicitly restricted
 * Create Cloud Storage buckets with bucket-level IAM (no ACLs)
 * Grant IAM roles to any `@ucsb.edu` user
@@ -126,7 +126,7 @@ ERROR: (gcloud.compute.instances.create) Could not fetch resource:
 ```
 
 If you believe the block is in error or need a specific exception, open a
-ServiceNow ticket. Describe the use case and the specific constraint. The
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5). Describe the use case and the specific constraint. The
 Cloud Team will evaluate whether an exemption is appropriate.
 
 Exceptions are never granted for constraints that directly support UC IS-3 or

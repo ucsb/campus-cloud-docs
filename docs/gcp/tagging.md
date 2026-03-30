@@ -35,9 +35,9 @@ cost attribution, and Security Command Center policy scoping.
 |---|---|---|
 | `environment` | `dev`, `test`, `prod`, `other` | |
 | `mission` | `academic`, `research`, `administrative`, `mixed` | |
-| `protection-level` | `P1`, `P2`, `P3`, `P4` | Uppercase |
-| `availability-level` | `A1`, `A2`, `A3`, `A4` | Uppercase |
-| `recovery-level` | `R1`, `R2`, `R3`, `R4` | Uppercase |
+| `protection-level` | `p1`, `p2`, `p3`, `p4` | |
+| `availability-level` | `a1`, `a2`, `a3`, `a4` | |
+| `recovery-level` | `r1`, `r2`, `r3`, `r4` | |
 | `dept` | UCSB department code (e.g., `COMS`, `PHYS`, `IDCL`) | 4-letter code from the UCSB chart of accounts |
 
 See [Tagging & Labels](/docs/general/tagging) for definitions of protection,

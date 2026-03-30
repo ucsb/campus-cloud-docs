@@ -63,16 +63,16 @@ organization).
 ### `protection-level`
 | Value | Meaning |
 |---|---|
-| `P1` | Public — no confidentiality requirement |
-| `P2` | Internal — university internal data |
-| `P3` | Sensitive — PII, FERPA, proprietary research |
-| `P4` | Regulated — HIPAA, CUI, ITAR, export-controlled |
+| `p1` | Public — no confidentiality requirement |
+| `p2` | Internal — university internal data |
+| `p3` | Sensitive — PII, FERPA, proprietary research |
+| `p4` | Regulated — HIPAA, CUI, ITAR, export-controlled |
 
 ### `availability-level`
-`A1` (best-effort) through `A4` (99.9%+ uptime)
+`a1` (best-effort) through `a4` (99.9%+ uptime)
 
 ### `recovery-level`
-`R1` (rebuild acceptable) through `R4` (near-zero RPO/RTO)
+`r1` (rebuild acceptable) through `r4` (near-zero RPO/RTO)
 
 ### `dept`
 4-character UCSB Chart of Accounts department code (e.g., `COMS`, `PHYS`, `MCDB`).

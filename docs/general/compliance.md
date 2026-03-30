@@ -63,7 +63,7 @@ tier, you have two options:
 2. **Enable additional controls** on your existing account to increase
    compliance coverage.
 
-Open a [ServiceNow ticket](https://ucsb.service-now.com/) or email
+Open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) or email
 [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu) to discuss your options.
 
 ---

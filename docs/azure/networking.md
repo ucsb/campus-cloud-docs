@@ -49,7 +49,7 @@ coverage.
 
 If your subscription needs a Virtual Network:
 
-1. Open a ServiceNow ticket: Cloud Services → Cloud Question.
+1. Open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5): Cloud Services → Cloud Question.
 2. Specify:
    * Subscription name and ID
    * Whether campus connectivity is needed (hub peering)

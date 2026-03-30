@@ -46,7 +46,7 @@ These roles map to UCSB Identity groups that you manage at
 |---|---|
 | UCSB Subscription Owner | Full subscription control; cannot manage VPN/ExpressRoute |
 | UCSB Application Owner | Manage apps and resources at the resource group level; no auth writes or networking changes |
-| UCSB Network Operations | Manage VNets, NSGs, UDRs, VPN, ExpressRoute |
+| UCSB Network Operations | Manage VPN gateways, ExpressRoute circuits, VPN sites, route tables; manage authorization writes |
 | UCSB Security Operations | Security admin, policies, Key Vault purge, Defender |
 
 ### GCP Roles

@@ -82,12 +82,13 @@ Regularly review your compliance posture:
 ## What You Can and Cannot Do
 
 ### You Can
-* Create any resource type in West US 2 (recommended) and West Central US
+* Create any resource type in West US 2 (recommended), West Central US, East US 2, and Central US
 * Create custom NSG rules and route tables within your VNet
 * Create additional Resource Groups (with required tags)
 * Enable, configure, and disable most Azure services in your subscription
 
 ### You Cannot
+* Create resources in regions other than West US 2, West Central US, East US 2, and Central US
 * Enable public blob access on storage accounts
 * Remove or modify policy assignments (management group level, read-only)
 * Detach your subscription from the management group hierarchy
@@ -96,8 +97,8 @@ Regularly review your compliance posture:
 
 ## Requesting a Policy Exception
 
-If a policy blocks something you believe is legitimate, open a ServiceNow
-ticket. Explain the use case and the specific policy assignment that is
+If a policy blocks something you believe is legitimate, open a [ServiceNow
+ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5). Explain the use case and the specific policy assignment that is
 blocking you. The Cloud Team will evaluate the request and, if appropriate,
 create a policy exemption on your subscription.
 

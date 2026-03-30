@@ -90,7 +90,7 @@ If your request included hub-spoke Virtual WAN peering for campus connectivity:
 
 1. Navigate to **Virtual Networks** in your subscription to confirm the VNet exists.
 2. Check **Peerings** — it should show a peering to the Campus Cloud hub VNet.
-3. If the VNet or peering is missing, open a ServiceNow ticket.
+3. If the VNet or peering is missing, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
 
 ---
 
@@ -114,4 +114,4 @@ Create a cost budget to alert you if spend approaches your expected amount:
 | Missing VNet, networking issues | [Networking](/docs/azure/networking) |
 | Policy violations | [Guardrails](/docs/azure/guardrails) |
 | Billing questions | [Cost Management](/docs/general/cost-management) |
-| Everything else | ServiceNow → Cloud Services |
+| Everything else | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) → Cloud Services |

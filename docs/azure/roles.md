@@ -82,5 +82,5 @@ For automated workloads (pipelines, scripts, applications):
 ## Requesting Role Changes
 
 Changes to the custom role definitions themselves (not role assignments) must
-be made by the Cloud Team. Open a ServiceNow ticket if the available roles do
+be made by the Cloud Team. Open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) if the available roles do
 not match your team's needs.

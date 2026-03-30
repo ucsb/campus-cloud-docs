@@ -61,7 +61,7 @@ network resources.
 
 If your project requires network connectivity:
 
-* **Internet egress via Cloud NAT** — open a ServiceNow ticket and the Cloud
+* **Internet egress via Cloud NAT** — open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) and the Cloud
   Team will provision it for your project.
 * **Access to UCSB campus resources** — not currently available for GCP.
   Contact the Cloud Team to discuss options.
@@ -120,4 +120,4 @@ See [Billing](/docs/gcp/billing) for more information.
 | Networking issues | [Networking](/docs/gcp/networking) |
 | Org policy violations | [Guardrails](/docs/gcp/guardrails) |
 | Billing questions | [Billing](/docs/gcp/billing) |
-| Everything else | ServiceNow → Cloud Services |
+| Everything else | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) → Cloud Services |

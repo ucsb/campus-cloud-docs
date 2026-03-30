@@ -32,7 +32,7 @@ compliance.
 
 Contact the Cloud Team to start the migration process:
 [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu) or open a
-[ServiceNow ticket](https://ucsb.service-now.com/).
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
 
 Migration is a standard process the Cloud Team performs regularly. You will need
 a valid Purchase Order from Gateway before migration can begin.

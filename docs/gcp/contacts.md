@@ -83,7 +83,7 @@ To update a contact email (e.g., when your team's functional address changes):
 
 For org-level contact changes or support tickets:
 
-ServiceNow → Information Technology Services → Advanced Technical Services →
+[ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) → Information Technology Services → Advanced Technical Services →
 Cloud Services → Cloud Question
 
 Include your **GCP Project ID** in all support requests.

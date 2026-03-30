@@ -49,4 +49,4 @@ sub-accounts for cost attribution. UC enterprise pricing is included.
 ### Questions / Contact
 
 * General questions — [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu)
-* Account issues — open a [ServiceNow ticket](https://ucsb.service-now.com/)
+* Account issues — open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)

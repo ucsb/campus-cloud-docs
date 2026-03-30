@@ -80,5 +80,5 @@ baseline settings.
 ## Requesting New Products
 
 If you have a common infrastructure pattern that you think would benefit other
-teams, suggest it to the Cloud Team via ServiceNow. The Cloud Team evaluates
+teams, suggest it to the Cloud Team via [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5). The Cloud Team evaluates
 product requests periodically.

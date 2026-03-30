@@ -8,10 +8,10 @@ last_reviewed: 2026-03-30
 ## GCP Networking Overview
 
 Networking in the GCP Campus Cloud is centrally managed. **You cannot create
-VPC networks yourself** — org policy blocks VPC creation for all users. Only
+VPC networks yourself** — a deny policy blocks VPC creation for all users. Only
 the Cloud Team's automation account can provision network resources.
 
-If your project needs networking, open a ServiceNow ticket to request it.
+If your project needs networking, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) to request it.
 
 ---
 
@@ -44,8 +44,8 @@ The following constraints are enforced across all projects:
 
 ## Requesting Network Resources
 
-All networking must be provisioned by the Cloud Team. Submit a ServiceNow
-ticket (Cloud Services) with:
+All networking must be provisioned by the Cloud Team. Submit a [ServiceNow
+ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) (Cloud Services) with:
 
 * Your GCP project ID
 * The connectivity you need (Cloud NAT, a VPC subnet, etc.)
