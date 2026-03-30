@@ -7,88 +7,105 @@ last_reviewed: 2026-03-30
 
 ## GCP Guardrails
 
-UCSB Campus Cloud enforces guardrails using two mechanisms:
+UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
+GCP project aligned with university security policy
+([UC IS-3](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html))
+and the federal
+[NIST 800-171]({{ site.baseurl }}/glossary#nist-800-171) standard for
+protecting sensitive research data.
 
-* **Organization Policies** — Resource-level constraints applied to the
-  entire organization or specific folders. These prevent specific operations
-  regardless of IAM permissions.
-* **IAM Deny Policies** — Deny-first rules that block specific IAM actions
-  even if a role would otherwise allow them.
+Guardrails are designed to maintain a safe, compliant baseline without getting
+in the way of normal cloud usage. You will only notice them if you attempt
+something outside that baseline. The sections below describe what is and is not
+allowed.
 
 ---
 
-## Key Organization Policy Constraints
+## Built-in Organization Policy Constraints
 
 ### Networking
 
 | Constraint | Effect |
 |---|---|
-| Prohibit auto-mode VPC networks | Auto-mode VPC creation is blocked; use custom-mode only |
-| Restrict external IPs on VMs | VMs cannot have public IP addresses |
-| Restrict Cloud VPN peer IPs | Only approved VPN endpoints can be used |
-| Restrict protocol forwarding | Forwarded protocol traffic to external IPs is blocked |
-| Allowed resource regions | Only us-central1 and us-west1 allowed for most resources |
+| Deny external IPs on VMs (`vmExternalIpAccess`) | VMs cannot have public IP addresses |
+| Require custom-mode VPCs only (custom constraint) | Auto-mode VPC creation is blocked |
+| Restrict protocol forwarding | Both external and internal protocol forwarding blocked |
+| Restrict external load balancers | All external load balancer types are blocked (`in:EXTERNAL`) |
+| Restrict resource locations | Only us-central1 and us-west1 allowed for most resources |
+| Restrict Compute storage resources | Disk/image sharing restricted to within the org |
 
 ### Identity and Access
 
 | Constraint | Effect |
 |---|---|
-| Domain-restricted sharing | IAM bindings for `allUsers` or `allAuthenticatedUsers` are blocked; public access to resources is prevented |
-| Restrict workforce identity federation | Only UCSB-approved identity providers can be used |
+| Domain-restricted sharing (`allowedPolicyMemberDomains`) | IAM bindings restricted to UCSB organization members only |
+| Disable default SA auto-grants | GCP will not auto-grant `roles/editor` to default service accounts |
 
-### Storage and Data
+### Storage
 
 | Constraint | Effect |
 |---|---|
-| Enforce uniform bucket-level access | Fine-grained ACLs on Cloud Storage are blocked; bucket-level IAM only |
-| Require retention policy on Cloud Storage | Retention policies required on GCS buckets in NIST folder |
+| Public access prevention (`publicAccessPrevention`) | Internet-accessible GCS buckets are blocked |
 
 ### Compute
 
 | Constraint | Effect |
 |---|---|
 | Require OS Login | OS Login must be enabled on all Compute Engine instances |
-| Restrict VM images | Only approved images allowed (blocks arbitrary public images in NIST folder) |
-| Disable serial port access | Serial port access to VMs is blocked |
-| Require shielded VMs | Shielded VM features (Secure Boot, vTPM) required in NIST folder |
+| Require Shielded VMs | Shielded VM features (Secure Boot, vTPM) required |
+| Restrict VM images | Only approved Google-published images allowed |
+| Detailed audit logging mode | Data Access audit logs enabled for all services |
 
 ---
 
 ## IAM Deny Policies (Organization-Wide)
 
 IAM deny policies operate before role bindings are evaluated — they are
-absolute restrictions:
+absolute restrictions. The landing zone uses 4 deny policies at the org level:
 
-| Denied Action | Applies To |
-|---|---|
-| Disable Data Access audit logs | All principals |
-| Set public IAM bindings (`allUsers`, `allAuthenticatedUsers`) | All principals except Cloud Team service accounts |
-| Attach a billing account (in Sandbox folder) | All principals (prevents billing in Sandbox Unfunded) |
-| Delete organization policies | All principals except break-glass accounts |
+| Policy | What It Blocks | Exceptions |
+|---|---|---|
+| Resource Manager Lockdown | Creating/deleting folders, removing project liens (deletion protection), moving projects between folders, changing billing account assignments | TFC service account, org admins (break-glass) |
+| Networking Lockdown | Creating VPC networks | TFC service account only |
+| TFC SA IAM Protection | Modifying org-level IAM policy out of band | TFC service account, org admins (break-glass) |
+| Contact Preservation | Deleting or modifying Essential Contacts | TFC service account, org admins, billing admins |
 
 ---
 
-## Custom Constraints
+## Additional Security Constraints
 
-The UCSB Landing Zone includes custom org policy constraints that enforce
-specific NIST 800-171 controls not covered by standard constraints.
-Examples include requiring CMEK encryption keys for specific services and
-restricting database connection methods. These are applied in the UCSB NIST
-Baseline folder.
+These guardrails enforce additional NIST 800-171 controls beyond the built-in
+policies above.
+
+### Enforced Org-Wide
+
+| Constraint | Effect |
+|---|---|
+| Disable Gmail members | IAM bindings with `@gmail.com` members are blocked |
+| Disable public IAM bindings | IAM bindings with `allUsers` or `allAuthenticatedUsers` are blocked |
+| Disable IP forwarding | VMs cannot be created with IP forwarding enabled |
+| Require VPC flow logs | Subnets cannot be created without flow logs enabled |
+| Require DNS logging | DNS policies must have logging enabled |
+| Require DNSSEC on public zones | Public DNS zones must have DNSSEC enabled |
+| Require custom-mode VPC | Auto-mode VPCs (subnets in every region) are blocked |
+| Require firewall logging | VPC firewall rules must have logging enabled (GKE-managed rules excluded) |
+| Require backend service logging | Load balancer backend services must have logging enabled |
+| Disable weak SSL policies | SSL policies with TLS < 1.2 or weak cipher suites are blocked |
 
 ---
 
 ## What You Can and Cannot Do
 
 ### You Can
-* Create custom-mode VPCs with subnets in us-central1 and us-west1
 * Create VMs with private IP addresses only
-* Use Cloud NAT for outbound internet access
+* Make outbound internet connections from VMs freely (outbound traffic is not restricted)
+* Request VPC and networking resources via ServiceNow (provisioned by Cloud Team)
 * Enable any GCP API not explicitly restricted
 * Create Cloud Storage buckets with bucket-level IAM (no ACLs)
 * Grant IAM roles to any `@ucsb.edu` user
 
 ### You Cannot
+* Create any VPC networks (deny policy blocks `networks.create` for all users)
 * Create auto-mode VPCs
 * Assign external public IPs to VMs
 * Set public access IAM bindings (`allUsers`, `allAuthenticatedUsers`)

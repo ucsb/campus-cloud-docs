@@ -33,11 +33,9 @@ Policies applied at a higher level are inherited by everything underneath.
 
 ```
 UCSB Organization (ucsb.edu)
-├── UCSB Core               (Cloud Team infrastructure — not for PI use)
-├── UCSB NIST Baseline      (Regulated research workloads)
-├── UCSB Legacy             (Pre-landing-zone projects)
-├── UCSB Sandbox Unfunded   (Exploration — no billing attached)
-└── UCSB Quarantine-Disabled (Suspended/policy-violating projects)
+├── UCSB NIST Baseline           (Production and research workloads)
+│   └── Sandbox Unfunded         (Self-service exploration — no billing)
+└── UCSB Legacy                  (Pre-landing-zone projects)
 ```
 
 Your project will be placed in the folder that matches your funding and
@@ -46,10 +44,10 @@ compliance requirements:
 | Folder | Use Case | Billing | Who Provisions |
 |---|---|---|---|
 | UCSB NIST Baseline | Research, sensitive data, funded workloads | Yes | Cloud Team via Gateway PO |
-| UCSB Sandbox Unfunded | Exploration, learning, testing | No | Cloud Team on request |
-| UCSB Core | Shared services | n/a | Cloud Team only |
+| Sandbox Unfunded | Exploration, learning, testing; self-created projects (e.g. from Apps Script) | No | **You** — any `@ucsb.edu` user can create projects here |
+| UCSB Legacy | Pre-existing projects migrated into the org | Yes | Cloud Team |
 
-{% include alert.html type="info" title="Sandbox Unfunded — no billing" content="Projects in the Sandbox Unfunded folder cannot have a billing account attached. This means most paid services (Compute Engine, Cloud SQL, GKE) cannot be enabled. Sandbox is for exploring the GCP console, IAM, and free-tier services only." %}
+{% include alert.html type="info" title="Sandbox Unfunded — self-service, no billing" content="Any @ucsb.edu user can create a project in the Sandbox Unfunded folder — including projects created automatically by tools like Apps Script. Billing cannot be attached, so most paid services (Compute Engine, Cloud SQL, GKE) are unavailable. Use this folder for exploring the GCP console, IAM, and free-tier services." %}
 
 ---
 
@@ -62,8 +60,8 @@ When your project is provisioned, the Cloud Team will:
 * **Enable Cloud Audit Logs** — Admin Activity logs are WORM protected for 3 years
 * **Enable Security Command Center (SCC)** — Central security findings
 * **Require required resource labels** — Enforce your team's tags on resources
-* **Restrict networking** — Add your project to the Shared VPC or configure
-  a standalone VPC with org policy controls
+* **Restrict networking** — VPC creation is blocked by org policy; request
+  networking resources from the Cloud Team if your project needs them
 * **Set a billing budget alert** — Notifies you when spend approaches your
   specified threshold (funded projects only)
 

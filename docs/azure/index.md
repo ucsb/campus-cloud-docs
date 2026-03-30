@@ -30,17 +30,22 @@ baseline.
 
 ## Management Group Hierarchy
 
-Azure subscriptions are organized into a management group hierarchy. Policies
-applied at a higher level in the hierarchy are inherited by all subscriptions
-below it.
+Azure subscriptions are organized into a management group hierarchy based on the
+**Cloud Adoption Framework (CAF) Enterprise Scale** module. Policies applied at a
+higher level in the hierarchy are inherited by all subscriptions below it.
 
 ```
 UCSB Tenant (Root)
-└── Campus Cloud
-    ├── Research
-    ├── Academic
-    ├── Administrative
-    └── Sandbox
+└── UCSB Campus Cloud
+    ├── Landing Zones
+    │   ├── UCSB Baseline V1
+    │   ├── UCSB Learning
+    │   └── UCSB Sponsorship
+    ├── Platform
+    │   ├── Connectivity
+    │   └── Management
+    ├── Sandboxes
+    └── UCSB Legacy
 ```
 
 Your subscription is placed in the management group that matches your use
@@ -59,7 +64,7 @@ When your subscription is provisioned, the Cloud Team will:
 * **Apply Azure Policy** for NIST 800-171 audit compliance
 * **Connect networking** — your subscription receives a Virtual Network
   with hub-spoke peering to the Campus Cloud Virtual WAN (if requested)
-* **Require Resource Group tags** — policy prevents RG creation without
+* **Require Resource Group tags** — policy audits RG creation for
   the five required tags
 
 ---
@@ -78,9 +83,10 @@ allowed values.
 ## Regions
 
 All subscriptions are configured for **West US 2** as the primary region.
-West Central US is available as a secondary. Other regions are not blocked
-by default but should be discussed with the Cloud Team before use to ensure
-that networking, compliance, and cost monitoring will work correctly.
+West Central US is available as a secondary. East US 2 and Central US are also
+allowed by policy. Other regions are blocked by a Deny policy at the management
+group level — contact the Cloud Team before attempting to use a region not
+listed here.
 
 ---
 

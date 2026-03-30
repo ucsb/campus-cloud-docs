@@ -16,10 +16,10 @@ standalone VPCs without a Transit Gateway attachment.
 
 ## How to Connect to Campus
 
-UCSB has two high-speed links between the AWS us-east-1 / us-west-2 regions and
-the UCSB campus network:
+UCSB has **two AWS Direct Connect connections** and a **Site-to-Site VPN** between
+the AWS us-east-1 / us-west-2 regions and the UCSB campus network:
 
-* **AWS Direct Connect** — dedicated private circuits (primary path)
+* **AWS Direct Connect** — two dedicated private circuits (primary path)
 * **AWS Site-to-Site VPN** — encrypted tunnel over the internet (backup path)
 
 Traffic from your VPC to campus resources automatically routes through the

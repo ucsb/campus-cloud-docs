@@ -7,17 +7,17 @@ last_reviewed: 2026-03-30
 
 ## AWS Guardrails
 
-UCSB Campus Cloud applies guardrails using two mechanisms:
+UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
+AWS account aligned with university security policy
+([UC IS-3](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html))
+and the federal
+[NIST 800-171]({{ site.baseurl }}/glossary#nist-800-171) standard for
+protecting sensitive research data.
 
-* **Service Control Policies (SCPs)** — Organization-level policies that
-  override account-level permissions. Even an account Administrator cannot
-  exceed what an SCP permits.
-* **AWS Control Tower Controls** — Proactive, detective, and reactive controls
-  managed by Control Tower on top of SCPs.
-
-Guardrails are designed to maintain a safe, compliant baseline across all
-accounts without getting in the way of normal cloud usage. You will only notice
-them if you attempt something outside that baseline.
+Guardrails are designed to maintain a safe, compliant baseline without getting
+in the way of normal cloud usage. You will only notice them if you attempt
+something outside that baseline. The sections below describe what is and is not
+allowed.
 
 ---
 
@@ -60,10 +60,12 @@ be performed by the organization management account instead.
 
 ## Amazon Bedrock (Generative AI)
 
-**Amazon Bedrock is available only in us-east-1.**
+**Amazon Bedrock is available in us-east-1, us-west-2, and also us-east-2.**
 
-An SCP exception allows Bedrock API calls in us-east-1 even if us-west-2 is
-your primary region. Bedrock in other regions remains blocked.
+Bedrock works in both standard allowed regions (us-east-1 and us-west-2). An
+additional SCP exception allows Bedrock API calls in **us-east-2** (Ohio) for
+models that are not available in the standard regions. All other services remain
+blocked in us-east-2.
 
 ---
 

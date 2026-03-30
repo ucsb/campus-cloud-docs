@@ -23,9 +23,9 @@ GCP Cloud Audit Logs record all administrative, data-access, and system events.
 | Data Access | API calls that read or write data (if enabled) | 30 days default (configurable) |
 | System Events | Automated GCP actions | 30 days default |
 
-**Admin Activity audit logs cannot be disabled** — an organization IAM deny
-policy blocks all principals from disabling them. These logs are your
-tamper-resistant record of who changed what and when.
+**Admin Activity audit logs cannot be disabled** — GCP enforces this at the
+API level for all projects. These logs are your tamper-resistant record of who
+changed what and when.
 
 ### Enabling Data Access Logs
 
@@ -76,8 +76,9 @@ all cloud environments (AWS, Azure, GCP). Wiz performs agentless scanning for:
 * Network exposure analysis
 * Secrets and credentials exposed in code or disk
 
-Wiz scanning is enabled via the `ucsb:wiz-scanning` platform tag on your
-project (automatically set during project provisioning). Do not remove this tag.
+Wiz scanning is **opt-in** and is not enabled by default for most projects. If
+your project handles sensitive data or you would like the additional visibility,
+contact the Cloud Team to request it.
 
 ---
 
@@ -120,9 +121,8 @@ If a GCP resource is actively being exploited:
 
 ## Project Quarantine
 
-Projects that violate org policies or are suspected of compromise may be moved
-to the **UCSB Quarantine-Disabled** folder automatically. When a project is
-quarantined:
+Projects that violate org policies or are suspected of compromise may be
+quarantined by the Cloud Team. When a project is quarantined:
 
 * Additional org policies are applied that restrict most actions.
 * The Cloud Team will contact the project owner to investigate.

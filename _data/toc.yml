@@ -11,6 +11,9 @@
           url: "getting-started#budgeting"
         - title: Procuring an Account
           url: "getting-started#procure-a-campus-cloud-account"
+ 
+   - title: "Glossary"
+      url: "glossary"
 
     - title: "General Guidance"
       url: "docs/general"
@@ -93,6 +96,3 @@
           url: "docs/gcp/billing"
         - title: Project Contacts
           url: "docs/gcp/contacts"
-
-    - title: "Glossary"
-      url: "glossary"

@@ -84,13 +84,13 @@ organization).
 | Provider | Consequence |
 |---|---|
 | AWS | Compliance alert in Security Hub; resource may show as non-compliant |
-| Azure | Resource group deployment may be **blocked** (Deny effect on policy) |
+| Azure | Resource group flagged as non-compliant (Audit policy) |
 | GCP | Audit finding; platform automation skips untagged projects |
 
-For Azure, the five required tags on **resource groups** are enforced at
-deployment time: `ucsb:po-number`, `ucsb:environment`, `ucsb:mission`,
-`ucsb:protection-level`, and `ucsb:availability-level`. A resource group
-without these tags cannot be created.
+For Azure, the five required tags on **resource groups** are audited by policy:
+`ucsb:po-number`, `ucsb:environment`, `ucsb:mission`,
+`ucsb:protection-level`, and `ucsb:availability-level`. Resource groups
+without these tags will be flagged as non-compliant but can still be created.
 
 ---
 

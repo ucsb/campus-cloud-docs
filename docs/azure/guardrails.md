@@ -7,27 +7,35 @@ last_reviewed: 2026-03-30
 
 ## Azure Guardrails
 
-UCSB Campus Cloud applies guardrails via **Azure Policy** assignments at the
-management group level. Policies are inherited by all subscriptions
-automatically. Some policies are **Audit** (log and alert on non-compliance)
-and some are **Deny** (block non-compliant resource creation entirely).
+UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
+Azure subscription aligned with university security policy
+([UC IS-3](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html))
+and the federal
+[NIST 800-171]({{ site.baseurl }}/glossary#nist-800-171) standard for
+protecting sensitive research data.
+
+Guardrails are designed to maintain a safe, compliant baseline without getting
+in the way of normal cloud usage. You will only notice them if you attempt
+something outside that baseline. The sections below describe what is and is not
+allowed.
 
 ---
 
 ## Required Resource Group Tags
 
-**Resource Groups cannot be created without all five required tags.**
+**All Resource Groups should have the five required tags.**
 
-This is enforced with a **Deny** policy — attempts to create a Resource Group
-without the tags will be blocked with a policy violation error.
+This is enforced with an **Audit** policy — Resource Groups created without the
+required tags will be flagged as non-compliant in Azure Policy, but creation is
+not blocked.
 
 | Tag | Allowed Values |
 |---|---|
 | `ucsb:po-number` | Your PO number (free text) |
-| `ucsb:environment` | `production`, `staging`, `development`, `sandbox` |
-| `ucsb:mission` | `research`, `academic`, `administrative`, `infrastructure` |
-| `ucsb:protection-level` | `P1`, `P2`, `P3`, `P4` |
-| `ucsb:availability-level` | `A1`, `A2`, `A3`, `A4` |
+| `ucsb:environment` | `dev`, `test`, `prod`, `other` |
+| `ucsb:mission` | `academic`, `research`, `administrative`, `mixed` |
+| `ucsb:protection-level` | `p1`, `p2`, `p3`, `p4` |
+| `ucsb:availability-level` | `a1`, `a2`, `a3`, `a4` |
 
 See [Tagging](/docs/general/tagging) for definitions of protection and
 availability levels.
@@ -50,11 +58,11 @@ set to `true`. If you need to share data publicly, use either:
 
 ## NSG Flow Logs
 
-**NSG Flow Logs must be enabled on all Network Security Groups.**
+**NSG Flow Logs should be enabled on all Network Security Groups.**
 
-This is an Audit policy. NSG Flow Logs are enabled automatically on NSGs
-created by the Cloud Team. If you create NSGs directly, the policy will flag
-them as non-compliant — enable Flow Logs in the NSG configuration.
+NSG Flow Logs are deployed automatically via a policy assignment. If you create
+NSGs directly, the policy will deploy Flow Logs for them. Verify in the NSG
+configuration that Flow Logs are active.
 
 ---
 
@@ -80,7 +88,6 @@ Regularly review your compliance posture:
 * Enable, configure, and disable most Azure services in your subscription
 
 ### You Cannot
-* Create a Resource Group without all five required tags
 * Enable public blob access on storage accounts
 * Remove or modify policy assignments (management group level, read-only)
 * Detach your subscription from the management group hierarchy

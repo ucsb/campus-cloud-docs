@@ -1,119 +1,120 @@
 ---
 title: GCP Labels & Tags
-description: Required labels and GCP resource tags for Campus Cloud GCP projects, how to set them, and what the platform controls automatically.
+description: Resource Manager Tags and project labels for Campus Cloud GCP projects — what they are, who sets them, and how to update them.
 permalink: /docs/gcp/tagging
 last_reviewed: 2026-03-30
 ---
 
-## GCP Labels and Tags
+## GCP Tags and Labels
 
-GCP has two distinct metadata concepts:
+GCP has two distinct metadata systems:
 
-* **Labels** — Key-value pairs attached to individual resources (VMs, buckets,
-  BigQuery datasets, etc.). Visible in billing data.
-* **Tags (Resource Manager Tags)** — Hierarchical key-value pairs attached to
-  resources or projects at the organization level. Used to enforce org policies
-  and control access.
+* **Resource Manager Tags** — Organization-level key-value pairs bound to
+  projects. Used for governance, billing attribution, and automation (e.g.,
+  Janitor Bot, Wiz scanning). These are set at the **project level**, not on
+  individual resources.
+* **Project Labels** — Flat key-value metadata on a project. Appear in billing
+  exports. Set at project creation by the Cloud Team.
 
-UCSB Campus Cloud uses both. Labels are required for cost and compliance
-attribution. Resource Manager Tags are used for platform governance and
-some are managed by the Cloud Team, not by you.
-
----
-
-## Required Labels
-
-Apply these labels to all resources you create. Label enforcement is active
-— unlabeled resources may be flagged by Security Command Center.
-
-| Label Key | Required? | Allowed Values | Notes |
-|---|---|---|---|
-| `ucsb:environment` | Yes | `production`, `staging`, `development`, `sandbox` | |
-| `ucsb:mission` | Yes | `research`, `academic`, `administrative`, `infrastructure` | |
-| `ucsb:protection-level` | Yes | `p1`, `p2`, `p3`, `p4` | Lowercase for GCP labels |
-| `ucsb:availability-level` | Yes | `a1`, `a2`, `a3`, `a4` | Lowercase for GCP labels |
-| `ucsb:recovery-level` | Yes | `r1`, `r2`, `r3`, `r4` | |
-| `ucsb:dept` | Yes | Department code (e.g., `chem`, `engineering`) | |
-
-See [Tagging](/docs/general/tagging) for definitions of protection, availability,
-and recovery levels.
+{% include alert.html type="info" title="No ucsb: prefix in GCP" content="Unlike AWS, GCP Resource Manager Tags do not use a ucsb: namespace prefix. Tag keys are simply environment, mission, protection-level, etc. They are scoped to the UCSB organization automatically." %}
 
 ---
 
-## Platform-Managed Tags (Do Not Modify)
+## Resource Manager Tags
 
-Three Resource Manager Tags on each project are managed by the Cloud Team
-and should not be changed:
+Tags are bound to your **project**, not to individual resources. Most are set
+at project creation by the Vending Machine. The 6 owner-settable tags can be
+changed by project owners at any time.
 
-| Tag Key | Purpose | Who Manages It |
+### Owner-Settable Tags
+
+You are responsible for keeping these accurate. They drive billing reports,
+cost attribution, and Security Command Center policy scoping.
+
+| Tag Key | Allowed Values | Notes |
 |---|---|---|
-| `ucsb:expiry-date` | Track project expiration | Cloud Team (automated) |
-| `ucsb:billing-limit` | Set maximum spend allowed on the project | Cloud Team |
-| `ucsb:wiz-scanning` | Control Wiz security scanning enrollment | Cloud Team |
+| `environment` | `dev`, `test`, `prod`, `other` | |
+| `mission` | `academic`, `research`, `administrative`, `mixed` | |
+| `protection-level` | `P1`, `P2`, `P3`, `P4` | Uppercase |
+| `availability-level` | `A1`, `A2`, `A3`, `A4` | Uppercase |
+| `recovery-level` | `R1`, `R2`, `R3`, `R4` | Uppercase |
+| `dept` | UCSB department code (e.g., `COMS`, `PHYS`, `IDCL`) | 4-letter code from the UCSB chart of accounts |
 
-If any of these tags are missing or incorrect on your project, contact the
-Cloud Team. Do not modify them.
+See [Tagging & Labels](/docs/general/tagging) for definitions of protection,
+availability, and recovery levels.
+
+### Platform-Controlled Tags (Do Not Modify)
+
+These three tags are managed exclusively by the Cloud Team and platform
+automation. You do not have permission to set or change them.
+
+| Tag Key | Allowed Values | Purpose |
+|---|---|---|
+| `expiry-date` | `YYYY-WW` (e.g., `2027-W12`) | Janitor Bot uses this to quarantine or clean up projects after the ISO week passes |
+| `billing-limit` | `20`, `50`, `100` (USD) | Budget Enforcer spending cap |
+| `wiz-scanning` | `true` | Opt this project into Wiz CSPM security scanning |
+
+If any platform tag is missing or incorrect on your project, contact the
+Cloud Team. Do not attempt to set these yourself — the binding will be
+rejected by IAM policy.
 
 ---
 
-## How to Add Labels to a Resource
+## How to Update Owner-Settable Tags
 
 ### In the GCP Console
 
-Most resources have a **Labels** section in their detail view:
-
-1. Open the resource (e.g., a VM instance or storage bucket).
-2. Click **Edit** (or the pencil icon on the Labels section).
-3. Click **+ Add label** and enter the key-value pairs.
-4. Save.
-
-### At Resource Creation
-
-When creating a resource, add labels in the **Labels** section of the creation
-form before confirming.
+1. Go to **IAM & Admin → Tags** in the left menu, or navigate to the project's
+   **Project info** card on the home page.
+2. Click **Add tag** or the edit icon next to an existing tag.
+3. Select the tag key and value from the dropdown lists.
+4. Click **Save**.
 
 ### With gcloud CLI
 
 ```bash
-# Add labels to a VM
-gcloud compute instances add-labels INSTANCE_NAME \
-  --labels=ucsb:environment=production,ucsb:mission=research \
-  --zone=us-central1-a
+# List current tag bindings on your project
+gcloud resource-manager tags bindings list \
+  --parent=//cloudresourcemanager.googleapis.com/projects/YOUR_PROJECT_ID
 
-# Add labels to a GCS bucket
-gcloud storage buckets update gs://my-bucket \
-  --update-labels=ucsb:environment=production,ucsb:mission=research
+# Add or update a tag binding
+gcloud resource-manager tags bindings create \
+  --tag-value=YOUR_ORG_ID/environment/prod \
+  --parent=//cloudresourcemanager.googleapis.com/projects/YOUR_PROJECT_ID
 ```
 
-### With Terraform
-
-```hcl
-resource "google_compute_instance" "example" {
-  name         = "my-instance"
-  machine_type = "e2-standard-4"
-  zone         = "us-central1-a"
-
-  labels = {
-    "ucsb:environment"       = "production"
-    "ucsb:mission"           = "research"
-    "ucsb:protection-level"  = "p2"
-    "ucsb:availability-level" = "a2"
-    "ucsb:recovery-level"    = "r2"
-    "ucsb:dept"              = "chemistry"
-  }
-  # ...
-}
-```
+Replace `YOUR_ORG_ID` with the UCSB organization ID and `YOUR_PROJECT_ID` with
+your numeric project ID.
 
 ---
 
-## Checking Label Compliance
+## Project Labels
 
-To check whether your resources have the required labels:
+Project labels are set at creation time and appear in billing exports. They
+are managed by the Cloud Team — you do not need to set these yourself.
 
-1. Navigate to **Cloud Asset Inventory** → **Asset list**.
-2. Filter by resource type and your project.
-3. Export to a spreadsheet and check for missing label keys.
+| Label Key | Example Value | Purpose |
+|---|---|---|
+| `business_unit` | `its-ccid` | Identifies the owning business unit |
+| `costing` | `gcp-core` | Cost allocation group for billing reports |
 
-Alternatively, Security Command Center findings will flag resources that are
-missing required labels.
+Labels cannot drive org policies or automation. They supplement tags for
+billing visibility only.
+
+---
+
+## Checking Your Project's Tags
+
+To view the tags currently bound to your project:
+
+1. Navigate to **IAM & Admin → Tags** in the console.
+2. All tag bindings for the project are listed there.
+
+Or use gcloud:
+
+```bash
+gcloud resource-manager tags bindings list \
+  --parent=//cloudresourcemanager.googleapis.com/projects/YOUR_PROJECT_ID
+```
+
+Security Command Center will flag projects with missing required tags.

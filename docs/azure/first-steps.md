@@ -66,8 +66,9 @@ instructions for adding team members.
 
 ## Step 5 — Create a Resource Group
 
-All resources must be in a Resource Group. Azure Policy blocks creation of
-Resource Groups without the five required tags.
+All resources must be in a Resource Group. Azure Policy audits Resource Groups
+for the five required tags — groups missing tags will be flagged as
+non-compliant.
 
 1. Navigate to **Resource Groups → + Create**.
 2. Select your subscription and a region (West US 2 recommended).

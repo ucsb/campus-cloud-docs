@@ -60,7 +60,7 @@ Before you start the procurement process, you will need to estimate your monthly
 
 
 ## [Procure a Campus Cloud Account](#procure-a-campus-cloud-account)
-{% include alert.html type="info" title="Information" content="AWS accounts requested wtih @ucsb.edu emails must be created in the Campus Cloud. You will receive an \"error processing your request\" when requesting a AWS Account with a @ucsb.edu email unless it is in the Campus Cloud LZ. <a href=\"https://docs.cloud.ucsb.edu/docs/guidelines/account-request\"> &nbsp;&nbsp;More Info</a>" %}
+{% include alert.html type="info" title="Information" content="AWS accounts requested with @ucsb.edu emails must be created in the Campus Cloud. You will receive an \"error processing your request\" when requesting a AWS Account with a @ucsb.edu email unless it is in the Campus Cloud LZ. <a href='/docs/guidelines/account-request'> &nbsp;&nbsp;More Info</a>" %}
 
 
 All three providers use the same Gateway procurement process. Creating a Purchase Order (PO) is the first step for a new AWS account, Azure subscription, or GCP project — as well as for migrating an existing account.
@@ -92,7 +92,7 @@ You will not be able to access your account until all steps are completed and th
 	and Sub **3, 5 or 7**. Your requisition will be returned if these codes are not correct. SUBMIT your requisition.
 
 5.  The Campus Cloud team will receive your Purchase Order and contact you to finalize setting up your account.
-6.  After it is set up, ou will receive an activation email with instructions to access your new account.
+6.  After it is set up, you will receive an activation email with instructions to access your new account.
 7.  Assign users to your Account Groups.
 8.  Your account will be billed through the Master Payer Account with consolidated billing. Any monthly costs will be charged against the Purchase Order you submitted.
 

@@ -52,16 +52,24 @@ Key constraints to know:
 
 ---
 
-## Step 4 — Configure Networking
+## Step 4 — Networking
 
-If your project needs VPC connectivity:
+GCP Campus Cloud does not currently have a centrally-managed Shared VPC or
+campus connectivity (VPN/Interconnect) in place. Org policy blocks you from
+creating VPCs yourself — only the Cloud Team's automation account can create
+network resources.
 
-1. Check **VPC Network** in the console — a default VPC may have been
-   pre-created by the Cloud Team.
-2. If no VPC exists, you will need to create one (custom mode — auto mode is
-   blocked by org policy). See [Networking](/docs/gcp/networking) for details.
-3. If you need to reach UCSB campus resources, open a ServiceNow ticket to
-   request VPN or interconnect routing.
+If your project requires network connectivity:
+
+* **Internet egress via Cloud NAT** — open a ServiceNow ticket and the Cloud
+  Team will provision it for your project.
+* **Access to UCSB campus resources** — not currently available for GCP.
+  Contact the Cloud Team to discuss options.
+* **No VPN to campus is available at this time.**
+
+If your workload does not need private networking, you can proceed without a VPC.
+Services like Cloud Storage, BigQuery, Pub/Sub, and Cloud Functions work without
+one.
 
 ---
 
@@ -79,12 +87,17 @@ APIs — if you get an org policy error, see [Guardrails](/docs/gcp/guardrails).
 
 ---
 
-## Step 6 — Set Required Labels
+## Step 6 — Verify Required Tags
 
-All resources should be labeled with the required label keys. Label enforcement
-is active — unlabeled resources may be flagged by Security Command Center.
+Your project should already have the required Resource Manager Tags set by the
+Cloud Team at provisioning. Verify them by navigating to **IAM & Admin → Tags**.
 
-See [Labels & Tags](/docs/gcp/tagging) for the required labels and allowed values.
+The owner-settable tags (`environment`, `mission`, `protection-level`,
+`availability-level`, `recovery-level`, `dept`) can be updated by you if they
+need to change. The platform-controlled tags (`expiry-date`, `billing-limit`,
+`wiz-scanning`) are managed by the Cloud Team only.
+
+See [Labels & Tags](/docs/gcp/tagging) for allowed values and how to update them.
 
 ---
 

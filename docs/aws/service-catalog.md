@@ -37,13 +37,14 @@ You can update or terminate a product from the **Provisioned Products** list.
 
 | Product | Description |
 |---|---|
-| VPC — Campus Connected | VPC with Transit Gateway attachment for campus network access |
-| VPC — Internet Only | Standalone VPC with NAT gateway for internet-only workloads |
-| EC2 Linux Instance | Hardened Amazon Linux 2023 instance with SSM Agent |
-| EC2 Windows Instance | Hardened Windows Server 2022 instance with SSM Agent |
-| S3 Bucket | Private bucket with server-side encryption and versioning |
-| RDS MySQL / PostgreSQL | Managed relational database with encryption and automated backups |
-| Budget Alarm | CloudWatch billing alarm wired to your team's email |
+| Simple VPC | Basic VPC for internet-only workloads |
+| Advanced VPC | VPC with Transit Gateway attachment for campus network access |
+| Budget Notification | CloudWatch billing alarm wired to your team's email |
+| Security Notifications | SNS-based alerts for security events |
+| IAM Role-to-Group | Maps IAM roles to IdP groups for federated access |
+| SNS Topic | Pre-configured SNS topic for notifications |
+| Effectual Budget | Enhanced budget management product |
+| Instance Scheduler | Automated start/stop scheduling for EC2 and RDS instances |
 
 {% include alert.html type="info" title="Product list may change" content="New products are added as the Cloud Team develops them. Log in to the AWS Console and check Service Catalog → Products for the current complete list." %}
 
@@ -55,8 +56,8 @@ When requesting a VPC, choose the family that matches your connectivity needs:
 
 | VPC Type | Campus Network Access | Internet Access | Use When |
 |---|---|---|---|
-| Campus Connected | Yes (via Transit Gateway) | Yes (via NAT) | You need to reach on-prem file shares, databases, or LDAP |
-| Internet Only | No | Yes (via NAT) | Public-facing apps with no campus dependency |
+| Advanced VPC (Campus Connected) | Yes (via Transit Gateway) | Yes (via NAT) | You need to reach on-prem file shares, databases, or LDAP |
+| Simple VPC (Internet Only) | No | Yes (via NAT) | Public-facing apps with no campus dependency |
 
 You can have both types in the same account. See [Networking](/docs/aws/networking)
 for more details.

@@ -21,9 +21,9 @@ with their `@ucsb.edu` account — no local passwords or service accounts.
 
 | Role | Who Should Use It | Key Permissions | Key Restrictions |
 |---|---|---|---|
-| **UCSB Subscription Owner** | PI or department head (1–2 people max) | Manage all resources, assign roles | Cannot modify root-level management group policies |
-| **UCSB Application Owner** | Developers, researchers, lab managers | Create/manage compute, storage, databases, deploy code | Cannot manage RBAC assignments; cannot modify network hub resources |
-| **UCSB Network Operations** | Networking staff | Manage VNets, NSGs, route tables, peerings | Read-only outside of network resources |
+| **UCSB Subscription Owner** | PI or department head (1–2 people max) | Manage all resources, assign roles | Cannot manage VPN gateways, ExpressRoute circuits, or VPN sites |
+| **UCSB Application Owner** | Developers, researchers, lab managers | Create/manage compute, storage, databases, deploy code | Cannot manage RBAC assignments; cannot write to VPN gateways, ExpressRoute, route tables, public IPs, or VNets; cannot purge Key Vault |
+| **UCSB Network Operations** | Networking staff | Manage VPN gateways, ExpressRoute circuits, VPN sites, route tables; manage authorization writes | Read-only outside of VPN/ExpressRoute/routing resources |
 | **UCSB Security Operations** | Security reviewers, compliance staff | Read all resources, view Defender alerts, manage Key Vault | No write access to data-plane resources |
 
 ### Choosing the Right Role

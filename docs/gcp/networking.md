@@ -1,126 +1,87 @@
 ---
 title: GCP Networking
-description: VPC configuration, org policy constraints, campus connectivity, and networking rules for GCP projects.
+description: Networking constraints, current limitations, and how to request network resources for GCP projects.
 permalink: /docs/gcp/networking
 last_reviewed: 2026-03-30
 ---
 
 ## GCP Networking Overview
 
-GCP networking in Campus Cloud is governed by organization policies that
-enforce a secure network baseline across all projects. Key rules:
+Networking in the GCP Campus Cloud is centrally managed. **You cannot create
+VPC networks yourself** — org policy blocks VPC creation for all users. Only
+the Cloud Team's automation account can provision network resources.
 
-* **Custom-mode VPCs only** — Auto-mode VPC networks are blocked.
-* **No external (public) IP addresses on VMs** — VMs must use private IPs only.
-* **Allowed regions:** us-central1 (Iowa) and us-west1 (Oregon).
-
----
-
-## Creating a VPC
-
-**Auto-mode VPC creation is blocked by org policy.** All VPCs must be
-custom-mode, where you define subnets manually.
-
-To create a custom-mode VPC:
-
-1. Navigate to **VPC Network → VPC networks → + Create VPC network**.
-2. Under **Subnet creation mode**, select **Custom**.
-3. Add one or more subnets in `us-central1` or `us-west1`.
-4. Apply a subnet CIDR from RFC 1918 address space — coordinate with the
-   Cloud Team to avoid conflicts with Shared VPC or on-premises ranges.
-5. Enable **Private Google Access** on each subnet to allow VMs to reach
-   Google APIs without an external IP.
+If your project needs networking, open a ServiceNow ticket to request it.
 
 ---
 
-## External IP Addresses
+## Current State
 
-**VMs cannot have external (public) IP addresses by default.**
+| Capability | Available? |
+|---|---|
+| User-created VPCs | No — deny policy blocks `networks.create` |
+| Internet egress via Cloud NAT | Not required — outbound internet traffic is not restricted |
+| VPC peering | Not available (VPC creation is blocked; contact Cloud Team if needed) |
+| Shared VPC attachment | Not available (contact Cloud Team if needed) |
 
-An org policy constraint blocks assignment of external IPs to VM instances.
-This means:
-
-* VMs are not directly reachable from the internet.
-* VMs can still reach the internet for outbound traffic via **Cloud NAT**.
-* If you need inbound internet traffic, use a **Cloud Load Balancer** in front
-  of your VMs.
-
-If you need an external IP for a specific workload, open a ServiceNow ticket
-with a justification. Exceptions are reviewed individually.
+{% include alert.html type="warning" title="Campus connectivity not available" content="There is currently no VPN or Interconnect between GCP and the UCSB campus network. If your workload requires campus connectivity, contact the Cloud Team to discuss options." %}
 
 ---
 
-## Cloud NAT (Outbound Internet Access)
+## Org Policy Networking Constraints
 
-To allow your VMs internet access without public IPs:
+The following constraints are enforced across all projects:
 
-1. Navigate to your VPC in the console → **Cloud NAT**.
-2. Click **+ Create Cloud NAT gateway**.
-3. Select the VPC network, region, and Cloud Router (create one if needed).
-4. Configure NAT IP allocation (auto or manual).
-
-With Cloud NAT configured, VMs with only private IPs can make outbound internet
-connections through the NAT gateway.
-
----
-
-## Campus Connectivity
-
-To route traffic between your GCP project and the UCSB campus network, contact
-the Cloud Team. Campus-to-GCP connectivity options include:
-
-* **Cloud VPN** — encrypted tunnel over the internet between GCP and the UCSB
-  campus firewall. Suitable for most research workloads.
-* **Cloud Interconnect** — dedicated private connectivity (if available).
-
-Campus connectivity must be requested via ServiceNow and is provisioned by the
-Cloud Team. It is not self-service.
+* **No VPC creation** — users cannot create VPC networks; a deny policy
+  blocks `networks.create` for all users except the TFC service account.
+* **Custom-mode VPCs only** — auto-mode VPCs (which create subnets in every
+  region) are blocked by a custom constraint.
+* **No external IP addresses on VMs** — VMs may not have public IPs.
+* **Allowed regions:** us-central1 (Iowa) and us-west1 (Oregon) only.
+* **VPC flow logs required** — subnets without flow logs cannot be created.
 
 ---
 
-## Shared VPC
+## Requesting Network Resources
 
-For projects that need to share a VPC with other projects (e.g., a shared
-network for a research group), the Cloud Team can configure Shared VPC:
+All networking must be provisioned by the Cloud Team. Submit a ServiceNow
+ticket (Cloud Services) with:
 
-* One **host project** owns the VPC and subnets.
-* One or more **service projects** consume the shared network.
-
-Contact the Cloud Team if your use case requires Shared VPC.
-
----
-
-## Firewall Rules
-
-GCP firewall rules control ingress and egress at the VPC level:
-
-* Implicit deny-all ingress is the default — you must explicitly allow traffic.
-* Best practice: allow only the minimum required ports from specific IP ranges.
-* Avoid `0.0.0.0/0` inbound rules on administrative ports (22, 3389).
-* Use **service account–based firewall rules** for VM-to-VM traffic within the
-  project.
+* Your GCP project ID
+* The connectivity you need (Cloud NAT, a VPC subnet, etc.)
+* The region (us-central1 or us-west1)
+* Any specific CIDR or peering requirements
 
 ---
 
-## Cloud DNS
+## Accessing Private VMs Without a Public IP
 
-* Each VPC has an implicit DNS resolver at the VPC's default gateway address.
-* Private zones in Cloud DNS are available for internal name resolution.
-* Contact the Cloud Team to register a record in a UCSB-owned public DNS zone.
+Since VMs cannot have external IPs, use **Identity-Aware Proxy (IAP)** for
+SSH and RDP access. IAP tunnels traffic over HTTPS (port 443) without
+requiring a VPN or public IP.
+
+**Requirements:** the `roles/iap.tunnelResourceAccessor` IAM permission on
+the target VM or project, and the `gcloud` CLI.
+
+```bash
+gcloud compute ssh INSTANCE_NAME --tunnel-through-iap --project PROJECT_ID --zone ZONE
+```
+
+IAP is the recommended and supported method for interactive access to GCP VMs.
 
 ---
 
-## Off-Campus Access to Private VMs
+## Services That Work Without a VPC
 
-To access a private GCP VM from off campus:
+Many GCP services do not require a VPC at all:
 
-1. Connect to **UCSB ConnectUCSB GlobalProtect VPN** on your laptop.
-2. Use **Identity-Aware Proxy (IAP) TCP tunneling** for SSH/RDP without a
-   public IP:
-   ```bash
-   gcloud compute ssh <instance-name> --tunnel-through-iap --project <project-id>
-   ```
-3. IAP tunneling works over HTTPS (port 443) and does not require a VPN, but
-   does require the `roles/iap.tunnelResourceAccessor` IAM permission.
+* Cloud Storage
+* BigQuery
+* Pub/Sub
+* Cloud Functions
+* Cloud Run
+* Vertex AI
 
-IAP is the recommended method for SSH access to GCP VMs.
+If your workload uses only managed services, you may not need to request
+network provisioning.
+

@@ -8,10 +8,12 @@ last_reviewed: 2026-03-30
 ## GCP Billing in Campus Cloud
 
 GCP billing in Campus Cloud is managed through **GCP Billing Accounts** at the
-organization level. Each funded project is linked to a billing sub-account that
-rolls up charges to the UCSB master billing account. You do not manage the
-billing account directly — costs are invoiced to you through the same
-Gateway/PO process used for account provisioning.
+organization level. Each funded project is linked to a **billing sub-account**
+that rolls up charges to the UCSB master billing account. Multiple projects may
+share the same sub-account (sub-accounts are organized per department or cost
+center, not per project). You do not manage the billing account directly —
+costs are invoiced to you through the same Gateway/PO process used for account
+provisioning.
 
 {% include alert.html type="info" title="Sandbox Unfunded has no billing" content="Projects in the Sandbox Unfunded folder cannot have a billing account attached. Most paid services (Compute Engine, Cloud SQL, GKE) are not available in Sandbox. Sandbox is for exploring free-tier services and GCP configuration only." %}
 
