@@ -2,12 +2,6 @@
 layout: page
 title: "Getting Started"
 permalink: /getting-started/
-tags:
- - cloud
- - aws
- - azure
- - gcp
- - github
 ---
 
 # Getting Started

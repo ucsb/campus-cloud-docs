@@ -112,8 +112,7 @@ Team may contact you for unresolved high-severity items.
 If you suspect a security incident (unauthorized access, data exposure, unusual
 account activity):
 
-1. Open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) immediately —
-   select Cloud Services under Information Technology Services.
+1. Open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) immediately.
 2. Do **not** attempt to clean up or remove evidence before the Cloud Team has
    been notified.
 3. Do **not** share account credentials or access to investigate; the Cloud Team

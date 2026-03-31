@@ -21,7 +21,7 @@ region, and tag.
 3. If you see a QuickSight sign-in prompt, click **Sign in with Active Directory /
    SAML** and use your UCSB credentials.
 
-{% include alert.html type="warning" title="QuickSight access is not automatic" content="QuickSight access must be provisioned separately from your AWS account. If you cannot access QuickSight, request access via [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) → Cloud Services." %}
+{% include alert.html type="warning" title="QuickSight access is not automatic" content="QuickSight access must be provisioned separately from your AWS account. If you cannot access QuickSight, request access via [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)" %}
 
 **Account name for QuickSight:** `ucsb-campus-cloud`
 
@@ -77,6 +77,3 @@ Open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys
 * Your AWS Account ID
 * Your UCSB NetID
 * Whether you need read-only or author access to QuickSight
-
-[ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) → Information Technology Services → Advanced Technical Services →
-Cloud Services → Cloud Question

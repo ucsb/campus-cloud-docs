@@ -107,4 +107,4 @@ See the [Tagging](/docs/general/tagging) page for required tags and allowed valu
 | Missing VPC, networking issues | [Networking](/docs/aws/networking) |
 | Policy violations / Access Denied | [Guardrails](/docs/aws/guardrails) |
 | Billing questions | [Cost Management](/docs/general/cost-management) |
-| Everything else | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) → Cloud Services |
+| Everything else | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) |

@@ -70,9 +70,6 @@ relies on are degraded or have planned maintenance:
 ## Contacting the Cloud Team
 
 For changes to your subscription that you cannot make yourself, open a
-[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5):
-
-[ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) → Information Technology Services → Advanced Technical Services →
-Cloud Services → Cloud Question
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
 
 Include your **Subscription ID** in all support requests.

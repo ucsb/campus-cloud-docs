@@ -60,7 +60,4 @@ or an unexpected billing spike in time to respond.
 ## Contact the Cloud Team
 
 For account-level changes you cannot make yourself (Primary contact updates,
-bulk contact updates across multiple accounts), open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5):
-
-[ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) → Information Technology Services → Advanced Technical Services →
-Cloud Services → Cloud Question
+bulk contact updates across multiple accounts), open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).

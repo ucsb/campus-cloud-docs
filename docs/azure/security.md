@@ -74,8 +74,7 @@ If you observe a suspicious event or believe a resource has been compromised:
    time, and what you observed.
 2. **Do not delete evidence** — Do not terminate VMs, delete logs, or rotate
    secrets before notifying the Cloud Team.
-3. **Open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) marked Urgent** — [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) → Cloud Services →
-   describe the incident. Include the Account/Subscription ID.
+3. **Open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) marked Urgent** and describe the incident. Include the Account/Subscription ID.
 4. **Contact your department's ISO** (Information Security Officer) if
    regulated data may be involved.
 
