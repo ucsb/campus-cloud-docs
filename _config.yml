@@ -16,13 +16,14 @@ description: > # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 
-# DO NOT CHANGE THE LINE OF THIS FILE without editing .circleci/circle_urls.sh
-baseurl: "/" # the subpath of your site, e.g. /blog
-#baseurl: "/campus-cloud-docs" # the subpath of your site, e.g. /blog
+# --- Production (docs.cloud.ucsb.edu) ---
+baseurl: "/"
+url: "https://docs.cloud.ucsb.edu"
 
-# This is mostly for testing
-url: "https://docs.cloud.ucsb.edu/" # the base hostname & protocol for your site
-#url: "https://ucsb.github.io/campus-cloud-docs/" # the base hostname & protocol for your site
+# --- Test (iancrew.github.io/campus-cloud-docs) ---
+# Uncomment the two lines below and comment out the two above to test.
+#baseurl: "/campus-cloud-docs"
+#url: "https://iancrew.github.io"
 
 # Social (First three Required)
 repo: "https://github.com/ucsb/campus-cloud-docs"
@@ -63,9 +64,6 @@ fixedNav: 'true' # true or false
 
 permalink: /:year/:title/
 markdown: kramdown
-plugins:
-  - jekyll-redirect-from
-
 exclude: [_site, CHANGELOG.md, LICENSE, README.md, vendor]
 
 # Collections
