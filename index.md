@@ -2,9 +2,6 @@
 layout: page
 title: "Campus Cloud Docs - Home"
 permalink: /
-redirect_from:
-  - /getting-started/
-  - /getting-started
 ---
 
 ## UCSB Campus Cloud
