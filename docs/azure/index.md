@@ -7,12 +7,10 @@ last_reviewed: 2026-03-30
 
 ## Azure at UCSB
 
-The UCSB Campus Cloud Azure platform is built using the **Cloud Adoption
-Framework (CAF) Enterprise Scale** reference architecture with a Campus Cloud Landing Zone
-deployed via Terraform. Every subscription is provisioned inside a shared
-management group hierarchy with pre-applied policies, networking, and security
-monitoring so teams can start building quickly with a consistent security
-baseline.
+The UCSB Campus Cloud Azure platform provides every subscription inside a
+shared management group hierarchy with pre-applied policies, networking, and
+security monitoring. Your team can start building right away with a consistent
+security baseline.
 
 ---
 
@@ -30,9 +28,8 @@ baseline.
 
 ## Management Group Hierarchy
 
-Azure subscriptions are organized into a management group hierarchy based on the
-**Cloud Adoption Framework (CAF) Enterprise Scale** module. Policies applied at a
-higher level in the hierarchy are inherited by all subscriptions below it.
+Azure subscriptions are organized into a management group hierarchy. Policies
+applied at a higher level are inherited by all subscriptions below it.
 
 ```
 UCSB Tenant (Root)
@@ -95,5 +92,6 @@ listed here.
 * [Request a Subscription](/getting-started/procurement)
 * [First Steps](/docs/azure/first-steps)
 * [Networking](/docs/azure/networking)
-* [Roles & Access](/docs/azure/roles)
 * [Guardrails & Policies](/docs/azure/guardrails)
+* [Security](/docs/azure/security)
+* [Roles & Access](/docs/azure/roles)

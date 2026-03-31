@@ -57,5 +57,5 @@ that need a campus-specific definition.
 | **UC Enterprise Discount** | UC system-wide pricing agreements with cloud providers (AWS EDP, Azure EA, GCP negotiated rates). Applied automatically to Campus Cloud accounts. |
 | **UC Policy IS-3** | University of California Electronic Information Security Policy. Requires data classification and appropriate protections. |
 | **Wiz** | The cloud security posture management (CSPM) tool used across all Campus Cloud environments for agentless vulnerability and misconfiguration scanning. |
-| **WORM** | Write Once, Read Many — a storage retention mode that prevents log deletion or modification. Used for audit logs in GCP (3-year retention). |
+| **WORM** | Write Once, Read Many — a storage mode that prevents stored data from being deleted or modified. Used for audit logs in GCP (3-year retention). |
 

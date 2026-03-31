@@ -7,78 +7,85 @@ last_reviewed: 2026-03-30
 
 ## GCP Security
 
-Every Campus Cloud GCP project is connected to organization-wide security
-tooling. The primary components are **Cloud Audit Logs** and **Security
-Command Center (SCC)**.
+Every Campus Cloud GCP project comes with security tools already turned on.
+You don't need to set any of this up — it's ready when your project is
+created. The main tools are **Cloud Audit Logs** (audit logging) and
+**Security Command Center** (security checks and threat detection).
 
 ---
 
 ## Cloud Audit Logs
 
-GCP Cloud Audit Logs record all administrative, data-access, and system events.
+[Cloud Audit Logs](https://cloud.google.com/logging/docs/audit) record every
+administrative action in your project — who did what, when, and from where.
 
 | Log Type | What It Records | Retention |
 |---|---|---|
-| Admin Activity | Changes to resource configurations and metadata | WORM — 3 years (cannot be deleted or modified) |
-| Data Access | API calls that read or write data (if enabled) | 30 days default (configurable) |
+| Admin Activity | Changes to resources and settings | 3 years (cannot be deleted or modified) |
+| Data Access | Reads and writes to data (if enabled) | 30 days default (configurable) |
 | System Events | Automated GCP actions | 30 days default |
 
-**Admin Activity audit logs cannot be disabled** — GCP enforces this at the
-API level for all projects. These logs are your tamper-resistant record of who
-changed what and when.
+**Admin Activity logs are always on** and cannot be disabled.
 
 ### Enabling Data Access Logs
 
-Data Access logs are not enabled by default because they can generate very high
-log volumes. To enable them for a specific service:
+Data Access logs are off by default because they can generate high volume.
+To enable them for a specific service:
 
-1. Navigate to **IAM & Admin → Audit Logs**.
+1. Go to **IAM & Admin → Audit Logs** in the Google Cloud console.
 2. Select a service (e.g., Cloud Storage, BigQuery).
-3. Check **Data Read**, **Data Write**, and **Admin Read** as appropriate.
+3. Check **Data Read**, **Data Write**, and/or **Admin Read**.
 4. Save.
 
-For NIST-compliance accounts, Data Access logs are recommended (and may be
-required by your compliance team).
+For accounts handling sensitive data, Data Access logs are recommended.
+
+For details, see the
+[Cloud Audit Logs docs](https://cloud.google.com/logging/docs/audit).
 
 ---
 
-## Security Command Center (SCC)
+## Centralized Log Management
 
-SCC is enabled at the UCSB organization level. It aggregates security findings
-from all projects into a central dashboard accessible to the Cloud Team.
+In addition to the per-project log retention above, the Cloud Team collects
+audit logs from all projects into a central archive:
 
-SCC identifies:
-* Publicly exposed storage buckets
-* VMs with known vulnerabilities (via Container Analysis / VM Manager)
-* IAM policy misconfigurations
-* Unusual API activity (via Event Threat Detection)
-* Unsafe networking configurations
+| Destination | Purpose | Retention |
+|---|---|---|
+| Cloud Storage | Long-term archive (locked, cannot be deleted early) | 3 years |
+| BigQuery | Searchable access for investigation | Retained in dataset |
 
-### Viewing Your Project's Findings
+You don't need to configure this — it's managed by the Cloud Team.
 
-1. Navigate to **Security → Security Command Center → Findings**.
+---
+
+## Security Command Center
+
+[Security Command Center](https://cloud.google.com/security-command-center/docs/concepts-security-command-center-overview)
+is enabled at the UCSB organization level. It checks all projects for security
+issues — publicly exposed storage buckets, VM vulnerabilities, IAM
+misconfigurations, unusual API activity, and unsafe network settings.
+
+### Reviewing Findings
+
+1. Open **Security → Security Command Center → Findings** in the Google Cloud
+   console.
 2. Filter by your project ID.
-3. Sort by severity (Critical → High → Medium → Low).
-4. Click a finding to see the affected resource and remediation steps.
+3. Start with Critical and High severity.
+4. Click a finding to see which resource is affected and how to fix it.
 
-Address Critical and High severity findings promptly. The Cloud Team may
-reach out if critical findings are not addressed within a reasonable time.
+Address Critical and High findings promptly. The Cloud Team may follow up if
+they remain unresolved.
+
+For details, see the
+[Security Command Center docs](https://cloud.google.com/security-command-center/docs).
 
 ---
 
 ## Wiz Cloud Security Posture Management
 
-UCSB Campus Cloud uses **Wiz** for additional security posture scanning across
-all cloud environments (AWS, Azure, GCP). Wiz performs agentless scanning for:
-
-* Vulnerabilities on running VMs and containers
-* Identity and access risks
-* Network exposure analysis
-* Secrets and credentials exposed in code or disk
-
-Wiz scanning is **opt-in** and is not enabled by default for most projects. If
-your project handles sensitive data or you would like the additional visibility,
-contact the Cloud Team to request it.
+Wiz is available across all Campus Cloud platforms (AWS, Azure, GCP). See
+[Security & Shared Responsibility — Wiz](/docs/general/security#wiz-cloud-security-posture-management)
+for details.
 
 ---
 
@@ -86,43 +93,35 @@ contact the Cloud Team to request it.
 
 **Only @ucsb.edu accounts can access Campus Cloud GCP projects.**
 
-An org policy restricts domain sharing — IAM bindings cannot be granted to
-Google accounts outside the `ucsb.edu` domain, `allUsers`, or
-`allAuthenticatedUsers`. Attempts to grant access to a personal Gmail address
-will fail with an org policy violation error.
+You cannot grant access to personal Gmail addresses or to "all users" —
+attempts to do so will fail with a policy error.
 
 If an external collaborator needs access, contact the Cloud Team to discuss
-options (sponsored UCSB account, Workload Identity Federation for automated
-workloads, etc.).
+options (e.g., a sponsored UCSB account).
 
 ---
 
 ## Incident Response
 
-If you suspect a security incident:
-
-1. **Document immediately:** Note the project ID, resource name, approximate
-   time of the suspicious activity, and what you observed.
-2. **Do not delete evidence:** Do not delete VMs, revoke service accounts, or
-   rotate keys before notifying the Cloud Team.
-3. **Open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) marked Urgent** and describe the incident. Include the GCP Project ID.
-4. **Contact your department ISO** if regulated data may be involved.
+Follow the general
+[incident response steps](/docs/general/security#reporting-a-security-incident)
+for all suspected security events. The section below covers GCP-specific
+emergency actions.
 
 ### Emergency Isolation
 
 If a GCP resource is actively being exploited:
-* **IAM:** Revoke the compromised service account or user's IAM binding for
-  the affected project.
-* **Firewall:** Add a deny-all firewall rule at priority 1 to isolate the VM.
+* Remove the compromised user or service account's access to the project.
+* Add a deny-all firewall rule (priority 1) to isolate a compromised VM.
 * **Do not delete the VM** — preserve it for forensics.
 
 ---
 
 ## Project Quarantine
 
-Projects that violate org policies or are suspected of compromise may be
+Projects that violate policies or are suspected of compromise may be
 quarantined by the Cloud Team. When a project is quarantined:
 
-* Additional org policies are applied that restrict most actions.
+* Most actions in the project are restricted.
 * The Cloud Team will contact the project owner to investigate.
-* Projects are restored to the normal folder after remediation.
+* The project is restored after the issue is resolved.

@@ -19,7 +19,7 @@ If your project needs networking, open a [ServiceNow ticket](https://ucsb.servic
 
 | Capability | Available? |
 |---|---|
-| User-created VPCs | No — deny policy blocks `networks.create` |
+| User-created VPCs | No — blocked by policy |
 | Internet egress via Cloud NAT | Not required — outbound internet traffic is not restricted |
 | VPC peering | Not available (VPC creation is blocked; contact Cloud Team if needed) |
 | Shared VPC attachment | Not available (contact Cloud Team if needed) |
@@ -32,8 +32,8 @@ If your project needs networking, open a [ServiceNow ticket](https://ucsb.servic
 
 The following constraints are enforced across all projects:
 
-* **No VPC creation** — users cannot create VPC networks; a deny policy
-  blocks `networks.create` for all users except the TFC service account.
+* **No VPC creation** — users cannot create VPC networks; only the Cloud
+  Team's automation can provision them.
 * **Custom-mode VPCs only** — auto-mode VPCs (which create subnets in every
   region) are blocked by a custom constraint.
 * **No external IP addresses on VMs** — VMs may not have public IPs.
@@ -57,7 +57,7 @@ ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf3989
 ## Accessing Private VMs Without a Public IP
 
 Since VMs cannot have external IPs, use **Identity-Aware Proxy (IAP)** for
-SSH and RDP access. IAP tunnels traffic over HTTPS (port 443) without
+browser-based SSH and RDP access. IAP tunnels traffic securely without
 requiring a VPN or public IP.
 
 **Requirements:** the `roles/iap.tunnelResourceAccessor` IAM permission on

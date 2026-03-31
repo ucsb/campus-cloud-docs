@@ -19,8 +19,8 @@ This model applies across all three providers.
 ### What the Cloud Provider Is Responsible For
 
 * Physical data center security, hardware, and networking infrastructure
-* Hypervisor and managed service security (the underlying compute, storage, and
-  network fabric)
+* The underlying compute, storage, and network systems that managed services
+  run on
 * Software patches and updates for managed services (RDS, Cloud SQL, Azure SQL, etc.)
 
 ### What the Campus Cloud Team Is Responsible For
@@ -30,7 +30,7 @@ This model applies across all three providers.
 * Centralized audit logging and security monitoring
 * Campus network connectivity
 * Identity federation (UCSB SSO to each provider)
-* Platform-level compliance controls (NIST 800-53/800-171 baseline)
+* Platform-level compliance controls (NIST 800-171 baseline)
 
 ### What You Are Responsible For
 
@@ -107,18 +107,38 @@ Team may contact you for unresolved high-severity items.
 
 ---
 
+## Wiz Cloud Security Posture Management
+
+UCSB Campus Cloud uses [Wiz](https://www.wiz.io/) for additional security
+posture scanning across all cloud environments (AWS, Azure, GCP). Wiz performs
+agentless scanning for:
+
+* Vulnerabilities on running VMs and containers
+* Identity and access risks
+* Network exposure analysis
+* Secrets and credentials exposed in code or disk
+
+Wiz scanning is **opt-in** and is not enabled by default for most accounts. If
+your account handles sensitive data or you would like the additional visibility,
+contact the Cloud Team to request it.
+
+---
+
 ## Reporting a Security Incident
 
 If you suspect a security incident (unauthorized access, data exposure, unusual
 account activity):
 
-1. Open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) immediately.
-2. Do **not** attempt to clean up or remove evidence before the Cloud Team has
-   been notified.
-3. Do **not** share account credentials or access to investigate; the Cloud Team
-   will request access as needed.
+1. **Document immediately** — Note the account/project/subscription ID, resource
+   name, approximate time of the suspicious activity, and what you observed.
+2. **Do not delete evidence** — Do not terminate VMs, delete logs, revoke
+   service accounts, or rotate secrets before the Cloud Team has been notified.
+3. **Open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) marked Urgent** and describe the incident.
+   Include the account or project identifier.
+4. **Contact your department's ISO** (Information Security Officer) if regulated
+   data may be involved.
 
-For provider-specific security pages, see:
-[AWS Security](/docs/aws/guardrails) ·
+Each provider page describes platform-specific emergency isolation steps:
+[AWS Security](/docs/aws/security) ·
 [Azure Security](/docs/azure/security) ·
 [GCP Security](/docs/gcp/security)

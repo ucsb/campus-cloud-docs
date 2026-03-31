@@ -84,10 +84,12 @@ To request a copy: [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu)
 Each provider's security monitoring tools send findings to consolidated views:
 
 * **AWS:** Security Hub aggregates GuardDuty, Config, and other findings.
-  Prisma Cloud integration may be available — contact the Cloud Team for
-  current status.
 * **Azure:** Microsoft Defender for Cloud provides the unified security posture.
 * **GCP:** Security Command Center provides organization-wide findings.
+
+In addition, [Wiz](/docs/general/security#wiz-cloud-security-posture-management)
+is available for cross-provider security posture scanning. Contact the Cloud
+Team for details.
 
 ---
 
@@ -95,7 +97,7 @@ Each provider's security monitoring tools send findings to consolidated views:
 
 Regardless of account type, every Campus Cloud account must:
 
-1. Have the root/admin password secured and MFA enabled
+1. Have administrative passwords secured and MFA enabled
 2. Have valid alternate contacts (billing, security, operations)
 3. Apply data classification tags to resources
 4. Use the account only for UCSB business purposes in accordance with UC IS-3

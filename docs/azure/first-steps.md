@@ -35,7 +35,7 @@ the Cloud Team. Follow the steps below to get set up.
 
 If your subscription does not appear, verify that:
 * You are in the UC Santa Barbara directory (step 1).
-* Your RBAC role assignment is complete (ask the Cloud Team if unsure).
+* Your role assignment is complete (ask the Cloud Team if unsure).
 
 ---
 

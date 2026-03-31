@@ -59,7 +59,7 @@ it — either create a new account or migrate an existing personal account.
 
 ## Personal vs. Campus Cloud Accounts
 
-A personal cloud account uses a personal credit card and is outside the Campus
+A personal cloud account uses a personal credit card and is outside the
 Campus Cloud Landing Zone. Personal accounts:
 
 * Do not receive UC enterprise discounts

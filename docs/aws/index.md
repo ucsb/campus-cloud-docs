@@ -7,11 +7,10 @@ last_reviewed: 2026-03-30
 
 ## AWS at UCSB
 
-The UCSB Campus Cloud AWS platform is built on **AWS Control Tower** with a
-multi-account structure managed by Service Control Policies (SCPs). Every
-account is pre-provisioned with a consistent set of guardrails, networking
-configuration, auditing, and default roles so teams can start building
-quickly without setting up security infrastructure from scratch.
+The UCSB Campus Cloud AWS platform uses a multi-account structure where every
+account is pre-configured with guardrails, networking, audit logging, and
+default roles. Your team can start building right away without setting up
+security infrastructure from scratch.
 
 ---
 
@@ -64,12 +63,12 @@ be moved between OUs on request if your project's needs change.
 
 When your account is provisioned, the Cloud Team will:
 
-* **Attach your account** to the AWS Organization and apply SCPs
+* **Attach your account** to the AWS Organization and apply guardrail policies
 * **Enable AWS Security Hub** and configure NIST 800-171 standards
 * **Enable AWS Config** to track configuration changes
 * **Enable AWS CloudTrail** (organization-level, cannot be disabled)
 * **Pre-wire networking** — your account receives a VPC connected to the
-  Transit Gateway for campus campus network access (if requested)
+  campus network (if requested)
 * **Create four default IAM roles** for your team (see [Identity & Access](/docs/general/identity))
 * **Set a billing alarm** at the threshold you specify during account request
 
@@ -111,6 +110,10 @@ because the templates are already configured for UCSB compliance requirements.
 
 ## Next Steps
 
+* [Request an Account](/getting-started/procurement)
 * [First Steps](/docs/aws/first-steps)
 * [Networking](/docs/aws/networking)
 * [Guardrails & SCPs](/docs/aws/guardrails)
+* [Security](/docs/aws/security)
+* [Service Catalog](/docs/aws/service-catalog)
+* [Cost Dashboards (QuickSight)](/docs/aws/quicksight)

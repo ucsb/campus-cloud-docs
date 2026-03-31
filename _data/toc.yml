@@ -46,6 +46,8 @@
           url: "docs/aws/networking"
         - title: Guardrails & SCPs
           url: "docs/aws/guardrails"
+        - title: Security
+          url: "docs/aws/security"
         - title: Service Catalog
           url: "docs/aws/service-catalog"
         - title: Cost Dashboards (QuickSight)

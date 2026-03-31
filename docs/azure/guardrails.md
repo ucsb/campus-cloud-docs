@@ -46,10 +46,10 @@ availability levels.
 
 **Public blob access on Storage Accounts is blocked.**
 
-Azure Policy denies the creation of Storage Accounts with `allowBlobPublicAccess`
-set to `true`. If you need to share data publicly, use either:
+Azure Policy blocks the creation of Storage Accounts that allow public blob
+access. If you need to share data publicly, use either:
 
-* A **pre-signed Shared Access Signature (SAS) URL** with a short expiry.
+* A **pre-signed URL** (Shared Access Signature) with a short expiry.
 * **Azure CDN** fronting a private storage account.
 * A blob with a specific **public container** configuration discussed with the
   Cloud Team.
@@ -60,8 +60,8 @@ set to `true`. If you need to share data publicly, use either:
 
 **NSG Flow Logs should be enabled on all Network Security Groups.**
 
-NSG Flow Logs are deployed automatically via a policy assignment. If you create
-NSGs directly, the policy will deploy Flow Logs for them. Verify in the NSG
+NSG Flow Logs are enabled automatically by policy. If you create NSGs
+directly, Flow Logs will be configured for them. Verify in the NSG
 configuration that Flow Logs are active.
 
 ---

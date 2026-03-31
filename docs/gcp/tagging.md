@@ -23,8 +23,8 @@ GCP has two distinct metadata systems:
 ## Resource Manager Tags
 
 Tags are bound to your **project**, not to individual resources. Most are set
-at project creation by the Vending Machine. The 6 owner-settable tags can be
-changed by project owners at any time.
+at project creation by the Cloud Team's provisioning automation. The 6
+owner-settable tags can be changed by project owners at any time.
 
 ### Owner-Settable Tags
 

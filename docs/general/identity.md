@@ -76,7 +76,7 @@ IT admin may also be able to help.
 
 ### GCP
 
-IAM bindings are managed at the project level in the GCP Console under
+Role assignments are managed at the project level in the GCP Console under
 **IAM & Admin → IAM**, or via the Cloud Team for platform-level roles. Only
 project Owners can grant roles. Only `@ucsb.edu` accounts can be added —
 personal Gmail accounts are not permitted.

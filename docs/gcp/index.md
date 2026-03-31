@@ -7,11 +7,11 @@ last_reviewed: 2026-03-30
 
 ## GCP at UCSB
 
-The UCSB Campus Cloud GCP platform is built on a **Google Cloud Organization**
-with a structured folder hierarchy managed by the Cloud Team using HCP Terraform
-and Workload Identity Federation. Every project is provisioned inside a folder
-with organization-level policies and guardrails, giving teams a compliant
-starting point without manual security setup.
+The UCSB Campus Cloud GCP platform is organized as a **Google Cloud
+Organization** with a structured folder hierarchy managed by the Cloud Team.
+Every project is provisioned inside a folder with organization-level policies
+and guardrails, giving your team a compliant starting point without manual
+security setup.
 
 ---
 
@@ -55,13 +55,13 @@ compliance requirements:
 
 When your project is provisioned, the Cloud Team will:
 
-* **Apply organization IAM deny policies** — Block high-risk operations
-  (e.g., `allUsers` public access, disabling audit logs)
-* **Enable Cloud Audit Logs** — Admin Activity logs are WORM protected for 3 years
-* **Enable Security Command Center (SCC)** — Central security findings
-* **Require required resource labels** — Enforce your team's tags on resources
-* **Restrict networking** — VPC creation is blocked by org policy; request
-  networking resources from the Cloud Team if your project needs them
+* **Block high-risk operations** — Policies prevent actions like granting
+  public access or disabling audit logs
+* **Enable Cloud Audit Logs** — Admin Activity logs are stored securely for 3 years
+* **Enable Security Command Center** — Central dashboard for security findings
+* **Require resource labels** — Enforce your team's tags on resources
+* **Restrict networking** — Only the Cloud Team can create VPC networks; request
+  networking resources if your project needs them
 * **Set a billing budget alert** — Notifies you when spend approaches your
   specified threshold (funded projects only)
 
@@ -81,4 +81,6 @@ are tested primarily in these two regions.
 * [First Steps](/docs/gcp/first-steps)
 * [Networking](/docs/gcp/networking)
 * [Guardrails & Org Policies](/docs/gcp/guardrails)
+* [Security](/docs/gcp/security)
 * [Labels & Tags](/docs/gcp/tagging)
+* [Billing](/docs/gcp/billing)

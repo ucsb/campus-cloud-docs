@@ -38,8 +38,8 @@ allowed.
 
 | Constraint | Effect |
 |---|---|
-| Domain-restricted sharing (`allowedPolicyMemberDomains`) | IAM bindings restricted to UCSB organization members only |
-| Disable default SA auto-grants | GCP will not auto-grant `roles/editor` to default service accounts |
+| Domain-restricted sharing (`allowedPolicyMemberDomains`) | Access can only be granted to UCSB organization members |
+| Disable default SA auto-grants | GCP will not auto-grant editor access to default service accounts |
 
 ### Storage
 
@@ -65,10 +65,10 @@ absolute restrictions. The Campus Cloud Landing Zone uses 4 deny policies at the
 
 | Policy | What It Blocks | Exceptions |
 |---|---|---|
-| Resource Manager Lockdown | Creating/deleting folders, removing project liens (deletion protection), moving projects between folders, changing billing account assignments | TFC service account, org admins (break-glass) |
-| Networking Lockdown | Creating VPC networks | TFC service account only |
-| TFC SA IAM Protection | Modifying org-level IAM policy out of band | TFC service account, org admins (break-glass) |
-| Contact Preservation | Deleting or modifying Essential Contacts | TFC service account, org admins, billing admins |
+| Resource Manager Lockdown | Creating/deleting folders, removing project deletion protection, moving projects between folders, changing billing account assignments | Cloud Team automation, org admins (break-glass) |
+| Networking Lockdown | Creating VPC networks | Cloud Team automation only |
+| Automation Account Protection | Modifying org-level access policies outside of the standard process | Cloud Team automation, org admins (break-glass) |
+| Contact Preservation | Deleting or modifying Essential Contacts | Cloud Team automation, org admins, billing admins |
 
 ---
 
@@ -81,8 +81,8 @@ policies above.
 
 | Constraint | Effect |
 |---|---|
-| Disable Gmail members | IAM bindings with `@gmail.com` members are blocked |
-| Disable public IAM bindings | IAM bindings with `allUsers` or `allAuthenticatedUsers` are blocked |
+| Disable Gmail members | Granting access to `@gmail.com` accounts is blocked |
+| Disable public access grants | Granting access to `allUsers` or `allAuthenticatedUsers` is blocked |
 | Disable IP forwarding | VMs cannot be created with IP forwarding enabled |
 | Require VPC flow logs | Subnets cannot be created without flow logs enabled |
 | Require DNS logging | DNS policies must have logging enabled |
@@ -108,7 +108,7 @@ policies above.
 * Create any VPC networks (deny policy blocks `networks.create` for all users)
 * Create auto-mode VPCs
 * Assign external public IPs to VMs
-* Set public access IAM bindings (`allUsers`, `allAuthenticatedUsers`)
+* Set public access permissions (`allUsers`, `allAuthenticatedUsers`)
 * Disable audit logs
 * Create resources in regions outside us-central1 / us-west1 (for most services)
 * Attach a billing account to a Sandbox Unfunded project

@@ -109,7 +109,7 @@ aws s3 ls --profile my-ucsb-account
 ## Step 8 — Tag Your Resources
 
 All resources must be tagged with the required tags. Missing tags will
-eventually trigger quarantine or removal under Policy-as-Code enforcement.
+eventually trigger compliance alerts or resource removal.
 
 See the [Tagging](/docs/general/tagging) page for required tags and allowed values.
 

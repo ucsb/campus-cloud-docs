@@ -101,7 +101,7 @@ common APIs are pre-enabled, but check:
 3. To enable a new API: **+ Enable APIs and Services** → search and enable.
 
 Note: Some APIs require billing to be enabled. Org policies may block specific
-APIs — if you get an org policy error, see [Guardrails](/docs/gcp/guardrails).
+APIs — if you get a policy error, see [Guardrails](/docs/gcp/guardrails).
 
 ---
 

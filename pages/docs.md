@@ -30,6 +30,7 @@ navigate or jump directly to a section below.
  - [AWS First Steps](/docs/aws/first-steps)
  - [Networking](/docs/aws/networking)
  - [Guardrails & SCPs](/docs/aws/guardrails)
+ - [Security](/docs/aws/security)
  - [Service Catalog](/docs/aws/service-catalog)
  - [Cost Dashboards (QuickSight)](/docs/aws/quicksight)
 
@@ -48,4 +49,5 @@ navigate or jump directly to a section below.
  - [Guardrails & Org Policies](/docs/gcp/guardrails)
  - [Security](/docs/gcp/security)
  - [Labels & Tags](/docs/gcp/tagging)
+ - [Billing](/docs/gcp/billing)
  - [Billing](/docs/gcp/billing)
