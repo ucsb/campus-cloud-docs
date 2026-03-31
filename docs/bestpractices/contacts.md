@@ -4,6 +4,6 @@ description: Contacts for your Cloud Account
 permalink: /docs/bestpractices/contacts
 ---
 
-{% include alert.html type="warning" title="This page has moved" content="AWS account contacts guidance has moved to the AWS section." %}
+{% include alert.html type="warning" title="This page has moved" content="Account contacts guidance has moved to the General section." %}
 
-**[Go to AWS Account Contacts &rarr;](/docs/aws/contacts)**
+**[Go to Account Contacts &rarr;](/docs/general/contacts)**

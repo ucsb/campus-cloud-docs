@@ -101,6 +101,6 @@ Regardless of account type, every Campus Cloud account must:
 4. Use the account only for UCSB business purposes in accordance with UC IS-3
 
 For provider-specific controls, see:
-[AWS Guardrails](../aws/guardrails) ·
-[Azure Guardrails](../azure/guardrails) ·
-[GCP Guardrails](../gcp/guardrails)
+[AWS Guardrails](/docs/aws/guardrails) ·
+[Azure Guardrails](/docs/azure/guardrails) ·
+[GCP Guardrails](/docs/gcp/guardrails)

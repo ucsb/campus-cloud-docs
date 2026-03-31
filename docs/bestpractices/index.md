@@ -14,7 +14,7 @@ permalink: /docs/bestpractices
 * [Close an Account](/docs/general/close-account)
 * [AWS Service Catalog](/docs/aws/service-catalog)
 * [AWS Account Contacts](/docs/aws/contacts)
-* [AWS VPN & Campus Connectivity](/docs/aws/vpn)
+* [AWS VPN & Campus Connectivity](/docs/aws/networking)
 *  [VPN traffic](bestpractices/vpn)
 *  [Close Account](bestpractices/close)
 *  [Research](bestpractices/research)

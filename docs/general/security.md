@@ -119,6 +119,6 @@ account activity):
    will request access as needed.
 
 For provider-specific security pages, see:
-[AWS Security](../aws/guardrails) ·
-[Azure Security](../azure/security) ·
-[GCP Security](../gcp/security)
+[AWS Security](/docs/aws/guardrails) ·
+[Azure Security](/docs/azure/security) ·
+[GCP Security](/docs/gcp/security)

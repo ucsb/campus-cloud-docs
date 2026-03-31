@@ -38,7 +38,25 @@ If you are not listed or your role is incorrect, contact the Cloud Team.
 
 ---
 
-## Step 3 — Review Org Policy Constraints
+## Step 3 — Set Project Contacts
+
+GCP uses **Essential Contacts** to route notifications to your team. The Cloud
+Team has configured org-level contacts; you need to add project-level contacts.
+See [Account Contacts](/docs/general/contacts) for general best practices.
+
+1. Navigate to [Essential Contacts](https://console.cloud.google.com/iam-admin/essentialcontacts)
+   with your project selected.
+2. Click **+ Add contact**.
+3. Enter a functional email address and select:
+   * **Security** — Security Command Center findings
+   * **Technical** — Maintenance and service disruption notices
+   * **Billing** — Budget alerts and billing notifications
+4. Confirm by clicking the verification link emailed to that address.
+5. Repeat for each category that needs a different address.
+
+---
+
+## Step 4 — Review Org Policy Constraints
 
 Organization policies are applied at the folder level and inherited by your
 project. Before creating resources, review the key constraints on the
@@ -52,7 +70,7 @@ Key constraints to know:
 
 ---
 
-## Step 4 — Networking
+## Step 5 — Networking
 
 GCP Campus Cloud does not currently have a centrally-managed Shared VPC or
 campus connectivity (VPN/Interconnect) in place. Org policy blocks you from
@@ -73,7 +91,7 @@ one.
 
 ---
 
-## Step 5 — Enable Required APIs
+## Step 6 — Enable Required APIs
 
 GCP services must be enabled via the API before you can use them. Most
 common APIs are pre-enabled, but check:
@@ -87,7 +105,7 @@ APIs — if you get an org policy error, see [Guardrails](/docs/gcp/guardrails).
 
 ---
 
-## Step 6 — Verify Required Tags
+## Step 7 — Verify Required Tags
 
 Your project should already have the required Resource Manager Tags set by the
 Cloud Team at provisioning. Verify them by navigating to **IAM & Admin → Tags**.
@@ -100,7 +118,7 @@ See [Labels & Tags](/docs/gcp/tagging) for allowed values and how to update them
 
 ---
 
-## Step 7 — Verify Budget Alert (Funded Projects)
+## Step 8 — Verify Budget Alert (Funded Projects)
 
 1. Navigate to **Billing → Budgets & alerts**.
 2. Confirm a billing budget exists for your project.

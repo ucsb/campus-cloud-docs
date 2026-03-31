@@ -102,7 +102,7 @@ traffic to campus CIDRs will route through the hub automatically.
 
 To reach resources in your Azure VNet from off campus:
 
-1. Connect to **UCSB ConnectUCSB GlobalProtect VPN** on your laptop.
+1. Connect to the [UCSB campus VPN](https://it.ucsb.edu/network-infrastructure-services/ivanti-connect-secure-campus-vpn) on your laptop.
 2. Once on VPN, your traffic routes through the campus network → Virtual WAN
    hub → your spoke VNet.
 

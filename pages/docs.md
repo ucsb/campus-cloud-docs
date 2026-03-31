@@ -14,11 +14,12 @@ navigate or jump directly to a section below.
 
 ## General Guidance (All Providers)
  - [General Guidance Overview](/docs/general/)
- - [Security](/docs/general/security)
  - [Identity & Access](/docs/general/identity)
- - [Tagging](/docs/general/tagging)
+ - [Security](/docs/general/security)
  - [Compliance](/docs/general/compliance)
+ - [Tagging](/docs/general/tagging)
  - [Cost Management](/docs/general/cost-management)
+ - [Account Contacts](/docs/general/contacts)
  - [Research in the Cloud](/docs/general/research)
  - [Data Management](/docs/general/data-management)
  - [Migrate a Personal Account](/docs/general/migrate)
@@ -27,13 +28,10 @@ navigate or jump directly to a section below.
 ## AWS
  - [AWS Overview](/docs/aws/)
  - [AWS First Steps](/docs/aws/first-steps)
- - [Account Request](/docs/aws/account-request)
  - [Networking](/docs/aws/networking)
- - [VPN & Campus Connectivity](/docs/aws/vpn)
  - [Guardrails & SCPs](/docs/aws/guardrails)
  - [Service Catalog](/docs/aws/service-catalog)
  - [Cost Dashboards (QuickSight)](/docs/aws/quicksight)
- - [Account Contacts](/docs/aws/contacts)
 
 ## Azure
  - [Azure Overview](/docs/azure/)
@@ -42,7 +40,6 @@ navigate or jump directly to a section below.
  - [Guardrails & Policies](/docs/azure/guardrails)
  - [Security](/docs/azure/security)
  - [Roles & Access](/docs/azure/roles)
- - [Account Contacts](/docs/azure/contacts)
 
 ## GCP
  - [GCP Overview](/docs/gcp/)
@@ -52,4 +49,3 @@ navigate or jump directly to a section below.
  - [Security](/docs/gcp/security)
  - [Labels & Tags](/docs/gcp/tagging)
  - [Billing](/docs/gcp/billing)
- - [Project Contacts](/docs/gcp/contacts)

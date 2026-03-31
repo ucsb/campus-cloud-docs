@@ -4,6 +4,8 @@ description: AWS Account Request Error
 permalink: /docs/guidelines/account-request
 ---
 
-{% include alert.html type="warning" title="This page has moved" content="AWS account request guidance has moved to the AWS section." %}
+{% include alert.html type="warning" title="This page has moved" content="Account request guidance has moved to the AWS Overview and Procurement pages." %}
 
-**[Go to Account Request Restrictions &rarr;](/docs/aws/account-request)**
+**[Go to AWS Overview &rarr;](/docs/aws/)**
+
+**[Go to Procurement &rarr;](/getting-started/procurement)**

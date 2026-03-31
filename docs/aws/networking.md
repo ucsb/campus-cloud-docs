@@ -19,14 +19,18 @@ standalone VPCs without a Transit Gateway attachment.
 UCSB has **two AWS Direct Connect connections** and a **Site-to-Site VPN** between
 the AWS us-east-1 / us-west-2 regions and the UCSB campus network:
 
-* **AWS Direct Connect** — two dedicated private circuits (primary path)
-* **AWS Site-to-Site VPN** — encrypted tunnel over the internet (backup path)
+| Link | Type | Regions | Purpose |
+|---|---|---|---|
+| Direct Connect Circuit 1 | Private VIF | us-east-1, us-west-2 | Primary campus connectivity |
+| Direct Connect Circuit 2 | Private VIF | us-east-1, us-west-2 | Redundancy / failover |
+| Site-to-Site VPN | IPsec over internet | us-east-1, us-west-2 | Tertiary failover |
 
-Traffic from your VPC to campus resources automatically routes through the
-Transit Gateway and uses the best available path. You do not need to configure
-this yourself.
+Routing preference: Direct Connect → Site-to-Site VPN. Failover is automatic
+and generally transparent to workloads. Traffic from your VPC to campus
+resources routes through the Transit Gateway automatically — you do not need to
+configure this yourself.
 
-{% include alert.html type="info" title="ConnectUCSB VPN not needed" content="If your EC2 instance or Lambda is inside a VPC attached to the Transit Gateway, it can reach campus resources directly — you do not need to run the ConnectUCSB VPN on the server. The GlobalProtect VPN is for your laptop, not for cloud workloads." %}
+{% include alert.html type="info" title="Campus VPN not needed for cloud workloads" content="If your EC2 instance or Lambda is inside a VPC attached to the Transit Gateway, it can reach campus resources directly — you do not need to run the campus VPN on the server. The VPN is for your laptop, not for cloud workloads." %}
 
 ---
 
@@ -98,15 +102,14 @@ current IP list.
 
 ---
 
-## VPN Client Access
+## Campus Network Firewall
 
-If you need to connect to resources in a Campus Cloud VPC from a laptop or
-workstation that is not on the UCSB campus network:
+Traffic from AWS to campus resources passes through the UCSB campus firewall.
+If you need to allow traffic from AWS to a specific campus host or service:
 
-1. Use the **UCSB ConnectUCSB GlobalProtect VPN** on your endpoint.
-2. ConnectUCSB routes your traffic through the campus network, which then
-   reaches the Transit Gateway and your VPC.
-3. See [VPN Setup](/docs/aws/vpn) for configuration details.
+1. Identify the AWS egress IP range (ask the Cloud Team).
+2. Submit a firewall rule request through the appropriate campus IT process for
+   your department.
 
 ---
 
@@ -115,3 +118,50 @@ workstation that is not on the UCSB campus network:
 All persistent networking changes (new CIDR, new TGW attachment, firewall rule
 changes at the TGW level) require a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5). Day-to-day Security
 Group and NACL changes within your account do not require a ticket.
+
+---
+
+## VPN Client Access
+
+If you need to connect to resources in a Campus Cloud VPC from a laptop or
+workstation that is not on the UCSB campus network:
+
+1. Connect to the **UCSB campus VPN** on your endpoint.
+2. The VPN routes your traffic through the campus network → Direct Connect →
+   Transit Gateway → your VPC.
+
+Download and configure the VPN client at:
+[https://it.ucsb.edu/network-infrastructure-services/ivanti-connect-secure-campus-vpn](https://it.ucsb.edu/network-infrastructure-services/ivanti-connect-secure-campus-vpn)
+
+{% include alert.html type="info" title="VPN is for your laptop, not for servers" content="Cloud workloads (EC2, Lambda, containers) inside a campus-connected VPC can reach campus resources directly through the Transit Gateway. The campus VPN is only for your laptop or workstation when working off-campus." %}
+
+---
+
+## Troubleshooting Connectivity
+
+### Cannot Reach a Private IP in AWS
+
+1. Confirm you are connected to the campus VPN (check the tray icon).
+2. Confirm the resource's Security Group allows inbound traffic from the campus
+   CIDR ranges. Ask the Cloud Team for the current list if unsure.
+3. Confirm the VPC has a Transit Gateway attachment
+   (Console → VPC → Transit Gateway Attachments).
+4. Ping or traceroute from your laptop to inspect where the path breaks.
+
+### High Latency Between Campus and AWS
+
+* Direct Connect should show < 5 ms latency to us-west-2 and < 60 ms to us-east-1.
+* Latency significantly above these values may indicate the VPN failover path is
+  in use. Check the AWS Health Dashboard and open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) if the
+  issue persists.
+
+### Resource Inside AWS Cannot Reach Campus
+
+1. Verify the EC2 instance is in a campus-connected VPC (not an internet-only VPC).
+2. Check the Security Group allows outbound to the campus IP range.
+3. Verify the campus firewall allows inbound from the AWS egress IP range.
+   (Contact the Cloud Team for the AWS NAT IPs to whitelist.)
+
+---
+
+

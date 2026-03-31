@@ -7,23 +7,25 @@
           url: "getting-started/training"
         - title: Procuring an Account
           url: "getting-started/procurement"
- 
+
     - title: "Glossary"
       url: "glossary"
 
     - title: "General Guidance"
       url: "docs/general"
       children:
-        - title: Security
-          url: "docs/general/security"
         - title: Identity & Access
           url: "docs/general/identity"
-        - title: Tagging
-          url: "docs/general/tagging"
+        - title: Security
+          url: "docs/general/security"
         - title: Compliance
           url: "docs/general/compliance"
+        - title: Tagging
+          url: "docs/general/tagging"
         - title: Cost Management
           url: "docs/general/cost-management"
+        - title: Account Contacts
+          url: "docs/general/contacts"
         - title: Research
           url: "docs/general/research"
         - title: Data Management
@@ -40,20 +42,14 @@
           url: "docs/aws"
         - title: First Steps
           url: "docs/aws/first-steps"
-        - title: Account Request
-          url: "docs/aws/account-request"
         - title: Networking
           url: "docs/aws/networking"
-        - title: VPN & Campus Connectivity
-          url: "docs/aws/vpn"
         - title: Guardrails & SCPs
           url: "docs/aws/guardrails"
         - title: Service Catalog
           url: "docs/aws/service-catalog"
         - title: Cost Dashboards (QuickSight)
           url: "docs/aws/quicksight"
-        - title: Account Contacts
-          url: "docs/aws/contacts"
 
     - title: "Azure"
       url: "docs/azure"
@@ -70,8 +66,6 @@
           url: "docs/azure/security"
         - title: Roles & Access
           url: "docs/azure/roles"
-        - title: Account Contacts
-          url: "docs/azure/contacts"
 
     - title: "GCP"
       url: "docs/gcp"
@@ -90,5 +84,3 @@
           url: "docs/gcp/tagging"
         - title: Billing
           url: "docs/gcp/billing"
-        - title: Project Contacts
-          url: "docs/gcp/contacts"

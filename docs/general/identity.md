@@ -42,12 +42,9 @@ These roles map to UCSB Identity groups that you manage at
 
 ### Azure Roles
 
-| Role | What It Can Do |
-|---|---|
-| UCSB Subscription Owner | Full subscription control; cannot manage VPN/ExpressRoute |
-| UCSB Application Owner | Manage apps and resources at the resource group level; no auth writes or networking changes |
-| UCSB Network Operations | Manage VPN gateways, ExpressRoute circuits, VPN sites, route tables; manage authorization writes |
-| UCSB Security Operations | Security admin, policies, Key Vault purge, Defender |
+Azure subscriptions use four custom RBAC roles purpose-built for the Campus
+Cloud. See [Azure Roles & Access](/docs/azure/roles) for the full role table,
+permission details, and instructions for adding and removing users.
 
 ### GCP Roles
 
@@ -102,7 +99,24 @@ Assign the minimum role needed for each person's responsibilities. In particular
 ## Root and Platform Accounts
 
 **AWS root credentials** — access is blocked by guardrail. You cannot use the
-root account in a Campus Cloud AWS account. See [AWS Guardrails](../aws/guardrails).
+root account in a Campus Cloud AWS account. See [AWS Guardrails](/docs/aws/guardrails).
 
 **Azure and GCP platform admin roles** — certain platform-level permissions
 are reserved for the Cloud Team and cannot be self-assigned.
+
+---
+
+## External Collaborators
+
+All three providers require a `@ucsb.edu` identity. External collaborators
+without a UCSB NetID cannot be added directly to your account's role structure.
+
+Options for granting access to external collaborators:
+
+* **Create a sponsored UCSB NetID** for the collaborator through UCSB IT — this
+  gives them a `@ucsb.edu` identity that works with all three providers.
+* **Share data without granting account access** — for example, use pre-signed
+  S3 URLs, scoped SAS tokens (Azure), or signed URLs (GCP).
+* **Set up cross-institution federated access** via SAML or OIDC for the
+  collaborator's home identity provider (advanced — requires Cloud Team
+  involvement).

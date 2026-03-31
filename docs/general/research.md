@@ -19,7 +19,8 @@ pricing.
 
 * **Compliance for federal funding.** If your grant requires NIST 800-171
   compliance (common for DoD, NSF, and NIH grants involving CUI), the Campus
-  Cloud provides a compliant account tier. See [Compliance](compliance).
+  Cloud provides a compliant account tier — see
+  [Compliance & Governance](/docs/general/compliance) for details and how to request one.
 * **Significant discounts.** UC enterprise agreements give you lower prices
   than retail cloud rates — automatically.
 * **No credit card required.** Billing goes through your UCSB Purchase Order and
@@ -37,7 +38,7 @@ pricing.
 
 1. **Estimate your needs.** What compute, storage, and services will you need?
    Use the provider pricing calculators to estimate costs (see
-   [Costs & Billing](cost-management)).
+   [Costs & Billing](/docs/general/cost-management)).
 2. **Choose your provider.** Most research groups use AWS. Azure and GCP are
    good choices for teams already using Microsoft or Google tools, or for
    specific services (e.g., Google BigQuery, Azure ML).
@@ -46,15 +47,13 @@ pricing.
 
 ---
 
-## Amazon Research Awards (ARA)
+## Cloud Provider Research Credits
 
-Amazon Research Awards offer unrestricted research funds and AWS Promotional
-Credits to academic institutions.
-
-* UCSB researchers awarded ARA credits should use a Campus Cloud account to
-  access them — either create a new account or migrate an existing personal
-  account.
-* [More about ARA](https://www.amazon.science/research-awards)
+All three providers offer programs that award cloud credits or research funds to
+academic researchers. See
+[Pricing, Discounts & Credits](/docs/general/cost-management#research-credits) for
+the full list. If you receive an award, use a Campus Cloud account to redeem
+it — either create a new account or migrate an existing personal account.
 
 ---
 
@@ -66,7 +65,7 @@ Campus Cloud Landing Zone. Personal accounts:
 * Do not receive UC enterprise discounts
 * May not meet compliance requirements for federal grants
 * Should not use a `@ucsb.edu` email address (this triggers a restriction —
-  see [AWS Account Request](../aws/account-request))
+  see [Identity & Access](identity#external-collaborators))
 * May be subject to review to ensure UC policies are followed
 
 If you have a personal account you want to bring into the Campus Cloud, contact
@@ -90,7 +89,7 @@ Contact: [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu) or open a
 
 ## Data Management Plans (DMPs)
 
-If your grant requires a Data Management Plan, see [Data Management Plans](data-management).
+If your grant requires a Data Management Plan, see [Data Management Plans](/docs/general/data-management).
 
 ---
 

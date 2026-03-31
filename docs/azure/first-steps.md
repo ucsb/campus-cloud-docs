@@ -53,7 +53,33 @@ If Defender plans are showing as Off, contact the Cloud Team.
 
 ---
 
-## Step 4 — Review Your Roles
+## Step 4 — Set Subscription Contacts
+
+Configure notification contacts so your team receives security, billing, and
+health alerts. See [Account Contacts](/docs/general/contacts) for general best
+practices.
+
+The primary billing contact is managed by the Cloud Team. **You configure:**
+
+**Security alerts (Defender for Cloud):**
+1. Navigate to **Microsoft Defender for Cloud → Environment settings**.
+2. Click your subscription → **Email notifications**.
+3. Set the email to your team's functional security address.
+4. Alert severity: High as a minimum (All recommended).
+5. Save.
+
+**Budget alerts:** Add your team's billing email when you create a budget
+(see Step 8 below).
+
+**Service Health alerts:**
+1. Navigate to **Service Health → Health alerts → + Create service health alert**.
+2. Scope to your subscription; choose the services and regions you use.
+3. Create an Action Group with an Email action pointing to your team's address.
+4. Save.
+
+---
+
+## Step 5 — Review Your Roles
 
 Four custom RBAC roles are assigned to your team. Use the principle of
 least privilege — most day-to-day work should use **Application Owner**,
@@ -64,7 +90,7 @@ instructions for adding team members.
 
 ---
 
-## Step 5 — Create a Resource Group
+## Step 6 — Create a Resource Group
 
 All resources must be in a Resource Group. Azure Policy audits Resource Groups
 for the five required tags — groups missing tags will be flagged as
@@ -84,7 +110,7 @@ See [Tagging](/docs/general/tagging) for allowed values.
 
 ---
 
-## Step 6 — Configure Networking (Optional)
+## Step 7 — Configure Networking (Optional)
 
 If your request included hub-spoke Virtual WAN peering for campus connectivity:
 
@@ -94,7 +120,7 @@ If your request included hub-spoke Virtual WAN peering for campus connectivity:
 
 ---
 
-## Step 7 — Set a Budget Alert
+## Step 8 — Set a Budget Alert
 
 Create a cost budget to alert you if spend approaches your expected amount:
 

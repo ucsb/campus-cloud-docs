@@ -26,6 +26,22 @@ quickly without setting up security infrastructure from scratch.
 
 ---
 
+## Requesting an AWS Account
+
+Follow the standard [procurement process](/getting-started/procurement) via
+UCSB Gateway. In addition to the standard form fields, be ready to provide:
+
+* **Region preference** — us-east-1 (N. Virginia), us-west-2 (Oregon), or both
+* **Campus network connectivity** — whether you need a Transit Gateway
+  attachment to reach on-premises UCSB systems
+* **Estimated monthly spend** — used to set your initial billing alarm
+* **Use case** — research, coursework, administrative, etc.
+
+After your PO is approved, the Cloud Team will provision the account within
+approximately 2 business days and send a confirmation email.
+
+---
+
 ## Account Structure
 
 Accounts live inside an **AWS Organization** managed by the Cloud Team. They
@@ -95,7 +111,6 @@ because the templates are already configured for UCSB compliance requirements.
 
 ## Next Steps
 
-* [Request an Account](/docs/aws/account-request)
 * [First Steps](/docs/aws/first-steps)
 * [Networking](/docs/aws/networking)
 * [Guardrails & SCPs](/docs/aws/guardrails)

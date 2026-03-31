@@ -39,7 +39,23 @@ If no alarm is present, open a [ServiceNow ticket](https://ucsb.service-now.com/
 
 ---
 
-## Step 3 — Review Your Default Roles
+## Step 3 — Set Account Contacts
+
+Set your Alternate contacts so your team receives security findings, service
+health events, and billing alerts. See [Account Contacts](/docs/general/contacts)
+for general best practices.
+
+The Cloud Team manages the Primary contact. **You set the Alternate contacts:**
+
+1. In the top-right dropdown, click your account name → **Account**.
+2. Scroll to **Alternate contacts**.
+3. Set the Security, Operations, and Billing contacts to your team's functional
+   email addresses (e.g., `mylab-cloud@ucsb.edu`).
+4. Save changes.
+
+---
+
+## Step 4 — Review Your Default Roles
 
 Four IAM roles are pre-created in every account. Add your team members via
 **im.ucsb.edu** (see [Identity & Access](/docs/general/identity)).
@@ -49,7 +65,7 @@ federated through UCSB Shibboleth.
 
 ---
 
-## Step 4 — Review Guardrails
+## Step 5 — Review Guardrails
 
 Policy controls (SCPs) are applied at the organization level and cannot be
 modified at the account level. Before building, familiarize yourself with the
@@ -58,7 +74,7 @@ encounter unexpected `Access Denied` errors.
 
 ---
 
-## Step 5 — Configure Networking
+## Step 6 — Configure Networking
 
 If your request included campus network connectivity:
 
@@ -71,7 +87,7 @@ can be deployed via the [Service Catalog](/docs/aws/service-catalog).
 
 ---
 
-## Step 6 — Deploy Your First Resource
+## Step 7 — Deploy Your First Resource
 
 Use the [Service Catalog](/docs/aws/service-catalog) to deploy
 pre-approved infrastructure templates. This is the fastest way to get
@@ -90,7 +106,7 @@ aws s3 ls --profile my-ucsb-account
 
 ---
 
-## Step 7 — Tag Your Resources
+## Step 8 — Tag Your Resources
 
 All resources must be tagged with the required tags. Missing tags will
 eventually trigger quarantine or removal under Policy-as-Code enforcement.
