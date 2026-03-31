@@ -42,6 +42,15 @@ a:hover {
   color: #047C91; /* UCSB Aqua Web */
 }
 
+/* Ensure content-area links are underlined for accessibility (WCAG 1.4.1) */
+.td-content a {
+  text-decoration: underline;
+}
+
+.td-content a:hover {
+  text-decoration: underline;
+}
+
 /* Sidebar active link */
 .td-sidebar-nav a.active,
 .td-sidebar-nav .td-sidebar-link.active > a {

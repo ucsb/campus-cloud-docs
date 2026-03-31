@@ -1,6 +1,7 @@
 <link href="https://webfonts.brand.ucsb.edu/webfont.min.css" rel="stylesheet">
 <link href="{{ site.baseurl }}/assets/css/ucsb-brand.css" rel="stylesheet">
 
+<a class="sr-only sr-only-focusable" href="#main-content">Skip to main content</a>
 <header>
         <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
         <a class="navbar-brand" href="{{ site.baseurl }}/">
@@ -33,6 +34,11 @@
 
 <script>
 $(document).ready(function() {
+  // Accessibility: add id for skip-nav link target
+  $('main[role="main"]').attr('id', 'main-content');
+  // Accessibility: add scope="col" to table header cells
+  $('thead th').attr('scope', 'col');
+
   var url = "https://api.github.com/search/repositories?q={{ site.github_user }}/{{ site.github_repo }}";
   fetch(url, { 
       headers: {"Accept":"application/vnd.github.preview"}

@@ -30,24 +30,24 @@ You will not be able to access your account until all steps are completed and th
 1.  Log in to the UCSB Gateway Procurement System
 2.  Complete the Campus Cloud Form.
 
-	![assets/img/gatewayhome.png]({{site.url}}assets/img/gatewayhome.png)
+	![Gateway Procurement System home page showing the Campus Cloud form link]({{site.url}}assets/img/gatewayhome.png)
 
     * Please note the instructions on the left side of the form, and provide the requested information. Build in lead time for your start date. The estimated expenditure is for the duration of the PO.
     * The expected duration is one year. The purchase order should then be renewed annually. If your procurement group is willing to support multi-year blankets, please limit your max duration to three years.
     * The form is for the one Account. You can not request multiple accounts with a single form. You will want to fill out multiple forms and add them as line items in your cart.
     * _NOTE: Your Gateway Admin may be needed to input Object Code and Sub Number (See Troubleshooting Section below)_
 
-	![assets/img/gatewayform.png]({{site.url}}assets/img/gatewayform.png)
+	![Campus Cloud procurement form with fields for account details]({{site.url}}assets/img/gatewayform.png)
 
 3.  Add the completed form to your Cart.
 	
 	Verify that you have set the correct Commodity Code: **81110000**
 	
-	![assets/img/gatewaycart-commoditycode.png]({{site.url}}assets/img/gatewaycart-commoditycode.png)
+	![Gateway cart showing Commodity Code field set to 81110000]({{site.url}}assets/img/gatewaycart-commoditycode.png)
 	
 	and Object Code: **7185**
 	
-	![assets/img/gatewaycart-objectcode.png]({{site.url}}assets/img/gatewaycart-objectcode.png)	 
+	![Gateway cart showing Object Code field set to 7185]({{site.url}}assets/img/gatewaycart-objectcode.png)	 
 	
 	and Sub **3, 5 or 7**. Your requisition will be returned if these codes are not correct. SUBMIT your requisition.
 
