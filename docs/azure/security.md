@@ -16,24 +16,6 @@ provisioned. The main tools are **Azure Activity Log** (audit logging),
 
 ---
 
-## Azure Activity Log
-
-[Azure Activity Log](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/activity-log)
-records every subscription-level action — who created, changed, or deleted a
-resource, and when.
-
-* **Always on** — Activity Log cannot be turned off.
-* **Centralized** — Logs are forwarded to a Log Analytics workspace and
-  retained for at least 90 days.
-
-You can view your Activity Log under **Monitor → Activity Log** in the Azure
-portal.
-
-For details, see the
-[Azure Activity Log docs](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/activity-log).
-
----
-
 ## Microsoft Defender for Cloud
 
 [Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
@@ -53,6 +35,41 @@ if they remain unresolved.
 
 For details, see the
 [Microsoft Defender for Cloud docs](https://learn.microsoft.com/en-us/azure/defender-for-cloud/).
+
+---
+
+## Incident Response
+
+Follow the general
+[incident response steps](/docs/general/security#reporting-a-security-incident)
+for all suspected security events. The section below covers Azure-specific
+emergency actions.
+
+### Emergency Isolation
+
+If a VM is actively compromised and you need to stop the attack:
+
+* Apply a **Network Security Group rule** that blocks all inbound/outbound
+  traffic to the VM (deny all, priority 100) while preserving the VM for forensics.
+* Do **not** delete or deallocate the VM — forensic images may be needed.
+
+---
+
+## Azure Activity Log
+
+[Azure Activity Log](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/activity-log)
+records every subscription-level action — who created, changed, or deleted a
+resource, and when.
+
+* **Always on** — Activity Log cannot be turned off.
+* **Centralized** — Logs are forwarded to a Log Analytics workspace and
+  retained for at least 90 days.
+
+You can view your Activity Log under **Monitor → Activity Log** in the Azure
+portal.
+
+For details, see the
+[Azure Activity Log docs](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/activity-log).
 
 ---
 
@@ -137,20 +154,3 @@ portal and all API access.
 If you're locked out of MFA, contact the
 [UCSB Help Desk](https://www.it.ucsb.edu/get-help) — the Cloud Team cannot
 bypass MFA.
-
----
-
-## Incident Response
-
-Follow the general
-[incident response steps](/docs/general/security#reporting-a-security-incident)
-for all suspected security events. The section below covers Azure-specific
-emergency actions.
-
-### Emergency Isolation
-
-If a VM is actively compromised and you need to stop the attack:
-
-* Apply a **Network Security Group rule** that blocks all inbound/outbound
-  traffic to the VM (deny all, priority 100) while preserving the VM for forensics.
-* Do **not** delete or deallocate the VM — forensic images may be needed.

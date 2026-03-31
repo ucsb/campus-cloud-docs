@@ -15,20 +15,6 @@ provisioned. The main tools are **CloudTrail** (audit logging),
 
 ---
 
-## AWS CloudTrail
-
-[CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html)
-records every action taken in your account — who did what, when, and from where.
-
-* **Always on** — CloudTrail cannot be turned off in Campus Cloud accounts.
-* **Centralized** — Logs are stored in a secure archive managed by the Cloud
-  Team.
-
-You can create additional trails for specific needs (e.g., logging data access
-to S3 buckets), but you cannot modify or delete the organization-wide trail.
-
----
-
 ## AWS Security Hub
 
 [Security Hub](https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html)
@@ -50,6 +36,27 @@ For details, see the
 
 ---
 
+## Incident Response
+
+Follow the general
+[incident response steps](/docs/general/security#reporting-a-security-incident)
+for all suspected security events. The section below covers AWS-specific
+emergency actions.
+
+### Emergency Isolation
+
+If an EC2 instance is actively compromised and you need to stop the attack:
+
+* Replace the instance's **Security Group** with one that denies all inbound and
+  outbound traffic while preserving the instance for forensics.
+* Do **not** terminate or stop the instance — forensic snapshots of the EBS
+  volumes may be needed.
+* If a compromised IAM user or role is involved, attach a **deny-all inline
+  policy** to the entity rather than deleting it, to preserve CloudTrail
+  attribution.
+
+---
+
 ## Amazon GuardDuty
 
 [GuardDuty](https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html)
@@ -62,6 +69,20 @@ potentially compromised instances, or unexpected network traffic.
 
 For details, see the
 [Amazon GuardDuty User Guide](https://docs.aws.amazon.com/guardduty/latest/ug/).
+
+---
+
+## AWS CloudTrail
+
+[CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html)
+records every action taken in your account — who did what, when, and from where.
+
+* **Always on** — CloudTrail cannot be turned off in Campus Cloud accounts.
+* **Centralized** — Logs are stored in a secure archive managed by the Cloud
+  Team.
+
+You can create additional trails for specific needs (e.g., logging data access
+to S3 buckets), but you cannot modify or delete the organization-wide trail.
 
 ---
 
@@ -133,25 +154,6 @@ Wiz is available across all Campus Cloud platforms (AWS, Azure, GCP). See
 for details.
 
 ---
-
-## Incident Response
-
-Follow the general
-[incident response steps](/docs/general/security#reporting-a-security-incident)
-for all suspected security events. The section below covers AWS-specific
-emergency actions.
-
-### Emergency Isolation
-
-If an EC2 instance is actively compromised and you need to stop the attack:
-
-* Replace the instance's **Security Group** with one that denies all inbound and
-  outbound traffic while preserving the instance for forensics.
-* Do **not** terminate or stop the instance — forensic snapshots of the EBS
-  volumes may be needed.
-* If a compromised IAM user or role is involved, attach a **deny-all inline
-  policy** to the entity rather than deleting it, to preserve CloudTrail
-  attribution.
 
 For guardrails and service control policies applied to your account, see
 [Guardrails & SCPs](/docs/aws/guardrails).
