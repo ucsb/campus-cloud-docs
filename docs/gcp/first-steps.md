@@ -94,8 +94,7 @@ Cloud Team at provisioning. Verify them by navigating to **IAM & Admin → Tags*
 
 The owner-settable tags (`environment`, `mission`, `protection-level`,
 `availability-level`, `recovery-level`, `dept`) can be updated by you if they
-need to change. The platform-controlled tags (`expiry-date`, `billing-limit`,
-`wiz-scanning`) are managed by the Cloud Team only.
+need to change.
 
 See [Labels & Tags](/docs/gcp/tagging) for allowed values and how to update them.
 

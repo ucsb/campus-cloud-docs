@@ -69,18 +69,6 @@ The budget sends email alerts at defined spend thresholds.
 
 ---
 
-## Billing Limit Tag
-
-The `ucsb:billing-limit` platform tag on your project reflects the maximum
-spend limit set by the Cloud Team during provisioning. This is informational —
-it does not automatically stop billing at that threshold. You are responsible
-for monitoring costs and staying within your budget.
-
-If you expect your project to exceed the initial budget, contact the Cloud Team
-to discuss options before costs accumulate.
-
----
-
 ## Cost Attribution with Labels
 
 GCP billing data is exportable to BigQuery, and labels flow through to billing

@@ -7,7 +7,7 @@ last_reviewed: 2026-03-30
 
 ## Tagging & Labels
 
-Tags (called Labels in GCP) are key-value pairs you attach to cloud resources.
+Tags are key-value pairs you attach to cloud resources.
 The Campus Cloud uses them for billing attribution, compliance monitoring, and
 operational automation.
 
@@ -21,8 +21,6 @@ Some tags are required — the Cloud Team enforces them. Others are set by you.
   project, department, or environment.
 * **Compliance:** Tags like `protection-level` drive security policy scoping
   and audit requirements.
-* **Operations:** Tags like `expiry-date` (GCP) drive automated lifecycle
-  management.
 
 ---
 
@@ -41,14 +39,6 @@ organization).
 | Uptime requirement | `ucsb:availability-level` | `ucsb:availability-level` | `availability-level` | You |
 | Backup requirement | `ucsb:recovery-level` | — | `recovery-level` | You |
 | Department | `ucsb:dept` | — | `dept` | You |
-
-### GCP-only platform tags (set by Cloud Team)
-
-| Tag | Purpose |
-|---|---|
-| `billing-limit` | Maximum monthly spend cap |
-| `expiry-date` | Project lifecycle end date (ISO week, e.g. `2026-W52`) |
-| `wiz-scanning` | Whether this project is included in Wiz security scanning |
 
 ---
 

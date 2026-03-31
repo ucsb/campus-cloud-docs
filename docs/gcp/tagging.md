@@ -43,21 +43,6 @@ cost attribution, and Security Command Center policy scoping.
 See [Tagging & Labels](/docs/general/tagging) for definitions of protection,
 availability, and recovery levels.
 
-### Platform-Controlled Tags (Do Not Modify)
-
-These three tags are managed exclusively by the Cloud Team and platform
-automation. You do not have permission to set or change them.
-
-| Tag Key | Allowed Values | Purpose |
-|---|---|---|
-| `expiry-date` | `YYYY-WW` (e.g., `2027-W12`) | Janitor Bot uses this to quarantine or clean up projects after the ISO week passes |
-| `billing-limit` | `20`, `50`, `100` (USD) | Budget Enforcer spending cap |
-| `wiz-scanning` | `true` | Opt this project into Wiz CSPM security scanning |
-
-If any platform tag is missing or incorrect on your project, contact the
-Cloud Team. Do not attempt to set these yourself — the binding will be
-rejected by IAM policy.
-
 ---
 
 ## How to Update Owner-Settable Tags
