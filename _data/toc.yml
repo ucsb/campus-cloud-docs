@@ -1,7 +1,7 @@
 - title: Documentation
   links:
     - title: "Getting Started"
-      url: "getting-started"
+      url: "/"
       children:
         - title: Training
           url: "getting-started/training"
