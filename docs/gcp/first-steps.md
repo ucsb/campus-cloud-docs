@@ -114,7 +114,7 @@ The owner-settable tags (`environment`, `mission`, `protection-level`,
 `availability-level`, `recovery-level`, `dept`) can be updated by you if they
 need to change.
 
-See [Labels & Tags](docs/gcp/tagging) for allowed values and how to update them.
+See [Tagging & Labels](docs/general/tagging) for allowed values and how to update them.
 
 ---
 
@@ -125,7 +125,7 @@ See [Labels & Tags](docs/gcp/tagging) for allowed values and how to update them.
 3. The budget notifies you at 50%, 90%, and 100% of the budget by default.
 4. To change thresholds or recipients, edit the budget.
 
-See [Billing](docs/gcp/billing) for more information.
+See [Costs & Billing](docs/general/cost-management) for more information.
 
 ---
 
@@ -136,5 +136,5 @@ See [Billing](docs/gcp/billing) for more information.
 | Access problems | [Identity & Access](docs/general/identity) |
 | Networking issues | [Networking](docs/gcp/networking) |
 | Org policy violations | [Guardrails](docs/gcp/guardrails) |
-| Billing questions | [Billing](docs/gcp/billing) |
+| Billing questions | [Costs & Billing](docs/general/cost-management) |
 | Everything else | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) |

@@ -93,3 +93,26 @@ Example: `ucsb:environment = prod`
 
 GCP Resource Manager Tags are already scoped to the UCSB organization, so no
 namespace prefix is needed.
+
+---
+
+## How to Update Your Tags
+
+Each provider has a different interface for managing tags:
+
+* **AWS:** [AWS resource tagging docs](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html) — use Tag Editor in the AWS Console or the CLI.
+* **Azure:** [Azure resource tagging docs](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources) — set tags on Resource Groups and resources in the portal or CLI.
+* **GCP:** [GCP Resource Manager Tags docs](https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing) — tags are set at the **project level** (not on individual resources). Update them under **IAM & Admin → Tags** in the console or via `gcloud resource-manager tags bindings`. For project labels, see [Creating and managing labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels).
+
+---
+
+## GCP: Tags vs. Labels
+
+GCP has two separate metadata systems. The Campus Cloud uses both:
+
+* **Resource Manager Tags** — the required tags listed above. Set at the
+  project level, used for governance, compliance, and automation.
+* **Project Labels** — flat key-value pairs on the project that appear in
+  billing exports. Set by the project owner for cost attribution. Labels do
+  not drive policies or automation — they supplement tags for billing
+  visibility.

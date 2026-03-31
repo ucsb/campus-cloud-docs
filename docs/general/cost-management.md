@@ -125,3 +125,17 @@ uses pre-built courses.
 
 Programs change frequently — check each provider's site for current eligibility,
 deadlines, and award amounts.
+
+---
+
+## Cost Optimization Tips
+
+* **Reserved Instances / Committed Use Discounts:** If you have stable,
+  predictable workloads (e.g., a long-running research cluster), committing to
+  1–3 years can reduce compute costs significantly.
+* **Spot / Preemptible VMs:** For fault-tolerant batch workloads, Spot VMs are
+  60–80% cheaper than on-demand.
+* **Rightsizing:** Review provider recommendations (AWS Compute Optimizer,
+  Azure Advisor, GCP VM Manager) to downsize over-provisioned resources.
+* **Storage lifecycle policies:** Move infrequently accessed data to cheaper
+  storage tiers (S3 Glacier, Azure Cool/Archive, GCS Nearline/Coldline).

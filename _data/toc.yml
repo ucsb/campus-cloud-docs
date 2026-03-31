@@ -76,7 +76,3 @@
           url: "docs/gcp/guardrails"
         - title: Security
           url: "docs/gcp/security"
-        - title: Labels & Tags
-          url: "docs/gcp/tagging"
-        - title: Billing
-          url: "docs/gcp/billing"

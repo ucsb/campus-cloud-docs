@@ -82,5 +82,5 @@ are tested primarily in these two regions.
 * [Networking](docs/gcp/networking)
 * [Guardrails & Org Policies](docs/gcp/guardrails)
 * [Security](docs/gcp/security)
-* [Labels & Tags](docs/gcp/tagging)
-* [Billing](docs/gcp/billing)
+* [Tagging & Labels](docs/general/tagging)
+* [Costs & Billing](docs/general/cost-management)
