@@ -3,6 +3,8 @@ title: Migrate to Campus Cloud
 description: How to migrate an existing personal or free cloud account to the Campus Cloud
 permalink: /docs/general/migrate
 last_reviewed: 2026-03-30
+redirect_from:
+  - /docs/guidelines/migrate
 ---
 
 ## Migrate to Campus Cloud

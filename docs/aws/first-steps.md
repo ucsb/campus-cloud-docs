@@ -3,6 +3,8 @@ title: AWS First Steps
 description: What to do after your AWS account is provisioned — sign in, set up billing, deploy your first resource.
 permalink: /docs/aws/first-steps
 last_reviewed: 2026-03-30
+redirect_from:
+  - /docs/firststeps/awsfirststeps
 ---
 
 ## Getting Started With Your AWS Account

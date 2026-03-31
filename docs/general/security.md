@@ -3,6 +3,8 @@ title: Security & Shared Responsibility
 description: How security responsibilities are divided between the Cloud Team, cloud providers, and you
 permalink: /docs/general/security
 last_reviewed: 2026-03-30
+redirect_from:
+  - /docs/guidelines/security
 ---
 
 ## Security & Shared Responsibility

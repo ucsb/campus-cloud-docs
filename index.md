@@ -2,6 +2,9 @@
 layout: page
 title: "Campus Cloud Docs - Home"
 permalink: /
+redirect_from:
+  - /getting-started/
+  - /getting-started
 ---
 
 ## UCSB Campus Cloud
@@ -25,7 +28,8 @@ Using the Campus Cloud means:
   available to Campus Cloud accounts. Contact the Cloud Team to discuss the
   right support tier for your workload.
 
-New here? Start with the [Getting Started](getting-started) guide.
+New here? Start with [Training Resources](getting-started/training) or
+[Procure an Account](getting-started/procurement).
 
 ---
 

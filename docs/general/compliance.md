@@ -3,6 +3,8 @@ title: Compliance & Governance
 description: NIST 800-171, UC IS-3, and how to request a compliant account
 permalink: /docs/general/compliance
 last_reviewed: 2026-03-30
+redirect_from:
+  - /docs/guidelines/compliance
 ---
 
 ## Compliance & Governance

@@ -3,6 +3,8 @@ title: AWS Overview
 description: Overview of the UCSB Campus Cloud AWS environment — accounts, regions, default configuration, and how to access it.
 permalink: /docs/aws/
 last_reviewed: 2026-03-30
+redirect_from:
+  - /docs/guidelines/account-request
 ---
 
 ## AWS at UCSB

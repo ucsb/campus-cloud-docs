@@ -3,6 +3,8 @@ title: GCP First Steps
 description: What to do after your GCP project is provisioned — sign in, verify setup, deploy your first resource.
 permalink: /docs/gcp/first-steps
 last_reviewed: 2026-03-30
+redirect_from:
+  - /docs/firststeps/gcpfirststeps
 ---
 
 ## Getting Started With Your GCP Project

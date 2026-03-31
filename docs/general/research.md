@@ -3,6 +3,8 @@ title: Cloud for Research
 description: Using the UCSB Campus Cloud for research computing
 permalink: /docs/general/research
 last_reviewed: 2026-03-30
+redirect_from:
+  - /docs/bestpractices/research
 ---
 
 ## Cloud for Research

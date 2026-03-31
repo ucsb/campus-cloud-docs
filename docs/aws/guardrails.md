@@ -3,6 +3,8 @@ title: AWS Guardrails & SCPs
 description: Service Control Policies and Control Tower controls applied to all Campus Cloud AWS accounts.
 permalink: /docs/aws/guardrails
 last_reviewed: 2026-03-30
+redirect_from:
+  - /docs/guidelines/guardrails/aws
 ---
 
 ## AWS Guardrails

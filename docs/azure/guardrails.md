@@ -3,6 +3,8 @@ title: Azure Guardrails & Policies
 description: Azure Policy assignments and compliance controls applied to all Campus Cloud Azure subscriptions.
 permalink: /docs/azure/guardrails
 last_reviewed: 2026-03-30
+redirect_from:
+  - /docs/guidelines/guardrails/azure
 ---
 
 ## Azure Guardrails

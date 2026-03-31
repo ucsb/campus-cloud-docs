@@ -3,6 +3,11 @@ title: General Guidance
 description: Cross-provider guidance for security, identity, tagging, compliance, cost management, and more.
 permalink: /docs/general/
 last_reviewed: 2026-03-30
+redirect_from:
+  - /docs/bestpractices
+  - /docs/firststeps
+  - /docs/guidelines
+  - /docs/guidelines/description
 ---
 
 ## General Guidance

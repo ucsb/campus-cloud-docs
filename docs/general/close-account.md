@@ -3,6 +3,8 @@ title: Close an Account
 description: How to close a Campus Cloud account on AWS, Azure, or GCP
 permalink: /docs/general/close-account
 last_reviewed: 2026-03-30
+redirect_from:
+  - /docs/bestpractices/close
 ---
 
 ## Close an Account

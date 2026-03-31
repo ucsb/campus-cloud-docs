@@ -3,6 +3,9 @@ title: AWS Service Catalog
 description: Pre-approved, ready-to-deploy infrastructure products available via the AWS Service Catalog.
 permalink: /docs/aws/service-catalog
 last_reviewed: 2026-03-30
+redirect_from:
+  - /docs/bestpractices/servicecatalog
+  - /docs/guidelines/servicecatalog
 ---
 
 ## AWS Service Catalog

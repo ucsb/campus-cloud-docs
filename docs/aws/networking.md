@@ -3,6 +3,9 @@ title: AWS Networking
 description: VPC options, campus connectivity, Transit Gateway, and IP address management for AWS accounts.
 permalink: /docs/aws/networking
 last_reviewed: 2026-03-30
+redirect_from:
+  - /docs/bestpractices/vpn
+  - /docs/guidelines/networking
 ---
 
 ## AWS Networking Overview

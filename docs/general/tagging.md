@@ -3,6 +3,9 @@ title: Tagging & Labels
 description: Required tags across AWS, Azure, and GCP
 permalink: /docs/general/tagging
 last_reviewed: 2026-03-30
+redirect_from:
+  - /docs/bestpractices/tagging
+  - /docs/guidelines/tagging
 ---
 
 ## Tagging & Labels

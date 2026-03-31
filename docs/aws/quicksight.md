@@ -3,6 +3,8 @@ title: AWS Cost Visualization with QuickSight
 description: How to access the UCSB AWS cost dashboard in Amazon QuickSight to monitor spending across your account.
 permalink: /docs/aws/quicksight
 last_reviewed: 2026-03-30
+redirect_from:
+  - /docs/guidelines/quicksight-dashboards
 ---
 
 ## Cost Dashboards with Amazon QuickSight

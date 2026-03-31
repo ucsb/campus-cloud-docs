@@ -3,6 +3,8 @@ title: Costs & Billing
 description: Cloud pricing, UC discounts, and how to manage your cloud spending
 permalink: /docs/general/cost-management
 last_reviewed: 2026-03-30
+redirect_from:
+  - /docs/bestpractices/costmodels
 ---
 
 ## Costs & Billing

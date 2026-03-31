@@ -3,6 +3,8 @@ title: Account Contacts
 description: Best practices for setting cloud account contacts across all providers
 permalink: /docs/general/contacts
 last_reviewed: 2026-03-30
+redirect_from:
+  - /docs/bestpractices/contacts
 ---
 
 ## Account Contacts

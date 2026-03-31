@@ -3,6 +3,8 @@ title: Data Management Plans
 description: DMP guidelines for researchers using the Campus Cloud
 permalink: /docs/general/data-management
 last_reviewed: 2026-03-30
+redirect_from:
+  - /docs/guidelines/dmp
 ---
 
 ## Data Management Plans
