@@ -38,8 +38,6 @@
     - title: "AWS"
       url: "docs/aws"
       children:
-        - title: Overview
-          url: "docs/aws"
         - title: First Steps
           url: "docs/aws/first-steps"
         - title: Networking
@@ -56,8 +54,6 @@
     - title: "Azure"
       url: "docs/azure"
       children:
-        - title: Overview
-          url: "docs/azure"
         - title: First Steps
           url: "docs/azure/first-steps"
         - title: Networking
@@ -72,8 +68,6 @@
     - title: "GCP"
       url: "docs/gcp"
       children:
-        - title: Overview
-          url: "docs/gcp"
         - title: First Steps
           url: "docs/gcp/first-steps"
         - title: Networking
