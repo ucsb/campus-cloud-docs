@@ -8,8 +8,8 @@ permalink: /docs/firststeps
 
 ## First Steps by Provider
 
-* **[AWS First Steps](/docs/aws/first-steps)**
-* **[Azure First Steps](/docs/azure/first-steps)**
-* **[GCP First Steps](/docs/gcp/first-steps)**
+* **[AWS First Steps](docs/aws/first-steps)**
+* **[Azure First Steps](docs/azure/first-steps)**
+* **[GCP First Steps](docs/gcp/first-steps)**
 
 

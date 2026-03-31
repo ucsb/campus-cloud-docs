@@ -77,10 +77,10 @@ are tested primarily in these two regions.
 
 ## Next Steps
 
-* [Request a Project](/getting-started/procurement)
-* [First Steps](/docs/gcp/first-steps)
-* [Networking](/docs/gcp/networking)
-* [Guardrails & Org Policies](/docs/gcp/guardrails)
-* [Security](/docs/gcp/security)
-* [Labels & Tags](/docs/gcp/tagging)
-* [Billing](/docs/gcp/billing)
+* [Request a Project](getting-started/procurement)
+* [First Steps](docs/gcp/first-steps)
+* [Networking](docs/gcp/networking)
+* [Guardrails & Org Policies](docs/gcp/guardrails)
+* [Security](docs/gcp/security)
+* [Labels & Tags](docs/gcp/tagging)
+* [Billing](docs/gcp/billing)

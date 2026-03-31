@@ -40,7 +40,7 @@ For details, see the
 ## Incident Response
 
 Follow the general
-[incident response steps](/docs/general/security#reporting-a-security-incident)
+[incident response steps](docs/general/security#reporting-a-security-incident)
 for all suspected security events. The section below covers GCP-specific
 emergency actions.
 
@@ -111,7 +111,7 @@ You don't need to configure this — it's managed by the Cloud Team.
 ## Wiz Cloud Security Posture Management
 
 Wiz is available across all Campus Cloud platforms (AWS, Azure, GCP). See
-[Security & Shared Responsibility — Wiz](/docs/general/security#wiz-cloud-security-posture-management)
+[Security & Shared Responsibility — Wiz](docs/general/security#wiz-cloud-security-posture-management)
 for details.
 
 ---

@@ -66,7 +66,7 @@ To verify or update it:
 3. To add a threshold (e.g., 80% warning + 100% alert), edit the budget or
    create a new one.
 
-See [Cost Management](/docs/general/cost-management) for guidance on setting
+See [Cost Management](docs/general/cost-management) for guidance on setting
 appropriate budget alerts.
 
 ---

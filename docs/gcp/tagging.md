@@ -40,7 +40,7 @@ cost attribution, and Security Command Center policy scoping.
 | `recovery-level` | `r1`, `r2`, `r3`, `r4` | |
 | `dept` | UCSB department code (e.g., `COMS`, `PHYS`, `IDCL`) | 4-letter code from the UCSB chart of accounts |
 
-See [Tagging & Labels](/docs/general/tagging) for definitions of protection,
+See [Tagging & Labels](docs/general/tagging) for definitions of protection,
 availability, and recovery levels.
 
 ---

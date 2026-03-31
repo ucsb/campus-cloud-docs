@@ -42,7 +42,7 @@ If you are not listed or your role is incorrect, contact the Cloud Team.
 
 GCP uses **Essential Contacts** to route notifications to your team. The Cloud
 Team has configured org-level contacts; you need to add project-level contacts.
-See [Account Contacts](/docs/general/contacts) for general best practices.
+See [Account Contacts](docs/general/contacts) for general best practices.
 
 1. Navigate to [Essential Contacts](https://console.cloud.google.com/iam-admin/essentialcontacts)
    with your project selected.
@@ -60,7 +60,7 @@ See [Account Contacts](/docs/general/contacts) for general best practices.
 
 Organization policies are applied at the folder level and inherited by your
 project. Before creating resources, review the key constraints on the
-[Guardrails](/docs/gcp/guardrails) page to understand what is allowed and
+[Guardrails](docs/gcp/guardrails) page to understand what is allowed and
 what will be blocked.
 
 Key constraints to know:
@@ -101,7 +101,7 @@ common APIs are pre-enabled, but check:
 3. To enable a new API: **+ Enable APIs and Services** → search and enable.
 
 Note: Some APIs require billing to be enabled. Org policies may block specific
-APIs — if you get a policy error, see [Guardrails](/docs/gcp/guardrails).
+APIs — if you get a policy error, see [Guardrails](docs/gcp/guardrails).
 
 ---
 
@@ -114,7 +114,7 @@ The owner-settable tags (`environment`, `mission`, `protection-level`,
 `availability-level`, `recovery-level`, `dept`) can be updated by you if they
 need to change.
 
-See [Labels & Tags](/docs/gcp/tagging) for allowed values and how to update them.
+See [Labels & Tags](docs/gcp/tagging) for allowed values and how to update them.
 
 ---
 
@@ -125,7 +125,7 @@ See [Labels & Tags](/docs/gcp/tagging) for allowed values and how to update them
 3. The budget notifies you at 50%, 90%, and 100% of the budget by default.
 4. To change thresholds or recipients, edit the budget.
 
-See [Billing](/docs/gcp/billing) for more information.
+See [Billing](docs/gcp/billing) for more information.
 
 ---
 
@@ -133,8 +133,8 @@ See [Billing](/docs/gcp/billing) for more information.
 
 | Issue | Where to go |
 |---|---|
-| Access problems | [Identity & Access](/docs/general/identity) |
-| Networking issues | [Networking](/docs/gcp/networking) |
-| Org policy violations | [Guardrails](/docs/gcp/guardrails) |
-| Billing questions | [Billing](/docs/gcp/billing) |
+| Access problems | [Identity & Access](docs/general/identity) |
+| Networking issues | [Networking](docs/gcp/networking) |
+| Org policy violations | [Guardrails](docs/gcp/guardrails) |
+| Billing questions | [Billing](docs/gcp/billing) |
 | Everything else | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) |

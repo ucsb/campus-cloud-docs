@@ -99,4 +99,4 @@ difficult to identify what generated specific charges.
 After month-end, the Cloud Team reconciles GCP billing sub-accounts and invoices
 each project owner through UCSB Gateway. Keep your PO funded with sufficient
 balance to avoid delays. Do not close your PO until the final invoice for the
-month is submitted (see [Close an Account](/docs/general/close-account)).
+month is submitted (see [Close an Account](docs/general/close-account)).

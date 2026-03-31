@@ -8,16 +8,16 @@ permalink: /docs/guidelines
 
 ## General Guidance
 
-* [Security](/docs/general/security)
-* [Identity & Access](/docs/general/identity)
-* [Tagging](/docs/general/tagging)
-* [Compliance](/docs/general/compliance)
-* [Cost Management](/docs/general/cost-management)
+* [Security](docs/general/security)
+* [Identity & Access](docs/general/identity)
+* [Tagging](docs/general/tagging)
+* [Compliance](docs/general/compliance)
+* [Cost Management](docs/general/cost-management)
 
 ## Provider-Specific Topics
 
-* [AWS Networking](/docs/aws/networking) · [Azure Networking](/docs/azure/networking) · [GCP Networking](/docs/gcp/networking)
-* [AWS Guardrails](/docs/aws/guardrails) · [Azure Guardrails](/docs/azure/guardrails) · [GCP Guardrails](/docs/gcp/guardrails)
+* [AWS Networking](docs/aws/networking) · [Azure Networking](docs/azure/networking) · [GCP Networking](docs/gcp/networking)
+* [AWS Guardrails](docs/aws/guardrails) · [Azure Guardrails](docs/azure/guardrails) · [GCP Guardrails](docs/gcp/guardrails)
 *  [Security Guidelines](guidelines/security)
 *  [Migrate to the Cloud](guidelines/migrate)
 *  [Quicksight Dashboards](guidelines/quicksight.dashboards)

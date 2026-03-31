@@ -139,6 +139,6 @@ account activity):
    data may be involved.
 
 Each provider page describes platform-specific emergency isolation steps:
-[AWS Security](/docs/aws/security) ·
-[Azure Security](/docs/azure/security) ·
-[GCP Security](/docs/gcp/security)
+[AWS Security](docs/aws/security) ·
+[Azure Security](docs/azure/security) ·
+[GCP Security](docs/gcp/security)
