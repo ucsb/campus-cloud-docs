@@ -26,7 +26,7 @@ Using the Campus Cloud means:
   right support tier for your workload.
 
 New here? Start with [Training Resources]({{ "/docs/general/" | relative_url }}) or
-[Procure an Account]({{ "/getting-started" | relative_url }}).
+[Getting Started]({{ "/getting-started" | relative_url }}).
 
 ---
 
