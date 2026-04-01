@@ -2,7 +2,7 @@
 title: AWS First Steps
 description: What to do after your AWS account is provisioned — sign in, set up billing, deploy your first resource.
 permalink: /docs/aws/first-steps
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-01
 redirect_from:
   - /docs/firststeps/awsfirststeps
 ---
@@ -32,36 +32,7 @@ the Cloud Team. Follow the steps below to get set up.
 
 ---
 
-## Step 2 — Verify Your Budget Alarm
-
-A billing alarm was configured during account provisioning at the threshold you
-specified in your account request. Confirm it is in place:
-
-1. In the Console, navigate to **CloudWatch → Alarms → All alarms**.
-2. Verify a billing alarm exists and the threshold is correct.
-3. Confirm the SNS subscription is set to email you or your team.
-
-If no alarm is present, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) to request one.
-
----
-
-## Step 3 — Set Account Contacts
-
-Set your Alternate contacts so your team receives security findings, service
-health events, and billing alerts. See [Account Contacts]({{ "/docs/general/contacts" | relative_url }})
-for general best practices.
-
-The Cloud Team manages the Primary contact. **You set the Alternate contacts:**
-
-1. In the top-right dropdown, click your account name → **Account**.
-2. Scroll to **Alternate contacts**.
-3. Set the Security, Operations, and Billing contacts to your team's functional
-   email addresses (e.g., `mylab-cloud@ucsb.edu`).
-4. Save changes.
-
----
-
-## Step 4 — Review Your Default Roles
+## Step 2 — Review Your Default Roles
 
 Four IAM roles are pre-created in every account. You do not need to create IAM
 users or local passwords — all access is federated through UCSB Shibboleth.
@@ -90,7 +61,23 @@ role themselves — add yourself as a member if you also want access.
 
 ---
 
-## Step 5 — Review Guardrails
+## Step 3 — Set Account Contacts
+
+Set your Alternate contacts so your team receives security findings, service
+health events, and billing alerts. See [Account Contacts]({{ "/docs/general/contacts" | relative_url }})
+for general best practices.
+
+The Cloud Team manages the Primary contact. **You set the Alternate contacts:**
+
+1. In the top-right dropdown, click your account name → **Account**.
+2. Scroll to **Alternate contacts**.
+3. Set the Security, Operations, and Billing contacts to your team's functional
+   email addresses (e.g., `mylab-cloud@ucsb.edu`).
+4. Save changes.
+
+---
+
+## Step 4 — Review Guardrails
 
 Policy controls (SCPs) are applied at the organization level and cannot be
 modified at the account level. Before building, familiarize yourself with the
@@ -99,7 +86,7 @@ encounter unexpected `Access Denied` errors.
 
 ---
 
-## Step 6 — Configure Networking
+## Step 5 — Configure Networking
 
 If your request included campus network connectivity:
 
@@ -112,7 +99,7 @@ can be deployed via the [Service Catalog]({{ "/docs/aws/service-catalog" | relat
 
 ---
 
-## Step 7 — Deploy Your First Resource
+## Step 6 — Deploy Your First Resource
 
 Use the [Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }}) to deploy
 pre-approved infrastructure templates. This is the fastest way to get
@@ -131,12 +118,25 @@ aws s3 ls --profile my-ucsb-account
 
 ---
 
-## Step 8 — Tag Your Resources
+## Step 7 — Tag Your Resources
 
 All resources must be tagged with the required tags. Missing tags will
 eventually trigger compliance alerts or resource removal.
 
 See the [Tagging]({{ "/docs/general/tagging" | relative_url }}) page for required tags and allowed values.
+
+---
+
+## Step 8 — Verify Your Budget Alarm
+
+A billing alarm was configured during account provisioning at the threshold you
+specified in your account request. Confirm it is in place:
+
+1. In the Console, navigate to **CloudWatch → Alarms → All alarms**.
+2. Verify a billing alarm exists and the threshold is correct.
+3. Confirm the SNS subscription is set to email you or your team.
+
+If no alarm is present, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) to request one.
 
 ---
 

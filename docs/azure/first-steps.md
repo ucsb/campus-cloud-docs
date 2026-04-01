@@ -2,7 +2,7 @@
 title: Azure First Steps
 description: What to do after your Azure subscription is provisioned — sign in, verify setup, deploy your first resource.
 permalink: /docs/azure/first-steps
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-01
 redirect_from:
   - /docs/firststeps/azurefirststeps
   - /docs/azure/roles
@@ -46,17 +46,30 @@ If your subscription does not appear, verify that:
 
 ---
 
-## Step 3 — Verify Defender for Cloud
+## Step 3 — Review Your Roles
 
-Microsoft Defender for Cloud is enabled on all Campus Cloud subscriptions.
-Confirm it is active:
+Four custom RBAC roles are assigned to your subscription:
 
-1. Search for **Microsoft Defender for Cloud** in the portal.
-2. Under **Environment settings**, click your subscription.
-3. Verify Defender plans are showing as **On** for the resource types you use
-   (VMs, Storage, SQL, Key Vault, etc.).
+| Role | Who Should Use It | Key Permissions |
+|---|---|---|
+| **UCSB Subscription Owner** | PI or department head (1–2 people max) | Manage all resources, assign roles |
+| **UCSB Application Owner** | Developers, researchers, lab managers | Create/manage compute, storage, databases, deploy code |
+| **UCSB Network Operations** | Networking staff | Manage VPN gateways, ExpressRoute, route tables |
+| **UCSB Security Operations** | Security reviewers, compliance staff | Read all resources, view Defender alerts, manage Key Vault |
 
-If Defender plans are showing as Off, contact the Cloud Team.
+Most day-to-day work should use **Application Owner**. Use **Subscription
+Owner** only for initial setup and RBAC management. Changes to the role
+definitions themselves must be made by the Cloud Team — open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
+if the available roles do not match your team's needs.
+
+### Adding and Removing Users
+
+Subscription Owners can manage role assignments in the Azure portal under
+**Access control (IAM)**. See
+[Assign Azure roles using the Azure portal](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal)
+for step-by-step instructions. Only `@ucsb.edu` accounts can be assigned
+roles — external collaborators need a sponsored UCSB account.
 
 ---
 
@@ -86,34 +99,31 @@ The primary billing contact is managed by the Cloud Team. **You configure:**
 
 ---
 
-## Step 5 — Review Your Roles
+## Step 5 — Verify Defender for Cloud
 
-Four custom RBAC roles are assigned to your subscription:
+Microsoft Defender for Cloud is enabled on all Campus Cloud subscriptions.
+Confirm it is active:
 
-| Role | Who Should Use It | Key Permissions |
-|---|---|---|
-| **UCSB Subscription Owner** | PI or department head (1–2 people max) | Manage all resources, assign roles |
-| **UCSB Application Owner** | Developers, researchers, lab managers | Create/manage compute, storage, databases, deploy code |
-| **UCSB Network Operations** | Networking staff | Manage VPN gateways, ExpressRoute, route tables |
-| **UCSB Security Operations** | Security reviewers, compliance staff | Read all resources, view Defender alerts, manage Key Vault |
+1. Search for **Microsoft Defender for Cloud** in the portal.
+2. Under **Environment settings**, click your subscription.
+3. Verify Defender plans are showing as **On** for the resource types you use
+   (VMs, Storage, SQL, Key Vault, etc.).
 
-Most day-to-day work should use **Application Owner**. Use **Subscription
-Owner** only for initial setup and RBAC management. Changes to the role
-definitions themselves must be made by the Cloud Team — open a
-[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
-if the available roles do not match your team's needs.
-
-### Adding and Removing Users
-
-Subscription Owners can manage role assignments in the Azure portal under
-**Access control (IAM)**. See
-[Assign Azure roles using the Azure portal](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal)
-for step-by-step instructions. Only `@ucsb.edu` accounts can be assigned
-roles — external collaborators need a sponsored UCSB account.
+If Defender plans are showing as Off, contact the Cloud Team.
 
 ---
 
-## Step 6 — Create a Resource Group
+## Step 6 — Configure Networking (Optional)
+
+If your request included hub-spoke Virtual WAN peering for campus connectivity:
+
+1. Navigate to **Virtual Networks** in your subscription to confirm the VNet exists.
+2. Check **Peerings** — it should show a peering to the Campus Cloud hub VNet.
+3. If the VNet or peering is missing, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
+
+---
+
+## Step 7 — Create a Resource Group
 
 All resources must be in a Resource Group. Azure Policy audits Resource Groups
 for the four required tags — groups missing tags will be flagged as
@@ -129,16 +139,6 @@ non-compliant.
 4. Click **Review + Create**.
 
 See [Tagging]({{ "/docs/general/tagging" | relative_url }}) for allowed values.
-
----
-
-## Step 7 — Configure Networking (Optional)
-
-If your request included hub-spoke Virtual WAN peering for campus connectivity:
-
-1. Navigate to **Virtual Networks** in your subscription to confirm the VNet exists.
-2. Check **Peerings** — it should show a peering to the Campus Cloud hub VNet.
-3. If the VNet or peering is missing, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
 
 ---
 
