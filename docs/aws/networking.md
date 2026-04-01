@@ -9,11 +9,15 @@ redirect_from:
 ---
 
 ## AWS Networking Overview
+{:.no_toc}
 
 UCSB Campus Cloud uses **AWS Transit Gateway** as the central hub for network
 connectivity. Every account that needs to reach the campus network receives a
 VPC that is attached to the Transit Gateway. Internet-only accounts use
 standalone VPCs without a Transit Gateway attachment.
+
+* TOC
+{:toc}
 
 ---
 

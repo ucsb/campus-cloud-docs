@@ -10,10 +10,14 @@ redirect_from:
 ---
 
 ## Costs & Billing
+{:.no_toc}
 
 Cloud resources are billed on a pay-as-you-go model — you pay for what you use,
 typically by the hour or second. This section explains how billing works in the
 Campus Cloud, the discounts available to UCSB, and how to keep costs under control.
+
+* TOC
+{:toc}
 
 ---
 
@@ -64,9 +68,9 @@ Set up a budget alert in your account so you are notified before your spending
 exceeds expectations. Instructions are in each provider's First Steps guide.
 
 * For AWS, use the **Fixed Monthly Budget with Notification** product in the
-  Service Catalog — see [AWS First Steps](/docs/aws/first-steps).
-* For Azure, use **Azure Cost Management** — see [Azure First Steps](/docs/azure/first-steps).
-* For GCP, use **Cloud Billing budgets** — see [GCP First Steps](/docs/gcp/first-steps).
+  Service Catalog — see [AWS First Steps]({{ "/docs/aws/first-steps" | relative_url }}).
+* For Azure, use **Azure Cost Management** — see [Azure First Steps]({{ "/docs/azure/first-steps" | relative_url }}).
+* For GCP, use **Cloud Billing budgets** — see [GCP First Steps]({{ "/docs/gcp/first-steps" | relative_url }}).
 
 A budget alert does not automatically stop your account from spending — it sends
 a notification. Monitor your account regularly during the first few weeks of a
@@ -79,7 +83,7 @@ new workload.
 Cloud costs are tracked against the Purchase Order you created in Gateway.
 Monthly usage is invoiced approximately three weeks after the end of each month.
 Keep your PO active until all invoices have been processed — see
-[Close an Account](/docs/general/close-account) for details on the closure timeline.
+[Close an Account]({{ "/docs/general/close-account" | relative_url }}) for details on the closure timeline.
 
 If your costs are approaching your PO limit, renew or increase your PO before
 it expires. Contact your departmental financial administrator and the Cloud Team.

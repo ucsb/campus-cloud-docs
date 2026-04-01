@@ -77,9 +77,9 @@ are tested primarily in these two regions.
 
 ## Next Steps
 
-* [Request a Project](getting-started/procurement)
-* [First Steps](/docs/gcp/first-steps)
-* [Networking](/docs/gcp/networking)
-* [Guardrails & Org Policies](/docs/gcp/guardrails)
-* [Security](/docs/gcp/security)
+* [Request a Project]({{ "/getting-started/procurement" | relative_url }})
+* [First Steps]({{ "/docs/gcp/first-steps" | relative_url }})
+* [Networking]({{ "/docs/gcp/networking" | relative_url }})
+* [Guardrails & Org Policies]({{ "/docs/gcp/guardrails" | relative_url }})
+* [Security]({{ "/docs/gcp/security" | relative_url }})
 

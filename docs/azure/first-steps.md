@@ -58,7 +58,7 @@ If Defender plans are showing as Off, contact the Cloud Team.
 ## Step 4 — Set Subscription Contacts
 
 Configure notification contacts so your team receives security, billing, and
-health alerts. See [Account Contacts](/docs/general/contacts) for general best
+health alerts. See [Account Contacts]({{ "/docs/general/contacts" | relative_url }}) for general best
 practices.
 
 The primary billing contact is managed by the Cloud Team. **You configure:**
@@ -87,7 +87,7 @@ Four custom RBAC roles are assigned to your team. Use the principle of
 least privilege — most day-to-day work should use **Application Owner**,
 not **UCSB Subscription Owner**.
 
-See [Roles & Access](/docs/azure/roles) for details on each role and
+See [Roles & Access]({{ "/docs/azure/roles" | relative_url }}) for details on each role and
 instructions for adding team members.
 
 ---
@@ -108,7 +108,7 @@ non-compliant.
    * `ucsb:availability-level`
 4. Click **Review + Create**.
 
-See [Tagging](/docs/general/tagging) for allowed values.
+See [Tagging]({{ "/docs/general/tagging" | relative_url }}) for allowed values.
 
 ---
 
@@ -137,9 +137,9 @@ Create a cost budget to alert you if spend approaches your expected amount:
 
 | Issue | Where to go |
 |---|---|
-| Access problems (can't sign in, wrong directory) | [Identity & Access](/docs/general/identity) |
-| Tag policy blocking resource group creation | [Tagging](/docs/general/tagging) |
-| Missing VNet, networking issues | [Networking](/docs/azure/networking) |
-| Policy violations | [Guardrails](/docs/azure/guardrails) |
-| Billing questions | [Cost Management](/docs/general/cost-management) |
+| Access problems (can't sign in, wrong directory) | [Identity & Access]({{ "/docs/general/identity" | relative_url }}) |
+| Tag policy blocking resource group creation | [Tagging]({{ "/docs/general/tagging" | relative_url }}) |
+| Missing VNet, networking issues | [Networking]({{ "/docs/azure/networking" | relative_url }}) |
+| Policy violations | [Guardrails]({{ "/docs/azure/guardrails" | relative_url }}) |
+| Billing questions | [Cost Management]({{ "/docs/general/cost-management" | relative_url }}) |
 | Everything else | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) |

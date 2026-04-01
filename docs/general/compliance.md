@@ -45,7 +45,7 @@ federally funded research with export controls, or data subject to ITAR, HIPAA,
 or similar frameworks — you should request a NIST-compliant account.
 
 This applies to **all three providers**. The request process is the same:
-follow the standard [procurement process](getting-started/procurement)
+follow the standard [procurement process]({{ "/getting-started/procurement" | relative_url }})
 and select **"NIST Compliant Account"** on the Campus Cloud form.
 
 A NIST-compliant account is placed in an Organizational Unit (AWS), Management
@@ -89,7 +89,7 @@ Each provider's security monitoring tools send findings to consolidated views:
 * **Azure:** Microsoft Defender for Cloud provides the unified security posture.
 * **GCP:** Security Command Center provides organization-wide findings.
 
-In addition, [Wiz](/docs/general/security#wiz-cloud-security-posture-management)
+In addition, [Wiz]({{ "/docs/general/security#wiz-cloud-security-posture-management" | relative_url }})
 is available for cross-provider security posture scanning. Contact the Cloud
 Team for details.
 
@@ -105,6 +105,6 @@ Regardless of account type, every Campus Cloud account must:
 4. Use the account only for UCSB business purposes in accordance with UC IS-3
 
 For provider-specific controls, see:
-[AWS Guardrails](/docs/aws/guardrails) ·
-[Azure Guardrails](/docs/azure/guardrails) ·
-[GCP Guardrails](/docs/gcp/guardrails)
+[AWS Guardrails]({{ "/docs/aws/guardrails" | relative_url }}) ·
+[Azure Guardrails]({{ "/docs/azure/guardrails" | relative_url }}) ·
+[GCP Guardrails]({{ "/docs/gcp/guardrails" | relative_url }})

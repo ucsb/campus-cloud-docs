@@ -57,17 +57,10 @@ ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf3989
 ## Accessing Private VMs Without a Public IP
 
 Since VMs cannot have external IPs, use **Identity-Aware Proxy (IAP)** for
-browser-based SSH and RDP access. IAP tunnels traffic securely without
-requiring a VPN or public IP.
+SSH and RDP access. IAP tunnels traffic securely without requiring a VPN or
+public IP.
 
-**Requirements:** the `roles/iap.tunnelResourceAccessor` IAM permission on
-the target VM or project, and the `gcloud` CLI.
-
-```bash
-gcloud compute ssh INSTANCE_NAME --tunnel-through-iap --project PROJECT_ID --zone ZONE
-```
-
-IAP is the recommended and supported method for interactive access to GCP VMs.
+See Google's official guide: [Using IAP for TCP forwarding](https://cloud.google.com/iap/docs/using-tcp-forwarding)
 
 ---
 

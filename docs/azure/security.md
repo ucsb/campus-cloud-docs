@@ -41,7 +41,7 @@ For details, see the
 ## Incident Response
 
 Follow the general
-[incident response steps](/docs/general/security#reporting-a-security-incident)
+[incident response steps]({{ "/docs/general/security#reporting-a-security-incident" | relative_url }})
 for all suspected security events. The section below covers Azure-specific
 emergency actions.
 
@@ -130,7 +130,7 @@ For more information, see the
 ## Wiz Cloud Security Posture Management
 
 Wiz is available across all Campus Cloud platforms (AWS, Azure, GCP). See
-[Security & Shared Responsibility — Wiz](/docs/general/security#wiz-cloud-security-posture-management)
+[Security & Shared Responsibility — Wiz]({{ "/docs/general/security#wiz-cloud-security-posture-management" | relative_url }})
 for details.
 
 ---

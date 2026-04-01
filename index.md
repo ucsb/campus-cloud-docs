@@ -25,8 +25,8 @@ Using the Campus Cloud means:
   available to Campus Cloud accounts. Contact the Cloud Team to discuss the
   right support tier for your workload.
 
-New here? Start with [Training Resources](getting-started/training) or
-[Procure an Account](getting-started/procurement).
+New here? Start with [Training Resources]({{ "/getting-started/training" | relative_url }}) or
+[Procure an Account]({{ "/getting-started/procurement" | relative_url }}).
 
 ---
 
@@ -37,7 +37,7 @@ Service Catalog of self-service products (VPCs, budgets, IAM roles), and
 security monitoring pre-configured. UC enterprise pricing and Enterprise Support
 are included automatically.
 
-[AWS Overview](/docs/aws) · [AWS First Steps](/docs/aws/first-steps)
+[AWS Overview]({{ "/docs/aws" | relative_url }}) · [AWS First Steps]({{ "/docs/aws/first-steps" | relative_url }})
 
 ---
 
@@ -47,7 +47,7 @@ Your Azure Subscription is placed inside the UCSB management hierarchy with
 pre-configured policies, Defender for Cloud monitoring, and network connectivity
 via Virtual WAN. UC enterprise pricing through the Azure EA applies automatically.
 
-[Azure Overview](/docs/azure) · [Azure First Steps](/docs/azure/first-steps)
+[Azure Overview]({{ "/docs/azure" | relative_url }}) · [Azure First Steps]({{ "/docs/azure/first-steps" | relative_url }})
 
 ---
 
@@ -57,7 +57,7 @@ Your GCP Project lives in the UCSB organization with org-wide policies,
 centralized audit logging, Security Command Center monitoring, and billing
 sub-accounts for cost attribution. UC enterprise pricing is included.
 
-[GCP Overview](/docs/gcp) · [GCP First Steps](/docs/gcp/first-steps)
+[GCP Overview]({{ "/docs/gcp" | relative_url }}) · [GCP First Steps]({{ "/docs/gcp/first-steps" | relative_url }})
 
 ---
 

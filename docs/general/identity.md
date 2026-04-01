@@ -43,7 +43,7 @@ These roles map to UCSB Identity groups that you manage at
 ### Azure Roles
 
 Azure subscriptions use four custom RBAC roles purpose-built for the Campus
-Cloud. See [Azure Roles & Access](/docs/azure/roles) for the full role table,
+Cloud. See [Azure Roles & Access]({{ "/docs/azure/roles" | relative_url }}) for the full role table,
 permission details, and instructions for adding and removing users.
 
 ### GCP Roles
@@ -99,7 +99,7 @@ Assign the minimum role needed for each person's responsibilities. In particular
 ## Root and Platform Accounts
 
 **AWS root credentials** — access is blocked by guardrail. You cannot use the
-root account in a Campus Cloud AWS account. See [AWS Guardrails](/docs/aws/guardrails).
+root account in a Campus Cloud AWS account. See [AWS Guardrails]({{ "/docs/aws/guardrails" | relative_url }}).
 
 **Azure and GCP platform admin roles** — certain platform-level permissions
 are reserved for the Cloud Team and cannot be self-assigned.

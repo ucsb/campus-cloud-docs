@@ -22,7 +22,7 @@ pricing.
 * **Compliance for federal funding.** If your grant requires NIST 800-171
   compliance (common for DoD, NSF, and NIH grants involving CUI), the Campus
   Cloud provides a compliant account tier — see
-  [Compliance & Governance](/docs/general/compliance) for details and how to request one.
+  [Compliance & Governance]({{ "/docs/general/compliance" | relative_url }}) for details and how to request one.
 * **Significant discounts.** UC enterprise agreements give you lower prices
   than retail cloud rates — automatically.
 * **No credit card required.** Billing goes through your UCSB Purchase Order and
@@ -40,11 +40,11 @@ pricing.
 
 1. **Estimate your needs.** What compute, storage, and services will you need?
    Use the provider pricing calculators to estimate costs (see
-   [Costs & Billing](/docs/general/cost-management)).
+   [Costs & Billing]({{ "/docs/general/cost-management" | relative_url }})).
 2. **Choose your provider.** Most research groups use AWS. Azure and GCP are
    good choices for teams already using Microsoft or Google tools, or for
    specific services (e.g., Google BigQuery, Azure ML).
-3. **Request an account.** Follow the [procurement guide](getting-started/procurement). Indicate on your form if you need NIST 800-171 compliance.
+3. **Request an account.** Follow the [procurement guide]({{ "/getting-started/procurement" | relative_url }}). Indicate on your form if you need NIST 800-171 compliance.
 4. **Set up your environment.** Follow the First Steps guide for your provider.
 
 ---
@@ -53,7 +53,7 @@ pricing.
 
 All three providers offer programs that award cloud credits or research funds to
 academic researchers. See
-[Pricing, Discounts & Credits](/docs/general/cost-management#research-credits) for
+[Pricing, Discounts & Credits]({{ "/docs/general/cost-management#research-credits" | relative_url }}) for
 the full list. If you receive an award, use a Campus Cloud account to redeem
 it — either create a new account or migrate an existing personal account.
 
@@ -91,7 +91,7 @@ Contact: [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu) or open a
 
 ## Data Management Plans (DMPs)
 
-If your grant requires a Data Management Plan, see [Data Management Plans](/docs/general/data-management).
+If your grant requires a Data Management Plan, see [Data Management Plans]({{ "/docs/general/data-management" | relative_url }}).
 
 ---
 

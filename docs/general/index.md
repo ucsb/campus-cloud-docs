@@ -14,7 +14,7 @@ redirect_from:
 
 These pages cover topics that apply across all three cloud providers (AWS,
 Azure, and GCP). For provider-specific details, see the
-[AWS](/docs/aws/), [Azure](/docs/azure/), or [GCP](/docs/gcp/) sections.
+[AWS]({{ "/docs/aws/" | relative_url }}), [Azure]({{ "/docs/azure/" | relative_url }}), or [GCP]({{ "/docs/gcp/" | relative_url }}) sections.
 
 The following resources can help you get up to speed on cloud concepts before you start.
 
@@ -48,12 +48,12 @@ library (free with UCSB NetID) includes:
 
 | Topic | Description |
 |---|---|
-| [Security](/docs/general/security) | Shared-responsibility model, encryption, logging, and vulnerability management |
-| [Identity & Access](/docs/general/identity) | Single sign-on, federated identity, and access management across providers |
-| [Tagging](/docs/general/tagging) | Required tags, naming conventions, and how tags are enforced |
-| [Compliance](/docs/general/compliance) | UC IS-3, NIST 800-171, and how to request a compliant account |
-| [Cost Management](/docs/general/cost-management) | Budgets, alerts, and strategies for controlling cloud spend |
-| [Research](/docs/general/research) | Guidance for faculty and researchers using cloud for grants and sponsored work |
-| [Data Management](/docs/general/data-management) | Data classification, storage, and retention considerations |
-| [Migrate a Personal Account](/docs/general/migrate) | How to bring an existing personal cloud account into the Campus Cloud |
-| [Close an Account](/docs/general/close-account) | Steps to decommission and close a Campus Cloud account |
+| [Security]({{ "/docs/general/security" | relative_url }}) | Shared-responsibility model, encryption, logging, and vulnerability management |
+| [Identity & Access]({{ "/docs/general/identity" | relative_url }}) | Single sign-on, federated identity, and access management across providers |
+| [Tagging]({{ "/docs/general/tagging" | relative_url }}) | Required tags, naming conventions, and how tags are enforced |
+| [Compliance]({{ "/docs/general/compliance" | relative_url }}) | UC IS-3, NIST 800-171, and how to request a compliant account |
+| [Cost Management]({{ "/docs/general/cost-management" | relative_url }}) | Budgets, alerts, and strategies for controlling cloud spend |
+| [Research]({{ "/docs/general/research" | relative_url }}) | Guidance for faculty and researchers using cloud for grants and sponsored work |
+| [Data Management]({{ "/docs/general/data-management" | relative_url }}) | Data classification, storage, and retention considerations |
+| [Migrate a Personal Account]({{ "/docs/general/migrate" | relative_url }}) | How to bring an existing personal cloud account into the Campus Cloud |
+| [Close an Account]({{ "/docs/general/close-account" | relative_url }}) | Steps to decommission and close a Campus Cloud account |

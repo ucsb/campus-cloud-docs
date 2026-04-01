@@ -55,7 +55,7 @@ subscription.
 
 When your subscription is provisioned, the Cloud Team will:
 
-* **Assign four custom RBAC roles** to your team (see [Roles](/docs/azure/roles))
+* **Assign four custom RBAC roles** to your team (see [Roles]({{ "/docs/azure/roles" | relative_url }}))
 * **Enable Microsoft Defender for Cloud** across all supported resource types
 * **Deploy Log Analytics workspace** for security monitoring (90-day retention)
 * **Apply Azure Policy** for NIST 800-171 audit compliance
@@ -72,7 +72,7 @@ All resources must be inside a **Resource Group** with the five required tags.
 Azure Policy enforces this — resource group creation is blocked if any
 required tag is missing.
 
-See [Tagging](/docs/general/tagging) for the full list of required tags and
+See [Tagging]({{ "/docs/general/tagging" | relative_url }}) for the full list of required tags and
 allowed values.
 
 ---
@@ -89,9 +89,9 @@ listed here.
 
 ## Next Steps
 
-* [Request a Subscription](getting-started/procurement)
-* [First Steps](/docs/azure/first-steps)
-* [Networking](/docs/azure/networking)
-* [Guardrails & Policies](/docs/azure/guardrails)
-* [Security](/docs/azure/security)
-* [Roles & Access](/docs/azure/roles)
+* [Request a Subscription]({{ "/getting-started/procurement" | relative_url }})
+* [First Steps]({{ "/docs/azure/first-steps" | relative_url }})
+* [Networking]({{ "/docs/azure/networking" | relative_url }})
+* [Guardrails & Policies]({{ "/docs/azure/guardrails" | relative_url }})
+* [Security]({{ "/docs/azure/security" | relative_url }})
+* [Roles & Access]({{ "/docs/azure/roles" | relative_url }})

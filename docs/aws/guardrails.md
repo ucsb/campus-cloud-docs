@@ -102,7 +102,7 @@ controls applied automatically by Control Tower:
 * VPC Flow Logs enabled
 * GuardDuty enabled
 
-See [Compliance](/docs/general/compliance) for more information on requesting a
+See [Compliance]({{ "/docs/general/compliance" | relative_url }}) for more information on requesting a
 NIST-baseline account.
 
 ---
