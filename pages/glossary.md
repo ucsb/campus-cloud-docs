@@ -20,7 +20,7 @@ that need a campus-specific definition.
 | Term | Definition |
 |---|---|
 | **Allowed Regions** | US regions where you can deploy resources: AWS (us-east-1, us-west-2), Azure (West US 2, West Central US), GCP (us-central1, us-west1). |
-| **Availability Level (a1–a4)** | How critical uptime is for your resources. Set via the `availability-level` tag. See [Tagging](docs/general/tagging). |
+| **Availability Level (a1–a4)** | How critical uptime is for your resources. Set via the `availability-level` tag. See [Tagging](/docs/general/tagging). |
 | **Baseline** | The standard security configuration applied to every new account — audit logging, guardrails, budget alerts. |
 | **Campus Cloud Account** | General term for your cloud workspace. AWS calls it an *Account*, Azure a *Subscription*, GCP a *Project*. |
 | **Campus Cloud Landing Zone** | The secure, pre-configured multi-account environment the Cloud Team maintains for each cloud provider. |

@@ -62,7 +62,7 @@ When requesting a VPC, choose the family that matches your connectivity needs:
 | Advanced VPC (Campus Connected) | Yes (via Transit Gateway) | Yes (via NAT) | You need to reach on-prem file shares, databases, or LDAP |
 | Simple VPC (Internet Only) | No | Yes (via NAT) | Public-facing apps with no campus dependency |
 
-You can have both types in the same account. See [Networking](docs/aws/networking)
+You can have both types in the same account. See [Networking](/docs/aws/networking)
 for more details.
 
 ---
@@ -75,7 +75,7 @@ The same guardrails, tagging requirements, and region restrictions apply
 regardless of how resources are created.
 
 If you create resources outside of Service Catalog, you are responsible for
-ensuring they comply with required [tags](docs/general/tagging) and security
+ensuring they comply with required [tags](/docs/general/tagging) and security
 baseline settings.
 
 ---

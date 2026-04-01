@@ -32,7 +32,6 @@ navigate or jump directly to a section below.
  - [Guardrails & SCPs](/docs/aws/guardrails)
  - [Security](/docs/aws/security)
  - [Service Catalog](/docs/aws/service-catalog)
- - [Cost Dashboards (QuickSight)](/docs/aws/quicksight)
 
 ## Azure
  - [Azure Overview](/docs/azure/)

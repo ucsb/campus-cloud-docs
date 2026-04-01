@@ -39,7 +39,7 @@ For details, see the
 ## Incident Response
 
 Follow the general
-[incident response steps](docs/general/security#reporting-a-security-incident)
+[incident response steps](/docs/general/security#reporting-a-security-incident)
 for all suspected security events. The section below covers AWS-specific
 emergency actions.
 
@@ -140,7 +140,7 @@ accounts or the public.
 
 You can set up email notifications when resources in your account fall out of
 compliance. The **Local Security Notifications** product in the
-[Service Catalog](docs/aws/service-catalog) creates an email subscription that
+[Service Catalog](/docs/aws/service-catalog) creates an email subscription that
 alerts you to AWS Config compliance changes.
 
 This is optional but recommended so your team is aware of issues as they arise.
@@ -150,10 +150,10 @@ This is optional but recommended so your team is aware of issues as they arise.
 ## Wiz Cloud Security Posture Management
 
 Wiz is available across all Campus Cloud platforms (AWS, Azure, GCP). See
-[Security & Shared Responsibility — Wiz](docs/general/security#wiz-cloud-security-posture-management)
+[Security & Shared Responsibility — Wiz](/docs/general/security#wiz-cloud-security-posture-management)
 for details.
 
 ---
 
 For guardrails and service control policies applied to your account, see
-[Guardrails & SCPs](docs/aws/guardrails).
+[Guardrails & SCPs](/docs/aws/guardrails).

@@ -51,7 +51,7 @@ The Campus Cloud adheres to a Shared Responsibility Model:
 | Framework | Who It Applies To | Next Step |
 |---|---|---|
 | UC Policy IS-3 | All Campus Cloud accounts | Classify your data; apply appropriate tags |
-| NIST 800-171 | Research involving CUI (DoD, NSF, NIH grants) | Request a NIST-compliant account — see [Compliance](docs/general/compliance) |
+| NIST 800-171 | Research involving CUI (DoD, NSF, NIH grants) | Request a NIST-compliant account — see [Compliance](/docs/general/compliance) |
 | HIPAA | Research involving protected health information | Contact the Cloud Team; a BAA may be required |
 | FERPA | Work involving student education records | Classify as P3 minimum; limit access |
 

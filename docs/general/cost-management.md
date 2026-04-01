@@ -5,6 +5,8 @@ permalink: /docs/general/cost-management
 last_reviewed: 2026-03-30
 redirect_from:
   - /docs/bestpractices/costmodels
+  - /docs/aws/quicksight
+  - /docs/guidelines/quicksight-dashboards
 ---
 
 ## Costs & Billing
@@ -29,11 +31,32 @@ These baseline services include:
 
 ## Monitoring Your Costs
 
-* **AWS:** Cost and Usage Reports, AWS Cost Explorer, and QuickSight dashboards
-  provided by the Cloud Team — see [QuickSight Dashboards](docs/aws/quicksight).
-* **Azure:** Azure Cost Management + Billing in the Azure portal.
-  *(Azure cost tool — contact Cloud Team for details.)*
-* **GCP:** GCP Billing Account console under **Billing → Reports**.
+Each provider offers built-in tools for tracking your cloud spending:
+
+* **AWS:** [AWS Cost Explorer](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html) —
+  in the console, go to **Billing → Cost Explorer**.
+* **Azure:** [Azure Cost Management + Billing](https://learn.microsoft.com/en-us/azure/cost-management-billing/) —
+  in the portal, go to **Cost Management**.
+* **GCP:** [GCP Billing Reports](https://cloud.google.com/billing/docs/reports) —
+  in the console, go to **Billing → Reports**.
+
+### UCSB Custom Dashboards
+
+The Cloud Team maintains custom cost dashboards that aggregate spending across
+Campus Cloud accounts:
+
+* **AWS — Amazon QuickSight:** A centralized dashboard showing cost and usage
+  data across all Campus Cloud AWS accounts, broken down by account, service,
+  daily trend, and tag. Data is updated daily from AWS Cost and Usage Reports
+  (typically a 24–48 hour lag). The QuickSight account name is
+  `ucsb-campus-cloud`.
+* **Azure — Cost Management Dashboard:** A custom Azure cost reporting tool
+  maintained by the Cloud Team.
+
+Dashboard access must be provisioned separately from your cloud account. To
+request access, open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
+with your cloud account ID and UCSB NetID.
 
 ### Budget Alerts
 
@@ -41,9 +64,9 @@ Set up a budget alert in your account so you are notified before your spending
 exceeds expectations. Instructions are in each provider's First Steps guide.
 
 * For AWS, use the **Fixed Monthly Budget with Notification** product in the
-  Service Catalog — see [AWS First Steps](docs/aws/first-steps).
-* For Azure, use **Azure Cost Management** — see [Azure First Steps](docs/azure/first-steps).
-* For GCP, use **Cloud Billing budgets** — see [GCP First Steps](docs/gcp/first-steps).
+  Service Catalog — see [AWS First Steps](/docs/aws/first-steps).
+* For Azure, use **Azure Cost Management** — see [Azure First Steps](/docs/azure/first-steps).
+* For GCP, use **Cloud Billing budgets** — see [GCP First Steps](/docs/gcp/first-steps).
 
 A budget alert does not automatically stop your account from spending — it sends
 a notification. Monitor your account regularly during the first few weeks of a
@@ -56,7 +79,7 @@ new workload.
 Cloud costs are tracked against the Purchase Order you created in Gateway.
 Monthly usage is invoiced approximately three weeks after the end of each month.
 Keep your PO active until all invoices have been processed — see
-[Close an Account](docs/general/close-account) for details on the closure timeline.
+[Close an Account](/docs/general/close-account) for details on the closure timeline.
 
 If your costs are approaching your PO limit, renew or increase your PO before
 it expires. Contact your departmental financial administrator and the Cloud Team.

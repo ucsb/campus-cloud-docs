@@ -39,7 +39,7 @@ not blocked.
 | `ucsb:protection-level` | `p1`, `p2`, `p3`, `p4` |
 | `ucsb:availability-level` | `a1`, `a2`, `a3`, `a4` |
 
-See [Tagging](docs/general/tagging) for definitions of protection and
+See [Tagging](/docs/general/tagging) for definitions of protection and
 availability levels.
 
 ---

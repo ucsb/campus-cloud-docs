@@ -42,13 +42,13 @@ or an unexpected billing spike in time to respond.
 Each provider has a different way to configure contacts. Follow the guide for
 your provider:
 
-* [AWS First Steps — Set Account Contacts](docs/aws/first-steps#step-3--set-account-contacts) —
+* [AWS First Steps — Set Account Contacts](/docs/aws/first-steps#step-3--set-account-contacts) —
   Alternate contacts (Security, Operations, Billing) in the AWS Account
   Settings page.
-* [Azure First Steps — Set Subscription Contacts](docs/azure/first-steps#step-4--set-subscription-contacts) —
+* [Azure First Steps — Set Subscription Contacts](/docs/azure/first-steps#step-4--set-subscription-contacts) —
   Defender email notifications, budget alert recipients, and Service Health
   alert rules.
-* [GCP First Steps — Set Project Contacts](docs/gcp/first-steps#step-3--set-project-contacts) —
+* [GCP First Steps — Set Project Contacts](/docs/gcp/first-steps#step-3--set-project-contacts) —
   Essential Contacts for Security, Technical, and Billing notification
   categories.
 

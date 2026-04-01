@@ -71,7 +71,7 @@ When your account is provisioned, the Cloud Team will:
 * **Enable AWS CloudTrail** (organization-level, cannot be disabled)
 * **Pre-wire networking** — your account receives a VPC connected to the
   campus network (if requested)
-* **Create four default IAM roles** for your team (see [Identity & Access](docs/general/identity))
+* **Create four default IAM roles** for your team (see [Identity & Access](/docs/general/identity))
 * **Set a billing alarm** at the threshold you specify during account request
 
 ---
@@ -79,7 +79,7 @@ When your account is provisioned, the Cloud Team will:
 ## Regions
 
 All workloads must run in **us-east-1 or us-west-2** (with a limited exception
-for Amazon Bedrock). See [Guardrails & SCPs](docs/aws/guardrails) for details
+for Amazon Bedrock). See [Guardrails & SCPs](/docs/aws/guardrails) for details
 and exceptions.
 
 ---
@@ -96,14 +96,14 @@ Four roles are created in every account using the naming pattern
 | ReadOnly | View-only; useful for auditors and stakeholders |
 | Billing | View billing data only |
 
-See the [Identity & Access](docs/general/identity) page for instructions on
+See the [Identity & Access](/docs/general/identity) page for instructions on
 adding and removing users.
 
 ---
 
 ## Service Catalog
 
-The AWS [Service Catalog](docs/aws/service-catalog) provides pre-approved,
+The AWS [Service Catalog](/docs/aws/service-catalog) provides pre-approved,
 pre-configured product templates for common infrastructure patterns. Using a
 Service Catalog product is the recommended way to provision new infrastructure
 because the templates are already configured for UCSB compliance requirements.
@@ -113,9 +113,9 @@ because the templates are already configured for UCSB compliance requirements.
 ## Next Steps
 
 * [Request an Account](getting-started/procurement)
-* [First Steps](docs/aws/first-steps)
-* [Networking](docs/aws/networking)
-* [Guardrails & SCPs](docs/aws/guardrails)
-* [Security](docs/aws/security)
-* [Service Catalog](docs/aws/service-catalog)
-* [Cost Dashboards (QuickSight)](docs/aws/quicksight)
+* [First Steps](/docs/aws/first-steps)
+* [Networking](/docs/aws/networking)
+* [Guardrails & SCPs](/docs/aws/guardrails)
+* [Security](/docs/aws/security)
+* [Service Catalog](/docs/aws/service-catalog)
+* [Cost Management](/docs/general/cost-management)

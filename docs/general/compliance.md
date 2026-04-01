@@ -89,7 +89,7 @@ Each provider's security monitoring tools send findings to consolidated views:
 * **Azure:** Microsoft Defender for Cloud provides the unified security posture.
 * **GCP:** Security Command Center provides organization-wide findings.
 
-In addition, [Wiz](docs/general/security#wiz-cloud-security-posture-management)
+In addition, [Wiz](/docs/general/security#wiz-cloud-security-posture-management)
 is available for cross-provider security posture scanning. Contact the Cloud
 Team for details.
 
@@ -105,6 +105,6 @@ Regardless of account type, every Campus Cloud account must:
 4. Use the account only for UCSB business purposes in accordance with UC IS-3
 
 For provider-specific controls, see:
-[AWS Guardrails](docs/aws/guardrails) ·
-[Azure Guardrails](docs/azure/guardrails) ·
-[GCP Guardrails](docs/gcp/guardrails)
+[AWS Guardrails](/docs/aws/guardrails) ·
+[Azure Guardrails](/docs/azure/guardrails) ·
+[GCP Guardrails](/docs/gcp/guardrails)

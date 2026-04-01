@@ -1,12 +1,10 @@
 - title: Documentation
   links:
-    - title: "Getting Started"
+    - title: "Home"
       url: "/"
-      children:
-        - title: Training
-          url: "getting-started/training"
-        - title: Procuring an Account
-          url: "getting-started/procurement"
+
+    - title: "Getting Started"
+      url: "getting-started"
 
     - title: "Glossary"
       url: "glossary"
@@ -14,6 +12,8 @@
     - title: "General Guidance"
       url: "docs/general"
       children:
+        - title: Overview
+          url: "docs/general"
         - title: Identity & Access
           url: "docs/general/identity"
         - title: Security
@@ -38,6 +38,8 @@
     - title: "AWS"
       url: "docs/aws"
       children:
+        - title: Overview
+          url: "docs/aws"
         - title: First Steps
           url: "docs/aws/first-steps"
         - title: Networking
@@ -48,12 +50,12 @@
           url: "docs/aws/security"
         - title: Service Catalog
           url: "docs/aws/service-catalog"
-        - title: Cost Dashboards (QuickSight)
-          url: "docs/aws/quicksight"
 
     - title: "Azure"
       url: "docs/azure"
       children:
+        - title: Overview
+          url: "docs/azure"
         - title: First Steps
           url: "docs/azure/first-steps"
         - title: Networking
@@ -68,6 +70,8 @@
     - title: "GCP"
       url: "docs/gcp"
       children:
+        - title: Overview
+          url: "docs/gcp"
         - title: First Steps
           url: "docs/gcp/first-steps"
         - title: Networking
