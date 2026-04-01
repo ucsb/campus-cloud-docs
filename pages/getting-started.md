@@ -25,7 +25,7 @@ All three providers use the same Gateway procurement process. Creating a Purchas
 
 You will not be able to access your account until all steps are completed and the Campus Cloud Team creates it.
 
-1.  Log in to the UCSB Gateway Procurement System
+1.  Log in to the [UCSB Gateway Procurement System](https://it.ucsb.edu/administration-business/gateway)
 2.  Complete the Campus Cloud Form.
 
     ![Gateway Procurement System home page showing the Campus Cloud form link]({{ "/assets/img/gatewayhome.png" | relative_url }})
