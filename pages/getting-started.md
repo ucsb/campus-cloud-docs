@@ -18,7 +18,8 @@ managing your cloud budget.
 
 ### Gateway Procurement Process
 
-{% include alert.html type="info" title="Information" content="AWS accounts requested with @ucsb.edu emails must be created in the Campus Cloud. You will receive an \"error processing your request\" when requesting a AWS Account with a @ucsb.edu email unless it is in the Campus Cloud Landing Zone. <a href='{{ "/docs/general/identity#external-collaborators" | relative_url }}'>More Info</a>" %}
+{% capture alert_content %}AWS accounts requested with @ucsb.edu emails must be created in the Campus Cloud. You will receive an "error processing your request" when requesting a AWS Account with a @ucsb.edu email unless it is in the Campus Cloud Landing Zone. <a href='{{ "/docs/general/identity#external-collaborators" | relative_url }}'>More Info</a>{% endcapture %}
+{% include alert.html type="info" title="Information" content=alert_content %}
 
 All three providers use the same Gateway procurement process. Creating a Purchase Order (PO) is the first step for a new AWS account, Azure subscription, or GCP project — as well as for migrating an existing account.
 
