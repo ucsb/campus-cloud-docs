@@ -2,7 +2,7 @@
 title: GCP First Steps
 description: What to do after your GCP project is provisioned — sign in, verify setup, deploy your first resource.
 permalink: /docs/gcp/first-steps
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-01
 redirect_from:
   - /docs/firststeps/gcpfirststeps
 ---
@@ -36,6 +36,7 @@ Cloud Team. Follow the steps below to get set up.
 
 1. Navigate to **IAM & Admin → IAM** in the left menu.
 2. Confirm your `@ucsb.edu` account is listed with the appropriate role:
+   * **Owner** — full access including IAM and billing (default for the project requester)
    * **Editor** — create and manage most resources
    * **Viewer** — read-only
    * **Project IAM Admin** — manage IAM for the project (if needed)
