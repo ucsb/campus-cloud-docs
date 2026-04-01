@@ -5,12 +5,17 @@ permalink: /docs/azure/first-steps
 last_reviewed: 2026-03-30
 redirect_from:
   - /docs/firststeps/azurefirststeps
+  - /docs/azure/roles
 ---
 
 ## Getting Started With Your Azure Subscription
+{:.no_toc}
 
 Your subscription is ready when you receive the provisioning confirmation from
 the Cloud Team. Follow the steps below to get set up.
+
+* TOC
+{:toc}
 
 ---
 
@@ -83,12 +88,28 @@ The primary billing contact is managed by the Cloud Team. **You configure:**
 
 ## Step 5 — Review Your Roles
 
-Four custom RBAC roles are assigned to your team. Use the principle of
-least privilege — most day-to-day work should use **Application Owner**,
-not **UCSB Subscription Owner**.
+Four custom RBAC roles are assigned to your subscription:
 
-See [Roles & Access]({{ "/docs/azure/roles" | relative_url }}) for details on each role and
-instructions for adding team members.
+| Role | Who Should Use It | Key Permissions |
+|---|---|---|
+| **UCSB Subscription Owner** | PI or department head (1–2 people max) | Manage all resources, assign roles |
+| **UCSB Application Owner** | Developers, researchers, lab managers | Create/manage compute, storage, databases, deploy code |
+| **UCSB Network Operations** | Networking staff | Manage VPN gateways, ExpressRoute, route tables |
+| **UCSB Security Operations** | Security reviewers, compliance staff | Read all resources, view Defender alerts, manage Key Vault |
+
+Most day-to-day work should use **Application Owner**. Use **Subscription
+Owner** only for initial setup and RBAC management. Changes to the role
+definitions themselves must be made by the Cloud Team — open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
+if the available roles do not match your team's needs.
+
+### Adding and Removing Users
+
+Subscription Owners can manage role assignments in the Azure portal under
+**Access control (IAM)**. See
+[Assign Azure roles using the Azure portal](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal)
+for step-by-step instructions. Only `@ucsb.edu` accounts can be assigned
+roles — external collaborators need a sponsored UCSB account.
 
 ---
 
@@ -136,7 +157,7 @@ Create a cost budget to alert you if spend approaches your expected amount:
 
 | Issue | Where to go |
 |---|---|
-| Access problems (can't sign in, wrong directory) | [Identity & Access]({{ "/docs/general/identity" | relative_url }}) |
+| Access problems (can't sign in, wrong directory) | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) |
 | Tag policy blocking resource group creation | [Tagging]({{ "/docs/general/tagging" | relative_url }}) |
 | Missing VNet, networking issues | [Networking]({{ "/docs/azure/networking" | relative_url }}) |
 | Policy violations | [Guardrails]({{ "/docs/azure/guardrails" | relative_url }}) |

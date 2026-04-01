@@ -8,9 +8,13 @@ redirect_from:
 ---
 
 ## Getting Started With Your AWS Account
+{:.no_toc}
 
 Your account is ready when you receive the provisioning confirmation email from
 the Cloud Team. Follow the steps below to get set up.
+
+* TOC
+{:toc}
 
 ---
 
@@ -59,11 +63,30 @@ The Cloud Team manages the Primary contact. **You set the Alternate contacts:**
 
 ## Step 4 — Review Your Default Roles
 
-Four IAM roles are pre-created in every account. Add your team members via
-**im.ucsb.edu** (see [Identity & Access]({{ "/docs/general/identity" | relative_url }})).
+Four IAM roles are pre-created in every account. You do not need to create IAM
+users or local passwords — all access is federated through UCSB Shibboleth.
 
-You do not need to create IAM users or local passwords. All access is
-federated through UCSB Shibboleth.
+| Role | What It Can Do |
+|---|---|
+| Administrator (`ucsb-idp-administrator`) | Full access to all AWS services and resources, including IAM |
+| PowerUser (`ucsb-idp-poweruser`) | Full access to AWS services; cannot manage IAM |
+| ReadOnly (`ucsb-idp-readonly`) | View-only access to all AWS resources |
+| Billing (`ucsb-idp-billing`) | View billing and cost data only |
+
+Use **PowerUser** for day-to-day work. Reserve **Administrator** for IAM
+changes and initial setup.
+
+### Adding and Removing Users
+
+Use the "Manage Group Tags" tool at [im.ucsb.edu](https://im.ucsb.edu):
+
+1. Log in with your UCSB NetID.
+2. Go to **Admin Tools → Manage Group Tags**.
+3. Find the group for your account role (e.g., `ucsb-idp-administrator-123456789012`).
+4. Owners can add and remove Members. Members are authorized for the role.
+
+Only account owners have permission to add members. Owners are not granted the
+role themselves — add yourself as a member if you also want access.
 
 ---
 
@@ -121,7 +144,7 @@ See the [Tagging]({{ "/docs/general/tagging" | relative_url }}) page for require
 
 | Issue | Where to go |
 |---|---|
-| Access problems (can't sign in, missing role) | [Identity & Access]({{ "/docs/general/identity" | relative_url }}) |
+| Access problems (can't sign in, missing role) | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) |
 | Missing VPC, networking issues | [Networking]({{ "/docs/aws/networking" | relative_url }}) |
 | Policy violations / Access Denied | [Guardrails]({{ "/docs/aws/guardrails" | relative_url }}) |
 | Billing questions | [Cost Management]({{ "/docs/general/cost-management" | relative_url }}) |

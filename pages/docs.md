@@ -14,7 +14,6 @@ navigate or jump directly to a section below.
 
 ## General Guidance (All Providers)
  - [General Guidance Overview]({{ "/docs/general/" | relative_url }})
- - [Identity & Access]({{ "/docs/general/identity" | relative_url }})
  - [Security]({{ "/docs/general/security" | relative_url }})
  - [Compliance]({{ "/docs/general/compliance" | relative_url }})
  - [Tagging]({{ "/docs/general/tagging" | relative_url }})
@@ -39,7 +38,6 @@ navigate or jump directly to a section below.
  - [Networking]({{ "/docs/azure/networking" | relative_url }})
  - [Guardrails & Policies]({{ "/docs/azure/guardrails" | relative_url }})
  - [Security]({{ "/docs/azure/security" | relative_url }})
- - [Roles & Access]({{ "/docs/azure/roles" | relative_url }})
 
 ## GCP
  - [GCP Overview]({{ "/docs/gcp/" | relative_url }})

@@ -67,7 +67,7 @@ Campus Cloud Landing Zone. Personal accounts:
 * Do not receive UC enterprise discounts
 * May not meet compliance requirements for federal grants
 * Should not use a `@ucsb.edu` email address (this triggers a restriction —
-  see [Identity & Access]({{ "/docs/general/identity#external-collaborators" | relative_url }}))
+  see [Security — External Collaborators]({{ "/docs/general/security#external-collaborators" | relative_url }}))
 * May be subject to review to ensure UC policies are followed
 
 If you have a personal account you want to bring into the Campus Cloud, contact

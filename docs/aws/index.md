@@ -69,7 +69,7 @@ When your account is provisioned, the Cloud Team will:
 * **Enable AWS CloudTrail** (organization-level, cannot be disabled)
 * **Pre-wire networking** — your account receives a VPC connected to the
   campus network (if requested)
-* **Create four default IAM roles** for your team (see [Identity & Access]({{ "/docs/general/identity" | relative_url }}))
+* **Create four default IAM roles** for your team (see [First Steps]({{ "/docs/aws/first-steps" | relative_url }}))
 * **Set a billing alarm** at the threshold you specify during account request
 
 ---
@@ -94,7 +94,7 @@ Four roles are created in every account using the naming pattern
 | ReadOnly | View-only; useful for auditors and stakeholders |
 | Billing | View billing data only |
 
-See the [Identity & Access]({{ "/docs/general/identity" | relative_url }}) page for instructions on
+See the [First Steps]({{ "/docs/aws/first-steps" | relative_url }}) page for instructions on
 adding and removing users.
 
 ---

@@ -9,6 +9,7 @@ redirect_from:
   - /docs/guidelines
   - /docs/guidelines/description
   - /getting-started/training
+  - /docs/general/identity
 ---
 
 ## General Guidance
@@ -50,7 +51,6 @@ library (free with UCSB NetID) includes:
 | Topic | Description |
 |---|---|
 | [Security]({{ "/docs/general/security" | relative_url }}) | Shared-responsibility model, encryption, logging, and vulnerability management |
-| [Identity & Access]({{ "/docs/general/identity" | relative_url }}) | Single sign-on, federated identity, and access management across providers |
 | [Tagging]({{ "/docs/general/tagging" | relative_url }}) | Required tags, naming conventions, and how tags are enforced |
 | [Compliance]({{ "/docs/general/compliance" | relative_url }}) | UC IS-3, NIST 800-171, and how to request a compliant account |
 | [Cost Management]({{ "/docs/general/cost-management" | relative_url }}) | Budgets, alerts, and strategies for controlling cloud spend |

@@ -50,7 +50,7 @@ your subscription.
 
 When your subscription is provisioned, the Cloud Team will:
 
-* **Assign four custom RBAC roles** to your team (see [Roles]({{ "/docs/azure/roles" | relative_url }}))
+* **Assign four custom RBAC roles** to your team (see [First Steps]({{ "/docs/azure/first-steps" | relative_url }}))
 * **Enable Microsoft Defender for Cloud** across all supported resource types
 * **Deploy Log Analytics workspace** for security monitoring (90-day retention)
 * **Apply Azure Policy** for NIST 800-171 audit compliance
@@ -89,4 +89,4 @@ listed here.
 * [Networking]({{ "/docs/azure/networking" | relative_url }})
 * [Guardrails & Policies]({{ "/docs/azure/guardrails" | relative_url }})
 * [Security]({{ "/docs/azure/security" | relative_url }})
-* [Roles & Access]({{ "/docs/azure/roles" | relative_url }})
+

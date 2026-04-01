@@ -126,6 +126,37 @@ contact the Cloud Team to request it.
 
 ---
 
+## Least-Privilege Principle
+
+Assign the minimum role needed for each person's responsibilities:
+
+* **AWS** — Use **ReadOnly** or **Billing** roles for stakeholders who only
+  need to review costs or resources. Use **PowerUser** for day-to-day work
+  and reserve **Administrator** for IAM changes.
+* **Azure** — Use **Application Owner** rather than **Subscription Owner** for
+  most day-to-day work.
+* **GCP** — Use project-level roles (Editor, Viewer) instead of broader roles
+  unless explicitly needed.
+
+---
+
+## External Collaborators
+
+All three providers require a `@ucsb.edu` identity. External collaborators
+without a UCSB NetID cannot be added directly to your account's role structure.
+
+Options for granting access to external collaborators:
+
+* **Create a sponsored UCSB NetID** for the collaborator through UCSB IT — this
+  gives them a `@ucsb.edu` identity that works with all three providers.
+* **Share data without granting account access** — for example, use pre-signed
+  S3 URLs, scoped SAS tokens (Azure), or signed URLs (GCP).
+* **Set up cross-institution federated access** via SAML or OIDC for the
+  collaborator's home identity provider (advanced — requires Cloud Team
+  involvement).
+
+---
+
 ## Reporting a Security Incident
 
 If you suspect a security incident (unauthorized access, data exposure, unusual

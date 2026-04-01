@@ -14,8 +14,6 @@
       children:
         - title: Overview
           url: "docs/general"
-        - title: Identity & Access
-          url: "docs/general/identity"
         - title: Security
           url: "docs/general/security"
         - title: Compliance
@@ -64,8 +62,6 @@
           url: "docs/azure/guardrails"
         - title: Security
           url: "docs/azure/security"
-        - title: Roles & Access
-          url: "docs/azure/roles"
 
     - title: "GCP"
       url: "docs/gcp"

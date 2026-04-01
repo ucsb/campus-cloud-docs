@@ -8,9 +8,13 @@ redirect_from:
 ---
 
 ## Getting Started With Your GCP Project
+{:.no_toc}
 
 Your project is ready when you receive the provisioning confirmation from the
 Cloud Team. Follow the steps below to get set up.
+
+* TOC
+{:toc}
 
 ---
 
@@ -37,6 +41,13 @@ Cloud Team. Follow the steps below to get set up.
    * **Project IAM Admin** — manage IAM for the project (if needed)
 
 If you are not listed or your role is incorrect, contact the Cloud Team.
+
+### Adding and Removing Users
+
+Project Owners can grant roles under **IAM & Admin → IAM** in the GCP Console.
+See [Grant an IAM role](https://cloud.google.com/iam/docs/grant-role-console)
+for step-by-step instructions. Only `@ucsb.edu` accounts can be added —
+personal Gmail accounts are not permitted.
 
 ---
 
@@ -135,7 +146,7 @@ See [Costs & Billing]({{ "/docs/general/cost-management" | relative_url }}) for 
 
 | Issue | Where to go |
 |---|---|
-| Access problems | [Identity & Access]({{ "/docs/general/identity" | relative_url }}) |
+| Access problems | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) |
 | Networking issues | [Networking]({{ "/docs/gcp/networking" | relative_url }}) |
 | Org policy violations | [Guardrails]({{ "/docs/gcp/guardrails" | relative_url }}) |
 | Billing questions | [Costs & Billing]({{ "/docs/general/cost-management" | relative_url }}) |

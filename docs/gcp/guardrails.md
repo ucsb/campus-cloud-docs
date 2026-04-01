@@ -131,3 +131,14 @@ Cloud Team will evaluate whether an exemption is appropriate.
 
 Exceptions are never granted for constraints that directly support UC IS-3 or
 NIST 800-171 compliance requirements.
+
+---
+
+## Platform Admin Roles
+
+Certain platform-level permissions (organization administration, folder
+management, and billing account assignments) are reserved for the Campus Cloud
+Team and cannot be self-assigned. The IAM Deny Policies above block these
+actions for all users except Cloud Team automation accounts. If you need an
+action that requires platform-level access, open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).

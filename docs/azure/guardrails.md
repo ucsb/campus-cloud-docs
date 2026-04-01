@@ -103,3 +103,13 @@ ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf3989
 create a policy exemption on your subscription.
 
 Exceptions are not granted for controls required by UC IS-3 policy.
+
+---
+
+## Platform Admin Roles
+
+Certain platform-level permissions (management group administration, policy
+management, and tenant-wide configurations) are reserved for the Campus Cloud
+Team and cannot be self-assigned. If you need an action that requires
+platform-level access, open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
