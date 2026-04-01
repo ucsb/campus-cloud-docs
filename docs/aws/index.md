@@ -45,19 +45,17 @@ approximately 2 business days and send a confirmation email.
 
 ## Account Structure
 
-Accounts live inside an **AWS Organization** managed by the Cloud Team. They
-are organized into Organizational Units (OUs):
+Accounts live inside an **AWS Organization** managed by the Cloud Team.
+They are organized into Organizational Units (OUs). Policies applied at
+the OU level are inherited by every account inside it.
 
-| OU | Purpose | Notes |
-|---|---|---|
-| Research | Regulated and sensitive research workloads | NIST 800-171 controls available |
-| Academic | Coursework, labs, student projects | |
-| Administrative | Business operations (HR, Finance, etc.) | |
-| Sandbox | Exploration and development | No production data |
-| UCSB Core | Cloud Team–managed shared services | Not for direct PI use |
+| OU | Purpose |
+|---|---|
+| UCSB Baseline V2 | Production workloads — research, academic, and administrative accounts with full guardrails and NIST 800-171 controls |
+| Sandbox | Exploration and development — no production data allowed |
 
-New accounts are placed in the OU that matches the request type. Accounts can
-be moved between OUs on request if your project's needs change.
+New accounts are placed in **UCSB Baseline V2** by default. Contact the
+Cloud Team if your needs change.
 
 ---
 

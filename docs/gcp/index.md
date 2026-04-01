@@ -29,23 +29,13 @@ security setup.
 ## Organization Hierarchy
 
 GCP resources are organized in a tree: **Organization → Folders → Projects**.
-Policies applied at a higher level are inherited by everything underneath.
+Policies applied at a higher level are inherited by every project underneath.
 
-```
-UCSB Organization (ucsb.edu)
-├── UCSB NIST Baseline           (Production and research workloads)
-│   └── Sandbox Unfunded         (Self-service exploration — no billing)
-└── UCSB Legacy                  (Pre-landing-zone projects)
-```
-
-Your project will be placed in the folder that matches your funding and
-compliance requirements:
-
-| Folder | Use Case | Billing | Who Provisions |
-|---|---|---|---|
-| UCSB NIST Baseline | Research, sensitive data, funded workloads | Yes | Cloud Team via Gateway PO |
-| Sandbox Unfunded | Exploration, learning, testing; self-created projects (e.g. from Apps Script) | No | **You** — any `@ucsb.edu` user can create projects here |
-| UCSB Legacy | Pre-existing projects migrated into the org | Yes | Cloud Team |
+| Folder | Purpose |
+|---|---|
+| UCSB NIST Baseline | Production workloads — funded research, academic, and administrative projects with full org-policy enforcement |
+| Sandbox Unfunded | Self-service exploration — any `@ucsb.edu` user can create a project here, but billing cannot be attached |
+| UCSB Legacy | Pre-existing projects that predate the landing zone |
 
 {% include alert.html type="info" title="Sandbox Unfunded — self-service, no billing" content="Any @ucsb.edu user can create a project in the Sandbox Unfunded folder — including projects created automatically by tools like Apps Script. Billing cannot be attached, so most paid services (Compute Engine, Cloud SQL, GKE) are unavailable. Use this folder for exploring the GCP console, IAM, and free-tier services." %}
 

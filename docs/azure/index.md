@@ -28,26 +28,21 @@ security baseline.
 
 ## Management Group Hierarchy
 
-Azure subscriptions are organized into a management group hierarchy. Policies
-applied at a higher level are inherited by all subscriptions below it.
+Azure subscriptions are organized into a management group hierarchy.
+Policies applied at a higher level are inherited by all subscriptions
+below it.
 
-```
-UCSB Tenant (Root)
-└── UCSB Campus Cloud
-    ├── Landing Zones
-    │   ├── UCSB Baseline V1
-    │   ├── UCSB Learning
-    │   └── UCSB Sponsorship
-    ├── Platform
-    │   ├── Connectivity
-    │   └── Management
-    ├── Sandboxes
-    └── UCSB Legacy
-```
+| Management Group | Purpose |
+|---|---|
+| UCSB Baseline V1 | Production workloads — research, administrative, and departmental subscriptions with full guardrails |
+| UCSB Learning | Coursework, labs, and student projects |
+| UCSB Sponsorship | Subscriptions funded through Microsoft sponsorship credits |
+| Sandboxes | Exploration and development — no production data |
+| UCSB Legacy | Pre-existing subscriptions that predate the Campus Cloud |
 
 Your subscription is placed in the management group that matches your use
-case. Policies applied to the management group govern all resources in your
-subscription.
+case. Policies applied to the management group govern all resources in
+your subscription.
 
 ---
 
