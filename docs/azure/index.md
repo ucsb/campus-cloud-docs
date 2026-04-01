@@ -84,7 +84,7 @@ listed here.
 
 ## Next Steps
 
-* [Request a Subscription]({{ "/getting-started/procurement" | relative_url }})
+* [Request a Subscription]({{ "/getting-started" | relative_url }})
 * [First Steps]({{ "/docs/azure/first-steps" | relative_url }})
 * [Networking]({{ "/docs/azure/networking" | relative_url }})
 * [Guardrails & Policies]({{ "/docs/azure/guardrails" | relative_url }})

@@ -2,7 +2,9 @@
 layout: page
 title: "Get a Campus Cloud Account"
 permalink: /getting-started
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-01
+redirect_from:
+  - /getting-started/procurement
 ---
 
 ## Get a Campus Cloud Account

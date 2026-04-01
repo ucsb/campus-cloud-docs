@@ -44,7 +44,7 @@ pricing.
 2. **Choose your provider.** Most research groups use AWS. Azure and GCP are
    good choices for teams already using Microsoft or Google tools, or for
    specific services (e.g., Google BigQuery, Azure ML).
-3. **Request an account.** Follow the [procurement guide]({{ "/getting-started/procurement" | relative_url }}). Indicate on your form if you need NIST 800-171 compliance.
+3. **Request an account.** Follow the [procurement guide]({{ "/getting-started" | relative_url }}). Indicate on your form if you need NIST 800-171 compliance.
 4. **Set up your environment.** Follow the First Steps guide for your provider.
 
 ---
@@ -67,7 +67,7 @@ Campus Cloud Landing Zone. Personal accounts:
 * Do not receive UC enterprise discounts
 * May not meet compliance requirements for federal grants
 * Should not use a `@ucsb.edu` email address (this triggers a restriction —
-  see [Identity & Access](identity#external-collaborators))
+  see [Identity & Access]({{ "/docs/general/identity#external-collaborators" | relative_url }}))
 * May be subject to review to ensure UC policies are followed
 
 If you have a personal account you want to bring into the Campus Cloud, contact

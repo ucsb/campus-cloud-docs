@@ -29,7 +29,7 @@ security infrastructure from scratch.
 
 ## Requesting an AWS Account
 
-Follow the standard [procurement process]({{ "/getting-started/procurement" | relative_url }}) via
+Follow the standard [procurement process]({{ "/getting-started" | relative_url }}) via
 UCSB Gateway. In addition to the standard form fields, be ready to provide:
 
 * **Region preference** — us-east-1 (N. Virginia), us-west-2 (Oregon), or both

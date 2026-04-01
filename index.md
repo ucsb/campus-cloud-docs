@@ -25,8 +25,8 @@ Using the Campus Cloud means:
   available to Campus Cloud accounts. Contact the Cloud Team to discuss the
   right support tier for your workload.
 
-New here? Start with [Training Resources]({{ "/getting-started/training" | relative_url }}) or
-[Procure an Account]({{ "/getting-started/procurement" | relative_url }}).
+New here? Start with [Training Resources]({{ "/docs/general/" | relative_url }}) or
+[Procure an Account]({{ "/getting-started" | relative_url }}).
 
 ---
 

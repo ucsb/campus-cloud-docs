@@ -76,4 +76,4 @@ will receive an "error processing your request" message if you try. All AWS
 accounts associated with UCSB email addresses must be created through or
 migrated into the Campus Cloud.
 
-See [Identity & Access](identity#external-collaborators) for details.
+See [Identity & Access]({{ "/docs/general/identity#external-collaborators" | relative_url }}) for details.

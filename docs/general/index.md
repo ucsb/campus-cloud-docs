@@ -8,6 +8,7 @@ redirect_from:
   - /docs/firststeps
   - /docs/guidelines
   - /docs/guidelines/description
+  - /getting-started/training
 ---
 
 ## General Guidance

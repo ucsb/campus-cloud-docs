@@ -67,7 +67,7 @@ are tested primarily in these two regions.
 
 ## Next Steps
 
-* [Request a Project]({{ "/getting-started/procurement" | relative_url }})
+* [Request a Project]({{ "/getting-started" | relative_url }})
 * [First Steps]({{ "/docs/gcp/first-steps" | relative_url }})
 * [Networking]({{ "/docs/gcp/networking" | relative_url }})
 * [Guardrails & Org Policies]({{ "/docs/gcp/guardrails" | relative_url }})
