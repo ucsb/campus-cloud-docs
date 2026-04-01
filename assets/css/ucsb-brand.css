@@ -32,6 +32,11 @@ code, pre {
   font-family: "Roboto Mono", "SFMono-Regular", Menlo, monospace;
 }
 
+/* Override Bootstrap default code color (#e83e8c) with UCSB Navy */
+code {
+  color: #003660;
+}
+
 /* --- Colors --- */
 
 a {

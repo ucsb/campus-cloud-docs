@@ -25,7 +25,7 @@ allowed.
 
 ## Required Resource Group Tags
 
-**All Resource Groups should have the five required tags.**
+**All Resource Groups should have the four required tags.**
 
 This is enforced with an **Audit** policy — Resource Groups created without the
 required tags will be flagged as non-compliant in Azure Policy, but creation is
@@ -33,7 +33,6 @@ not blocked.
 
 | Tag | Allowed Values |
 |---|---|
-| `ucsb:po-number` | Your PO number (free text) |
 | `ucsb:environment` | `dev`, `test`, `prod`, `other` |
 | `ucsb:mission` | `academic`, `research`, `administrative`, `mixed` |
 | `ucsb:protection-level` | `p1`, `p2`, `p3`, `p4` |

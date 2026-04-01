@@ -2,7 +2,7 @@
 title: Migrate to Campus Cloud
 description: How to migrate an existing personal or free cloud account to the Campus Cloud
 permalink: /docs/general/migrate
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-01
 redirect_from:
   - /docs/guidelines/migrate
 ---
@@ -30,14 +30,13 @@ compliance.
 
 ---
 
-## How to Migrate: All Providers
+## How to Migrate
 
-Contact the Cloud Team to start the migration process:
-[info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu) or open a
-[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
-
-Migration is a standard process the Cloud Team performs regularly. You will need
-a valid Purchase Order from Gateway before migration can begin.
+Follow the standard
+[Gateway procurement process]({{ "/getting-started" | relative_url }}).
+When completing the Campus Cloud form, mention your existing account or project
+so the Cloud Team can migrate it into the Landing Zone rather than creating a
+new one.
 
 ### What Happens During Migration
 
@@ -51,21 +50,6 @@ a valid Purchase Order from Gateway before migration can begin.
 Existing resources in your account are generally not affected by the migration,
 but resource-specific compliance findings may be generated after controls are
 applied.
-
----
-
-## What Is a Free Account?
-
-A free Azure Subscription or GCP Project is created without a payment mechanism.
-Free accounts are sometimes used for student coursework or personal experimentation.
-
-### Upgrading a Free Azure Subscription to Paid
-A Purchase Order must be created to cover costs. The subscription must then be
-imported into the Campus Cloud Landing Zone.
-
-### Upgrading a Free GCP Project to Paid
-Contact the Cloud Team. A Purchase Order is required, and billing will be
-attached through a Campus Cloud billing sub-account.
 
 ---
 

@@ -95,13 +95,12 @@ instructions for adding team members.
 ## Step 6 — Create a Resource Group
 
 All resources must be in a Resource Group. Azure Policy audits Resource Groups
-for the five required tags — groups missing tags will be flagged as
+for the four required tags — groups missing tags will be flagged as
 non-compliant.
 
 1. Navigate to **Resource Groups → + Create**.
 2. Select your subscription and a region (West US 2 recommended).
-3. Fill in all five required tags:
-   * `ucsb:po-number`
+3. Fill in all four required tags:
    * `ucsb:environment`
    * `ucsb:mission`
    * `ucsb:protection-level`

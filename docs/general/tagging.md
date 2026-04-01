@@ -33,42 +33,27 @@ The following tags are required across all three providers. AWS and Azure use a
 `ucsb:` namespace prefix. GCP does not (tags are already scoped to the UCSB
 organization).
 
-| What It Tracks | AWS Tag | Azure Tag | GCP Tag | Set By |
-|---|---|---|---|---|
-| Purchase Order number | `ucsb:po-number` | `ucsb:po-number` | — | Cloud Team |
-| Environment type | `ucsb:environment` | `ucsb:environment` | `environment` | You |
-| Mission area | `ucsb:mission` | `ucsb:mission` | `mission` | You |
-| Data sensitivity | `ucsb:protection-level` | `ucsb:protection-level` | `protection-level` | You |
-| Uptime requirement | `ucsb:availability-level` | `ucsb:availability-level` | `availability-level` | You |
-| Backup requirement | `ucsb:recovery-level` | — | `recovery-level` | You |
-| Department | `ucsb:dept` | — | `dept` | You |
+| What It Tracks | AWS Tag | Azure Tag | GCP Tag |
+|---|---|---|---|
+| Environment type | `ucsb:environment` | `ucsb:environment` | `environment` |
+| Mission area | `ucsb:mission` | `ucsb:mission` | `mission` |
+| Data sensitivity | `ucsb:protection-level` | `ucsb:protection-level` | `protection-level` |
+| Uptime requirement | `ucsb:availability-level` | `ucsb:availability-level` | `availability-level` |
+| Backup requirement | `ucsb:recovery-level` | — | `recovery-level` |
+| Department | `ucsb:dept` | — | `dept` |
 
 ---
 
 ## Allowed Values
 
-### `environment`
-`dev`, `test`, `prod`, `other`
-
-### `mission`
-`academic`, `research`, `administrative`, `mixed`
-
-### `protection-level`
-| Value | Meaning |
+| Tag | Allowed Values |
 |---|---|
-| `p1` | Public — no confidentiality requirement |
-| `p2` | Internal — university internal data |
-| `p3` | Sensitive — PII, FERPA, proprietary research |
-| `p4` | Regulated — HIPAA, CUI, ITAR, export-controlled |
-
-### `availability-level`
-`a1` (best-effort) through `a4` (99.9%+ uptime)
-
-### `recovery-level`
-`r1` (rebuild acceptable) through `r4` (near-zero RPO/RTO)
-
-### `dept`
-4-character UCSB Chart of Accounts department code (e.g., `COMS`, `PHYS`, `MCDB`).
+| `environment` | `dev`, `test`, `prod`, `other` |
+| `mission` | `academic`, `research`, `administrative`, `mixed` |
+| `protection-level` | `p1` (public), `p2` (internal), `p3` (sensitive — PII, FERPA), `p4` (regulated — HIPAA, CUI, ITAR). See [UC Data Classification](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html). |
+| `availability-level` | `a1` (minimal impact if unavailable) through `a4` (must stay up — essential service). See [UC Data Classification](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html). |
+| `recovery-level` | `r1` (deferrable — up to 30 days to recover) through `r4` (critical — recover within hours). See [UC IS-12 IT Recovery Policy (PDF)](https://security.ucop.edu/files/documents/policies/is-12-it-recovery-policy.pdf). |
+| `dept` | 4-character UCSB department code (e.g., `COMS`, `PHYS`, `MCDB`) |
 
 ---
 
@@ -80,8 +65,8 @@ organization).
 | Azure | Resource group flagged as non-compliant (Audit policy) |
 | GCP | Audit finding; platform automation skips untagged projects |
 
-For Azure, the five required tags on **resource groups** are audited by policy:
-`ucsb:po-number`, `ucsb:environment`, `ucsb:mission`,
+For Azure, the required tags on **resource groups** are audited by policy:
+`ucsb:environment`, `ucsb:mission`,
 `ucsb:protection-level`, and `ucsb:availability-level`. Resource groups
 without these tags will be flagged as non-compliant but can still be created.
 

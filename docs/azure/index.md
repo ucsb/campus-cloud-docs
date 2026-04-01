@@ -57,15 +57,15 @@ When your subscription is provisioned, the Cloud Team will:
 * **Connect networking** — your subscription receives a Virtual Network
   with hub-spoke peering to the Campus Cloud Virtual WAN (if requested)
 * **Require Resource Group tags** — policy audits RG creation for
-  the five required tags
+  the four required tags
 
 ---
 
 ## Resource Groups and Tags
 
-All resources must be inside a **Resource Group** with the five required tags.
-Azure Policy enforces this — resource group creation is blocked if any
-required tag is missing.
+All resources must be inside a **Resource Group** with the four required tags.
+Azure Policy audits this — Resource Groups missing tags will be flagged as
+non-compliant but can still be created.
 
 See [Tagging]({{ "/docs/general/tagging" | relative_url }}) for the full list of required tags and
 allowed values.
