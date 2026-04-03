@@ -2,7 +2,7 @@
 title: Azure Overview
 description: Overview of the UCSB Campus Cloud Azure environment — subscriptions, management groups, regions, and what is pre-configured.
 permalink: /docs/azure/
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-03
 ---
 
 ## Azure at UCSB
@@ -75,10 +75,9 @@ allowed values.
 ## Regions
 
 All subscriptions are configured for **West US 2** as the primary region.
-West Central US is available as a secondary. East US 2 and Central US are also
-allowed by policy. Other regions are blocked by a Deny policy at the management
-group level — contact the Cloud Team before attempting to use a region not
-listed here.
+**West Central US** is available as a secondary for disaster recovery or
+failover. All other regions are blocked by a Deny policy at the management
+group level.
 
 ---
 

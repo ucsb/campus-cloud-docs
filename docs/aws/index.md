@@ -2,9 +2,7 @@
 title: AWS Overview
 description: Overview of the UCSB Campus Cloud AWS environment — accounts, regions, default configuration, and how to access it.
 permalink: /docs/aws/
-last_reviewed: 2026-03-30
-redirect_from:
-  - /docs/guidelines/account-request
+last_reviewed: 2026-04-03
 ---
 
 ## AWS at UCSB
@@ -105,6 +103,26 @@ The AWS [Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }}) prov
 pre-configured product templates for common infrastructure patterns. Using a
 Service Catalog product is the recommended way to provision new infrastructure
 because the templates are already configured for UCSB compliance requirements.
+
+---
+
+## Enterprise Support
+
+Every Campus Cloud AWS account is automatically enrolled in **AWS Enterprise
+Support** at no additional cost to your account. This includes:
+
+* **Technical Account Manager (TAM)** — a named AWS technical advisor shared
+  across the UCSB organization. The TAM meets with the Cloud Team twice monthly
+  and can assist with architecture reviews, service limits, and best practices.
+* **AWS Concierge Team** — assists with billing and account questions.
+* **Support Channels** — you can open AWS Support cases via web, email, chat,
+  or phone directly from the AWS Console (Support → Create case).
+
+Response times depend on case severity — see
+[AWS Support Plans](https://aws.amazon.com/premiumsupport/plans/) for SLA
+details.
+
+{% include alert.html type="info" title="Open a Campus Cloud ticket first for platform issues" content="For issues related to account access, networking, guardrails, or Campus Cloud configuration, open a ServiceNow ticket with the Cloud Team rather than an AWS Support case. Use AWS Support for service-specific technical questions about your workloads." %}
 
 ---
 

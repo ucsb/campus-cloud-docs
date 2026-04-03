@@ -5,6 +5,7 @@ permalink: /getting-started
 last_reviewed: 2026-04-01
 redirect_from:
   - /getting-started/procurement
+  - /docs/guidelines/account-request
 ---
 
 ## Get a Campus Cloud Account

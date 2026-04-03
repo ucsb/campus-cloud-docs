@@ -2,7 +2,7 @@
 title: Security & Shared Responsibility
 description: How security responsibilities are divided between the Cloud Team, cloud providers, and you
 permalink: /docs/general/security
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-03
 redirect_from:
   - /docs/guidelines/security
 ---
@@ -106,6 +106,11 @@ Each provider has pre-configured security monitoring in your account:
 
 Review findings regularly. Critical findings may require a response — the Cloud
 Team may contact you for unresolved high-severity items.
+
+For provider-specific security best practices, see:
+* [AWS Security Best Practices](https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html)
+* [Azure Security Best Practices](https://learn.microsoft.com/en-us/azure/security/fundamentals/best-practices-and-patterns)
+* [GCP Security Best Practices](https://cloud.google.com/security/best-practices)
 
 ---
 

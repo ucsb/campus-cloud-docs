@@ -2,7 +2,7 @@
 title: Data Management Plans
 description: DMP guidelines for researchers using the Campus Cloud
 permalink: /docs/general/data-management
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-03
 redirect_from:
   - /docs/guidelines/dmp
 ---
@@ -63,7 +63,7 @@ The Campus Cloud adheres to a Shared Responsibility Model:
 * [DMPTool public templates](https://dmptool.org/public_templates) — browse
   templates from NSF, NIH, DoD, and other agencies
 * [UC Santa Barbara Library — Data Services](https://www.library.ucsb.edu/research-data-services)
-* [University of Arizona — Data Management Best Practices](https://data.library.arizona.edu/data-management/best-practices/data-sharing-archiving)
+* [University of Arizona — Data Sharing & Archiving Best Practices](https://lib.arizona.edu/research/data/data-management/best-practices/sharing)
 
 ---
 

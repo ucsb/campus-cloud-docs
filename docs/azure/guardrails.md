@@ -2,7 +2,7 @@
 title: Azure Guardrails & Policies
 description: Azure Policy assignments and compliance controls applied to all Campus Cloud Azure subscriptions.
 permalink: /docs/azure/guardrails
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-03
 redirect_from:
   - /docs/guidelines/guardrails/azure
 ---
@@ -83,13 +83,13 @@ Regularly review your compliance posture:
 ## What You Can and Cannot Do
 
 ### You Can
-* Create any resource type in West US 2 (recommended), West Central US, East US 2, and Central US
+* Create any resource type in **West US 2** (recommended) or **West Central US**
 * Create custom NSG rules and route tables within your VNet
 * Create additional Resource Groups (with required tags)
 * Enable, configure, and disable most Azure services in your subscription
 
 ### You Cannot
-* Create resources in regions other than West US 2, West Central US, East US 2, and Central US
+* Create resources in regions other than West US 2 and West Central US
 * Enable public blob access on storage accounts
 * Remove or modify policy assignments (management group level, read-only)
 * Detach your subscription from the management group hierarchy

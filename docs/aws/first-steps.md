@@ -142,10 +142,11 @@ If no alarm is present, open a [ServiceNow ticket](https://ucsb.service-now.com/
 
 ## Getting Help
 
-| Issue | Where to go |
+| Issue | Where to Go |
 |---|---|
 | Access problems (can't sign in, missing role) | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) |
 | Missing VPC, networking issues | [Networking]({{ "/docs/aws/networking" | relative_url }}) |
 | Policy violations / Access Denied | [Guardrails]({{ "/docs/aws/guardrails" | relative_url }}) |
 | Billing questions | [Cost Management]({{ "/docs/general/cost-management" | relative_url }}) |
+| AWS service questions | [Enterprise Support]({{ "/docs/aws/#enterprise-support" | relative_url }}) — open a case in the AWS Console |
 | Everything else | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) |

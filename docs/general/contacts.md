@@ -2,7 +2,7 @@
 title: Account Contacts
 description: Best practices for setting cloud account contacts across all providers
 permalink: /docs/general/contacts
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-03
 redirect_from:
   - /docs/bestpractices/contacts
 ---
@@ -44,13 +44,19 @@ your provider:
 
 * [AWS First Steps — Set Account Contacts]({{ "/docs/aws/first-steps#step-3--set-account-contacts" | relative_url }}) —
   Alternate contacts (Security, Operations, Billing) in the AWS Account
-  Settings page.
+  Settings page. See the
+  [AWS documentation on alternate contacts](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-contact-alternate.html)
+  for details on what each contact type receives.
 * [Azure First Steps — Set Subscription Contacts]({{ "/docs/azure/first-steps#step-4--set-subscription-contacts" | relative_url }}) —
   Defender email notifications, budget alert recipients, and Service Health
-  alert rules.
+  alert rules. See the
+  [Azure notification settings documentation](https://learn.microsoft.com/en-us/azure/defender-for-cloud/configure-email-notifications)
+  for Defender for Cloud email configuration.
 * [GCP First Steps — Set Project Contacts]({{ "/docs/gcp/first-steps#step-3--set-project-contacts" | relative_url }}) —
   Essential Contacts for Security, Technical, and Billing notification
-  categories.
+  categories. See the
+  [GCP Essential Contacts documentation](https://cloud.google.com/resource-manager/docs/managing-notification-contacts)
+  for details on notification categories.
 
 ---
 

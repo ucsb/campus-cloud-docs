@@ -2,7 +2,7 @@
 title: Azure Networking
 description: Virtual WAN hub-spoke topology, VNet peering, and campus connectivity for Azure subscriptions.
 permalink: /docs/azure/networking
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-03
 ---
 
 ## Azure Networking Overview
@@ -36,12 +36,9 @@ centrally managed hub VNet is maintained by the Cloud Team. Subscription VNets
 |---|---|
 | West US 2 (Washington) | Primary — use for all new workloads |
 | West Central US (Wyoming) | Secondary / DR — use for replication or failover |
-| East US 2, Central US | Also allowed by policy; discuss with Cloud Team before use |
 
-Most workloads should be deployed in West US 2. Other regions not listed above
-are blocked by a Deny policy. Contact the Cloud Team before deploying primary
-workloads in East US 2 or Central US to ensure networking and compliance
-coverage.
+Most workloads should be deployed in **West US 2**. All other regions are
+blocked by a Deny policy at the management group level.
 
 ---
 

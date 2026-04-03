@@ -2,7 +2,7 @@
 title: Costs & Billing
 description: Cloud pricing, UC discounts, and how to manage your cloud spending
 permalink: /docs/general/cost-management
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-03
 redirect_from:
   - /docs/bestpractices/costmodels
   - /docs/aws/quicksight
@@ -54,6 +54,14 @@ Campus Cloud accounts:
   daily trend, and tag. Data is updated daily from AWS Cost and Usage Reports
   (typically a 24–48 hour lag). The QuickSight account name is
   `ucsb-campus-cloud`.
+
+  To sign in:
+  1. Open [quicksight.aws.amazon.com](https://quicksight.aws.amazon.com) in an **Incognito / Private** browser window (required to avoid SSO session conflicts).
+  2. Enter account name: **ucsb-campus-cloud**
+  3. Sign in with your UCSB email address (`<netid>@ucsb.edu`).
+  4. Navigate to **Shared Folders** to find the Campus Cloud cost dashboards.
+
+  {% include alert.html type="info" title="Use an Incognito window" content="QuickSight uses a different authentication flow than the AWS Console. Opening it in your normal browser session may redirect you incorrectly. Always use Incognito / Private mode." %}
 * **Azure — Cost Management Dashboard:** A custom Azure cost reporting tool
   maintained by the Cloud Team.
 
