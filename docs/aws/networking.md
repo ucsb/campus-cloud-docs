@@ -40,52 +40,6 @@ through the Transit Gateway — you do not need to configure this yourself.
 
 ---
 
-## VPC Options
-
-When your account is provisioned, the Cloud Team creates a VPC using one of two
-product types from the
-[Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }}):
-
-| VPC Type | Campus Network Access | Internet Access | Use When |
-|---|---|---|---|
-| Advanced VPC (Campus Connected) | Yes (via Transit Gateway) | Yes (via NAT) | You need to reach on-prem file shares, databases, or LDAP |
-| Simple VPC (Internet Only) | No | Yes (via NAT) | Public-facing apps with no campus dependency |
-
-Specify which type you need in your account request or
-[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
-You can have both types in the same account.
-
-### VPC Families
-
-When you launch a VPC product, choose a **family** that determines the number
-of subnets, their type, and the total IP address space:
-
-| Family | Subnets | IPs | Subnet Type | Availability Zones |
-|---|---|---|---|---|
-| n1.small.public | 1 | 32 | 1 public | 1 |
-| n1.small.private | 1 | 32 | 1 private | 1 |
-| n1.medium.public | 1 | 64 | 1 public | 1 |
-| n1.medium.private | 1 | 64 | 1 private | 1 |
-| n1.large.public | 1 | 128 | 1 public | 1 |
-| n1.large.private | 1 | 128 | 1 private | 1 |
-| n2.medium.public | 2 | 64 | 2 public | 2 |
-| n2.medium.private | 2 | 64 | 2 private | 2 |
-| n2.medium.mixed | 2 | 64 | 1 public, 1 private | 2 |
-| n2.large.public | 2 | 128 | 2 public | 2 |
-| n2.large.private | 2 | 128 | 2 private | 2 |
-| n2.large.mixed | 2 | 128 | 1 public, 1 private | 2 |
-| n4.large.mixed | 4 | 128 | 2 public, 2 private | 2 |
-| n2.xlarge.public | 2 | 256 | 2 public | 2 |
-| n2.xlarge.private | 2 | 256 | 2 private | 2 |
-| n2.xlarge.mixed | 2 | 256 | 1 public, 1 private | 2 |
-| n4.xlarge.mixed | 4 | 256 | 2 public, 2 private | 2 |
-
-Multi-AZ families (n2.\* and n4.\*) spread subnets across two Availability Zones
-for higher availability. If you're not sure which family to pick, `n2.large.mixed`
-is a good general-purpose starting point.
-
----
-
 ## Requesting Networking Changes
 
 All persistent networking changes (new CIDR, new Transit Gateway attachment,
@@ -246,4 +200,47 @@ If you need IPs for other regions or the most current values, open a
 
 ---
 
+## VPC Options
+
+When your account is provisioned, the Cloud Team creates a VPC using one of two
+product types from the
+[Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }}):
+
+| VPC Type | Campus Network Access | Internet Access | Use When |
+|---|---|---|---|
+| Advanced VPC (Campus Connected) | Yes (via Transit Gateway) | Yes (via NAT) | You need to reach on-prem file shares, databases, or LDAP |
+| Simple VPC (Internet Only) | No | Yes (via NAT) | Public-facing apps with no campus dependency |
+
+Specify which type you need in your account request or
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
+You can have both types in the same account.
+
+### VPC Families
+
+When you launch a VPC product, choose a **family** that determines the number
+of subnets, their type, and the total IP address space:
+
+| Family | Subnets | IPs | Subnet Type | Availability Zones |
+|---|---|---|---|---|
+| n1.small.public | 1 | 32 | 1 public | 1 |
+| n1.small.private | 1 | 32 | 1 private | 1 |
+| n1.medium.public | 1 | 64 | 1 public | 1 |
+| n1.medium.private | 1 | 64 | 1 private | 1 |
+| n1.large.public | 1 | 128 | 1 public | 1 |
+| n1.large.private | 1 | 128 | 1 private | 1 |
+| n2.medium.public | 2 | 64 | 2 public | 2 |
+| n2.medium.private | 2 | 64 | 2 private | 2 |
+| n2.medium.mixed | 2 | 64 | 1 public, 1 private | 2 |
+| n2.large.public | 2 | 128 | 2 public | 2 |
+| n2.large.private | 2 | 128 | 2 private | 2 |
+| n2.large.mixed | 2 | 128 | 1 public, 1 private | 2 |
+| n4.large.mixed | 4 | 128 | 2 public, 2 private | 2 |
+| n2.xlarge.public | 2 | 256 | 2 public | 2 |
+| n2.xlarge.private | 2 | 256 | 2 private | 2 |
+| n2.xlarge.mixed | 2 | 256 | 1 public, 1 private | 2 |
+| n4.xlarge.mixed | 4 | 256 | 2 public, 2 private | 2 |
+
+Multi-AZ families (n2.\* and n4.\*) spread subnets across two Availability Zones
+for higher availability. If you're not sure which family to pick, `n2.large.mixed`
+is a good general-purpose starting point.
 
