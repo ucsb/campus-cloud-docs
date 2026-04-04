@@ -5,10 +5,9 @@ permalink: /glossary/
 
 ## Glossary
 
-For general cloud terminology, these authoritative references stay current
-without our maintenance:
+For general cloud terminology, see:
 
-- [AWS Glossary](https://docs.aws.amazon.com/glossary/latest/reference/glos-chap.html)
+- [AWS Glossary](https://docs.aws.amazon.com/glossary/latest/reference/glos-chap.html) (Amazon)
 - [AWS ↔ Azure ↔ GCP service comparison](https://cloud.google.com/docs/get-started/aws-azure-gcp-service-comparison) (Google)
 - [AWS ↔ Azure service comparison](https://learn.microsoft.com/en-us/azure/architecture/aws-professional/services) (Microsoft)
 
@@ -49,8 +48,6 @@ that need a campus-specific definition.
 | **Quarantine** | When the Cloud Team isolates a compromised or policy-violating account — network access cut, credentials disabled. |
 | **Recovery Level (r1–r4)** | Backup and disaster-recovery requirements for your workload. Set via the `recovery-level` tag. |
 | **RFC 1918** | Internet standard defining private IP address ranges (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16). Campus Cloud VPCs and VNets use addresses from these ranges. |
-| **RPO** | Recovery Point Objective — maximum acceptable data loss measured in time (e.g., a 24-hour RPO means you could lose up to one day of data). |
-| **RTO** | Recovery Time Objective — maximum acceptable downtime before a service must be restored. |
 | **Service Catalog** | Pre-approved infrastructure templates you can deploy yourself (VPCs, budgets, EC2 instances, etc.). Currently available in AWS. |
 | **SLO** | Service Level Objective — a target availability percentage (e.g., 99.9% uptime) for a workload. |
 | **Tags / Labels** | Key-value pairs attached to resources for billing attribution, compliance, and governance. AWS and Azure call them *Tags*; GCP calls them *Labels*. |

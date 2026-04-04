@@ -2,7 +2,7 @@
 title: Security & Shared Responsibility
 description: How security responsibilities are divided between the Cloud Team, cloud providers, and you
 permalink: /docs/general/security
-last_reviewed: 2026-04-03
+last_reviewed: 2026-04-04
 redirect_from:
   - /docs/guidelines/security
 ---
@@ -68,26 +68,33 @@ For UC Policy IS-3 details see:
 
 ## Availability and Recovery
 
-Two additional classification dimensions help align your architecture with your
-operational needs:
+In addition to data sensitivity, two classification dimensions help align your
+architecture with your operational needs. Set both values using the required
+tags described in [Tagging & Labels]({{ "/docs/general/tagging" | relative_url }}).
 
-**Availability Level** — how critical is uptime for this workload?
+### Availability Level
 
-| Level | Meaning |
+How critical is uptime? Based on the
+[UC Data Classification standard](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html).
+
+| Level | Description |
 |---|---|
-| A1 | Best-effort, no SLO |
-| A2 | Business hours — outages OK overnight and on weekends |
-| A3 | Standard — 99.5% uptime target |
-| A4 | High availability — 99.9%+ uptime target |
+| A1 — Minimal | Loss of availability poses minimal impact or financial losses |
+| A2 — Low | Loss of availability may cause minor losses or inefficiencies |
+| A3 — Moderate | Loss of availability would result in moderate financial losses and/or reduced customer service |
+| A4 — High | Loss of availability would result in major impairment to overall operations and/or essential services |
 
-**Recovery Level** — what are your backup and recovery requirements?
+### Recovery Level
 
-| Level | Meaning |
-|---|---|
-| R1 | Best-effort — rebuild from scratch acceptable |
-| R2 | Standard — daily backups, 24-hour RPO |
-| R3 | Enhanced — frequent backups, 4-hour RPO |
-| R4 | Aggressive — near-zero RPO/RTO, cross-region replication |
+How quickly must you recover? Based on the
+[UC IS-12 IT Recovery Policy (PDF)](https://security.ucop.edu/files/documents/policies/is-12-it-recovery-policy.pdf).
+
+| Level | Description | Recovery Time |
+|---|---|---|
+| R1 — Deferrable | Service can be deferred | Up to 30 days |
+| R2 — Necessary | Service is necessary for normal operations | Up to 5 days |
+| R3 — Critical 2 | Alternatives sustainable up to 24 hours | Up to 24 hours |
+| R4 — Critical 1 | Life/safety — alternatives not sustainable | Up to 6 hours |
 
 Use these levels to guide your architecture decisions and to communicate
 requirements to the Cloud Team.
