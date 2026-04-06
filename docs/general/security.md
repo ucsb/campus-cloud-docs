@@ -17,59 +17,38 @@ compliance, and data — see
 
 ---
 
-## Data Classification
+## Least-Privilege Principle
 
-All data stored in the Campus Cloud should be classified. Use UCSB's four-level
-protection framework:
+Assign the minimum role needed for each person's responsibilities:
 
-| Level | Description | Examples |
-|---|---|---|
-| P1 — Public | No confidentiality requirement | Published research, public websites |
-| P2 — Internal | University internal use | Administrative data, internal reports |
-| P3 — Sensitive | Personally identifiable or proprietary | PII, FERPA, unpublished research |
-| P4 — Regulated | Federally regulated or export-controlled | HIPAA, CUI, ITAR |
-
-Set the appropriate `protection-level` tag on your account and resources. For
-P3 and P4 data, contact the Cloud Team before storing data to confirm your
-account type is appropriate.
-
-For UC Policy IS-3 details see:
-[https://security.ucop.edu/policies/it-policies.html](https://security.ucop.edu/policies/it-policies.html)
+* **AWS** — Use **ReadOnly** or **Billing** roles for stakeholders who only
+  need to review costs or resources. Use **PowerUser** for day-to-day work
+  and reserve **Administrator** for IAM changes.
+* **Azure** — Use **Application Owner** rather than **Subscription Owner** for
+  most day-to-day work.
+* **GCP** — Use project-level roles (Editor, Viewer) instead of broader roles
+  unless explicitly needed.
 
 ---
 
-## Availability and Recovery
+## Reporting a Security Incident
 
-In addition to data sensitivity, two classification dimensions help align your
-architecture with your operational needs. Set both values using the required
-tags described in [Tagging & Labels]({{ "/docs/general/tagging" | relative_url }}).
+If you suspect a security incident (unauthorized access, data exposure, unusual
+account activity):
 
-### Availability Level
+1. **Document immediately** — Note the account/project/subscription ID, resource
+   name, approximate time of the suspicious activity, and what you observed.
+2. **Do not delete evidence** — Do not terminate VMs, delete logs, revoke
+   service accounts, or rotate secrets before the Cloud Team has been notified.
+3. **Open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) marked Urgent** and describe the incident.
+   Include the account or project identifier.
+4. **Contact your department's ISO** (Information Security Officer) if regulated
+   data may be involved.
 
-How critical is uptime? Based on the
-[UC Data Classification standard](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html).
-
-| Level | Description |
-|---|---|
-| A1 — Minimal | Loss of availability poses minimal impact or financial losses |
-| A2 — Low | Loss of availability may cause minor losses or inefficiencies |
-| A3 — Moderate | Loss of availability would result in moderate financial losses and/or reduced customer service |
-| A4 — High | Loss of availability would result in major impairment to overall operations and/or essential services |
-
-### Recovery Level
-
-How quickly must you recover? Based on the
-[UC IS-12 IT Recovery Policy (PDF)](https://security.ucop.edu/files/documents/policies/is-12-it-recovery-policy.pdf).
-
-| Level | Description | Recovery Time |
-|---|---|---|
-| R1 — Deferrable | Service can be deferred | Up to 30 days |
-| R2 — Necessary | Service is necessary for normal operations | Up to 5 days |
-| R3 — Critical 2 | Alternatives sustainable up to 24 hours | Up to 24 hours |
-| R4 — Critical 1 | Life/safety — alternatives not sustainable | Up to 6 hours |
-
-Use these levels to guide your architecture decisions and to communicate
-requirements to the Cloud Team.
+Each provider page describes platform-specific emergency isolation steps:
+[AWS Security]({{ "/docs/aws/security" | relative_url }}) ·
+[Azure Security]({{ "/docs/azure/security" | relative_url }}) ·
+[GCP Security]({{ "/docs/gcp/security" | relative_url }})
 
 ---
 
@@ -110,20 +89,6 @@ contact the Cloud Team to request it.
 
 ---
 
-## Least-Privilege Principle
-
-Assign the minimum role needed for each person's responsibilities:
-
-* **AWS** — Use **ReadOnly** or **Billing** roles for stakeholders who only
-  need to review costs or resources. Use **PowerUser** for day-to-day work
-  and reserve **Administrator** for IAM changes.
-* **Azure** — Use **Application Owner** rather than **Subscription Owner** for
-  most day-to-day work.
-* **GCP** — Use project-level roles (Editor, Viewer) instead of broader roles
-  unless explicitly needed.
-
----
-
 ## External Collaborators
 
 All three providers require a `@ucsb.edu` identity. External collaborators
@@ -141,21 +106,52 @@ Options for granting access to external collaborators:
 
 ---
 
-## Reporting a Security Incident
+## Data Classification
 
-If you suspect a security incident (unauthorized access, data exposure, unusual
-account activity):
+All data and workloads in the Campus Cloud should be classified along three
+dimensions: protection level, availability level, and recovery level. Set all
+three values using the required tags described in
+[Tagging & Labels]({{ "/docs/general/tagging" | relative_url }}).
 
-1. **Document immediately** — Note the account/project/subscription ID, resource
-   name, approximate time of the suspicious activity, and what you observed.
-2. **Do not delete evidence** — Do not terminate VMs, delete logs, revoke
-   service accounts, or rotate secrets before the Cloud Team has been notified.
-3. **Open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) marked Urgent** and describe the incident.
-   Include the account or project identifier.
-4. **Contact your department's ISO** (Information Security Officer) if regulated
-   data may be involved.
+### Protection Level
 
-Each provider page describes platform-specific emergency isolation steps:
-[AWS Security]({{ "/docs/aws/security" | relative_url }}) ·
-[Azure Security]({{ "/docs/azure/security" | relative_url }}) ·
-[GCP Security]({{ "/docs/gcp/security" | relative_url }})
+How confidential is the data? Based on the
+[UC Data Classification standard](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html).
+
+
+| Level | Description | Examples |
+|---|---|---|
+| P1 — Public | No confidentiality requirement | Published research, public websites |
+| P2 — Internal | University internal use | Administrative data, internal reports |
+| P3 — Sensitive | Personally identifiable or proprietary | PII, FERPA, unpublished research |
+| P4 — Regulated | Federally regulated or export-controlled | HIPAA, CUI, ITAR |
+
+For P3 and P4 data, contact the Cloud Team before storing data to confirm your account type is appropriate.
+
+### Availability Level
+
+How critical is uptime? Based on the
+[UC Data Classification standard](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html).
+
+| Level | Description |
+|---|---|
+| A1 — Minimal | Loss of availability poses minimal impact or financial losses |
+| A2 — Low | Loss of availability may cause minor losses or inefficiencies |
+| A3 — Moderate | Loss of availability would result in moderate financial losses and/or reduced customer service |
+| A4 — High | Loss of availability would result in major impairment to overall operations and/or essential services |
+
+### Recovery Level
+
+How quickly must you recover? Based on the
+[UC IS-12 IT Recovery Policy (PDF)](https://security.ucop.edu/files/documents/policies/is-12-it-recovery-policy.pdf).
+
+| Level | Description | Recovery Time |
+|---|---|---|
+| R1 — Deferrable | Service can be deferred | Up to 30 days |
+| R2 — Necessary | Service is necessary for normal operations | Up to 5 days |
+| R3 — Critical 2 | Alternatives sustainable up to 24 hours | Up to 24 hours |
+| R4 — Critical 1 | Life/safety — alternatives not sustainable | Up to 6 hours |
+
+Use these levels to guide your architecture decisions and to communicate
+requirements to the Cloud Team.
+
