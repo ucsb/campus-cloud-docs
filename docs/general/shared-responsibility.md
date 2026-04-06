@@ -5,7 +5,7 @@ permalink: /docs/general/shared-responsibility
 last_reviewed: 2026-04-06
 ---
 
-## Shared Responsibility
+# Shared Responsibility
 
 The Campus Cloud operates on a shared responsibility model. Three parties each
 own a distinct layer:

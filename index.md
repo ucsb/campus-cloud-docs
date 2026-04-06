@@ -2,9 +2,11 @@
 layout: page
 title: "Campus Cloud Docs - Home"
 permalink: /
+redirect_from:
+  - /about/
 ---
 
-## UCSB Campus Cloud
+# UCSB Campus Cloud
 
 The UCSB Campus Cloud provides managed, policy-compliant cloud environments on
 AWS, Azure, and GCP for the campus community. The Cloud Team (ITS-CCID) operates

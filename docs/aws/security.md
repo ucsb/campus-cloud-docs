@@ -5,7 +5,7 @@ permalink: /docs/aws/security
 last_reviewed: 2026-03-30
 ---
 
-## AWS Security
+# AWS Security
 
 Every Campus Cloud AWS account comes with security tools already turned on.
 You don't need to set any of this up — it's ready when your account is

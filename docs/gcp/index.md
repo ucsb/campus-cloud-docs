@@ -5,7 +5,7 @@ permalink: /docs/gcp/
 last_reviewed: 2026-03-30
 ---
 
-## GCP at UCSB
+# GCP at UCSB
 
 The UCSB Campus Cloud GCP platform is organized as a **Google Cloud
 Organization** with a structured folder hierarchy managed by the Cloud Team.

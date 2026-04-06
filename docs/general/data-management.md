@@ -7,7 +7,7 @@ redirect_from:
   - /docs/guidelines/dmp
 ---
 
-## Data Management Plans
+# Data Management Plans
 
 Most federal granting agencies require a Data Management Plan (DMP) that describes
 how your research data will be collected, stored, protected, and shared. This

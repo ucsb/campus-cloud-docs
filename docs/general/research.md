@@ -7,7 +7,7 @@ redirect_from:
   - /docs/bestpractices/research
 ---
 
-## Cloud for Research
+# Cloud for Research
 
 Cloud computing has become a critical tool for researchers across fields — from
 running large-scale simulations to storing and processing sensitive research

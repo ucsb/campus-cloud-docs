@@ -5,7 +5,7 @@ permalink: /docs/azure/networking
 last_reviewed: 2026-04-03
 ---
 
-## Azure Networking Overview
+# Azure Networking Overview
 
 UCSB Campus Cloud uses **Azure Virtual WAN** with a hub-spoke topology. A
 centrally managed hub VNet is maintained by the Cloud Team. Subscription VNets

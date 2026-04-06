@@ -8,7 +8,7 @@ redirect_from:
   - /docs/azure/roles
 ---
 
-## Getting Started With Your Azure Subscription
+# Getting Started With Your Azure Subscription
 {:.no_toc}
 
 Your subscription is ready when you receive the provisioning confirmation from

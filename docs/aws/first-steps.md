@@ -7,7 +7,7 @@ redirect_from:
   - /docs/firststeps/awsfirststeps
 ---
 
-## Getting Started With Your AWS Account
+# Getting Started With Your AWS Account
 {:.no_toc}
 
 Your account is ready when you receive the provisioning confirmation email from

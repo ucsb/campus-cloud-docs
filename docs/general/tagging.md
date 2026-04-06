@@ -8,7 +8,7 @@ redirect_from:
   - /docs/guidelines/tagging
 ---
 
-## Tagging & Labels
+# Tagging & Labels
 
 Tags are key-value pairs you attach to cloud resources.
 The Campus Cloud uses them for billing attribution, compliance monitoring, and

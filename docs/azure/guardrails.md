@@ -7,7 +7,7 @@ redirect_from:
   - /docs/guidelines/guardrails/azure
 ---
 
-## Azure Guardrails
+# Azure Guardrails
 
 UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
 Azure subscription aligned with university security policy

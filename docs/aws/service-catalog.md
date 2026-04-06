@@ -8,7 +8,7 @@ redirect_from:
   - /docs/guidelines/servicecatalog
 ---
 
-## AWS Service Catalog
+# AWS Service Catalog
 
 The AWS Service Catalog in your account contains a curated set of
 **pre-approved, compliance-ready infrastructure templates** created and

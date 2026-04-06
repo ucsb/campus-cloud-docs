@@ -5,7 +5,7 @@ permalink: /docs/azure/security
 last_reviewed: 2026-03-30
 ---
 
-## Azure Security
+# Azure Security
 
 Every Campus Cloud Azure subscription comes with security tools already turned
 on. You don't need to set any of this up — it's ready when your subscription is

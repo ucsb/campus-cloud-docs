@@ -9,7 +9,7 @@ redirect_from:
   - /docs/guidelines/account-request
 ---
 
-## Get a Campus Cloud Account
+# Get a Campus Cloud Account
 
 ### Budgeting
 

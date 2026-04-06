@@ -7,7 +7,7 @@ redirect_from:
   - /docs/guidelines/security
 ---
 
-## Security
+# Security
 
 This page covers security guidance for your Campus Cloud account. For the
 foundational model that explains how responsibilities are divided between the

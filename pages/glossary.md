@@ -3,7 +3,7 @@ title: Glossary
 permalink: /glossary/
 ---
 
-## Glossary
+# Glossary
 
 For general cloud terminology, see:
 

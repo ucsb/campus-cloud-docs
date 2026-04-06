@@ -7,7 +7,7 @@ redirect_from:
   - /docs/bestpractices/contacts
 ---
 
-## Account Contacts
+# Account Contacts
 
 Every Campus Cloud account has contacts that receive critical notifications —
 security findings, billing alerts, and service health events. Setting these

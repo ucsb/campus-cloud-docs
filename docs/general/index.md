@@ -12,7 +12,7 @@ redirect_from:
   - /docs/general/identity
 ---
 
-## General Guidance
+# General Guidance
 
 These pages cover topics that apply across all three cloud providers (AWS,
 Azure, and GCP). For provider-specific details, see the

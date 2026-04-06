@@ -5,7 +5,7 @@ permalink: /docs/aws/
 last_reviewed: 2026-04-03
 ---
 
-## AWS at UCSB
+# AWS at UCSB
 
 The UCSB Campus Cloud AWS platform uses a multi-account structure where every
 account is pre-configured with guardrails, networking, audit logging, and

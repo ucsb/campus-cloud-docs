@@ -9,7 +9,7 @@ redirect_from:
   - /docs/guidelines/quicksight-dashboards
 ---
 
-## Costs & Billing
+# Costs & Billing
 {:.no_toc}
 
 Cloud resources are billed on a pay-as-you-go model — you pay for what you use,

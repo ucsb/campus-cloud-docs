@@ -5,7 +5,7 @@ permalink: /docs/gcp/networking
 last_reviewed: 2026-03-30
 ---
 
-## GCP Networking Overview
+# GCP Networking Overview
 
 Networking in the GCP Campus Cloud is centrally managed. **You cannot create
 VPC networks yourself** — a deny policy blocks VPC creation for all users. Only

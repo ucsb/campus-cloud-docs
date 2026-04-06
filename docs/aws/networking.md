@@ -8,7 +8,7 @@ redirect_from:
   - /docs/guidelines/networking
 ---
 
-## AWS Networking Overview
+# AWS Networking Overview
 {:.no_toc}
 
 UCSB Campus Cloud uses **AWS Transit Gateway** as the central hub for network

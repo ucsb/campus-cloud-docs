@@ -5,7 +5,7 @@ permalink: /docs/azure/
 last_reviewed: 2026-04-03
 ---
 
-## Azure at UCSB
+# Azure at UCSB
 
 The UCSB Campus Cloud Azure platform provides every subscription inside a
 shared management group hierarchy with pre-applied policies, networking, and

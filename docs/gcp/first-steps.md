@@ -7,7 +7,7 @@ redirect_from:
   - /docs/firststeps/gcpfirststeps
 ---
 
-## Getting Started With Your GCP Project
+# Getting Started With Your GCP Project
 {:.no_toc}
 
 Your project is ready when you receive the provisioning confirmation from the

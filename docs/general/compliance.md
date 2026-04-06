@@ -7,7 +7,7 @@ redirect_from:
   - /docs/guidelines/compliance
 ---
 
-## Compliance & Governance
+# Compliance & Governance
 
 The Campus Cloud uses a [shared responsibility model]({{ "/docs/general/shared-responsibility" | relative_url }}).
 The Landing Zone provides a compliance baseline; you are responsible for the

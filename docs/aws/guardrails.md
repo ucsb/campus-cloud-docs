@@ -7,7 +7,7 @@ redirect_from:
   - /docs/guidelines/guardrails/aws
 ---
 
-## AWS Guardrails
+# AWS Guardrails
 
 UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
 AWS account aligned with university security policy

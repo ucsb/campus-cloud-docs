@@ -7,7 +7,7 @@ redirect_from:
   - /docs/bestpractices/close
 ---
 
-## Close an Account
+# Close an Account
 
 {% include alert.html type="warning" title="This cannot be undone" content="Once account closure is confirmed, all resources and data in the account are permanently destroyed. Back up everything you need before starting this process." %}
 

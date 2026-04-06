@@ -7,7 +7,7 @@ redirect_from:
   - /docs/guidelines/migrate
 ---
 
-## Migrate to Campus Cloud
+# Migrate to Campus Cloud
 
 If you have an existing personal or free cloud account in AWS, Azure, or GCP,
 you can migrate it into the Campus Cloud Landing Zone. Migrating gives you

@@ -5,7 +5,7 @@ permalink: /docs/gcp/security
 last_reviewed: 2026-03-30
 ---
 
-## GCP Security
+# GCP Security
 
 Every Campus Cloud GCP project comes with security tools already turned on.
 You don't need to set any of this up — it's ready when your project is

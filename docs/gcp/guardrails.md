@@ -5,7 +5,7 @@ permalink: /docs/gcp/guardrails
 last_reviewed: 2026-03-30
 ---
 
-## GCP Guardrails
+# GCP Guardrails
 
 UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
 GCP project aligned with university security policy
