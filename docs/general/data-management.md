@@ -2,7 +2,7 @@
 title: Data Management Plans
 description: DMP guidelines for researchers using the Campus Cloud
 permalink: /docs/general/data-management
-last_reviewed: 2026-04-03
+last_reviewed: 2026-04-06
 redirect_from:
   - /docs/guidelines/dmp
 ---
@@ -34,17 +34,8 @@ controls (e.g., HIPAA Business Associate Agreement, CUI handling procedures).
 
 ---
 
-## Shared Responsibility for Research Data
-
-The Campus Cloud adheres to a Shared Responsibility Model:
-
-* **The Campus Cloud Team provides:** security controls, audit infrastructure,
-  compliance guardrails, and platform monitoring.
-* **You are responsible for:** classifying your data, configuring your
-  workloads appropriately, managing access, and ensuring your processes follow
-  applicable regulations.
-
----
+{% capture alert_content %}The Campus Cloud uses a shared responsibility model. The Cloud Team provides security controls, audit infrastructure, and compliance guardrails. You are responsible for classifying your data, managing access, and following applicable regulations. See <a href="{{ "/docs/general/shared-responsibility" | relative_url }}">Shared Responsibility</a> for the full breakdown.{% endcapture %}
+{% include alert.html type="info" title="Shared Responsibility" content=alert_content %}
 
 ## Key Compliance Frameworks
 

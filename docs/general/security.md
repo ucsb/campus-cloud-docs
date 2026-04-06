@@ -1,47 +1,19 @@
 ---
-title: Security & Shared Responsibility
-description: How security responsibilities are divided between the Cloud Team, cloud providers, and you
+title: Security
+description: Security guidance for Campus Cloud accounts — data classification, monitoring, least-privilege, and incident response
 permalink: /docs/general/security
-last_reviewed: 2026-04-04
+last_reviewed: 2026-04-06
 redirect_from:
   - /docs/guidelines/security
 ---
 
-## Security & Shared Responsibility
+## Security
 
-Cloud security is a shared responsibility. The cloud provider secures the
-underlying infrastructure. The Campus Cloud Team secures the Campus Cloud Landing Zone
-configuration, policies, and platform tooling. You are responsible for how you
-configure and use the resources in your account.
-
-This model applies across all three providers.
-
----
-
-### What the Cloud Provider Is Responsible For
-
-* Physical data center security, hardware, and networking infrastructure
-* The underlying compute, storage, and network systems that managed services
-  run on
-* Software patches and updates for managed services (RDS, Cloud SQL, Azure SQL, etc.)
-
-### What the Campus Cloud Team Is Responsible For
-
-* Campus Cloud Landing Zone configuration: guardrails, org policies, management group
-  structure
-* Centralized audit logging and security monitoring
-* Campus network connectivity
-* Identity federation (UCSB SSO to each provider)
-* Platform-level compliance controls (NIST 800-171 baseline)
-
-### What You Are Responsible For
-
-* Classifying your data and setting appropriate tags (protection level, etc.)
-* Configuring your workloads securely (storage bucket permissions, security
-  groups, firewall rules)
-* Managing access to your account (who has which role)
-* Responding to security findings in your account
-* Ensuring your use complies with UC Policy IS-3 and applicable laws
+This page covers security guidance for your Campus Cloud account. For the
+foundational model that explains how responsibilities are divided between the
+cloud providers, the Campus Cloud Team, and you — across security, cost,
+compliance, and data — see
+[Shared Responsibility]({{ "/docs/general/shared-responsibility" | relative_url }}).
 
 ---
 

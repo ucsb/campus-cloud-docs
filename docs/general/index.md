@@ -2,7 +2,7 @@
 title: General Guidance
 description: Cross-provider guidance for security, identity, tagging, compliance, cost management, and more.
 permalink: /docs/general/
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-06
 redirect_from:
   - /docs/bestpractices
   - /docs/firststeps
@@ -50,7 +50,8 @@ library (free with UCSB NetID) includes:
 
 | Topic | Description |
 |---|---|
-| [Security]({{ "/docs/general/security" | relative_url }}) | Shared-responsibility model, encryption, logging, and vulnerability management |
+| [Shared Responsibility]({{ "/docs/general/shared-responsibility" | relative_url }}) | How responsibilities are divided between the cloud providers, the Campus Cloud Team, and you |
+| [Security]({{ "/docs/general/security" | relative_url }}) | Data classification, security monitoring, least-privilege, and incident response |
 | [Tagging]({{ "/docs/general/tagging" | relative_url }}) | Required tags, naming conventions, and how tags are enforced |
 | [Compliance]({{ "/docs/general/compliance" | relative_url }}) | UC IS-3, NIST 800-171, and how to request a compliant account |
 | [Cost Management]({{ "/docs/general/cost-management" | relative_url }}) | Budgets, alerts, and strategies for controlling cloud spend |

@@ -14,6 +14,8 @@
       children:
         - title: Overview
           url: "docs/general"
+        - title: Shared Responsibility
+          url: "docs/general/shared-responsibility"
         - title: Security
           url: "docs/general/security"
         - title: Compliance

@@ -2,7 +2,7 @@
 title: Costs & Billing
 description: Cloud pricing, UC discounts, and how to manage your cloud spending
 permalink: /docs/general/cost-management
-last_reviewed: 2026-04-03
+last_reviewed: 2026-04-06
 redirect_from:
   - /docs/bestpractices/costmodels
   - /docs/aws/quicksight
@@ -14,7 +14,10 @@ redirect_from:
 
 Cloud resources are billed on a pay-as-you-go model — you pay for what you use,
 typically by the hour or second. This section explains how billing works in the
-Campus Cloud, the discounts available to UCSB, and how to keep costs under control.
+Campus Cloud, the discounts available to UCSB, and how to keep costs under
+control. For how cost responsibilities are divided between you, the Cloud Team,
+and the provider, see
+[Shared Responsibility]({{ "/docs/general/shared-responsibility" | relative_url }}).
 
 * TOC
 {:toc}
@@ -61,7 +64,9 @@ Campus Cloud accounts:
   3. Sign in with your UCSB email address (`<netid>@ucsb.edu`).
   4. Navigate to **Shared Folders** to find the Campus Cloud cost dashboards.
 
-  {% include alert.html type="info" title="Use an Incognito window" content="QuickSight uses a different authentication flow than the AWS Console. Opening it in your normal browser session may redirect you incorrectly. Always use Incognito / Private mode." %}
+  {% capture alert_content %}QuickSight uses a different authentication flow than the AWS Console. Opening it in your normal browser session may redirect you incorrectly. Always use Incognito / Private mode.{% endcapture %}
+  {% include alert.html type="info" title="Use an Incognito window" content=alert_content %}
+
 * **Azure — Cost Management Dashboard:** A custom Azure cost reporting tool
   maintained by the Cloud Team.
 

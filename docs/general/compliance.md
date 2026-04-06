@@ -2,12 +2,16 @@
 title: Compliance & Governance
 description: NIST 800-171, UC IS-3, and how to request a compliant account
 permalink: /docs/general/compliance
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-06
 redirect_from:
   - /docs/guidelines/compliance
 ---
 
 ## Compliance & Governance
+
+The Campus Cloud uses a [shared responsibility model]({{ "/docs/general/shared-responsibility" | relative_url }}).
+The Landing Zone provides a compliance baseline; you are responsible for the
+controls that depend on your specific workloads and processes.
 
 The Campus Cloud is designed to align with two key standards:
 
