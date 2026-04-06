@@ -53,6 +53,9 @@ color: "#003660"
 # Build settings
 markdown: kramdown
 
+plugins:
+  - jekyll-redirect-from
+
 # If you add tags to pages, define this variable to link them to some external search
 # If you want to link to tags locally on the site, leave this commented out
 # tag_search_endpoint: https://ask.cyberinfrastructure.org/search?q=
