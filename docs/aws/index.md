@@ -122,7 +122,7 @@ Response times depend on case severity — see
 [AWS Support Plans](https://aws.amazon.com/premiumsupport/plans/) for SLA
 details.
 
-{% include alert.html type="info" title="Open a Campus Cloud ticket first for platform issues" content="For issues related to account access, networking, guardrails, or Campus Cloud configuration, open a ServiceNow ticket with the Cloud Team rather than an AWS Support case. Use AWS Support for service-specific technical questions about your workloads." %}
+{% include alert.html type="info" title="Open a Campus Cloud ticket first for platform issues" content="For issues related to account access, networking, guardrails, or Campus Cloud configuration, <a href='https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5'>open a ServiceNow ticket with the Cloud Team</a> rather than an AWS Support case. Use AWS Support for service-specific technical questions about your workloads." %}
 
 ---
 

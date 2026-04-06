@@ -4,6 +4,7 @@ title: "Get a Campus Cloud Account"
 permalink: /getting-started
 last_reviewed: 2026-04-01
 redirect_from:
+  - /getting-started/
   - /getting-started/procurement
   - /docs/guidelines/account-request
 ---
