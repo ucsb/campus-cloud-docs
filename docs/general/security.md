@@ -70,9 +70,7 @@ For provider-specific security best practices, see:
 * [Azure Security Best Practices](https://learn.microsoft.com/en-us/azure/security/fundamentals/best-practices-and-patterns)
 * [GCP Security Best Practices](https://cloud.google.com/security/best-practices)
 
----
-
-## Wiz Cloud Security Posture Management
+### Wiz Cloud Security Posture Management
 
 UCSB Campus Cloud uses [Wiz](https://www.wiz.io/) for additional security
 posture scanning across all cloud environments (AWS, Azure, GCP). Wiz performs
