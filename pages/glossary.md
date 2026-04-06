@@ -14,8 +14,6 @@ For general cloud terminology, see:
 The table below covers terms that are specific to the UCSB Campus Cloud or
 that need a campus-specific definition.
 
----
-
 | Term | Definition |
 |---|---|
 | **Allowed Regions** | US regions where you can deploy resources: AWS (us-east-1, us-west-2), Azure (West US 2, West Central US), GCP (us-central1, us-west1). |

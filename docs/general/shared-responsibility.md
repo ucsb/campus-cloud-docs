@@ -21,24 +21,6 @@ domain — security, cost, compliance, and data management.
 
 ## Responsibilities by Party
 
-### What the Cloud Provider Is Responsible For
-
-* Physical data center security, hardware, and networking infrastructure
-* The underlying compute, storage, and network systems that managed services
-  run on
-* Software patches and updates for managed services (RDS, Cloud SQL, Azure SQL, etc.)
-
-### What the Campus Cloud Team Is Responsible For
-
-* Landing Zone configuration: guardrails, org policies, management group
-  structure
-* Centralized audit logging and security monitoring
-* Campus network connectivity
-* Identity federation (UCSB SSO to each provider)
-* Platform-level compliance controls (NIST 800-171 baseline)
-* Baseline security tooling that runs continuously in every account (these
-  incur a small cost — see [Baseline Costs]({{ "/docs/general/cost-management#baseline-costs" | relative_url }}))
-
 ### What You Are Responsible For
 
 * **Security:** Configuring your workloads securely (storage bucket permissions,
@@ -54,16 +36,34 @@ domain — security, cost, compliance, and data management.
 * **Access:** Granting the minimum role necessary to each person in your
   account
 
+### What the Campus Cloud Team Is Responsible For
+
+* Landing Zone configuration: guardrails, org policies, management group
+  structure
+* Centralized audit logging and security monitoring
+* Campus network connectivity
+* Identity federation (UCSB SSO to each provider)
+* Platform-level compliance controls (NIST 800-171 baseline)
+* Baseline security tooling that runs continuously in every account (these
+  incur a small cost — see [Baseline Costs]({{ "/docs/general/cost-management#baseline-costs" | relative_url }}))
+
+### What the Cloud Provider Is Responsible For
+
+* Physical data center security, hardware, and networking infrastructure
+* The underlying compute, storage, and network systems that managed services
+  run on
+* Software patches and updates for managed services (RDS, Cloud SQL, Azure SQL, etc.)
+
 ---
 
 ## Summary
 
-| Domain | Cloud Provider | Campus Cloud Team | You |
+| Domain | You | Campus Cloud Team | Cloud Provider |
 |---|---|---|---|
-| **Security** | Infrastructure security, managed-service patching | Guardrails, audit logging, security monitoring, SSO | Workload configuration, access control, finding remediation |
-| **Cost** | Billing and invoicing | Baseline tooling (runs at a cost to you), UC enterprise discount negotiation | Budget alerts, spend monitoring, rightsizing |
-| **Compliance** | Certifications (SOC 2, ISO 27001, etc.) | Landing Zone controls, NIST 800-171 baseline, compliance tracking tools | Data classification, tagging, regulatory adherence |
-| **Data** | Storage durability, encryption at rest | Encryption defaults, audit trail of data access | Data classification, retention planning, access management |
+| **Security** | Workload configuration, access control, finding remediation | Guardrails, audit logging, security monitoring, SSO | Infrastructure security, managed-service patching |
+| **Cost** | Budget alerts, spend monitoring, rightsizing | Baseline tooling (runs at a cost to you), UC enterprise discount negotiation | Billing and invoicing |
+| **Compliance** | Data classification, tagging, regulatory adherence | Landing Zone controls, NIST 800-171 baseline, compliance tracking tools | Certifications (SOC 2, ISO 27001, etc.) |
+| **Data** | Data classification, retention planning, access management | Encryption defaults, audit trail of data access | Storage durability, encryption at rest |
 
 For the cloud providers' own descriptions of shared responsibility, see:
 * [AWS Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/)
