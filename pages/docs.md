@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Documentation
+description: Full index of all Campus Cloud documentation pages.
 permalink: /docs/
+last_reviewed: 2026-04-06
 ---
 
 # Documentation

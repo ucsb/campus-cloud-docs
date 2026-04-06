@@ -2,7 +2,7 @@
 title: GCP Networking
 description: Networking constraints, current limitations, and how to request network resources for GCP projects.
 permalink: /docs/gcp/networking
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-06
 ---
 
 # GCP Networking Overview
@@ -20,7 +20,7 @@ If your project needs networking, open a [ServiceNow ticket](https://ucsb.servic
 | Capability | Available? |
 |---|---|
 | User-created VPCs | No — blocked by policy |
-| Internet egress via Cloud NAT | Not required — outbound internet traffic is not restricted |
+| Internet egress via Cloud NAT | Provisioned with your VPC — provides outbound internet access |
 | VPC peering | Not available (VPC creation is blocked; contact Cloud Team if needed) |
 | Shared VPC attachment | Not available (contact Cloud Team if needed) |
 
@@ -37,6 +37,7 @@ The following constraints are enforced across all projects:
 * **Custom-mode VPCs only** — auto-mode VPCs (which create subnets in every
   region) are blocked by a custom constraint.
 * **No external IP addresses on VMs** — VMs may not have public IPs.
+  Outbound internet access is provided via Cloud NAT.
 * **Allowed regions:** us-central1 (Iowa) and us-west1 (Oregon) only.
 * **VPC flow logs required** — subnets without flow logs cannot be created.
 

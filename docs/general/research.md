@@ -2,7 +2,7 @@
 title: Cloud for Research
 description: Using the UCSB Campus Cloud for research computing
 permalink: /docs/general/research
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-06
 redirect_from:
   - /docs/bestpractices/research
 ---
@@ -99,8 +99,9 @@ If your grant requires a Data Management Plan, see [Data Management Plans]({{ "/
 
 **Can I use the Campus Cloud for a class or student project?**
 Yes, with faculty sponsorship and a Purchase Order. Student projects under
-faculty supervision qualify. For short-term or no-budget use, GCP's Sandbox
-Unfunded folder allows project creation without billing — contact the Cloud Team.
+faculty supervision qualify. For short-term or no-budget use, GCP's
+[Sandbox Unfunded]({{ "/docs/gcp/#organization-hierarchy" | relative_url }}) folder allows
+project creation without billing.
 
 **How do I get GPU access?**
 Request a standard account and provision GPU-enabled instance types (e.g., AWS

@@ -2,7 +2,7 @@
 title: AWS Guardrails & SCPs
 description: Service Control Policies and Control Tower controls applied to all Campus Cloud AWS accounts.
 permalink: /docs/aws/guardrails
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-06
 redirect_from:
   - /docs/guidelines/guardrails/aws
 ---
@@ -13,7 +13,7 @@ UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
 AWS account aligned with university security policy
 ([UC IS-3](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html))
 and the federal
-[NIST 800-171]({{ site.baseurl }}/glossary#nist-800-171) standard for
+[NIST 800-171]({{ "/glossary" | relative_url }}) standard for
 protecting sensitive research data.
 
 Guardrails are designed to maintain a safe, compliant baseline without getting

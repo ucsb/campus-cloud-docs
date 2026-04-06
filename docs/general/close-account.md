@@ -2,7 +2,7 @@
 title: Close an Account
 description: How to close a Campus Cloud account on AWS, Azure, or GCP
 permalink: /docs/general/close-account
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-06
 redirect_from:
   - /docs/bestpractices/close
 ---
@@ -56,7 +56,7 @@ process.
 
 {% include alert.html type="warning" title="Do not close your PO immediately" content="The PO associated with the account should not be closed for 30 days after the final invoice to ensure Accounting has time to process it. The Cloud Team invoices for the previous month's costs approximately three weeks after month-end." %}
 
-The Service Now ticket will remain open until the final invoice is submitted.
+The ServiceNow ticket will remain open until the final invoice is submitted.
 All correspondence about the account closure should be in the ticket.
 
 ---

@@ -2,7 +2,7 @@
 title: AWS Overview
 description: Overview of the UCSB Campus Cloud AWS environment — accounts, regions, default configuration, and how to access it.
 permalink: /docs/aws/
-last_reviewed: 2026-04-03
+last_reviewed: 2026-04-06
 ---
 
 # AWS at UCSB
@@ -82,14 +82,13 @@ and exceptions.
 
 ## Roles
 
-Four roles are created in every account using the naming pattern
-`ucsb-idp-<AccountName>-<RoleName>`. Assignments are managed via **im.ucsb.edu**.
+Four roles are created in every account. Assignments are managed via **im.ucsb.edu**.
 
 | Role | Capabilities |
 |---|---|
 | Administrator | Full account access (use sparingly) |
 | PowerUser | Create/manage most resources; cannot modify IAM roles |
-| ReadOnly | View-only; useful for auditors and stakeholders |
+| ReadOnly | View resource configurations and security posture |
 | Billing | View billing data only |
 
 See the [First Steps]({{ "/docs/aws/first-steps" | relative_url }}) page for instructions on
@@ -128,7 +127,7 @@ details.
 
 ## Next Steps
 
-* [Request an Account]({{ "/getting-started/procurement" | relative_url }})
+* [Request an Account]({{ "/getting-started" | relative_url }})
 * [First Steps]({{ "/docs/aws/first-steps" | relative_url }})
 * [Networking]({{ "/docs/aws/networking" | relative_url }})
 * [Guardrails & SCPs]({{ "/docs/aws/guardrails" | relative_url }})

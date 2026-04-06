@@ -1,6 +1,8 @@
 ---
 title: Glossary
+description: Definitions of terms specific to the UCSB Campus Cloud.
 permalink: /glossary/
+last_reviewed: 2026-04-06
 ---
 
 # Glossary

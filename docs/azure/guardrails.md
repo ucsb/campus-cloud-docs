@@ -2,7 +2,7 @@
 title: Azure Guardrails & Policies
 description: Azure Policy assignments and compliance controls applied to all Campus Cloud Azure subscriptions.
 permalink: /docs/azure/guardrails
-last_reviewed: 2026-04-03
+last_reviewed: 2026-04-06
 redirect_from:
   - /docs/guidelines/guardrails/azure
 ---
@@ -13,7 +13,7 @@ UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
 Azure subscription aligned with university security policy
 ([UC IS-3](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html))
 and the federal
-[NIST 800-171]({{ site.baseurl }}/glossary#nist-800-171) standard for
+[NIST 800-171]({{ "/glossary" | relative_url }}) standard for
 protecting sensitive research data.
 
 Guardrails are designed to maintain a safe, compliant baseline without getting
@@ -83,13 +83,13 @@ Regularly review your compliance posture:
 ## What You Can and Cannot Do
 
 ### You Can
-* Create any resource type in **West US 2** (recommended) or **West Central US**
+* Create any resource type in **West US 2** (recommended), **West Central US**, **East US 2**, or **Central US**
 * Create custom NSG rules and route tables within your VNet
 * Create additional Resource Groups (with required tags)
 * Enable, configure, and disable most Azure services in your subscription
 
 ### You Cannot
-* Create resources in regions other than West US 2 and West Central US
+* Create resources in regions other than the four allowed (West US 2, West Central US, East US 2, Central US)
 * Enable public blob access on storage accounts
 * Remove or modify policy assignments (management group level, read-only)
 * Detach your subscription from the management group hierarchy

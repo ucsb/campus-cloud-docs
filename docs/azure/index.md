@@ -2,7 +2,7 @@
 title: Azure Overview
 description: Overview of the UCSB Campus Cloud Azure environment — subscriptions, management groups, regions, and what is pre-configured.
 permalink: /docs/azure/
-last_reviewed: 2026-04-03
+last_reviewed: 2026-04-06
 ---
 
 # Azure at UCSB
@@ -20,8 +20,7 @@ security baseline.
 |---|---|
 | Sign-in URL | [portal.azure.com](https://portal.azure.com) |
 | Identity Provider | UCSB Microsoft Entra ID (Azure AD) |
-| Primary Region | West US 2 (Washington) |
-| Secondary Region | West Central US (Wyoming) |
+| Allowed Regions | West US 2 (recommended), West Central US, East US 2, Central US |
 | New Subscription Turnaround | ~2 business days after PO is approved |
 
 ---
@@ -74,10 +73,9 @@ allowed values.
 
 ## Regions
 
-All subscriptions are configured for **West US 2** as the primary region.
-**West Central US** is available as a secondary for disaster recovery or
-failover. All other regions are blocked by a Deny policy at the management
-group level.
+Four regions are available: **West US 2**, **West Central US**, **East US 2**,
+and **Central US**. West US 2 is recommended for most workloads. All other
+regions are blocked by a Deny policy at the management group level.
 
 ---
 

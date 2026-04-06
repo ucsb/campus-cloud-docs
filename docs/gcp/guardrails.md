@@ -2,7 +2,7 @@
 title: GCP Guardrails & Org Policies
 description: Organization policy constraints and IAM deny policies applied to all Campus Cloud GCP projects.
 permalink: /docs/gcp/guardrails
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-06
 ---
 
 # GCP Guardrails
@@ -11,7 +11,7 @@ UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
 GCP project aligned with university security policy
 ([UC IS-3](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html))
 and the federal
-[NIST 800-171]({{ site.baseurl }}/glossary#nist-800-171) standard for
+[NIST 800-171]({{ "/glossary" | relative_url }}) standard for
 protecting sensitive research data.
 
 Guardrails are designed to maintain a safe, compliant baseline without getting

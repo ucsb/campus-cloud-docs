@@ -18,7 +18,7 @@ The Campus Cloud is designed to align with two key standards:
 * **[UC Policy IS-3](https://security.ucop.edu/policies/it-policies.html)** —
   University of California information security policy. All Campus Cloud
   accounts must comply.
-* **[NIST 800-171 Rev 2](https://csrc.nist.gov/publications/detail/sp/800-171/rev-2/final)** —
+* **[NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final)** —
   federal standard for protecting Controlled Unclassified Information (CUI).
   Required to receive federal research funding involving sensitive data.
 

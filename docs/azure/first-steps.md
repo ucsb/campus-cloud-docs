@@ -2,7 +2,7 @@
 title: Azure First Steps
 description: What to do after your Azure subscription is provisioned — sign in, verify setup, deploy your first resource.
 permalink: /docs/azure/first-steps
-last_reviewed: 2026-04-01
+last_reviewed: 2026-04-06
 redirect_from:
   - /docs/firststeps/azurefirststeps
   - /docs/azure/roles

@@ -11,10 +11,9 @@ remote_theme: vsoch/docsy-jekyll
 title: Campus Cloud Documentation
 email: info@cloud.ucsb.edu
 author: Campus Cloud Team
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: >
+  UCSB Campus Cloud documentation — managed, policy-compliant cloud
+  environments on AWS, Azure, and GCP for the campus community.
 
 # --- Production (docs.cloud.ucsb.edu) ---
 baseurl: ""

@@ -2,7 +2,7 @@
 title: AWS First Steps
 description: What to do after your AWS account is provisioned — sign in, set up billing, deploy your first resource.
 permalink: /docs/aws/first-steps
-last_reviewed: 2026-04-01
+last_reviewed: 2026-04-06
 redirect_from:
   - /docs/firststeps/awsfirststeps
 ---
@@ -41,7 +41,7 @@ users or local passwords — all access is federated through UCSB Shibboleth.
 |---|---|
 | Administrator (`ucsb-idp-administrator`) | Full access to all AWS services and resources, including IAM |
 | PowerUser (`ucsb-idp-poweruser`) | Full access to AWS services; cannot manage IAM |
-| ReadOnly (`ucsb-idp-readonly`) | View-only access to all AWS resources |
+| ReadOnly (`ucsb-idp-readonly`) | View resource configurations and security posture |
 | Billing (`ucsb-idp-billing`) | View billing and cost data only |
 
 Use **PowerUser** for day-to-day work. Reserve **Administrator** for IAM

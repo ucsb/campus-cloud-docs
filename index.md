@@ -1,7 +1,9 @@
 ---
 layout: page
 title: "Campus Cloud Docs - Home"
+description: UCSB Campus Cloud documentation — managed, policy-compliant AWS, Azure, and GCP environments for the campus community.
 permalink: /
+last_reviewed: 2026-04-06
 redirect_from:
   - /about/
 ---
@@ -27,7 +29,7 @@ Using the Campus Cloud means:
   available to Campus Cloud accounts. Contact the Cloud Team to discuss the
   right support tier for your workload.
 
-New here? Start with [Training Resources]({{ "/docs/general/" | relative_url }}) or
+New here? Start with [General Guidance]({{ "/docs/general/" | relative_url }}) or
 [Getting Started]({{ "/getting-started" | relative_url }}).
 
 ---
