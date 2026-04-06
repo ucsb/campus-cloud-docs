@@ -10,9 +10,9 @@ last_reviewed: 2026-04-06
 The Campus Cloud operates on a shared responsibility model. Three parties each
 own a distinct layer:
 
-* **The cloud provider** secures the underlying infrastructure.
-* **The Campus Cloud Team** secures the Landing Zone configuration, policies, and platform tooling.
 * **You** are responsible for how you configure and use the resources in your account.
+* **The Campus Cloud Team** manages the Landing Zone configuration, policies, and platform tooling.
+* **The cloud provider** manages the underlying infrastructure.
 
 This model applies across all three providers (AWS, Azure, GCP) and across every
 domain — security, cost, compliance, and data management.
