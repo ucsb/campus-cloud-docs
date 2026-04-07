@@ -38,7 +38,7 @@ github_repo: "campus-cloud-docs"
 feedback: false
 
 # Link to a privacy policy in footer, uncomment and define if wanted
-privacy: http://www.policy.ucsb.edu/privacy-notification/
+privacy: https://www.privacy.ucsb.edu/information-privacy/website-privacy
 
 # google-analytics: UA-XXXXXXXXXX
 # Image and (square) dimension for logo (don't start with /)
