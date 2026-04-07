@@ -2,7 +2,7 @@
 title: Compliance & Governance
 description: NIST 800-171, UC IS-3, and how to request a compliant account
 permalink: /docs/general/compliance
-last_reviewed: 2026-04-06
+last_reviewed: 2026-04-07
 redirect_from:
   - /docs/guidelines/compliance
 ---
@@ -69,8 +69,8 @@ tier, you have two options:
 2. **Enable additional controls** on your existing account to increase
    compliance coverage.
 
-Open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) or email
-[info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu) to discuss your options.
+Email [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu) to discuss your options, or open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) if you are ready to proceed.
 
 ---
 

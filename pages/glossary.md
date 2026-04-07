@@ -2,7 +2,7 @@
 title: Glossary
 description: Definitions of terms specific to the UCSB Campus Cloud.
 permalink: /glossary/
-last_reviewed: 2026-04-06
+last_reviewed: 2026-04-07
 ---
 
 # Glossary
@@ -24,7 +24,7 @@ that need a campus-specific definition.
 | **Campus Cloud Account** | General term for your cloud workspace. AWS calls it an *Account*, Azure a *Subscription*, GCP a *Project*. |
 | **Campus Cloud Landing Zone** | The secure, pre-configured multi-account environment the Cloud Team maintains for each cloud provider. |
 | **Campus SSO** | Sign in with your UCSB NetID. AWS uses Shibboleth SAML; Azure and GCP use Entra ID federation. |
-| **Cloud Team** | The ITS team (ITS-CCID) that operates the Campus Cloud. Reachable via [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5). |
+| **Cloud Team** | The ITS team (ITS-CCID) that operates the Campus Cloud. For support and service requests, use [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5). For general questions and consulting, email [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu). |
 | **CUI** | Controlled Unclassified Information — sensitive federal research data requiring NIST 800-171 protections. |
 | **Data Management Plan (DMP)** | Documentation of how research data will be stored and managed. Use UC's [DMPTool](https://dmptool.org/). |
 | **DNSSEC** | DNS Security Extensions — cryptographic protocol that authenticates DNS responses to prevent spoofing. Required on GCP public DNS zones. |

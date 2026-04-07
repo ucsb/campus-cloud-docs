@@ -2,7 +2,7 @@
 title: Cloud for Research
 description: Using the UCSB Campus Cloud for research computing
 permalink: /docs/general/research
-last_reviewed: 2026-04-06
+last_reviewed: 2026-04-07
 redirect_from:
   - /docs/bestpractices/research
 ---
@@ -84,8 +84,8 @@ The Cloud Team offers consulting support for research projects. This includes:
 * Compliance guidance (NIST 800-171, HIPAA, FERPA)
 * Support for migrating on-premises HPC to the cloud
 
-Contact: [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu) or open a
-[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
+Email [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu) to start a conversation, or open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) if you have a specific request.
 
 ---
 
