@@ -1,23 +1,20 @@
 <footer class="bg-dark py-5 row d-print-none">
   <div class="container-fluid mx-sm-5">
-    <div class="row">
-      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
-  <small class="text-white d-block"><a class="text-white" href="https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5">Support &amp; service requests</a></small>
-  <small class="text-white d-block"><a class="text-white" href="mailto:info@cloud.ucsb.edu">General questions &amp; consulting</a></small>
-</div>
-<div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
-<ul class="list-inline mb-0">  
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" data-original-title="GitHub">
-    <a class="text-white" target="_blank" rel="noopener" href="{{ site.repo }}" aria-label="GitHub (opens in new tab)">
-      <i class="fab fa-github"></i>
-      <span class="sr-only">GitHub</span>
-    </a>
-  </li>
-</ul>
-</div>
-<div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-  <small class="text-white">&copy; 2026 UC Regents. All Rights Reserved</small>
-  {% if site.privacy %}<small class="ml-1"><a href="{{ site.privacy }}" target="_blank" rel="noopener" aria-label="Privacy Policy (opens in new tab)">Privacy Policy</a></small>{% endif %}	
+    <div class="row align-items-center">
+      <div class="col-12 col-sm-8 text-xs-center order-sm-1 py-2">
+        <small class="text-white d-block"><a class="text-white" style="text-decoration:underline" href="https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5">Support &amp; service requests</a></small>
+        <small class="text-white d-block"><a class="text-white" style="text-decoration:underline" href="mailto:info@cloud.ucsb.edu">General questions &amp; consulting</a></small>
+        <small class="text-white d-block mt-2">&copy; 2026 UC Regents. All Rights Reserved{% if site.privacy %} &mdash; <a class="text-white" style="text-decoration:underline" href="{{ site.privacy }}" target="_blank" rel="noopener" aria-label="Privacy Policy (opens in new tab)">Privacy Policy</a>{% endif %}</small>
+      </div>
+      <div class="col-12 col-sm-4 text-right text-xs-center order-sm-2 py-2">
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" data-original-title="GitHub">
+            <a class="text-white" target="_blank" rel="noopener" href="{{ site.repo }}" aria-label="GitHub (opens in new tab)">
+              <i class="fab fa-github"></i>
+              <span class="sr-only">GitHub</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
