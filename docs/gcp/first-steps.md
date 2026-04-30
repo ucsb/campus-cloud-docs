@@ -2,7 +2,7 @@
 title: GCP First Steps
 description: What to do after your GCP project is provisioned — sign in, verify setup, deploy your first resource.
 permalink: /docs/gcp/first-steps
-last_reviewed: 2026-04-01
+last_reviewed: 2026-04-30
 redirect_from:
   - /docs/firststeps/gcpfirststeps
 ---
@@ -86,22 +86,21 @@ Key constraints to know:
 
 ## Step 5 — Networking
 
-GCP Campus Cloud does not currently have a centrally-managed Shared VPC or
-campus connectivity (VPN/Interconnect) in place. Org policy blocks you from
-creating VPCs yourself — only the Cloud Team's automation account can create
-network resources.
+Your project is automatically attached to the campus Shared VPC at provisioning.
+Outbound internet access via Cloud NAT is included — no ticket needed.
 
-If your project requires network connectivity:
+Org policy blocks you from creating VPCs yourself — only the Cloud Team's
+automation account can provision network resources.
 
-* **Internet egress via Cloud NAT** — open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) and the Cloud
-  Team will provision it for your project.
+* **Internet egress** is available immediately via Cloud NAT.
 * **Access to UCSB campus resources** — not currently available for GCP.
-  Contact the Cloud Team to discuss options.
-* **No VPN to campus is available at this time.**
+  There is no VPN or Interconnect between GCP and the UCSB campus network at
+  this time. Contact the Cloud Team to discuss options.
 
-If your workload does not need private networking, you can proceed without a VPC.
-Services like Cloud Storage, BigQuery, Pub/Sub, and Cloud Functions work without
-one.
+If your workload uses only managed services (Cloud Storage, BigQuery, Pub/Sub,
+Cloud Functions, Cloud Run), you may not need to think about networking at all.
+
+See [GCP Networking]({{ "/docs/gcp/networking" | relative_url }}) for full details.
 
 ---
 

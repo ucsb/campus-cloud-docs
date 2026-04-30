@@ -2,7 +2,7 @@
 layout: page
 title: "Get a Campus Cloud Account"
 permalink: /getting-started
-last_reviewed: 2026-04-01
+last_reviewed: 2026-04-30
 redirect_from:
   - /getting-started/
   - /getting-started/procurement
@@ -11,7 +11,7 @@ redirect_from:
 
 # Get a Campus Cloud Account
 
-### Budgeting
+## Budgeting
 
 Before you start the procurement process, estimate your monthly spend.
 See [Costs & Billing]({{ "/docs/general/cost-management" | relative_url }}) for
@@ -20,9 +20,9 @@ managing your cloud budget.
 
 ---
 
-### Gateway Procurement Process
+## Gateway Procurement Process
 
-{% capture alert_content %}AWS accounts requested with @ucsb.edu emails must be created in the Campus Cloud. You will receive an "error processing your request" when requesting a AWS Account with a @ucsb.edu email unless it is in the Campus Cloud Landing Zone. <a href='{{ "/docs/general/security#external-collaborators" | relative_url }}'>More Info</a>{% endcapture %}
+{% capture alert_content %}AWS accounts requested with @ucsb.edu emails must be created in the Campus Cloud. You will receive an "error processing your request" when requesting an AWS account with a @ucsb.edu email unless it is in the Campus Cloud Landing Zone. <a href='{{ "/docs/general/security#external-collaborators" | relative_url }}'>Learn about the @ucsb.edu account requirement</a>{% endcapture %}
 {% include alert.html type="info" title="Information" content=alert_content %}
 
 All three providers use the same Gateway procurement process. Creating a Purchase Order (PO) is the first step for a new AWS account, Azure subscription, or GCP project — as well as for migrating an existing account.
@@ -53,14 +53,14 @@ You will not be able to access your account until all steps are completed and th
     
     and Sub **3, 5 or 7**. Your requisition will be returned if these codes are not correct. SUBMIT your requisition.
 
-5.  The Campus Cloud team will receive your Purchase Order and contact you to finalize setting up your account.
-6.  After it is set up, you will receive an activation email with instructions to access your new account.
-7.  Assign users to your Account Groups.
-8.  Your account will be billed through the Master Payer Account with consolidated billing. Any monthly costs will be charged against the Purchase Order you submitted.
+4.  The Campus Cloud team will receive your Purchase Order and contact you to finalize setting up your account.
+5.  After it is set up, you will receive an activation email with instructions to access your new account.
+6.  Assign users to your Account Groups.
+7.  Your account will be billed through the Master Payer Account with consolidated billing. Any monthly costs will be charged against the Purchase Order you submitted.
 
 ---
 
-### Troubleshooting Gateway
+## Troubleshooting Gateway
 
 **Requisition returned automatically?** Verify all three codes:
 * Commodity Code: **81110000**

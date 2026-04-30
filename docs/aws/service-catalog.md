@@ -2,7 +2,7 @@
 title: AWS Service Catalog
 description: Pre-approved, ready-to-deploy infrastructure products available via the AWS Service Catalog.
 permalink: /docs/aws/service-catalog
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-30
 redirect_from:
   - /docs/bestpractices/servicecatalog
   - /docs/guidelines/servicecatalog
@@ -42,12 +42,10 @@ You can update or terminate a product from the **Provisioned Products** list.
 |---|---|
 | Simple VPC | Basic VPC for internet-only workloads |
 | Advanced VPC | VPC with Transit Gateway attachment for campus network access |
-| Budget Notification | CloudWatch billing alarm wired to your team's email |
+| Fixed Monthly Budget with Notification | CloudWatch billing alarm wired to your team's email |
 | Security Notifications | SNS-based alerts for security events |
-| IAM Role-to-Group | Maps IAM roles to IdP groups for federated access |
+| Create IAM Role to UCSB Identity Group | Maps an IAM role to an IdP group for federated access |
 | SNS Topic | Pre-configured SNS topic for notifications |
-| Effectual Budget | Enhanced budget management product |
-| Instance Scheduler | Automated start/stop scheduling for EC2 and RDS instances |
 
 {% include alert.html type="info" title="Product list may change" content="New products are added as the Cloud Team develops them. Log in to the AWS Console and check Service Catalog → Products for the current complete list." %}
 

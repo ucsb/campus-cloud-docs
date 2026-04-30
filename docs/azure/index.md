@@ -2,7 +2,7 @@
 title: Azure Overview
 description: Overview of the UCSB Campus Cloud Azure environment — subscriptions, management groups, regions, and what is pre-configured.
 permalink: /docs/azure/
-last_reviewed: 2026-04-06
+last_reviewed: 2026-04-30
 ---
 
 # Azure at UCSB
@@ -36,7 +36,6 @@ below it.
 | UCSB Baseline V1 | Production workloads — research, administrative, and departmental subscriptions with full guardrails |
 | UCSB Learning | Coursework, labs, and student projects |
 | UCSB Sponsorship | Subscriptions funded through Microsoft sponsorship credits |
-| Sandboxes | Exploration and development — no production data |
 | UCSB Legacy | Pre-existing subscriptions that predate the Campus Cloud |
 
 Your subscription is placed in the management group that matches your use

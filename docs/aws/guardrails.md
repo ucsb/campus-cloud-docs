@@ -2,7 +2,7 @@
 title: AWS Guardrails & SCPs
 description: Service Control Policies and Control Tower controls applied to all Campus Cloud AWS accounts.
 permalink: /docs/aws/guardrails
-last_reviewed: 2026-04-06
+last_reviewed: 2026-04-30
 redirect_from:
   - /docs/guidelines/guardrails/aws
 ---
@@ -45,7 +45,9 @@ update it to use IMDSv2 before launching in Campus Cloud. The AWS SDKs (v2+)
 and recent Amazon Linux AMIs support IMDSv2 by default.
 
 Attempting to launch an EC2 instance with `optional` or `disabled` IMDSv2
-will fail with an `Access Denied` error.
+will fail with an `Access Denied` error. Additionally,
+`ec2:ModifyInstanceMetadataOptions` is blocked entirely — you cannot change
+metadata settings on a running instance.
 
 ---
 
@@ -83,7 +85,7 @@ blocked in us-east-2.
 ### You Cannot
 * Create resources outside us-east-1 / us-west-2
 * Disable AWS CloudTrail (org-level trail is read-only)
-* Disable AWS Config
+* Modify or delete the Landing Zone AWS Config rules
 * Use IMDSv1 on EC2 instances
 * Act as root without Cloud Team assistance
 * Modify or delete the default IAM roles created by the Cloud Team
@@ -93,8 +95,8 @@ blocked in us-east-2.
 
 ## Compliance Controls (NIST Accounts)
 
-Accounts in the Research OU with NIST 800-171 requirements have additional
-controls applied automatically by Control Tower:
+Accounts in the UCSB Baseline V2 OU with NIST 800-171 requirements have
+additional controls applied automatically by Control Tower:
 
 * Mandatory MFA for console access
 * S3 bucket public-access block enforced

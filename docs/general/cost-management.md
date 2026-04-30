@@ -2,7 +2,7 @@
 title: Costs & Billing
 description: Cloud pricing, UC discounts, and how to manage your cloud spending
 permalink: /docs/general/cost-management
-last_reviewed: 2026-04-06
+last_reviewed: 2026-04-30
 redirect_from:
   - /docs/bestpractices/costmodels
   - /docs/aws/quicksight
@@ -143,11 +143,11 @@ redeem it — either create a new account or migrate an existing personal accoun
 
 | Provider | Program | What You Get | Link |
 |----------|---------|-------------|------|
-| **AWS** | [Amazon Research Awards (ARA)](https://www.amazon.science/research-awards) | Unrestricted funds + AWS Promotional Credits | [Apply / Learn more](https://www.amazon.science/research-awards) |
-| **GCP** | [Google Cloud Research Credits](https://edu.google.com/programs/credits/research/) | Up to $5,000 in GCP credits (faculty, PhD students, postdocs) | [Apply](https://edu.google.com/programs/credits/research/) |
-| **GCP** | [Google Academic Research Awards (GARA)](https://research.google/programs-and-events/google-academic-research-awards/) | Unrestricted gifts for computing & technology research (professors) | [Learn more](https://research.google/programs-and-events/google-academic-research-awards/) |
-| **Azure** | [Microsoft Research Fellowship](https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/) | Azure compute access for collaborative research (faculty, PhD students, postdocs) | [Learn more](https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/) |
-| **Azure** | [Accelerating Foundation Models Research (AFMR)](https://www.microsoft.com/en-us/research/collaboration/accelerating-foundation-models-research/) | Azure AI services grants for foundation-model research | [Learn more](https://www.microsoft.com/en-us/research/collaboration/accelerating-foundation-models-research/) |
+| **AWS** | [Amazon Research Awards (ARA)](https://www.amazon.science/research-awards) | Unrestricted funds + AWS Promotional Credits | [Apply for ARA](https://www.amazon.science/research-awards) |
+| **GCP** | [Google Cloud Research Credits](https://edu.google.com/programs/credits/research/) | Up to $5,000 in GCP credits (faculty, PhD students, postdocs) | [Apply for GCP Research Credits](https://edu.google.com/programs/credits/research/) |
+| **GCP** | [Google Academic Research Awards (GARA)](https://research.google/programs-and-events/google-academic-research-awards/) | Unrestricted gifts for computing & technology research (professors) | [About GARA](https://research.google/programs-and-events/google-academic-research-awards/) |
+| **Azure** | [Microsoft Research Fellowship](https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/) | Azure compute access for collaborative research (faculty, PhD students, postdocs) | [About the Microsoft Research Fellowship](https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/) |
+| **Azure** | [Accelerating Foundation Models Research (AFMR)](https://www.microsoft.com/en-us/research/collaboration/accelerating-foundation-models-research/) | Azure AI services grants for foundation-model research | [About AFMR](https://www.microsoft.com/en-us/research/collaboration/accelerating-foundation-models-research/) |
 
 ### Teaching & Classroom Credits
 
@@ -157,8 +157,8 @@ the class — they are not self-service student accounts.
 
 | Provider | Program | What You Get | Link |
 |----------|---------|-------------|------|
-| **GCP** | [Google Cloud Teaching Credits](https://edu.google.com/programs/credits/teaching/) | Faculty apply per-course; GCP credits for students to use in coursework | [Apply](https://edu.google.com/programs/credits/teaching/) |
-| **Azure** | [Azure Education Hub](https://learn.microsoft.com/en-us/azure/education-hub/) | Faculty-managed Azure credits and lab environments for classroom use | [Learn more](https://learn.microsoft.com/en-us/azure/education-hub/) |
+| **GCP** | [Google Cloud Teaching Credits](https://edu.google.com/programs/credits/teaching/) | Faculty apply per-course; GCP credits for students to use in coursework | [Apply for GCP Teaching Credits](https://edu.google.com/programs/credits/teaching/) |
+| **Azure** | [Azure Education Hub](https://learn.microsoft.com/en-us/azure/education-hub/) | Faculty-managed Azure credits and lab environments for classroom use | [About Azure Education Hub](https://learn.microsoft.com/en-us/azure/education-hub/) |
 
 AWS does not offer a direct credits-to-faculty program;
 [AWS Academy](https://aws.amazon.com/training/awsacademy/) provides free

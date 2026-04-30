@@ -2,7 +2,7 @@
 title: Azure Security
 description: Security monitoring, Defender for Cloud, and log management in Campus Cloud Azure subscriptions.
 permalink: /docs/azure/security
-last_reviewed: 2026-03-30
+last_reviewed: 2026-04-30
 ---
 
 # Azure Security
@@ -82,7 +82,7 @@ following policies are active:
 | Policy | What It Enforces |
 |---|---|
 | Location restriction | Resources can only be created in approved regions |
-| Required tags | Resource groups and resources must carry required tags |
+| Required tags | Resource groups and resources are audited for required tags — missing tags generate compliance findings but do not block resource creation |
 | NIST 800-171 audit | Checks resources against NIST 800-171 controls |
 | No public blob access | Storage accounts cannot expose blobs publicly |
 | NSG Flow Logs | Network traffic logging is deployed automatically |

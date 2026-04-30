@@ -2,7 +2,7 @@
 title: GCP Networking
 description: Networking constraints, current limitations, and how to request network resources for GCP projects.
 permalink: /docs/gcp/networking
-last_reviewed: 2026-04-06
+last_reviewed: 2026-04-30
 ---
 
 # GCP Networking Overview
@@ -11,7 +11,9 @@ Networking in the GCP Campus Cloud is centrally managed. **You cannot create
 VPC networks yourself** — a deny policy blocks VPC creation for all users. Only
 the Cloud Team's automation account can provision network resources.
 
-If your project needs networking, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) to request it.
+Your project is automatically attached to the campus Shared VPC at provisioning,
+giving you outbound internet access via Cloud NAT immediately. For anything
+beyond that, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
 
 ---
 
@@ -20,9 +22,10 @@ If your project needs networking, open a [ServiceNow ticket](https://ucsb.servic
 | Capability | Available? |
 |---|---|
 | User-created VPCs | No — blocked by policy |
-| Internet egress via Cloud NAT | Provisioned with your VPC — provides outbound internet access |
-| VPC peering | Not available (VPC creation is blocked; contact Cloud Team if needed) |
-| Shared VPC attachment | Not available (contact Cloud Team if needed) |
+| Shared VPC attachment | Yes — your project is attached to the campus Shared VPC automatically at provisioning |
+| Internet egress via Cloud NAT | Yes — provided via the Shared VPC; no ticket required |
+| VPC peering | Not available (contact Cloud Team if needed) |
+| Campus connectivity (VPN/Interconnect) | Not available — no direct path to the UCSB campus network exists at this time |
 
 {% include alert.html type="warning" title="Campus connectivity not available" content="There is currently no VPN or Interconnect between GCP and the UCSB campus network. If your workload requires campus connectivity, contact the Cloud Team to discuss options." %}
 
@@ -45,11 +48,12 @@ The following constraints are enforced across all projects:
 
 ## Requesting Network Resources
 
-All networking must be provisioned by the Cloud Team. Submit a [ServiceNow
-ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) (Cloud Services) with:
+Your project is automatically attached to the campus Shared VPC at provisioning and receives outbound internet access via Cloud NAT — no ticket is needed for basic connectivity.
+
+For anything beyond standard outbound access (additional subnets, VPC peering, firewall rule changes), open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) (Cloud Services) with:
 
 * Your GCP project ID
-* The connectivity you need (Cloud NAT, a VPC subnet, etc.)
+* What you need and why
 * The region (us-central1 or us-west1)
 * Any specific CIDR or peering requirements
 

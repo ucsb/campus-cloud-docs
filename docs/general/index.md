@@ -2,7 +2,7 @@
 title: General Guidance
 description: Cross-provider guidance for security, identity, tagging, compliance, cost management, and more.
 permalink: /docs/general/
-last_reviewed: 2026-04-06
+last_reviewed: 2026-04-30
 redirect_from:
   - /docs/bestpractices
   - /docs/firststeps
@@ -19,6 +19,8 @@ Azure, and GCP). For provider-specific details, see the
 [AWS]({{ "/docs/aws/" | relative_url }}), [Azure]({{ "/docs/azure/" | relative_url }}), or [GCP]({{ "/docs/gcp/" | relative_url }}) sections.
 
 The following resources can help you get up to speed on cloud concepts before you start.
+
+## Learning Resources
 
 ### Campus Resources
 
