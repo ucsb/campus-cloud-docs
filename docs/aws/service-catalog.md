@@ -18,8 +18,8 @@ Using a Service Catalog product is the **recommended** way to provision
 common infrastructure because:
 
 * Products are pre-configured for UCSB tagging requirements.
-* Networking is set up for you (correct VPC, subnets, security groups).
 * Security defaults match Campus Cloud guardrails.
+* IP address ranges are automatically allocated from the campus pool — no coordination needed.
 * You spend minutes provisioning instead of hours.
 
 ---
@@ -38,30 +38,30 @@ You can update or terminate a product from the **Provisioned Products** list.
 
 ## Available Products
 
-| Product | Description |
+| Product | What it creates |
 |---|---|
-| Simple VPC | Basic VPC for internet-only workloads |
-| Advanced VPC | VPC with Transit Gateway attachment for campus network access |
-| Fixed Monthly Budget with Notification | CloudWatch billing alarm wired to your team's email |
-| Security Notifications | SNS-based alerts for security events |
-| Create IAM Role to UCSB Identity Group | Maps an IAM role to an IdP group for federated access |
-| SNS Topic | Pre-configured SNS topic for notifications |
+| Advanced VPC | A fully configured private network with subnets across two availability zones, optional internet access, campus network connectivity via Transit Gateway (when private subnets are selected), and an S3 endpoint. You choose the size and subnet layout. **Use this for most workloads.** |
+| Budget Alert and Action on Threshold (Effectual) | An alternative budget product that applies an IAM policy to your account when a spending threshold is reached, actively restricting further resource creation. Use this when you need a hard spending cap rather than just a notification. Deploy to your home region only. See the [Active Budget Controller docs](https://aws-ia.github.io/cloudformation-effectual-activebudgetcontroller/) for configuration details. |
+| Create IAM Role to UCSB Identity Group | Creates an empty IAM role and a matching UCSB Identity group at the same time. Members of that group (managed at [im.ucsb.edu](https://im.ucsb.edu)) can sign in to AWS and assume the role. You add permissions to the role after creation. Role names are limited to 15 characters. |
+| Fixed Monthly Budget with Notification | A monthly spending limit with email alerts. AWS emails you (and an optional second address) when your *forecasted* spend is on track to exceed the limit — by default the alert fires at 120% of your budget, so you get early warning before you actually go over. |
+| Instance Scheduler | Automatically starts and stops your EC2 and RDS instances on a schedule. Use this to avoid paying for instances that run overnight or on weekends when no one needs them. See the [Instance Scheduler on AWS docs](https://docs.aws.amazon.com/solutions/instance-scheduler-on-aws/) for configuration details. |
+| Local Security Notification | An email alert for guardrail violations. Whenever a resource in your account falls out of compliance with an AWS Config rule (a Campus Cloud guardrail), you get an email. Set this up so your team is notified of compliance issues without having to check the console. |
+| Simple VPC with Campus Connectivity | An empty private network with a block of IP addresses reserved from the campus pool. No subnets or internet access are included — use this only if you need to build your network layout from scratch. |
 
 {% include alert.html type="info" title="Product list may change" content="New products are added as the Cloud Team develops them. Log in to the AWS Console and check Service Catalog → Products for the current complete list." %}
 
 ---
 
-## VPC Families
+## Choosing a VPC
 
-When requesting a VPC, choose the family that matches your connectivity needs:
+Both VPC products reserve IP space from the campus-wide IP Address Manager (IPAM), so your address ranges won't conflict with other accounts.
 
-| VPC Type | Campus Network Access | Internet Access | Use When |
-|---|---|---|---|
-| Advanced VPC (Campus Connected) | Yes (via Transit Gateway) | Yes (via NAT) | You need to reach on-prem file shares, databases, or LDAP |
-| Simple VPC (Internet Only) | No | Yes (via NAT) | Public-facing apps with no campus dependency |
+| Product | Subnets included | Campus network access | Internet access | Use when |
+|---|---|---|---|---|
+| Advanced VPC | Yes — you choose size and layout (public, private, or both) | Yes, via Transit Gateway (when private subnets are selected) | Yes, via Internet Gateway (when public subnets are selected) | You need to run servers, databases, or anything that requires network connectivity |
+| Simple VPC with Campus Connectivity | No — you create subnets yourself | No — Transit Gateway attachment is not included | No | You need full control over your network design from scratch |
 
-You can have both types in the same account. See [Networking]({{ "/docs/aws/networking" | relative_url }})
-for more details.
+For most workloads, use **Advanced VPC**. See [Networking]({{ "/docs/aws/networking" | relative_url }}) for more details.
 
 ---
 
