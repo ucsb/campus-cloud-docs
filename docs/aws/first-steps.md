@@ -111,7 +111,7 @@ See the [Tagging]({{ "/docs/general/tagging" | relative_url }}) page for require
 
 ---
 
-## Step 7 — Verify Your Budget Alarm
+## Step 7 — Create a Budget Alarm
 
 Set a Budget alarm so that you are alerted before you exceed your budget (see [AWS docs: Create a billing alarm to monitor your estimated charges](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html)):
 
