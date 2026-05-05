@@ -34,6 +34,8 @@ common infrastructure because:
 
 You can update or terminate a product from the **Provisioned Products** list.
 
+For full details, see [Launching a product](https://docs.aws.amazon.com/servicecatalog/latest/userguide/enduser-launch.html) in the AWS Service Catalog End User Guide.
+
 ---
 
 ## Available Products
