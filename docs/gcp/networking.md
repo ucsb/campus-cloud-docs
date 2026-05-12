@@ -2,7 +2,7 @@
 title: GCP Networking
 description: Networking constraints, current limitations, and how to request network resources for GCP projects.
 permalink: /docs/gcp/networking
-last_reviewed: 2026-04-30
+last_reviewed: 2026-05-08
 ---
 
 # GCP Networking Overview
@@ -56,6 +56,22 @@ For anything beyond standard outbound access (additional subnets, VPC peering, f
 * What you need and why
 * The region (us-central1 or us-west1)
 * Any specific CIDR or peering requirements
+
+---
+
+## Adding Team Members to the Shared VPC
+
+Your project and its default service accounts can use the campus Shared VPC right away — no request needed. The project owner is also granted access at provisioning.
+
+Other team members and additional service accounts do **not** have Shared VPC access by default. Because subnet access is controlled in the host project — not your project — you cannot grant it yourself, even as the project owner.
+
+To request access for additional users or service accounts, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) and include:
+
+* Your GCP project ID
+* The Google identity (email address) of each person or service account that needs access
+
+{% capture alert_content %}Request a <strong>Google Group</strong> rather than listing individual users. Once the group is granted access, you can add and remove members yourself through the <a href="https://www.connect.ucsb.edu/accounts/connect-departmental-administrators/using-connect-admin-portal">Connect Admin Portal</a> (see the Google Groups section) — no follow-up tickets required when team membership changes.{% endcapture %}
+{% include alert.html type="info" title="Tip: use a Google Group" content=alert_content %}
 
 ---
 

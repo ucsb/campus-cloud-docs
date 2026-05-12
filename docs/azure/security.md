@@ -118,15 +118,6 @@ The Cloud Team can provide the workspace Resource ID if needed.
 
 ---
 
-## Microsoft Sentinel (SIEM)
-
-{% include alert.html type="info" title="Ask the Cloud Team" content="Centralized SIEM integration via Microsoft Sentinel may be available. Contact the Cloud Team to discuss whether your subscription's logs are forwarded to the campus Sentinel workspace." %}
-
-For more information, see the
-[Microsoft Sentinel documentation](https://learn.microsoft.com/en-us/azure/sentinel/overview).
-
----
-
 ## Wiz Cloud Security Posture Management
 
 Wiz is available across all Campus Cloud platforms (AWS, Azure, GCP). See
