@@ -1,0 +1,1 @@
+- [GitHub changes require approval](feedback_github_changes.md) — Never push, call GitHub API write endpoints, or change Pages settings without explicit user approval first
