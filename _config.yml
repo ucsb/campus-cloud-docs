@@ -11,18 +11,18 @@ remote_theme: vsoch/docsy-jekyll
 title: Campus Cloud Documentation
 email: info@cloud.ucsb.edu
 author: Campus Cloud Team
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: >
+  UCSB Campus Cloud documentation — managed, policy-compliant cloud
+  environments on AWS, Azure, and GCP for the campus community.
 
-# DO NOT CHANGE THE LINE OF THIS FILE without editing .circleci/circle_urls.sh
-baseurl: "/" # the subpath of your site, e.g. /blog
-#baseurl: "/campus-cloud-docs" # the subpath of your site, e.g. /blog
+# --- Production (docs.cloud.ucsb.edu) ---
+baseurl: ""
+url: "https://docs.cloud.ucsb.edu"
 
-# This is mostly for testing
-url: "https://docs.cloud.ucsb.edu/" # the base hostname & protocol for your site
-#url: "https://ucsb.github.io/campus-cloud-docs/" # the base hostname & protocol for your site
+# --- Test (iancrew.github.io/campus-cloud-docs) ---
+# Uncomment the two lines below and comment out the two above to test.
+#baseurl: "/campus-cloud-docs"
+#url: "https://iancrew.github.io"
 
 # Social (First three Required)
 repo: "https://github.com/ucsb/campus-cloud-docs"
@@ -38,18 +38,22 @@ github_repo: "campus-cloud-docs"
 feedback: false
 
 # Link to a privacy policy in footer, uncomment and define if wanted
-privacy: http://www.policy.ucsb.edu/privacy-notification/
+privacy: https://privacy.ucsb.edu/information-privacy/website-privacy
 
 # google-analytics: UA-XXXXXXXXXX
 # Image and (square) dimension for logo (don't start with /)
 # If commented, will use material hat theme
 # logo: "assets/img/logo/SRCC-square-red.png"
 logo_pixels: 34
-color: "#30638e"
+color: "#003660"
+# color: "#30638e" # old color
 # color: "#8c1515" # primary color for header, buttons
 
 # Build settings
 markdown: kramdown
+
+plugins:
+  - jekyll-redirect-from
 
 # If you add tags to pages, define this variable to link them to some external search
 # If you want to link to tags locally on the site, leave this commented out

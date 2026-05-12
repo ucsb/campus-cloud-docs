@@ -1,0 +1,88 @@
+---
+title: Azure Overview
+description: Overview of the UCSB Campus Cloud Azure environment — subscriptions, management groups, regions, and what is pre-configured.
+permalink: /docs/azure/
+last_reviewed: 2026-04-30
+---
+
+# Azure at UCSB
+
+The UCSB Campus Cloud Azure platform provides every subscription inside a
+shared management group hierarchy with pre-applied policies, networking, and
+security monitoring. Your team can start building right away with a consistent
+security baseline.
+
+---
+
+## Key Facts
+
+| Item | Value |
+|---|---|
+| Sign-in URL | [portal.azure.com](https://portal.azure.com) |
+| Identity Provider | UCSB Microsoft Entra ID (Azure AD) |
+| Allowed Regions | West US 2 (recommended), West Central US, East US 2, Central US |
+| New Subscription Turnaround | ~2 business days after PO is approved |
+
+---
+
+## Management Group Hierarchy
+
+Azure subscriptions are organized into a management group hierarchy.
+Policies applied at a higher level are inherited by all subscriptions
+below it.
+
+| Management Group | Purpose |
+|---|---|
+| UCSB Baseline V1 | Production workloads — research, administrative, and departmental subscriptions with full guardrails |
+| UCSB Learning | Coursework, labs, and student projects |
+| UCSB Sponsorship | Subscriptions funded through Microsoft sponsorship credits |
+| UCSB Legacy | Pre-existing subscriptions that predate the Campus Cloud |
+
+Your subscription is placed in the management group that matches your use
+case. Policies applied to the management group govern all resources in
+your subscription.
+
+---
+
+## What Is Pre-configured
+
+When your subscription is provisioned, the Cloud Team will:
+
+* **Assign four custom RBAC roles** to your team (see [First Steps]({{ "/docs/azure/first-steps" | relative_url }}))
+* **Enable Microsoft Defender for Cloud** across all supported resource types
+* **Deploy Log Analytics workspace** for security monitoring (90-day retention)
+* **Apply Azure Policy** for NIST 800-171 audit compliance
+* **Connect networking** — your subscription receives a Virtual Network
+  with hub-spoke peering to the Campus Cloud Virtual WAN (if requested)
+* **Require Resource Group tags** — policy audits RG creation for
+  the four required tags
+
+---
+
+## Resource Groups and Tags
+
+All resources must be inside a **Resource Group** with the four required tags.
+Azure Policy audits this — Resource Groups missing tags will be flagged as
+non-compliant but can still be created.
+
+See [Tagging]({{ "/docs/general/tagging" | relative_url }}) for the full list of required tags and
+allowed values.
+
+---
+
+## Regions
+
+Four regions are available: **West US 2**, **West Central US**, **East US 2**,
+and **Central US**. West US 2 is recommended for most workloads. All other
+regions are blocked by a Deny policy at the management group level.
+
+---
+
+## Next Steps
+
+* [Request a Subscription]({{ "/getting-started" | relative_url }})
+* [First Steps]({{ "/docs/azure/first-steps" | relative_url }})
+* [Networking]({{ "/docs/azure/networking" | relative_url }})
+* [Guardrails & Policies]({{ "/docs/azure/guardrails" | relative_url }})
+* [Security]({{ "/docs/azure/security" | relative_url }})
+

@@ -1,0 +1,115 @@
+---
+title: Azure Guardrails & Policies
+description: Azure Policy assignments and compliance controls applied to all Campus Cloud Azure subscriptions.
+permalink: /docs/azure/guardrails
+last_reviewed: 2026-04-06
+redirect_from:
+  - /docs/guidelines/guardrails/azure
+---
+
+# Azure Guardrails
+
+UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
+Azure subscription aligned with university security policy
+([UC IS-3](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html))
+and the federal
+[NIST 800-171]({{ "/glossary" | relative_url }}) standard for
+protecting sensitive research data.
+
+Guardrails are designed to maintain a safe, compliant baseline without getting
+in the way of normal cloud usage. You will only notice them if you attempt
+something outside that baseline. The sections below describe what is and is not
+allowed.
+
+---
+
+## Required Resource Group Tags
+
+**All Resource Groups should have the four required tags.**
+
+This is enforced with an **Audit** policy — Resource Groups created without the
+required tags will be flagged as non-compliant in Azure Policy, but creation is
+not blocked.
+
+| Tag | Allowed Values |
+|---|---|
+| `ucsb:environment` | `dev`, `test`, `prod`, `other` |
+| `ucsb:mission` | `academic`, `research`, `administrative`, `mixed` |
+| `ucsb:protection-level` | `p1`, `p2`, `p3`, `p4` |
+| `ucsb:availability-level` | `a1`, `a2`, `a3`, `a4` |
+
+See [Tagging]({{ "/docs/general/tagging" | relative_url }}) for definitions of protection and
+availability levels.
+
+---
+
+## Public Storage Access
+
+**Public blob access on Storage Accounts is blocked.**
+
+Azure Policy blocks the creation of Storage Accounts that allow public blob
+access. If you need to share data publicly, use either:
+
+* A **pre-signed URL** (Shared Access Signature) with a short expiry.
+* **Azure CDN** fronting a private storage account.
+* A blob with a specific **public container** configuration discussed with the
+  Cloud Team.
+
+---
+
+## NSG Flow Logs
+
+**NSG Flow Logs should be enabled on all Network Security Groups.**
+
+NSG Flow Logs are enabled automatically by policy. If you create NSGs
+directly, Flow Logs will be configured for them. Verify in the NSG
+configuration that Flow Logs are active.
+
+---
+
+## NIST 800-171 Audit Initiative
+
+A NIST 800-171 Policy Initiative is applied in Audit mode to all subscriptions.
+It does not block resource creation, but it generates compliance findings in
+Microsoft Defender for Cloud for controls that are not met.
+
+Regularly review your compliance posture:
+1. Navigate to **Microsoft Defender for Cloud → Regulatory compliance**.
+2. Select **NIST SP 800-171** from the list.
+3. Review and remediate any failing controls.
+
+---
+
+## What You Can and Cannot Do
+
+### You Can
+* Create any resource type in **West US 2** (recommended), **West Central US**, **East US 2**, or **Central US**
+* Create custom NSG rules and route tables within your VNet
+* Create additional Resource Groups (with required tags)
+* Enable, configure, and disable most Azure services in your subscription
+
+### You Cannot
+* Create resources in regions other than the four allowed (West US 2, West Central US, East US 2, Central US)
+* Enable public blob access on storage accounts
+* Remove or modify policy assignments (management group level, read-only)
+* Detach your subscription from the management group hierarchy
+
+---
+
+## Requesting a Policy Exception
+
+If a policy blocks something you believe is legitimate, open a [ServiceNow
+ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5). Explain the use case and the specific policy assignment that is blocking you. The Cloud Team will evaluate the request and, if appropriate,
+create a policy exemption on your subscription.
+
+Exceptions are not granted for controls required by UC IS-3 policy.
+
+---
+
+## Platform Admin Roles
+
+Certain platform-level permissions (management group administration, policy
+management, and tenant-wide configurations) are reserved for the Campus Cloud
+Team and cannot be self-assigned. If you need an action that requires
+platform-level access, open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).

@@ -1,58 +1,80 @@
 - title: Documentation
   links:
+    - title: "Home"
+      url: ""
+
     - title: "Getting Started"
       url: "getting-started"
-      children:
-        - title: Training
-          url: "getting-started#training"
-        - title: Consultation
-          url: "getting-started#consultation"
-        - title: Budgeting
-          url: "getting-started#budgeting"
-        - title: Procuring an Account
-          url: "getting-started#procure-a-campus-cloud-account"
-    - title: "First Steps"
-      url: "docs/firststeps"
-      children:
-        - title: AWS
-          url: "docs/firststeps/awsfirststeps"
-        - title: Azure
-          url: "docs/firststeps/azurefirststeps"
-        - title: GCP
-          url: "docs/firststeps/gcpfirststeps"          
-    - title: "Guidelines"
-      url: "docs/guidelines"
-      children:
-        - title: Description
-          url: "docs/guidelines/description"
-        - title: Networking
-          url: "docs/guidelines/networking"
-        - title: Tagging
-          url: "docs/guidelines/tagging"
-        - title: Compliance
-          url: "docs/guidelines/compliance"
-        - title: Security
-          url: "docs/guidelines/security"
-        - title: Migrate
-          url: "docs/guidelines/migrate"
-        - title: QS Dashboards
-          url: "docs/guidelines/quicksight.dashboards"
-    - title: "Best Practices"
-      url: "docs/bestpractices"
-      children:
-        - title: Service Catalog
-          url: "docs/bestpractices/servicecatalog"
-        - title: Account Contacts
-          url: "docs/bestpractices/contacts"
-        - title: Cost Models
-          url: "docs/bestpractices/costmodels"
-        - title: Resource Tagging
-          url: "docs/bestpractices/tagging"
-        - title: VPN Traffic
-          url: "docs/bestpractices/vpn"
-        - title: Close Account
-          url: "docs/bestpractices/close"
-        - title: Research
-          url: "docs/bestpractices/research"          
+
     - title: "Glossary"
       url: "glossary"
+
+    - title: "General Guidance"
+      url: "docs/general"
+      children:
+        - title: Overview
+          url: "docs/general"
+        - title: Shared Responsibility
+          url: "docs/general/shared-responsibility"
+        - title: Security
+          url: "docs/general/security"
+        - title: Compliance
+          url: "docs/general/compliance"
+        - title: Tagging
+          url: "docs/general/tagging"
+        - title: Cost Management
+          url: "docs/general/cost-management"
+        - title: Account Contacts
+          url: "docs/general/contacts"
+        - title: Research
+          url: "docs/general/research"
+        - title: Data Management
+          url: "docs/general/data-management"
+        - title: Migrate Personal Account
+          url: "docs/general/migrate"
+        - title: Close an Account
+          url: "docs/general/close-account"
+
+    - title: "AWS"
+      url: "docs/aws"
+      children:
+        - title: Overview
+          url: "docs/aws"
+        - title: First Steps
+          url: "docs/aws/first-steps"
+        - title: Networking
+          url: "docs/aws/networking"
+        - title: Guardrails & SCPs
+          url: "docs/aws/guardrails"
+        - title: Security
+          url: "docs/aws/security"
+        - title: Service Catalog
+          url: "docs/aws/service-catalog"
+
+    - title: "Azure"
+      url: "docs/azure"
+      children:
+        - title: Overview
+          url: "docs/azure"
+        - title: First Steps
+          url: "docs/azure/first-steps"
+        - title: Networking
+          url: "docs/azure/networking"
+        - title: Guardrails & Policies
+          url: "docs/azure/guardrails"
+        - title: Security
+          url: "docs/azure/security"
+
+    - title: "GCP"
+      url: "docs/gcp"
+      children:
+        - title: Overview
+          url: "docs/gcp"
+        - title: First Steps
+          url: "docs/gcp/first-steps"
+        - title: Networking
+          url: "docs/gcp/networking"
+        - title: Guardrails & Org Policies
+          url: "docs/gcp/guardrails"
+        - title: Security
+          url: "docs/gcp/security"

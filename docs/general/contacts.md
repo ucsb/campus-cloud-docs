@@ -1,0 +1,66 @@
+---
+title: Account Contacts
+description: Best practices for setting cloud account contacts across all providers
+permalink: /docs/general/contacts
+last_reviewed: 2026-04-03
+redirect_from:
+  - /docs/bestpractices/contacts
+---
+
+# Account Contacts
+
+Every Campus Cloud account has contacts that receive critical notifications —
+security findings, billing alerts, and service health events. Setting these
+correctly is one of the first things you should do after account creation.
+
+---
+
+## Use Functional Email Addresses
+
+{% include alert.html type="warning" title="Use functional email addresses" content="Avoid setting contacts to a personal email address. When people change roles or leave UCSB, contacts with personal addresses stop working. Use a department or team email (e.g., mylab-cloud@ucsb.edu) that can be managed by multiple people." %}
+
+---
+
+## Why Contacts Matter
+
+Cloud providers send important notifications to your contacts:
+
+* **Security** — alerts from security monitoring tools (GuardDuty, Defender for
+  Cloud, Security Command Center), abuse reports, and potential account
+  compromise notifications.
+* **Operations** — service health events, scheduled maintenance, and
+  infrastructure incidents that affect your resources.
+* **Billing** — budget threshold alerts and billing issue notifications.
+
+Missing or stale contacts mean your team may not hear about a security incident
+or an unexpected billing spike in time to respond.
+
+---
+
+## Provider-Specific Setup
+
+Each provider has a different way to configure contacts. Follow the guide for
+your provider:
+
+* [AWS First Steps — Set Account Contacts]({{ "/docs/aws/first-steps#step-3--set-account-contacts" | relative_url }}) —
+  Alternate contacts (Security, Operations, Billing) in the AWS Account
+  Settings page. See the
+  [AWS documentation on alternate contacts](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-contact-alternate.html)
+  for details on what each contact type receives.
+* [Azure First Steps — Set Subscription Contacts]({{ "/docs/azure/first-steps#step-4--set-subscription-contacts" | relative_url }}) —
+  Defender email notifications, budget alert recipients, and Service Health
+  alert rules. See the
+  [Azure notification settings documentation](https://learn.microsoft.com/en-us/azure/defender-for-cloud/configure-email-notifications)
+  for Defender for Cloud email configuration.
+* [GCP First Steps — Set Project Contacts]({{ "/docs/gcp/first-steps#step-3--set-project-contacts" | relative_url }}) —
+  Essential Contacts for Security, Technical, and Billing notification
+  categories. See the
+  [GCP Essential Contacts documentation](https://cloud.google.com/resource-manager/docs/managing-notification-contacts)
+  for details on notification categories.
+
+---
+
+## Contacting the Cloud Team
+
+For account-level contact changes you cannot make yourself, open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).

@@ -1,4 +1,8 @@
-- title: About
-  url: about
-- title: Getting Started
-  url: getting-started
+- title: Glossary
+  url: glossary
+- title: AWS
+  url: docs/aws
+- title: Azure
+  url: docs/azure
+- title: GCP
+  url: docs/gcp

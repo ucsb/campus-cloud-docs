@@ -1,7 +1,11 @@
+<link href="https://webfonts.brand.ucsb.edu/webfont.min.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/assets/css/ucsb-brand.css" rel="stylesheet">
+
+<a class="sr-only sr-only-focusable" href="#main-content">Skip to main content</a>
 <header>
         <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
         <a class="navbar-brand" href="{{ site.baseurl }}/">
-            <span class="navbar-logo"></span>{% include logo.svg %}<span class="text-uppercase font-weight-bold">{{ site.title }}</span>
+            <span class="navbar-logo"></span><span class="text-uppercase font-weight-bold">{{ site.title }}</span>
 	</a>
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
 		<ul class="navbar-nav mt-2 mt-lg-0">{% if site.repo %}
@@ -11,10 +15,6 @@
 			</li>{% endfor %}
 		</ul>
 	</div>
-	<div class="navbar-nav d-none d-lg-block">
- <input type="search" class="form-control td-search-input" placeholder="&#xf002 Search this site…" aria-label="Search this site…" autocomplete="off">
-        </div>
-
 	<div class="navbar-nav d-none d-lg-block">
           <a class="gh-source" data-gh-source="github" href="{{ site.repo }}" title="Go to repository" data-md-state="done">
           <div class="gh-source__repository">
@@ -30,6 +30,11 @@
 
 <script>
 $(document).ready(function() {
+  // Accessibility: add id for skip-nav link target
+  $('main[role="main"]').attr('id', 'main-content');
+  // Accessibility: add scope="col" to table header cells
+  $('thead th').attr('scope', 'col');
+
   var url = "https://api.github.com/search/repositories?q={{ site.github_user }}/{{ site.github_repo }}";
   fetch(url, { 
       headers: {"Accept":"application/vnd.github.preview"}
