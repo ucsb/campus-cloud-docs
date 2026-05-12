@@ -1,8 +1,8 @@
 - title: Glossary
   url: glossary
 - title: AWS
-  url: docs/aws
+  url: docs/aws/
 - title: Azure
-  url: docs/azure
+  url: docs/azure/
 - title: GCP
-  url: docs/gcp
+  url: docs/gcp/

@@ -10,10 +10,10 @@
       url: "glossary"
 
     - title: "General Guidance"
-      url: "docs/general"
+      url: "docs/general/"
       children:
         - title: Overview
-          url: "docs/general"
+          url: "docs/general/"
         - title: Shared Responsibility
           url: "docs/general/shared-responsibility"
         - title: Security
@@ -36,10 +36,10 @@
           url: "docs/general/close-account"
 
     - title: "AWS"
-      url: "docs/aws"
+      url: "docs/aws/"
       children:
         - title: Overview
-          url: "docs/aws"
+          url: "docs/aws/"
         - title: First Steps
           url: "docs/aws/first-steps"
         - title: Networking
@@ -52,10 +52,10 @@
           url: "docs/aws/service-catalog"
 
     - title: "Azure"
-      url: "docs/azure"
+      url: "docs/azure/"
       children:
         - title: Overview
-          url: "docs/azure"
+          url: "docs/azure/"
         - title: First Steps
           url: "docs/azure/first-steps"
         - title: Networking
@@ -66,10 +66,10 @@
           url: "docs/azure/security"
 
     - title: "GCP"
-      url: "docs/gcp"
+      url: "docs/gcp/"
       children:
         - title: Overview
-          url: "docs/gcp"
+          url: "docs/gcp/"
         - title: First Steps
           url: "docs/gcp/first-steps"
         - title: Networking
