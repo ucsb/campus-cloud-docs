@@ -60,11 +60,11 @@ a:hover {
 .td-sidebar-nav a.active,
 .td-sidebar-nav .td-sidebar-link.active > a {
   color: #003660;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .td-sidebar-nav a.td-sidebar-link__page.active {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 /* Footer background to Navy */
