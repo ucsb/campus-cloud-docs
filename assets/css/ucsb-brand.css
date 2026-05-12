@@ -56,11 +56,15 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Sidebar active link */
+/* Sidebar active link — section headings only, not child page links */
 .td-sidebar-nav a.active,
 .td-sidebar-nav .td-sidebar-link.active > a {
   color: #003660;
   font-weight: 700;
+}
+
+.td-sidebar-nav a.td-sidebar-link__page.active {
+  font-weight: 400;
 }
 
 /* Footer background to Navy */
