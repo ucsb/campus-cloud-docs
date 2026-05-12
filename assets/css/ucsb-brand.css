@@ -64,6 +64,7 @@ a:hover {
 }
 
 .td-sidebar-nav a.td-sidebar-link__page.active {
+  color: #3D4952;
   font-weight: 300;
 }
 
