@@ -1,9 +1,10 @@
 ---
 title: Security
 description: Security guidance for Campus Cloud accounts — data classification, monitoring, least-privilege, and incident response
-permalink: /docs/general/security
+permalink: /docs/general/security/
 last_reviewed: 2026-04-06
 redirect_from:
+  - /docs/general/security
   - /docs/guidelines/security
 ---
 
