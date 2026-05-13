@@ -17,7 +17,7 @@
         - title: Shared Responsibility
           url: "docs/general/shared-responsibility"
         - title: Security
-          url: "docs/general/security"
+          url: "docs/general/security/"
         - title: Compliance
           url: "docs/general/compliance"
         - title: Tagging
