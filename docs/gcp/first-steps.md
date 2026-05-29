@@ -52,7 +52,7 @@ grant roles to individuals directly** under IAM & Admin → IAM.
 | Group | Access it grants |
 |---|---|
 | `prj-<id>-owners@gcp.cloud.ucsb.edu` | Full project access (Owner), **view billing data**, and use of the campus **Shared VPC** |
-| `prj-<id>-editors@gcp.cloud.ucsb.edu` | Create and manage most resources (Editor) |
+| `prj-<id>-editors@gcp.cloud.ucsb.edu` | Create and manage most resources (Editor), and use of the campus **Shared VPC** |
 | `prj-<id>-viewers@gcp.cloud.ucsb.edu` | Read-only access (Viewer) |
 | `prj-<id>-billing@gcp.cloud.ucsb.edu` | View billing data and read-only project access |
 
