@@ -61,20 +61,21 @@ role themselves — add yourself as a member if you also want access.
 
 ---
 
-## Step 3 — Set Account Contacts
+## Step 3 — Review Account Contacts
 
-Set **alternate contacts** so billing, operations, and security notifications
-reach your team — not just the person who first requested the account. See
+Your account's **alternate contacts** — the Billing, Operations, and Security
+addresses that receive notifications such as security findings, service health
+events, and billing notices — are **set automatically when your account is
+provisioned**, using the contact information you supplied on your account
+request form. There is nothing you need to set up.
+
+To see what is on file, open the account menu (top right) → **Account** and
+scroll to **Alternate contacts**.
+
+To change a contact, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
+so the Cloud Team can update it. Use a shared functional email address rather
+than a personal one, so contacts survive staff changes. See
 [Account Contacts]({{ "/docs/general/contacts" | relative_url }}) for general best practices.
-
-1. In the AWS Console, open the account menu (top right) → **Account**.
-2. Scroll to **Alternate contacts** and click **Edit**.
-3. Set the **Billing**, **Operations**, and **Security** contacts to your
-   team's functional email addresses, then save.
-
-Use a shared functional email address rather than a personal one, so contacts
-survive staff changes. For details, see
-[AWS docs: Adding, changing, or removing alternate contacts](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-contact-alternate.html).
 
 ---
 

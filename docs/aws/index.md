@@ -74,9 +74,9 @@ When your account is provisioned, the Cloud Team will:
 
 ## Regions
 
-All workloads must run in **us-east-1 or us-west-2** (with a limited exception
-for Amazon Bedrock). See [Guardrails & SCPs]({{ "/docs/aws/guardrails" | relative_url }}) for details
-and exceptions.
+All workloads must run in **us-east-1 or us-west-2** (with a limited,
+programmatic-only Amazon Bedrock exception in two additional regions). See
+[Guardrails & SCPs]({{ "/docs/aws/guardrails" | relative_url }}) for details and exceptions.
 
 ---
 

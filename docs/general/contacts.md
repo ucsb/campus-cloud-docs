@@ -42,9 +42,10 @@ or an unexpected billing spike in time to respond.
 Each provider has a different way to configure contacts. Follow the guide for
 your provider:
 
-* [AWS First Steps — Set Account Contacts]({{ "/docs/aws/first-steps#step-3--set-account-contacts" | relative_url }}) —
-  Alternate contacts (Security, Operations, Billing) in the AWS Account
-  Settings page. See the
+* [AWS First Steps — Review Account Contacts]({{ "/docs/aws/first-steps#step-3--review-account-contacts" | relative_url }}) —
+  Alternate contacts (Security, Operations, Billing) are configured
+  automatically from the information on your account request form; the Cloud
+  Team updates them on request. See the
   [AWS documentation on alternate contacts](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-contact-alternate.html)
   for details on what each contact type receives.
 * [Azure First Steps — Set Subscription Contacts]({{ "/docs/azure/first-steps#step-4--set-subscription-contacts" | relative_url }}) —

@@ -23,6 +23,7 @@ navigate or jump directly to a section below.
  - [Tagging]({{ "/docs/general/tagging" | relative_url }})
  - [Cost Management]({{ "/docs/general/cost-management" | relative_url }})
  - [Account Contacts]({{ "/docs/general/contacts" | relative_url }})
+ - [Support]({{ "/docs/general/support" | relative_url }})
  - [Research in the Cloud]({{ "/docs/general/research" | relative_url }})
  - [Data Management]({{ "/docs/general/data-management" | relative_url }})
  - [Migrate a Personal Account]({{ "/docs/general/migrate" | relative_url }})

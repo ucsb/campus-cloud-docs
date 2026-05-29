@@ -57,6 +57,7 @@ library (free with UCSB NetID) includes:
 | [Tagging]({{ "/docs/general/tagging" | relative_url }}) | Required tags, naming conventions, and how tags are enforced |
 | [Compliance]({{ "/docs/general/compliance" | relative_url }}) | UC IS-3, NIST 800-171, and how to request a compliant account |
 | [Cost Management]({{ "/docs/general/cost-management" | relative_url }}) | Budgets, alerts, and strategies for controlling cloud spend |
+| [Support]({{ "/docs/general/support" | relative_url }}) | How to reach the Cloud Team, join the community, attend office hours, and schedule an annual check-in |
 | [Research]({{ "/docs/general/research" | relative_url }}) | Guidance for faculty and researchers using cloud for grants and sponsored work |
 | [Data Management]({{ "/docs/general/data-management" | relative_url }}) | Data classification, storage, and retention considerations |
 | [Migrate a Personal Account]({{ "/docs/general/migrate" | relative_url }}) | How to bring an existing personal cloud account into the Campus Cloud |
