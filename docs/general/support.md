@@ -70,7 +70,7 @@ You don't have to wait for us to reach out. To schedule a check-in proactively:
 1. Pick a time using our
    [check-in booking link](https://calendar.app.google/wSub7WUC3ReWk2Qr9).
 2. Complete the
-   [pre-screening survey](https://docs.google.com/forms/d/e/1FAIpQLSc9mNbijYP7fwdTDfBmHNKDQtbf1Z67wyzhJw19LBJ9_l6XOA/viewform?usp=header)
+   [pre-screening survey](https://docs.google.com/forms/d/e/1FAIpQLSc9mNbijYP7fwdTDfBmHNKDQtbf1Z67wyzhJw19LBJ9_l6XOA/viewform)
    before your meeting so we can prepare.
 
 If you are no longer the right contact for an account, let us know at
