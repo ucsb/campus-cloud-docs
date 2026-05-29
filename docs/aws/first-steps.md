@@ -2,7 +2,7 @@
 title: AWS First Steps
 description: What to do after your AWS account is provisioned — sign in, set up billing, deploy your first resource.
 permalink: /docs/aws/first-steps
-last_reviewed: 2026-04-06
+last_reviewed: 2026-05-29
 redirect_from:
   - /docs/firststeps/awsfirststeps
 ---
@@ -61,7 +61,24 @@ role themselves — add yourself as a member if you also want access.
 
 ---
 
-## Step 3 — Review Guardrails
+## Step 3 — Set Account Contacts
+
+Set **alternate contacts** so billing, operations, and security notifications
+reach your team — not just the person who first requested the account. See
+[Account Contacts]({{ "/docs/general/contacts" | relative_url }}) for general best practices.
+
+1. In the AWS Console, open the account menu (top right) → **Account**.
+2. Scroll to **Alternate contacts** and click **Edit**.
+3. Set the **Billing**, **Operations**, and **Security** contacts to your
+   team's functional email addresses, then save.
+
+Use a shared functional email address rather than a personal one, so contacts
+survive staff changes. For details, see
+[AWS docs: Adding, changing, or removing alternate contacts](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-contact-alternate.html).
+
+---
+
+## Step 4 — Review Guardrails
 
 Policy controls (SCPs) are applied at the organization level and cannot be
 modified at the account level. Before building, familiarize yourself with the
@@ -70,7 +87,7 @@ encounter unexpected `Access Denied` errors.
 
 ---
 
-## Step 4 — Configure Networking
+## Step 5 — Configure Networking
 
 If your request included campus network connectivity:
 
@@ -83,7 +100,7 @@ can be deployed via the [Service Catalog]({{ "/docs/aws/service-catalog" | relat
 
 ---
 
-## Step 5 — Deploy Your First Resource
+## Step 6 — Deploy Your First Resource
 
 Use the [Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }}) to deploy
 pre-approved infrastructure templates. This is the fastest way to get
@@ -102,7 +119,7 @@ aws s3 ls --profile my-ucsb-account
 
 ---
 
-## Step 6 — Tag Your Resources
+## Step 7 — Tag Your Resources
 
 All resources must be tagged with the required tags. Missing tags will
 eventually trigger compliance alerts or resource removal.
@@ -111,7 +128,7 @@ See the [Tagging]({{ "/docs/general/tagging" | relative_url }}) page for require
 
 ---
 
-## Step 7 — Create a Budget Alarm
+## Step 8 — Create a Budget Alarm
 
 Set a Budget alarm so that you are alerted before you exceed your budget (see [AWS docs: Create a billing alarm to monitor your estimated charges](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html)):
 

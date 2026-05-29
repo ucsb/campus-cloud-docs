@@ -2,7 +2,7 @@
 title: GCP Security
 description: Security monitoring, audit logging, Security Command Center, and incident response for GCP projects.
 permalink: /docs/gcp/security
-last_reviewed: 2026-03-30
+last_reviewed: 2026-05-29
 ---
 
 # GCP Security
@@ -116,12 +116,18 @@ for details.
 
 ---
 
-## Identity Restrictions
+## Identity & Access
 
 **Only @ucsb.edu accounts can access Campus Cloud GCP projects.**
 
 You cannot grant access to personal Gmail addresses or to "all users" —
 attempts to do so will fail with a policy error.
+
+Grant access through your project's **per-project access groups** (owners,
+editors, viewers, billing) rather than adding people directly under IAM — the
+groups also carry billing-data and Shared VPC access. See
+[GCP First Steps — Adding and Removing Users]({{ "/docs/gcp/first-steps#step-2--verify-your-access" | relative_url }})
+and [Identity & Access]({{ "/docs/general/identity" | relative_url }}).
 
 If an external collaborator needs access, contact the Cloud Team to discuss
 options (e.g., a sponsored UCSB account).

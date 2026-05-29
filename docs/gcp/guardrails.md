@@ -2,7 +2,7 @@
 title: GCP Guardrails & Org Policies
 description: Organization policy constraints and IAM deny policies applied to all Campus Cloud GCP projects.
 permalink: /docs/gcp/guardrails
-last_reviewed: 2026-04-06
+last_reviewed: 2026-05-29
 ---
 
 # GCP Guardrails
@@ -11,7 +11,7 @@ UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
 GCP project aligned with university security policy
 ([UC IS-3](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html))
 and the federal
-[NIST 800-171]({{ "/glossary" | relative_url }}) standard for
+[NIST 800-171]({{ "/glossary/" | relative_url }}) standard for
 protecting sensitive research data.
 
 Guardrails are designed to maintain a safe, compliant baseline without getting
@@ -58,17 +58,17 @@ allowed.
 
 ---
 
-## IAM Deny Policies (Organization-Wide)
+## IAM Deny Policies
 
 IAM deny policies operate before role bindings are evaluated — they are
-absolute restrictions. The Campus Cloud Landing Zone uses 4 deny policies at the org level:
+absolute restrictions. The following deny policies apply to standard Campus
+Cloud projects (those in the UCSB NIST Baseline folder):
 
 | Policy | What It Blocks | Exceptions |
 |---|---|---|
 | Resource Manager Lockdown | Creating/deleting folders, removing project deletion protection, moving projects between folders, changing billing account assignments | Cloud Team automation, org admins (break-glass) |
 | Networking Lockdown | Creating VPC networks | Cloud Team automation only |
 | Automation Account Protection | Modifying org-level access policies outside of the standard process | Cloud Team automation, org admins (break-glass) |
-| Contact Preservation | Deleting or modifying Essential Contacts | Cloud Team automation, org admins, billing admins |
 
 ---
 

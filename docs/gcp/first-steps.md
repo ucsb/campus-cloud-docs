@@ -2,7 +2,7 @@
 title: GCP First Steps
 description: What to do after your GCP project is provisioned — sign in, verify setup, deploy your first resource.
 permalink: /docs/gcp/first-steps
-last_reviewed: 2026-04-30
+last_reviewed: 2026-05-29
 redirect_from:
   - /docs/firststeps/gcpfirststeps
 ---
@@ -32,7 +32,7 @@ Cloud Team. Follow the steps below to get set up.
 
 ---
 
-## Step 2 — Verify Your IAM Role
+## Step 2 — Verify Your Access
 
 1. Navigate to **IAM & Admin → IAM** in the left menu.
 2. Confirm your `@ucsb.edu` account is listed with the appropriate role:
@@ -45,28 +45,53 @@ If you are not listed or your role is incorrect, contact the Cloud Team.
 
 ### Adding and Removing Users
 
-Project Owners can grant roles under **IAM & Admin → IAM** in the GCP Console.
-See [Grant an IAM role](https://cloud.google.com/iam/docs/grant-role-console)
-for step-by-step instructions. Only `@ucsb.edu` accounts can be added —
-personal Gmail accounts are not permitted.
+Every project comes with **four Google Groups** that carry the project's
+access. Manage access by adding and removing people in these groups — **do not
+grant roles to individuals directly** under IAM & Admin → IAM.
+
+| Group | Access it grants |
+|---|---|
+| `prj-<id>-owners@gcp.cloud.ucsb.edu` | Full project access (Owner), **view billing data**, and use of the campus **Shared VPC** |
+| `prj-<id>-editors@gcp.cloud.ucsb.edu` | Create and manage most resources (Editor) |
+| `prj-<id>-viewers@gcp.cloud.ucsb.edu` | Read-only access (Viewer) |
+| `prj-<id>-billing@gcp.cloud.ucsb.edu` | View billing data and read-only project access |
+
+(`<id>` is your project ID. Find the exact group addresses under
+**IAM & Admin → IAM**, where the groups are listed as members.)
+
+{% include alert.html type="warning" title="Use the groups, not direct grants" content="Billing-data access and Shared VPC access are attached to these groups, not to direct IAM grants. If you add someone straight to project IAM, they will be missing billing visibility and the campus network — add them to the appropriate group instead." %}
+
+**To add or remove members**, go to [groups.google.com](https://groups.google.com)
+and open the group. Project owners are **Managers** of all four groups, so they
+can manage membership for every access level. Only `@ucsb.edu` accounts can be
+added — personal Gmail accounts are not permitted.
+
+See [Identity & Access]({{ "/docs/general/identity" | relative_url }}) for the
+cross-provider picture.
 
 ---
 
-## Step 3 — Set Project Contacts
+## Step 3 — Review Project Contacts
 
-GCP uses **Essential Contacts** to route notifications to your team. The Cloud
-Team has configured org-level contacts; you need to add project-level contacts.
-See [Account Contacts]({{ "/docs/general/contacts" | relative_url }}) for general best practices.
+GCP uses **Essential Contacts** to route operational notifications to your team.
+**These are configured automatically** when your project is created — they point
+at your project's access groups, so there is nothing to set up:
 
-1. Navigate to [Essential Contacts](https://console.cloud.google.com/iam-admin/essentialcontacts)
-   with your project selected.
-2. Click **+ Add contact**.
-3. Enter a functional email address and select:
-   * **Security** — Security Command Center findings
-   * **Technical** — Maintenance and service disruption notices
-   * **Billing** — Budget alerts and billing notifications
-4. Confirm by clicking the verification link emailed to that address.
-5. Repeat for each category that needs a different address.
+| Group | Notifications it receives |
+|---|---|
+| `prj-<id>-owners` | All categories — Billing, Legal, Security, Suspension, Technical, and Technical Incidents |
+| `prj-<id>-billing` | Billing only |
+
+Because contacts are tied to the groups, you change **who** receives these
+notifications by managing group membership — the same way you
+[manage access](#step-2--verify-your-access). There is no need to add or verify
+contacts manually.
+
+If you also want notifications sent to an address that isn't a group member (for
+example, a shared ticketing alias), you can add it under
+[Essential Contacts](https://console.cloud.google.com/iam-admin/essentialcontacts)
+with your project selected. See [Account Contacts]({{ "/docs/general/contacts" | relative_url }})
+for general best practices.
 
 ---
 

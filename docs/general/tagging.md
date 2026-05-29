@@ -2,7 +2,7 @@
 title: Tagging & Labels
 description: Required tags across AWS, Azure, and GCP
 permalink: /docs/general/tagging
-last_reviewed: 2026-03-30
+last_reviewed: 2026-05-29
 redirect_from:
   - /docs/bestpractices/tagging
   - /docs/guidelines/tagging
@@ -65,10 +65,12 @@ organization).
 | Azure | Resource group flagged as non-compliant (Audit policy) |
 | GCP | Audit finding; platform automation skips untagged projects |
 
-For Azure, the required tags on **resource groups** are audited by policy:
-`ucsb:environment`, `ucsb:mission`,
-`ucsb:protection-level`, and `ucsb:availability-level`. Resource groups
-without these tags will be flagged as non-compliant but can still be created.
+For Azure, the four required tags are audited by policy on both **resource
+groups** and **taggable resources**: `ucsb:environment`, `ucsb:mission`,
+`ucsb:protection-level`, and `ucsb:availability-level`. Items without these tags
+are flagged as non-compliant but can still be created. (Azure also audits a
+`ucsb:po-number` tag, which the Cloud Team sets at provisioning — you don't
+manage it.)
 
 ---
 

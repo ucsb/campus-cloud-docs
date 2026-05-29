@@ -2,7 +2,7 @@
 title: Security
 description: Security guidance for Campus Cloud accounts — data classification, monitoring, least-privilege, and incident response
 permalink: /docs/general/security/
-last_reviewed: 2026-04-06
+last_reviewed: 2026-05-29
 redirect_from:
   - /docs/general/security
   - /docs/guidelines/security
@@ -27,8 +27,10 @@ Assign the minimum role needed for each person's responsibilities:
   and reserve **Administrator** for IAM changes.
 * **Azure** — Use **Application Owner** rather than **Subscription Owner** for
   most day-to-day work.
-* **GCP** — Use project-level roles (Editor, Viewer) instead of broader roles
-  unless explicitly needed.
+* **GCP** — Add people to the per-project access groups (owners, editors,
+  viewers, billing) rather than granting roles directly, and pick the
+  lowest-privilege group that fits. See
+  [Identity & Access]({{ "/docs/general/identity" | relative_url }}).
 
 ---
 

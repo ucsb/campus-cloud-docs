@@ -2,7 +2,7 @@
 title: Account Contacts
 description: Best practices for setting cloud account contacts across all providers
 permalink: /docs/general/contacts
-last_reviewed: 2026-04-03
+last_reviewed: 2026-05-29
 redirect_from:
   - /docs/bestpractices/contacts
 ---
@@ -52,9 +52,9 @@ your provider:
   alert rules. See the
   [Azure notification settings documentation](https://learn.microsoft.com/en-us/azure/defender-for-cloud/configure-email-notifications)
   for Defender for Cloud email configuration.
-* [GCP First Steps — Set Project Contacts]({{ "/docs/gcp/first-steps#step-3--set-project-contacts" | relative_url }}) —
-  Essential Contacts for Security, Technical, and Billing notification
-  categories. See the
+* [GCP First Steps — Review Project Contacts]({{ "/docs/gcp/first-steps#step-3--review-project-contacts" | relative_url }}) —
+  Essential Contacts are configured automatically and routed to your project's
+  access groups; you change recipients by managing group membership. See the
   [GCP Essential Contacts documentation](https://cloud.google.com/resource-manager/docs/managing-notification-contacts)
   for details on notification categories.
 

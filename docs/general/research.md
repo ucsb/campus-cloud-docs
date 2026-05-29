@@ -2,7 +2,7 @@
 title: Cloud for Research
 description: Using the UCSB Campus Cloud for research computing
 permalink: /docs/general/research
-last_reviewed: 2026-04-07
+last_reviewed: 2026-05-29
 redirect_from:
   - /docs/bestpractices/research
 ---
@@ -110,6 +110,7 @@ for each provider.
 
 **Can I share data with external collaborators?**
 Yes, with appropriate access controls. For P3/P4 data involving CUI or regulated
-data, consult the Cloud Team before sharing externally. GCP and Azure by default
-only allow `@ucsb.edu` accounts — external collaborators may need a UCSB
-affiliate account or guest access.
+data, consult the Cloud Team before sharing externally. All three providers
+require a `@ucsb.edu` identity for account access, so external collaborators
+may need a sponsored UCSB account — see
+[Security — External Collaborators]({{ "/docs/general/security#external-collaborators" | relative_url }}).

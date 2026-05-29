@@ -2,7 +2,7 @@
 title: Azure Guardrails & Policies
 description: Azure Policy assignments and compliance controls applied to all Campus Cloud Azure subscriptions.
 permalink: /docs/azure/guardrails
-last_reviewed: 2026-04-06
+last_reviewed: 2026-05-29
 redirect_from:
   - /docs/guidelines/guardrails/azure
 ---
@@ -13,7 +13,7 @@ UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
 Azure subscription aligned with university security policy
 ([UC IS-3](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html))
 and the federal
-[NIST 800-171]({{ "/glossary" | relative_url }}) standard for
+[NIST 800-171]({{ "/glossary/" | relative_url }}) standard for
 protecting sensitive research data.
 
 Guardrails are designed to maintain a safe, compliant baseline without getting
@@ -23,13 +23,14 @@ allowed.
 
 ---
 
-## Required Resource Group Tags
+## Required Tags
 
-**All Resource Groups should have the four required tags.**
+**Apply the four required tags to your Resource Groups and to taggable
+resources.**
 
-This is enforced with an **Audit** policy — Resource Groups created without the
-required tags will be flagged as non-compliant in Azure Policy, but creation is
-not blocked.
+This is enforced with an **Audit** policy — both Resource Groups and taggable
+resources created without the required tags are flagged as non-compliant in
+Azure Policy, but creation is not blocked.
 
 | Tag | Allowed Values |
 |---|---|
@@ -40,6 +41,9 @@ not blocked.
 
 See [Tagging]({{ "/docs/general/tagging" | relative_url }}) for definitions of protection and
 availability levels.
+
+A fifth tag, `ucsb:po-number`, is also audited. The Cloud Team sets this on
+your subscription at provisioning — you do not need to manage it.
 
 ---
 

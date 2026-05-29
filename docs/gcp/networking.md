@@ -2,7 +2,7 @@
 title: GCP Networking
 description: Networking constraints, current limitations, and how to request network resources for GCP projects.
 permalink: /docs/gcp/networking
-last_reviewed: 2026-05-08
+last_reviewed: 2026-05-29
 ---
 
 # GCP Networking Overview
@@ -157,8 +157,15 @@ and the Cloud Team will evaluate an exception.
 
 ## Public-Facing Services
 
-**Serverless services** like Cloud Run, Cloud Functions, and API Gateway can
-serve public internet traffic by default — no org policy exception is needed.
+**Public access is not allowed by default — even for serverless services.** Org
+policy requires authenticated (IAM-based) access to Cloud Run and Cloud
+Functions (`run.managed.requireInvokerIam`), and granting access to `allUsers`
+is separately blocked. By default these services are reachable only by
+identities you authorize, not the open internet.
+
+If you need a Cloud Run or Cloud Functions service to accept unauthenticated
+public traffic, open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
 
 For **VM-based workloads** that need a public-facing endpoint (e.g., a web
 application behind a load balancer), open a
