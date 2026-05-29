@@ -2,7 +2,7 @@
 title: AWS Guardrails & SCPs
 description: Service Control Policies and Control Tower controls applied to all Campus Cloud AWS accounts.
 permalink: /docs/aws/guardrails
-last_reviewed: 2026-04-30
+last_reviewed: 2026-05-29
 redirect_from:
   - /docs/guidelines/guardrails/aws
 ---
@@ -13,7 +13,7 @@ UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
 AWS account aligned with university security policy
 ([UC IS-3](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html))
 and the federal
-[NIST 800-171]({{ "/glossary" | relative_url }}) standard for
+[NIST 800-171]({{ "/glossary/" | relative_url }}) standard for
 protecting sensitive research data.
 
 Guardrails are designed to maintain a safe, compliant baseline without getting
@@ -64,12 +64,20 @@ be performed by the organization management account instead.
 
 ## Amazon Bedrock (Generative AI)
 
-**Amazon Bedrock is available in us-east-1, us-west-2, and also us-east-2.**
+**In the two standard regions (us-east-1 and us-west-2), Bedrock works fully —
+both the AWS Console and the API/CLI**, like any other allowed service.
 
-Bedrock works in both standard allowed regions (us-east-1 and us-west-2). An
-additional SCP exception allows Bedrock API calls in **us-east-2** (Ohio) for
-models that are not available in the standard regions. All other services remain
-blocked in us-east-2.
+An additional SCP exception allows **programmatic-only** Bedrock access in two
+otherwise-blocked regions — **us-east-2** (Ohio) and **us-west-1**
+(N. California) — for models that are not offered in the standard regions. In
+these two regions:
+
+* **Only the Bedrock model APIs work** — for example, invoking a model from the
+  AWS SDK or CLI.
+* **The Bedrock console will not work.** It depends on many other actions that
+  remain blocked in us-east-2 and us-west-1, so you must call Bedrock
+  programmatically there.
+* All other AWS services remain blocked in these two regions.
 
 ---
 

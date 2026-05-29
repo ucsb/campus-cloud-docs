@@ -2,7 +2,7 @@
 title: Costs & Billing
 description: Cloud pricing, UC discounts, and how to manage your cloud spending
 permalink: /docs/general/cost-management
-last_reviewed: 2026-04-30
+last_reviewed: 2026-05-29
 redirect_from:
   - /docs/bestpractices/costmodels
   - /docs/aws/quicksight
@@ -81,7 +81,8 @@ Set up a budget alert in your account so you are notified before your spending
 exceeds expectations. Instructions are in each provider's First Steps guide.
 
 * For AWS, use the **Fixed Monthly Budget with Notification** product in the
-  Service Catalog — see [AWS First Steps]({{ "/docs/aws/first-steps" | relative_url }}).
+  [Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }}), or set a
+  billing alarm — see [AWS First Steps]({{ "/docs/aws/first-steps" | relative_url }}).
 * For Azure, use **Azure Cost Management** — see [Azure First Steps]({{ "/docs/azure/first-steps" | relative_url }}).
 * For GCP, use **Cloud Billing budgets** — see [GCP First Steps]({{ "/docs/gcp/first-steps" | relative_url }}).
 

@@ -16,6 +16,8 @@
           url: "docs/general/"
         - title: Shared Responsibility
           url: "docs/general/shared-responsibility"
+        - title: Identity & Access
+          url: "docs/general/identity"
         - title: Security
           url: "docs/general/security/"
         - title: Compliance
@@ -26,6 +28,8 @@
           url: "docs/general/cost-management"
         - title: Account Contacts
           url: "docs/general/contacts"
+        - title: Support
+          url: "docs/general/support"
         - title: Research
           url: "docs/general/research"
         - title: Data Management

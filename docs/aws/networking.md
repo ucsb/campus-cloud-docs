@@ -2,7 +2,7 @@
 title: AWS Networking
 description: VPC options, campus connectivity, Transit Gateway, and IP address management for AWS accounts.
 permalink: /docs/aws/networking
-last_reviewed: 2026-04-03
+last_reviewed: 2026-05-29
 redirect_from:
   - /docs/bestpractices/vpn
   - /docs/guidelines/networking
@@ -206,10 +206,10 @@ When your account is provisioned, the Cloud Team creates a VPC using one of two
 product types from the
 [Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }}):
 
-| VPC Type | Campus Network Access | Internet Access | Use When |
+| VPC Type | Subnets | Campus Network Access | Use When |
 |---|---|---|---|
-| Advanced VPC (Campus Connected) | Yes (via Transit Gateway) | Yes (via NAT) | You need to reach on-prem file shares, databases, or LDAP |
-| Simple VPC (Internet Only) | No | Yes (via NAT) | Public-facing apps with no campus dependency |
+| Simple VPC with Campus Connectivity | Yes — multi-AZ; you choose a family (below) | Yes (via Transit Gateway) | Most workloads — running servers, databases, or anything needing network connectivity |
+| Advanced VPC | No — an empty VPC you build out yourself | Yes (Transit Gateway foundation) | You need full control over your network design from scratch |
 
 Specify which type you need in your account request or
 [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
@@ -217,8 +217,8 @@ You can have both types in the same account.
 
 ### VPC Families
 
-When you launch a VPC product, choose a **family** that determines the number
-of subnets, their type, and the total IP address space:
+When you launch the **Simple VPC** product, choose a **family** that determines
+the number of subnets, their type, and the total IP address space:
 
 | Family | Subnets | IPs | Subnet Type | Availability Zones |
 |---|---|---|---|---|

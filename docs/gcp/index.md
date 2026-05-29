@@ -2,7 +2,7 @@
 title: GCP Overview
 description: Overview of the UCSB Campus Cloud GCP environment — org hierarchy, folders, projects, regions, and what is pre-configured.
 permalink: /docs/gcp/
-last_reviewed: 2026-03-30
+last_reviewed: 2026-05-29
 ---
 
 # GCP at UCSB
@@ -34,7 +34,7 @@ Policies applied at a higher level are inherited by every project underneath.
 | Folder | Purpose |
 |---|---|
 | UCSB NIST Baseline | Production workloads — funded research, academic, and administrative projects with full org-policy enforcement |
-| Sandbox Unfunded | Self-service exploration — any `@ucsb.edu` user can create a project here, but billing cannot be attached |
+| ↳ Sandbox Unfunded | Nested under NIST Baseline. Self-service exploration — any `@ucsb.edu` user can create a project here, but billing cannot be attached |
 | UCSB Legacy | Pre-existing projects that predate the landing zone |
 
 {% include alert.html type="info" title="Sandbox Unfunded — self-service, no billing" content="Any @ucsb.edu user can create a project in the Sandbox Unfunded folder — including projects created automatically by tools like Apps Script. Billing cannot be attached, so most paid services (Compute Engine, Cloud SQL, GKE) are unavailable. Use this folder for exploring the GCP console, IAM, and free-tier services." %}
@@ -45,13 +45,21 @@ Policies applied at a higher level are inherited by every project underneath.
 
 When your project is provisioned, the Cloud Team will:
 
+* **Create per-project access groups** — Four Google Groups (owners, editors,
+  viewers, billing) that carry project, billing, and Shared VPC access; manage
+  access through these instead of granting roles directly (see
+  [Identity & Access]({{ "/docs/general/identity" | relative_url }}))
 * **Block high-risk operations** — Policies prevent actions like granting
   public access or disabling audit logs
 * **Enable Cloud Audit Logs** — Admin Activity logs are stored securely for 3 years
 * **Enable Security Command Center** — Central dashboard for security findings
-* **Require resource labels** — Enforce your team's tags on resources
+* **Require project tags** — Enforce your team's required tags, set at the
+  project level (see [Tagging]({{ "/docs/general/tagging" | relative_url }}))
 * **Restrict networking** — Only the Cloud Team can create VPC networks; request
   networking resources if your project needs them
+* **Route notifications to your team** — Essential Contacts are configured
+  automatically and point at your project's access groups, so security, billing,
+  and operational notices reach the right people
 * **Set a billing budget alert** — Notifies you when spend approaches your
   specified threshold (funded projects only)
 

@@ -2,7 +2,7 @@
 title: AWS First Steps
 description: What to do after your AWS account is provisioned — sign in, set up billing, deploy your first resource.
 permalink: /docs/aws/first-steps
-last_reviewed: 2026-04-06
+last_reviewed: 2026-05-29
 redirect_from:
   - /docs/firststeps/awsfirststeps
 ---
@@ -61,7 +61,25 @@ role themselves — add yourself as a member if you also want access.
 
 ---
 
-## Step 3 — Review Guardrails
+## Step 3 — Review Account Contacts
+
+Your account's **alternate contacts** — the Billing, Operations, and Security
+addresses that receive notifications such as security findings, service health
+events, and billing notices — are **set automatically when your account is
+provisioned**, using the contact information you supplied on your account
+request form. There is nothing you need to set up.
+
+To see what is on file, open the account menu (top right) → **Account** and
+scroll to **Alternate contacts**.
+
+To change a contact, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
+so the Cloud Team can update it. Use a shared functional email address rather
+than a personal one, so contacts survive staff changes. See
+[Account Contacts]({{ "/docs/general/contacts" | relative_url }}) for general best practices.
+
+---
+
+## Step 4 — Review Guardrails
 
 Policy controls (SCPs) are applied at the organization level and cannot be
 modified at the account level. Before building, familiarize yourself with the
@@ -70,7 +88,7 @@ encounter unexpected `Access Denied` errors.
 
 ---
 
-## Step 4 — Configure Networking
+## Step 5 — Configure Networking
 
 If your request included campus network connectivity:
 
@@ -83,7 +101,7 @@ can be deployed via the [Service Catalog]({{ "/docs/aws/service-catalog" | relat
 
 ---
 
-## Step 5 — Deploy Your First Resource
+## Step 6 — Deploy Your First Resource
 
 Use the [Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }}) to deploy
 pre-approved infrastructure templates. This is the fastest way to get
@@ -102,7 +120,7 @@ aws s3 ls --profile my-ucsb-account
 
 ---
 
-## Step 6 — Tag Your Resources
+## Step 7 — Tag Your Resources
 
 All resources must be tagged with the required tags. Missing tags will
 eventually trigger compliance alerts or resource removal.
@@ -111,7 +129,7 @@ See the [Tagging]({{ "/docs/general/tagging" | relative_url }}) page for require
 
 ---
 
-## Step 7 — Create a Budget Alarm
+## Step 8 — Create a Budget Alarm
 
 Set a Budget alarm so that you are alerted before you exceed your budget (see [AWS docs: Create a billing alarm to monitor your estimated charges](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html)):
 

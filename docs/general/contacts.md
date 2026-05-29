@@ -2,7 +2,7 @@
 title: Account Contacts
 description: Best practices for setting cloud account contacts across all providers
 permalink: /docs/general/contacts
-last_reviewed: 2026-04-03
+last_reviewed: 2026-05-29
 redirect_from:
   - /docs/bestpractices/contacts
 ---
@@ -42,9 +42,10 @@ or an unexpected billing spike in time to respond.
 Each provider has a different way to configure contacts. Follow the guide for
 your provider:
 
-* [AWS First Steps — Set Account Contacts]({{ "/docs/aws/first-steps#step-3--set-account-contacts" | relative_url }}) —
-  Alternate contacts (Security, Operations, Billing) in the AWS Account
-  Settings page. See the
+* [AWS First Steps — Review Account Contacts]({{ "/docs/aws/first-steps#step-3--review-account-contacts" | relative_url }}) —
+  Alternate contacts (Security, Operations, Billing) are configured
+  automatically from the information on your account request form; the Cloud
+  Team updates them on request. See the
   [AWS documentation on alternate contacts](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-contact-alternate.html)
   for details on what each contact type receives.
 * [Azure First Steps — Set Subscription Contacts]({{ "/docs/azure/first-steps#step-4--set-subscription-contacts" | relative_url }}) —
@@ -52,9 +53,9 @@ your provider:
   alert rules. See the
   [Azure notification settings documentation](https://learn.microsoft.com/en-us/azure/defender-for-cloud/configure-email-notifications)
   for Defender for Cloud email configuration.
-* [GCP First Steps — Set Project Contacts]({{ "/docs/gcp/first-steps#step-3--set-project-contacts" | relative_url }}) —
-  Essential Contacts for Security, Technical, and Billing notification
-  categories. See the
+* [GCP First Steps — Review Project Contacts]({{ "/docs/gcp/first-steps#step-3--review-project-contacts" | relative_url }}) —
+  Essential Contacts are configured automatically and routed to your project's
+  access groups; you change recipients by managing group membership. See the
   [GCP Essential Contacts documentation](https://cloud.google.com/resource-manager/docs/managing-notification-contacts)
   for details on notification categories.
 
