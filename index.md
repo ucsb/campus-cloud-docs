@@ -3,7 +3,7 @@ layout: page
 title: "Campus Cloud Docs - Home"
 description: UCSB Campus Cloud documentation — managed, policy-compliant AWS, Azure, and GCP environments for the campus community.
 permalink: /
-last_reviewed: 2026-04-06
+last_reviewed: 2026-06-07
 redirect_from:
   - /about/
 ---
@@ -34,7 +34,7 @@ New here? Start with [General Guidance]({{ "/docs/general/" | relative_url }}) o
 
 ---
 
-### Amazon Web Services (AWS)
+## Amazon Web Services (AWS)
 
 Your AWS account includes campus SSO login, networking connected to UCSB, a
 Service Catalog of self-service products (VPCs, budgets, IAM roles), and
@@ -45,7 +45,7 @@ are included automatically.
 
 ---
 
-### Microsoft Azure
+## Microsoft Azure
 
 Your Azure Subscription is placed inside the UCSB management hierarchy with
 pre-configured policies, Defender for Cloud monitoring, and network connectivity
@@ -55,7 +55,7 @@ via Virtual WAN. UC enterprise pricing through the Azure EA applies automaticall
 
 ---
 
-### Google Cloud Platform (GCP)
+## Google Cloud Platform (GCP)
 
 Your GCP Project lives in the UCSB organization with org-wide policies,
 centralized audit logging, Security Command Center monitoring, and billing
@@ -65,7 +65,7 @@ sub-accounts for cost attribution. UC enterprise pricing is included.
 
 ---
 
-### Who Is This For?
+## Who Is This For?
 
 The Campus Cloud is available to UCSB faculty, researchers, staff, and students
 for academic, research, and administrative work. If you are doing research that
@@ -78,7 +78,7 @@ directly with cloud providers may be more appropriate. Contact
 
 ---
 
-### Questions / Contact
+## Questions / Contact
 
 * General questions — [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu)
 * Account issues — open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
