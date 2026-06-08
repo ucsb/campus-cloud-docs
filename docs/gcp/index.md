@@ -5,6 +5,14 @@ permalink: /docs/gcp/
 last_reviewed: 2026-06-08
 ---
 
+# GCP at UCSB
+
+The UCSB Campus Cloud GCP platform is organized as a **Google Cloud
+Organization** with a structured folder hierarchy managed by the Cloud Team.
+Every project is provisioned inside a folder with organization-level policies
+and guardrails, giving your team a compliant starting point without manual
+security setup.
+
 {% capture alert_content %}
 <p>Please note: UCSB has updated its approach to purchasing paid cloud services from Microsoft Azure and Google Cloud. The Azure change took effect in January. The matching change for Google Cloud takes effect on Tuesday, June 16, 2026.</p>
 <p>In both cases, new paid subscriptions and projects must go through the campus <a href="{{ "/getting-started" | relative_url }}">Gateway procurement process</a> instead of being set up with a personal or departmental credit card. The campus agreements offer better pricing, give departments a clearer view of cloud spending, and protect users from unexpected charges on individual cards.</p>
@@ -29,14 +37,6 @@ last_reviewed: 2026-06-08
 <p><strong>Questions?</strong> Email <a href="mailto:info@cloud.ucsb.edu">info@cloud.ucsb.edu</a> or open a <a href="https://ucsb.service-now.com/it?id=it_sc_cat_item&amp;sys_id=c60e6bf2dbf398900c2e38f0ad961908&amp;sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5">ServiceNow request</a>.</p>
 {% endcapture %}
 {% include alert.html type="warning" title="Campus Cloud Service Updates — June 2026" content=alert_content %}
-
-# GCP at UCSB
-
-The UCSB Campus Cloud GCP platform is organized as a **Google Cloud
-Organization** with a structured folder hierarchy managed by the Cloud Team.
-Every project is provisioned inside a folder with organization-level policies
-and guardrails, giving your team a compliant starting point without manual
-security setup.
 
 ---
 

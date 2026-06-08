@@ -8,6 +8,30 @@ redirect_from:
   - /about/
 ---
 
+# UCSB Campus Cloud
+
+The UCSB Campus Cloud provides managed, policy-compliant cloud environments on
+AWS, Azure, and GCP for the campus community. The Cloud Team (ITS-CCID) operates
+a Campus Cloud Landing Zone for each provider — a pre-configured, secure multi-account
+environment that gives you a head start on security, compliance, and networking.
+
+Using the Campus Cloud means:
+
+* **UC enterprise pricing.** The UC system has negotiated discounts with AWS
+  (Enterprise Discount Program), Azure (Enterprise Agreement), and GCP. You
+  benefit automatically.
+* **Compliance built in.** Every account includes guardrails aligned with UC
+  Policy IS-3 and, for research accounts, NIST 800-171.
+* **Campus network connectivity.** AWS accounts can communicate with UCSB
+  on-premises systems over private networking. If you need campus connectivity
+  for Azure or GCP, contact us to discuss options.
+* **Support options.** AWS Business Support and Azure support plans are
+  available to Campus Cloud accounts. Contact the Cloud Team to discuss the
+  right support tier for your workload.
+
+New here? Start with [General Guidance]({{ "/docs/general/" | relative_url }}) or
+[Getting Started]({{ "/getting-started" | relative_url }}).
+
 {% capture alert_content %}
 <p>Please note: UCSB has updated its approach to purchasing paid cloud services from Microsoft Azure and Google Cloud. The Azure change took effect in January. The matching change for Google Cloud takes effect on Tuesday, June 16, 2026.</p>
 <p>In both cases, new paid subscriptions and projects must go through the campus <a href="{{ "/getting-started" | relative_url }}">Gateway procurement process</a> instead of being set up with a personal or departmental credit card. The campus agreements offer better pricing, give departments a clearer view of cloud spending, and protect users from unexpected charges on individual cards.</p>
@@ -37,30 +61,6 @@ redirect_from:
 <p><strong>Questions?</strong> Email <a href="mailto:info@cloud.ucsb.edu">info@cloud.ucsb.edu</a> or open a <a href="https://ucsb.service-now.com/it?id=it_sc_cat_item&amp;sys_id=c60e6bf2dbf398900c2e38f0ad961908&amp;sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5">ServiceNow request</a>.</p>
 {% endcapture %}
 {% include alert.html type="warning" title="Campus Cloud Service Updates — June 2026" content=alert_content %}
-
-# UCSB Campus Cloud
-
-The UCSB Campus Cloud provides managed, policy-compliant cloud environments on
-AWS, Azure, and GCP for the campus community. The Cloud Team (ITS-CCID) operates
-a Campus Cloud Landing Zone for each provider — a pre-configured, secure multi-account
-environment that gives you a head start on security, compliance, and networking.
-
-Using the Campus Cloud means:
-
-* **UC enterprise pricing.** The UC system has negotiated discounts with AWS
-  (Enterprise Discount Program), Azure (Enterprise Agreement), and GCP. You
-  benefit automatically.
-* **Compliance built in.** Every account includes guardrails aligned with UC
-  Policy IS-3 and, for research accounts, NIST 800-171.
-* **Campus network connectivity.** AWS accounts can communicate with UCSB
-  on-premises systems over private networking. If you need campus connectivity
-  for Azure or GCP, contact us to discuss options.
-* **Support options.** AWS Business Support and Azure support plans are
-  available to Campus Cloud accounts. Contact the Cloud Team to discuss the
-  right support tier for your workload.
-
-New here? Start with [General Guidance]({{ "/docs/general/" | relative_url }}) or
-[Getting Started]({{ "/getting-started" | relative_url }}).
 
 ---
 
