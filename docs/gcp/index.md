@@ -8,7 +8,7 @@ last_reviewed: 2026-06-08
 {% capture alert_content %}
 <p>Please note: UCSB has updated its approach to purchasing paid cloud services from Microsoft Azure and Google Cloud. The Azure change took effect in January. The matching change for Google Cloud takes effect on Tuesday, June 16, 2026.</p>
 <p>In both cases, new paid subscriptions and projects must go through the campus <a href="{{ "/getting-started" | relative_url }}">Gateway procurement process</a> instead of being set up with a personal or departmental credit card. The campus agreements offer better pricing, give departments a clearer view of cloud spending, and protect users from unexpected charges on individual cards.</p>
-<h1>Google Cloud (effective June 16, 2026)</h1>
+<h5>Google Cloud (effective June 16, 2026)</h5>
 <ul>
   <li><strong>New projects that need billing</strong> must be requested through the <a href="{{ "/getting-started" | relative_url }}">Gateway procurement process</a>. Personal and departmental credit cards can no longer be attached. Existing funded projects are not affected.</li>
   <li><strong>Google&#8217;s $300 new-account credit can no longer be activated with a ucsb.edu email account.</strong> This applies to individual users, including students. For coursework or research, faculty should look at the campus <a href="{{ "/docs/general/cost-management#research-credits" | relative_url }}">Research Credits and Teaching Credits</a> program. Research Credits offer up to $5,000 for faculty, PhD students, and postdocs. Teaching Credits are applied for on a per-course by faculty for student use.</li>

@@ -8,7 +8,7 @@ last_reviewed: 2026-06-08
 {% capture alert_content %}
 <p>Please note: UCSB has updated its approach to purchasing paid cloud services from Microsoft Azure and Google Cloud. The Azure change took effect in January. The matching change for Google Cloud takes effect on Tuesday, June 16, 2026.</p>
 <p>In both cases, new paid subscriptions and projects must go through the campus <a href="{{ "/getting-started" | relative_url }}">Gateway procurement process</a> instead of being set up with a personal or departmental credit card. The campus agreements offer better pricing, give departments a clearer view of cloud spending, and protect users from unexpected charges on individual cards.</p>
-<h1>Microsoft Azure (in effect since January 2026)</h1>
+<h5>Microsoft Azure (in effect since January 2026)</h5>
 <ul>
   <li><strong>New paid Azure subscriptions can no longer be created with a credit card.</strong> Free Azure subscriptions can no longer be upgraded to paid subscriptions using a credit card. To set up a new paid Azure subscription, contact the Campus Cloud Team and use the Gateway procurement process.</li>
   <li><strong>Existing Azure subscriptions are not affected</strong>, even if they have a credit card associated. Azure for Students is also not affected. Students with a verified ucsb.edu email can still sign up for Azure for Students and get $100 in credit for 12 months with no credit card required. Other educational subscription types, such as MSDN and Visual Studio Enterprise, are also unchanged.</li>
