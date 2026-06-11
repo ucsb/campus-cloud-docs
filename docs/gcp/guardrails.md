@@ -2,7 +2,7 @@
 title: GCP Guardrails & Org Policies
 description: Organization policy constraints and IAM deny policies applied to all Campus Cloud GCP projects.
 permalink: /docs/gcp/guardrails
-last_reviewed: 2026-05-29
+last_reviewed: 2026-06-11
 ---
 
 # GCP Guardrails
@@ -98,6 +98,7 @@ policies above.
 
 ### You Can
 * Create VMs with private IP addresses only
+* SSH or RDP into VMs via Identity-Aware Proxy (IAP) — requires the `allow-iap-ssh` or `allow-iap-rdp` network tag on the VM (see [Accessing Private VMs Without a Public IP]({{ "/docs/gcp/networking#accessing-private-vms-without-a-public-ip" | relative_url }}))
 * Make outbound internet connections from VMs freely (outbound traffic is not restricted)
 * Request VPC and networking resources via [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) (provisioned by Cloud Team)
 * Enable any GCP API not explicitly restricted

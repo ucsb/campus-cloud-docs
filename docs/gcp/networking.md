@@ -2,7 +2,7 @@
 title: GCP Networking
 description: Networking constraints, current limitations, and how to request network resources for GCP projects.
 permalink: /docs/gcp/networking
-last_reviewed: 2026-05-29
+last_reviewed: 2026-06-11
 ---
 
 # GCP Networking Overview
@@ -59,6 +59,30 @@ For anything beyond standard outbound access (additional subnets, VPC peering, f
 
 ---
 
+## Creating Compute Instances
+
+When creating a VM in the Cloud Console, the **Network interfaces** section
+defaults to **Networks in this project**. Because your project has no local VPC
+(blocked by org policy), this view is always empty.
+
+To place your VM on the campus Shared VPC, on the **Networking** tab:
+
+1. Click **Add a network interface** (or **Add a Dynamic Network Interface**).
+2. Click **Networks shared with me**.
+3. Choose a subnet from the **Shared subnetwork** dropdown.
+4. Click **Done**.
+
+{% capture alert_content %}If you see "No more networks available in this project," you have not switched the selector yet. Click <strong>Networks shared with me</strong> in the Network interfaces panel to reveal the campus Shared VPC.{% endcapture %}
+{% include alert.html type="warning" title="Network selector defaults to the wrong option" content=alert_content %}
+
+If **Networks shared with me** shows no subnets, your identity may not have
+Shared VPC access. See
+[Adding Team Members to the Shared VPC](#adding-team-members-to-the-shared-vpc)
+or open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
+
+---
+
 ## Adding Team Members to the Shared VPC
 
 Your project and its default service accounts can use the campus Shared VPC right away — no request needed. The project owner is also granted access at provisioning.
@@ -95,14 +119,11 @@ IAP.
 | `allow-iap-rdp` | RDP access (port 3389) via IAP |
 | `allow-win-activation` | Windows license activation (KMS egress) |
 
-**How to add a network tag:**
+**How to add a network tag** — see Google's guide for [full instructions](https://cloud.google.com/vpc/docs/add-remove-network-tags):
 
-* **Console:** Go to your VM instance → **Edit** → scroll to **Networking** →
-  enter the tag name in the **Network tags** field → **Save**.
-* **gcloud:** `gcloud compute instances create my-vm --tags=allow-iap-ssh`
-  (or add to an existing VM with `gcloud compute instances add-tags`).
-* **Terraform:** Add `tags = ["allow-iap-ssh"]` to your
-  `google_compute_instance` resource.
+* **Console:** VM instance → **Edit** → **Networking** → **Network tags** field → **Save**.
+* **gcloud:** `gcloud compute instances add-tags INSTANCE --zone=ZONE --tags=allow-iap-ssh`
+* **Terraform:** Add `tags = ["allow-iap-ssh"]` to your `google_compute_instance` resource.
 
 {% include alert.html type="info" title="Network tags are not Resource Manager Tags" content="Network tags are simple strings on a VM used for firewall targeting. They are separate from Resource Manager Tags (the structured key-value pairs like <code>environment=prod</code> used for billing and compliance)." %}
 
