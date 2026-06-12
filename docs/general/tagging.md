@@ -92,7 +92,7 @@ Each provider has a different interface for managing tags:
 
 * **AWS:** [AWS resource tagging docs](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html) — use Tag Editor in the AWS Console or the CLI.
 * **Azure:** [Azure resource tagging docs](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources) — set tags on Resource Groups and resources in the portal or CLI.
-* **GCP:** [GCP Resource Manager Tags docs](https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing) — tags are set at the **project level** (not on individual resources). Update them under **IAM & Admin → Tags** in the console or via `gcloud resource-manager tags bindings`. For project labels, see [Creating and managing labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels).
+* **GCP:** [View and update projects (Tags section)](https://cloud.google.com/resource-manager/docs/view-update-projects) — tags are set at the **project level** (not on individual resources). Update them under **[IAM & Admin → Settings → Tags](https://console.cloud.google.com/iam-admin/settings)** (*not* IAM & Admin → Tags) in the console or via `gcloud resource-manager tags bindings`. For project labels, see [Creating and managing labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels).
 
 ---
 
