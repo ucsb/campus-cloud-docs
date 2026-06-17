@@ -2,7 +2,7 @@
 title: GCP First Steps
 description: What to do after your GCP project is provisioned — sign in, verify setup, deploy your first resource.
 permalink: /docs/gcp/first-steps
-last_reviewed: 2026-05-29
+last_reviewed: 2026-06-17
 redirect_from:
   - /docs/firststeps/gcpfirststeps
 ---
@@ -34,14 +34,16 @@ Cloud Team. Follow the steps below to get set up.
 
 ## Step 2 — Verify Your Access
 
-1. Navigate to **IAM & Admin → IAM** in the left menu.
-2. Confirm your `@ucsb.edu` account is listed with the appropriate role:
-   * **Owner** — full access including IAM and billing (default for the project requester)
-   * **Editor** — create and manage most resources
-   * **Viewer** — read-only
-   * **Project IAM Admin** — manage IAM for the project (if needed)
+1. Go to [Cloud Hub](https://console.cloud.google.com/cloud-hub/) and confirm
+   your project appears and opens.
+2. If it does, your access is working — it comes from your membership in one of
+   the project's access groups (described below).
 
-If you are not listed or your role is incorrect, contact the Cloud Team.
+If you cannot open the project, contact the Cloud Team.
+
+If you are the project owner and need to give colleagues access, **do not add
+them under IAM & Admin** — manage membership in the project's Google Groups
+instead. See [Adding and Removing Users](#adding-and-removing-users) below.
 
 ### Adding and Removing Users
 
