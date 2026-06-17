@@ -53,10 +53,10 @@ grant roles to individuals directly** under IAM & Admin → IAM.
 
 | Group | Access it grants |
 |---|---|
-| `prj-<id>-owners@gcp.cloud.ucsb.edu` | Full project access (Owner), **view billing data**, and use of the campus **Shared VPC** |
-| `prj-<id>-editors@gcp.cloud.ucsb.edu` | Create and manage most resources (Editor), and use of the campus **Shared VPC** |
-| `prj-<id>-viewers@gcp.cloud.ucsb.edu` | Read-only access (Viewer) |
-| `prj-<id>-billing@gcp.cloud.ucsb.edu` | View billing data and read-only project access |
+| `<id>-owners@gcp.cloud.ucsb.edu` | Full project access (Owner), **view billing data**, and use of the campus **Shared VPC** |
+| `<id>-editors@gcp.cloud.ucsb.edu` | Create and manage most resources (Editor), and use of the campus **Shared VPC** |
+| `<id>-viewers@gcp.cloud.ucsb.edu` | Read-only access (Viewer) |
+| `<id>-billing@gcp.cloud.ucsb.edu` | View billing data and read-only project access |
 
 (`<id>` is your project ID. Find the exact group addresses under
 **IAM & Admin → IAM**, where the groups are listed as members.)
@@ -66,7 +66,7 @@ grant roles to individuals directly** under IAM & Admin → IAM.
 **To add or remove members**, go to [groups.google.com](https://groups.google.com)
 and open the group. Project owners are **Managers** of all four groups, so they
 can manage membership for every access level. Only `@ucsb.edu` accounts can be
-added — personal Gmail accounts are not permitted.
+added — personal Gmail accounts or accounts from other organizations are not permitted.
 
 See [Identity & Access]({{ "/docs/general/identity" | relative_url }}) for the
 cross-provider picture.
@@ -81,8 +81,8 @@ at your project's access groups, so there is nothing to set up:
 
 | Group | Notifications it receives |
 |---|---|
-| `prj-<id>-owners` | All categories — Billing, Legal, Security, Suspension, Technical, and Technical Incidents |
-| `prj-<id>-billing` | Billing only |
+| `<id>-owners` | All categories — Billing, Legal, Security, Suspension, Technical, and Technical Incidents |
+| `<id>-billing` | Billing only |
 
 Because contacts are tied to the groups, you change **who** receives these
 notifications by managing group membership — the same way you
