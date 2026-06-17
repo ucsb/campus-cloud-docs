@@ -68,6 +68,9 @@ and open the group. Project owners are **Managers** of all four groups, so they
 can manage membership for every access level. Only `@ucsb.edu` accounts can be
 added — personal Gmail accounts or accounts from other organizations are not permitted.
 
+After someone is added to a group, allow up to **30 minutes** for the new
+access to fully propagate before they have all their permissions.
+
 See [Identity & Access]({{ "/docs/general/identity" | relative_url }}) for the
 cross-provider picture.
 
