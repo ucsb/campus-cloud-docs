@@ -2,7 +2,7 @@
 title: GCP First Steps
 description: What to do after your GCP project is provisioned — sign in, verify setup, deploy your first resource.
 permalink: /docs/gcp/first-steps
-last_reviewed: 2026-06-17
+last_reviewed: 2026-06-18
 redirect_from:
   - /docs/firststeps/gcpfirststeps
 ---
@@ -84,7 +84,7 @@ at your project's access groups, so there is nothing to set up:
 
 | Group | Notifications it receives |
 |---|---|
-| `<id>-owners` | All categories — Billing, Legal, Security, Suspension, Technical, and Technical Incidents |
+| `<id>-owners` | Billing, Legal, Security, Suspension, and Technical |
 | `<id>-billing` | Billing only |
 
 Because contacts are tied to the groups, you change **who** receives these
@@ -151,7 +151,8 @@ APIs — if you get a policy error, see [Guardrails]({{ "/docs/gcp/guardrails" |
 ## Step 7 — Verify Required Tags
 
 Your project should already have the required Resource Manager Tags set by the
-Cloud Team at provisioning. Verify them by navigating to **IAM & Admin → Tags**.
+Cloud Team at provisioning. Verify them by navigating to **IAM & Admin →
+Settings → Tags** (not IAM & Admin → Tags).
 
 The owner-settable tags (`environment`, `mission`, `protection-level`,
 `availability-level`, `recovery-level`, `dept`) can be updated by you if they

@@ -2,7 +2,7 @@
 title: GCP Overview
 description: Overview of the UCSB Campus Cloud GCP environment — org hierarchy, folders, projects, regions, and what is pre-configured.
 permalink: /docs/gcp/
-last_reviewed: 2026-06-08
+last_reviewed: 2026-06-18
 ---
 
 # GCP at UCSB
@@ -59,7 +59,7 @@ Policies applied at a higher level are inherited by every project underneath.
 | Folder | Purpose |
 |---|---|
 | UCSB NIST Baseline | Production workloads — funded research, academic, and administrative projects with full org-policy enforcement |
-| ↳ Sandbox Unfunded | Nested under NIST Baseline. Self-service exploration — any `@ucsb.edu` user can create a project here, but billing cannot be attached |
+| Sandbox Unfunded | Self-service exploration — any `@ucsb.edu` user can create a project here, but billing cannot be attached |
 | UCSB Legacy | Pre-existing projects that predate the landing zone |
 
 {% include alert.html type="info" title="Sandbox Unfunded — self-service, no billing" content="Any @ucsb.edu user can create a project in the Sandbox Unfunded folder — including projects created automatically by tools like Apps Script. Billing cannot be attached, so most paid services (Compute Engine, Cloud SQL, GKE) are unavailable. Use this folder for exploring the GCP console, IAM, and free-tier services." %}
