@@ -2,7 +2,7 @@
 title: Azure Overview
 description: Overview of the UCSB Campus Cloud Azure environment — subscriptions, management groups, regions, and what is pre-configured.
 permalink: /docs/azure/
-last_reviewed: 2026-06-08
+last_reviewed: 2026-06-25
 ---
 
 # Azure at UCSB
@@ -87,6 +87,38 @@ allowed values.
 Four regions are available: **West US 2**, **West Central US**, **East US 2**,
 and **Central US**. West US 2 is recommended for most workloads. All other
 regions are blocked by a Deny policy at the management group level.
+
+---
+
+## Microsoft Support
+
+You can contact Microsoft directly from the Azure portal — unlike AWS, there is
+no separate enrollment step. From anywhere in the portal, select the **?** (Help)
+icon in the top header, or open **Help + support**, then choose **Create a
+support request**.
+
+What Microsoft can help with depends on your subscription:
+
+* **Subscription management** — billing, quota increases, and account questions
+  are included for every subscription at no cost.
+* **Technical support** — subscriptions provisioned by the Campus Cloud Team are
+  covered by the campus **Microsoft Unified Support** agreement, so you can open
+  technical support requests for them at no extra cost. When you create a request
+  for one of these subscriptions, select **Unified Support** as the support plan.
+* **Student, MSDN, and Visual Studio subscriptions** are not covered by the
+  campus agreement and receive **Basic** support only — subscription management
+  and billing, but no Microsoft technical support. See
+  [Compare Azure support plans](https://azure.microsoft.com/support/plans) for
+  the difference.
+
+To open a request, you need the **UCSB Subscription Owner** or **UCSB
+Application Owner** role on the subscription (see
+[First Steps]({{ "/docs/azure/first-steps" | relative_url }})).
+
+For step-by-step instructions, see Microsoft's official guide,
+[How to create an Azure support request](https://learn.microsoft.com/azure/azure-portal/supportability/how-to-create-azure-support-request).
+
+{% include alert.html type="info" title="Open a Campus Cloud ticket first for platform issues" content="For issues related to subscription access, networking, guardrails, or Campus Cloud configuration, <a href='https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5'>open a ServiceNow ticket with the Cloud Team</a> rather than a Microsoft support request. Use Microsoft support for service-specific questions about your workloads." %}
 
 ---
 

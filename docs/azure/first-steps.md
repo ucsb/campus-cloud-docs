@@ -2,7 +2,7 @@
 title: Azure First Steps
 description: What to do after your Azure subscription is provisioned — sign in, verify setup, deploy your first resource.
 permalink: /docs/azure/first-steps
-last_reviewed: 2026-04-06
+last_reviewed: 2026-06-25
 redirect_from:
   - /docs/firststeps/azurefirststeps
   - /docs/azure/roles
@@ -162,4 +162,5 @@ Create a cost budget to alert you if spend approaches your expected amount:
 | Missing VNet, networking issues | [Networking]({{ "/docs/azure/networking" | relative_url }}) |
 | Policy violations | [Guardrails]({{ "/docs/azure/guardrails" | relative_url }}) |
 | Billing questions | [Cost Management]({{ "/docs/general/cost-management" | relative_url }}) |
+| Azure service questions | [Microsoft Support]({{ "/docs/azure/#microsoft-support" | relative_url }}) — open a request in the Azure portal |
 | Everything else | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) |
