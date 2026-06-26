@@ -92,10 +92,9 @@ regions are blocked by a Deny policy at the management group level.
 
 ## Microsoft Support
 
-You can contact Microsoft directly from the Azure portal — unlike AWS, there is
-no separate enrollment step. From anywhere in the portal, select the **?** (Help)
-icon in the top header, or open **Help + support**, then choose **Create a
-support request**.
+You can contact Microsoft directly from the Azure portal — there is no separate
+sign-up step. From anywhere in the portal, select the **?** (Help) icon in the
+top header, or open **Help + support**, then choose **Create a support request**.
 
 What Microsoft can help with depends on your subscription:
 
