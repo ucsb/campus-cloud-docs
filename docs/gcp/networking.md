@@ -78,24 +78,17 @@ To place your VM on the campus Shared VPC, on the **Networking** tab:
 If **Networks shared with me** shows no subnets, your identity may not have
 Shared VPC access. See
 [Adding Team Members to the Shared VPC](#adding-team-members-to-the-shared-vpc)
-or open a
-[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
+below.
 
 ---
 
 ## Adding Team Members to the Shared VPC
 
-Your project and its default service accounts can use the campus Shared VPC right away — no request needed. The project owner is also granted access at provisioning.
+Your project and its default service accounts can use the campus Shared VPC right away — no request needed.
 
-Other team members and additional service accounts do **not** have Shared VPC access by default. Because subnet access is controlled in the host project — not your project — you cannot grant it yourself, even as the project owner.
+Shared VPC access for other people is granted through the project's `-owners@gcp.cloud.ucsb.edu` and `-editors@gcp.cloud.ucsb.edu` Google Groups — anyone added to either group gets Shared VPC access automatically. No ServiceNow ticket is needed.
 
-To request access for additional users or service accounts, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) and include:
-
-* Your GCP project ID
-* The Google identity (email address) of each person or service account that needs access
-
-{% capture alert_content %}Request a <strong>Google Group</strong> rather than listing individual users. Once the group is granted access, you can add and remove members yourself through the <a href="https://www.connect.ucsb.edu/accounts/connect-departmental-administrators/using-connect-admin-portal">Connect Admin Portal</a> (see the Google Groups section) — no follow-up tickets required when team membership changes.{% endcapture %}
-{% include alert.html type="info" title="Tip: use a Google Group" content=alert_content %}
+See [Adding and Removing Users]({{ "/docs/gcp/first-steps#adding-and-removing-users" | relative_url }}) for how to manage group membership. Allow up to 30 minutes for access to propagate after adding someone.
 
 ---
 
