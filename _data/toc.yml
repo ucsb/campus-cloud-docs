@@ -14,12 +14,16 @@
       children:
         - title: Overview
           url: "docs/general/"
+        - title: Support
+          url: "docs/general/support"
         - title: Shared Responsibility
           url: "docs/general/shared-responsibility"
         - title: Identity & Access
           url: "docs/general/identity"
         - title: Security
           url: "docs/general/security/"
+        - title: Data Management
+          url: "docs/general/data-management"
         - title: Compliance
           url: "docs/general/compliance"
         - title: Tagging
@@ -28,12 +32,8 @@
           url: "docs/general/cost-management"
         - title: Account Contacts
           url: "docs/general/contacts"
-        - title: Support
-          url: "docs/general/support"
         - title: Research
           url: "docs/general/research"
-        - title: Data Management
-          url: "docs/general/data-management"
         - title: Migrate Personal Account
           url: "docs/general/migrate"
         - title: Close an Account

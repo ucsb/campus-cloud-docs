@@ -25,6 +25,28 @@ with the wider campus cloud community.
 
 ---
 
+## Join the Community
+
+Anyone at UCSB who uses AWS, Azure, or GCP is welcome to join the **Cloud Impact
+Hub**, our Google Chat space for community support, questions, and best
+practices. It is the fastest way to get a quick answer from the Cloud Team and
+from other cloud users on campus.
+
+[Join the Cloud Impact Hub Google Chat space](https://chat.google.com/room/AAAAN8CAkZY?cls=4)
+
+---
+
+## Office Hours
+
+We hold open office hours every **Thursday from 10:00–11:00 AM**. Anyone is
+welcome to drop in with questions, ideas, or troubleshooting. No appointment is
+needed.
+
+Join the [Cloud Impact Hub Chat space](https://chat.google.com/room/AAAAN8CAkZY?cls=4)
+for the Zoom link and other details.
+
+---
+
 ## Vendor Support
 
 In addition to the Campus Cloud Team, you can open support requests directly
@@ -80,28 +102,6 @@ For step-by-step instructions, see Microsoft's official guide,
 Vendor support for GCP is **not currently available** through the Campus Cloud.
 The UC System is working on negotiating a support agreement, and we will
 announce it here once it is available.
-
----
-
-## Join the Community
-
-Anyone at UCSB who uses AWS, Azure, or GCP is welcome to join the **Cloud Impact
-Hub**, our Google Chat space for community support, questions, and best
-practices. It is the fastest way to get a quick answer from the Cloud Team and
-from other cloud users on campus.
-
-[Join the Cloud Impact Hub Google Chat space](https://chat.google.com/room/AAAAN8CAkZY?cls=4)
-
----
-
-## Office Hours
-
-We hold open office hours every **Thursday from 10:00–11:00 AM**. Anyone is
-welcome to drop in with questions, ideas, or troubleshooting. No appointment is
-needed.
-
-Join the [Cloud Impact Hub Chat space](https://chat.google.com/room/AAAAN8CAkZY?cls=4)
-for the Zoom link and other details.
 
 ---
 
