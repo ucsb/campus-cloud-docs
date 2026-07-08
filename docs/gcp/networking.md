@@ -2,7 +2,7 @@
 title: GCP Networking
 description: Networking constraints, current limitations, and how to request network resources for GCP projects.
 permalink: /docs/gcp/networking
-last_reviewed: 2026-06-11
+last_reviewed: 2026-07-08
 ---
 
 # GCP Networking Overview
@@ -178,25 +178,39 @@ and the Cloud Team will evaluate an exception.
 
 ## Public-Facing Services
 
-**Public access is not allowed by default — even for serverless services.** Org
-policy requires authenticated (IAM-based) access to Cloud Run and Cloud
-Functions (`run.managed.requireInvokerIam`), and granting access to `allUsers`
-is separately blocked. By default these services are reachable only by
-identities you authorize, not the open internet.
+**Public access is not allowed by default — even for serverless services.** Two
+org policies work together to keep your services private: one requires
+authenticated (IAM-based) access to Cloud Run and Cloud Functions, and a
+separate one blocks granting access to `allUsers`. By default these services are
+reachable only by identities you authorize, not the open internet.
 
-If you need a Cloud Run or Cloud Functions service to accept unauthenticated
-public traffic, open a
+Public traffic **is supported** when a workload genuinely needs it — you just
+have to request it. There are two paths, depending on what you're running.
+
+### Public Cloud Run or Cloud Functions (no load balancer)
+
+If you need a serverless service to accept unauthenticated public traffic
+(a public website, an API, a webhook receiver), open a
 [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
+The Cloud Team relaxes both guardrails **for that one project**, after which you
+can publish the service on its built-in HTTPS URL. This is free — no additional
+infrastructure.
 
-For **VM-based workloads** that need a public-facing endpoint (e.g., a web
-application behind a load balancer), open a
+{% capture alert_content %}A public serverless endpoint set up this way has <strong>no Web Application Firewall (WAF) in front of it</strong>. Protection depends entirely on your own application — validate all input, require authentication where you can, and keep dependencies patched. If you want a WAF and DDoS protection in front of a public app, request the load-balancer option below instead.{% endcapture %}
+{% include alert.html type="warning" title="No WAF by default" content=alert_content %}
+
+### VM-based apps, or a WAF in front of a public app
+
+For **VM-based workloads** that need a public-facing endpoint, or if you want a
+WAF and DDoS protection in front of a public Cloud Run service, open a
 [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
 The Cloud Team will provision an external
 [Application Load Balancer](https://docs.cloud.google.com/load-balancing/docs/application-load-balancer)
 with
 [Cloud Armor](https://docs.cloud.google.com/armor/docs/cloud-armor-overview)
 (Google's WAF and DDoS protection) on your behalf. You cannot create
-external load balancers yourself — they are blocked by org policy.
+external load balancers yourself — they are blocked by org policy. This option
+carries a monthly cost for the load balancer and WAF, billed to your project.
 
 ---
 

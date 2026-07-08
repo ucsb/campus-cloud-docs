@@ -2,7 +2,7 @@
 title: GCP Guardrails & Org Policies
 description: Organization policy constraints and IAM deny policies applied to all Campus Cloud GCP projects.
 permalink: /docs/gcp/guardrails
-last_reviewed: 2026-06-11
+last_reviewed: 2026-07-08
 ---
 
 # GCP Guardrails
@@ -83,6 +83,7 @@ policies above.
 |---|---|
 | Disable Gmail members | Granting access to `@gmail.com` accounts is blocked |
 | Disable public access grants | Granting access to `allUsers` or `allAuthenticatedUsers` is blocked |
+| Require authenticated Cloud Run invocation | Cloud Run and Cloud Functions require IAM-authenticated (logged-in) invocation |
 | Disable IP forwarding | VMs cannot be created with IP forwarding enabled |
 | Require VPC flow logs | Subnets cannot be created without flow logs enabled |
 | Require DNS logging | DNS policies must have logging enabled |
@@ -109,7 +110,7 @@ policies above.
 * Create any VPC networks (deny policy blocks `networks.create` for all users)
 * Create auto-mode VPCs
 * Assign external public IPs to VMs
-* Set public access permissions (`allUsers`, `allAuthenticatedUsers`)
+* Set public access permissions (`allUsers`, `allAuthenticatedUsers`) or expose Cloud Run / Cloud Functions to unauthenticated traffic — both require a per-project exception (see [Public-Facing Services]({{ "/docs/gcp/networking#public-facing-services" | relative_url }}))
 * Disable audit logs
 * Create resources in regions outside us-central1 / us-west1 (for most services)
 * Attach a billing account to a Sandbox Unfunded project

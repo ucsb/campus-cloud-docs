@@ -2,7 +2,7 @@
 title: GCP Security
 description: Security monitoring, audit logging, Security Command Center, and incident response for GCP projects.
 permalink: /docs/gcp/security
-last_reviewed: 2026-05-29
+last_reviewed: 2026-07-08
 ---
 
 # GCP Security
@@ -23,14 +23,20 @@ misconfigurations, unusual API activity, and unsafe network settings.
 
 ### Reviewing Findings
 
+Project owners can view Security Command Center findings for their own project —
+this access comes automatically with membership in the project's owners group.
+(The Owner role on its own does not grant access to findings, so use the owners
+group rather than a direct IAM grant.) This access is scoped to your project, so
+you automatically see findings for your own project only — there's nothing to
+restrict manually.
+
 1. Open **Security → Security Command Center → Findings** in the Google Cloud
    console.
-2. Filter by your project ID.
-3. Start with Critical and High severity.
-4. Click a finding to see which resource is affected and how to fix it.
+2. Start with Critical and High severity.
+3. Click a finding to see which resource is affected and how to fix it.
 
-Address Critical and High findings promptly. The Cloud Team may follow up if
-they remain unresolved.
+Address Critical and High findings promptly. The Cloud Team monitors
+organization-wide findings and may follow up if they remain unresolved.
 
 For details, see the
 [Security Command Center docs](https://cloud.google.com/security-command-center/docs).
