@@ -2,7 +2,7 @@
 title: GCP First Steps
 description: What to do after your GCP project is provisioned — sign in, verify setup, deploy your first resource.
 permalink: /docs/gcp/first-steps
-last_reviewed: 2026-06-18
+last_reviewed: 2026-07-08
 redirect_from:
   - /docs/firststeps/gcpfirststeps
 ---
@@ -12,6 +12,11 @@ redirect_from:
 
 Your project is ready when you receive the provisioning confirmation from the
 Cloud Team. Follow the steps below to get set up.
+
+These steps also work as a checklist for an established project — revisit them
+any time, such as after your
+[annual check-in]({{ "/docs/general/support#annual-account-check-ins" | relative_url }}),
+to verify your contacts, budget, and tags are still the way you want them.
 
 * TOC
 {:toc}
@@ -53,7 +58,7 @@ grant roles to individuals directly** under IAM & Admin → IAM.
 
 | Group | Access it grants |
 |---|---|
-| `<id>-owners@gcp.cloud.ucsb.edu` | Full project access (Owner), **view billing data**, and use of the campus **Shared VPC** |
+| `<id>-owners@gcp.cloud.ucsb.edu` | Full project access (Owner), **view billing data**, use of the campus **Shared VPC**, and visibility into the project's **Security Command Center findings** |
 | `<id>-editors@gcp.cloud.ucsb.edu` | Create and manage most resources (Editor), and use of the campus **Shared VPC** |
 | `<id>-viewers@gcp.cloud.ucsb.edu` | Read-only access (Viewer) |
 | `<id>-billing@gcp.cloud.ucsb.edu` | View billing data and read-only project access |
@@ -61,7 +66,7 @@ grant roles to individuals directly** under IAM & Admin → IAM.
 (`<id>` is your project ID. Find the exact group addresses under
 **IAM & Admin → IAM**, where the groups are listed as members.)
 
-{% include alert.html type="warning" title="Use the groups, not direct grants" content="Billing-data access and Shared VPC access are attached to these groups, not to direct IAM grants. If you add someone straight to project IAM, they will be missing billing visibility and the campus network — add them to the appropriate group instead." %}
+{% include alert.html type="warning" title="Use the groups, not direct grants" content="Never add someone directly to a project's IAM — always add them to the appropriate group instead. These groups carry extra access that the basic Owner/Editor/Viewer roles do not include — billing-data visibility, use of the campus Shared VPC, and (for owners) the project's Security Command Center findings. Anyone granted straight to project IAM will be missing some or all of it." %}
 
 **To add or remove members**, go to [groups.google.com](https://groups.google.com)
 and open the group. Project owners are **Managers** of all four groups, so they
@@ -148,15 +153,18 @@ APIs — if you get a policy error, see [Guardrails]({{ "/docs/gcp/guardrails" |
 
 ---
 
-## Step 7 — Verify Required Tags
+## Step 7 — Set Required Tags
 
-Your project should already have the required Resource Manager Tags set by the
-Cloud Team at provisioning. Verify them by navigating to **IAM & Admin →
-Settings → Tags** (not IAM & Admin → Tags).
+Unlike your access groups and Essential Contacts, the required Resource
+Manager Tags (`environment`, `mission`, `protection-level`,
+`availability-level`, `recovery-level`, `dept`) are **not** set automatically
+at provisioning — you set them yourself.
 
-The owner-settable tags (`environment`, `mission`, `protection-level`,
-`availability-level`, `recovery-level`, `dept`) can be updated by you if they
-need to change.
+1. Navigate to **IAM & Admin → Settings → Tags** (not IAM & Admin → Tags).
+2. Bind each of the six tags to your project.
+
+You can update these tags yourself at any time if your project's
+classification changes.
 
 See [Tagging & Labels]({{ "/docs/general/tagging" | relative_url }}) for allowed values and how to update them.
 
@@ -169,16 +177,24 @@ See [Tagging & Labels]({{ "/docs/general/tagging" | relative_url }}) for allowed
 3. The budget notifies you at 50%, 90%, and 100% of the budget by default.
 4. To change thresholds or recipients, edit the budget.
 
+A budget only sends notifications — it does not stop resources.
+
 See [Costs & Billing]({{ "/docs/general/cost-management" | relative_url }}) for more information.
 
 ---
 
 ## Getting Help
 
-| Issue | Where to go |
-|---|---|
-| Access problems | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) |
-| Networking issues | [Networking]({{ "/docs/gcp/networking" | relative_url }}) |
-| Org policy violations | [Guardrails]({{ "/docs/gcp/guardrails" | relative_url }}) |
-| Billing questions | [Costs & Billing]({{ "/docs/general/cost-management" | relative_url }}) |
-| Everything else | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) |
+For all the ways to get help, see the
+[Support]({{ "/docs/general/support" | relative_url }}) page. It covers:
+
+* **Contacting the Cloud Team** — open a
+  [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
+  for anything that needs tracking, or email
+  [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu).
+* **Community and office hours** — the Cloud Impact Hub chat space and weekly
+  drop-in office hours.
+* **Vendor support** — Google vendor support is not currently available
+  through the Campus Cloud.
+* **Annual check-ins** — schedule a check-in with the Cloud Team to review
+  your project.

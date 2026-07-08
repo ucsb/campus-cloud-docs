@@ -2,7 +2,7 @@
 title: Azure Security
 description: Security monitoring, Defender for Cloud, and log management in Campus Cloud Azure subscriptions.
 permalink: /docs/azure/security
-last_reviewed: 2026-04-30
+last_reviewed: 2026-07-08
 ---
 
 # Azure Security
@@ -29,9 +29,15 @@ containers, and tracks compliance against NIST 800-171.
 2. Start with High severity items.
 3. Click a recommendation to see which resources are affected and how to fix
    them.
+4. Also check **Security alerts** for active threat detections on your
+   resources.
 
 Address High severity recommendations promptly. The Cloud Team may follow up
 if they remain unresolved.
+
+To see how your subscription scores against a compliance standard, open
+**Microsoft Defender for Cloud → Regulatory compliance**, which shows your
+posture against NIST and the Microsoft cloud security benchmark.
 
 For details, see the
 [Microsoft Defender for Cloud docs](https://learn.microsoft.com/en-us/azure/defender-for-cloud/).

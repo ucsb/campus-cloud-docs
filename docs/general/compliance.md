@@ -2,7 +2,7 @@
 title: Compliance & Governance
 description: NIST 800-171, UC IS-3, and how to request a compliant account
 permalink: /docs/general/compliance
-last_reviewed: 2026-04-07
+last_reviewed: 2026-07-08
 redirect_from:
   - /docs/guidelines/compliance
 ---
@@ -58,6 +58,9 @@ Group (Azure), or Folder (GCP) with additional controls enabled:
 * Additional detective controls check encryption, access, and network configuration
 * Additional preventive controls block non-compliant configurations
 * Regular automated compliance reports are available on request
+
+{% capture alert_content %}Support for P4 (HIPAA/CUI) workloads on GCP is still being finalized. Contact the Cloud Team before starting a P4 project on GCP so we can confirm readiness together.{% endcapture %}
+{% include alert.html type="warning" title="GCP note" content=alert_content %}
 
 ### Migrating an Existing Account to NIST-Compliant
 

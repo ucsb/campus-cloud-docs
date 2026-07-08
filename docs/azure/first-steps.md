@@ -2,7 +2,7 @@
 title: Azure First Steps
 description: What to do after your Azure subscription is provisioned — sign in, verify setup, deploy your first resource.
 permalink: /docs/azure/first-steps
-last_reviewed: 2026-06-25
+last_reviewed: 2026-07-08
 redirect_from:
   - /docs/firststeps/azurefirststeps
   - /docs/azure/roles
@@ -13,6 +13,11 @@ redirect_from:
 
 Your subscription is ready when you receive the provisioning confirmation from
 the Cloud Team. Follow the steps below to get set up.
+
+These steps also work as a checklist for an established subscription — revisit
+them any time, such as after your
+[annual check-in]({{ "/docs/general/support#annual-account-check-ins" | relative_url }}),
+to verify your contacts, budget, and tags are still the way you want them.
 
 * TOC
 {:toc}
@@ -121,13 +126,17 @@ If your request included hub-spoke Virtual WAN peering for campus connectivity:
 2. Check **Peerings** — it should show a peering to the Campus Cloud hub VNet.
 3. If the VNet or peering is missing, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
 
+See [Azure Networking]({{ "/docs/azure/networking" | relative_url }}) for full
+details.
+
 ---
 
 ## Step 7 — Create a Resource Group
 
 All resources must be in a Resource Group. Azure Policy audits Resource Groups
 for the four required tags — groups missing tags will be flagged as
-non-compliant.
+non-compliant. (For the other policies applied to your subscription, see
+[Guardrails]({{ "/docs/azure/guardrails" | relative_url }}).)
 
 1. Navigate to **Resource Groups → + Create**.
 2. Select your subscription and a region (West US 2 recommended).
@@ -142,7 +151,7 @@ See [Tagging]({{ "/docs/general/tagging" | relative_url }}) for allowed values.
 
 ---
 
-## Step 8 — Set a Budget Alert
+## Step 8 — Set Up or Verify a Budget Alert
 
 Create a cost budget to alert you if spend approaches your expected amount:
 
@@ -151,16 +160,26 @@ Create a cost budget to alert you if spend approaches your expected amount:
 3. Configure alert thresholds (e.g., 80% actual, 100% forecasted).
 4. Set the alert email to your team's functional email address.
 
+A budget only sends notifications — it does not stop resources. To automate a
+response when a threshold is hit, attach an action group to the budget alert.
+See [Azure budget docs](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets)
+for details, and [Costs & Billing]({{ "/docs/general/cost-management" | relative_url }})
+for more on monitoring your spending.
+
 ---
 
 ## Getting Help
 
-| Issue | Where to go |
-|---|---|
-| Access problems (can't sign in, wrong directory) | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) |
-| Tag policy blocking resource group creation | [Tagging]({{ "/docs/general/tagging" | relative_url }}) |
-| Missing VNet, networking issues | [Networking]({{ "/docs/azure/networking" | relative_url }}) |
-| Policy violations | [Guardrails]({{ "/docs/azure/guardrails" | relative_url }}) |
-| Billing questions | [Cost Management]({{ "/docs/general/cost-management" | relative_url }}) |
-| Azure service questions | [Microsoft Support]({{ "/docs/azure/#microsoft-support" | relative_url }}) — open a request in the Azure portal |
-| Everything else | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) |
+For all the ways to get help, see the
+[Support]({{ "/docs/general/support" | relative_url }}) page. It covers:
+
+* **Contacting the Cloud Team** — open a
+  [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
+  for anything that needs tracking, or email
+  [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu).
+* **Community and office hours** — the Cloud Impact Hub chat space and weekly
+  drop-in office hours.
+* **Microsoft support** — technical support is included through the campus
+  Microsoft Unified Support agreement; open a request from the Azure portal.
+* **Annual check-ins** — schedule a check-in with the Cloud Team to review
+  your subscription.

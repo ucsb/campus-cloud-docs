@@ -12,18 +12,6 @@ shared management group hierarchy with pre-applied policies, networking, and
 security monitoring. Your team can start building right away with a consistent
 security baseline.
 
-{% capture alert_content %}
-<p>Please note: UCSB has updated its approach to purchasing paid cloud services from Microsoft Azure and Google Cloud. The Azure change took effect in January. The matching change for Google Cloud takes effect on Tuesday, June 16, 2026.</p>
-<p>In both cases, new paid subscriptions and projects must go through the campus <a href="{{ "/getting-started" | relative_url }}">Gateway procurement process</a> instead of being set up with a personal or departmental credit card. The campus agreements offer better pricing, give departments a clearer view of cloud spending, and protect users from unexpected charges on individual cards.</p>
-<h5>Microsoft Azure (in effect since January 2026)</h5>
-<ul>
-  <li><strong>New paid Azure subscriptions can no longer be created with a credit card.</strong> Free Azure subscriptions can no longer be upgraded to paid subscriptions using a credit card. To set up a new paid Azure subscription, contact the Campus Cloud Team and use the Gateway procurement process.</li>
-  <li><strong>Existing Azure subscriptions are not affected</strong>, even if they have a credit card associated. Azure for Students is also not affected. Students with a verified ucsb.edu email can still sign up for Azure for Students and get $100 in credit for 12 months with no credit card required. Other educational subscription types, such as MSDN and Visual Studio Enterprise, are also unchanged.</li>
-</ul>
-<p><strong>Questions?</strong> Email <a href="mailto:info@cloud.ucsb.edu">info@cloud.ucsb.edu</a> or open a <a href="https://ucsb.service-now.com/it?id=it_sc_cat_item&amp;sys_id=c60e6bf2dbf398900c2e38f0ad961908&amp;sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5">ServiceNow request</a>.</p>
-{% endcapture %}
-{% include alert.html type="warning" title="Campus Cloud Service Updates — June 2026" content=alert_content %}
-
 ---
 
 ## Key Facts
@@ -90,37 +78,6 @@ regions are blocked by a Deny policy at the management group level.
 
 ---
 
-## Microsoft Support
-
-You can contact Microsoft directly from the Azure portal — there is no separate
-sign-up step. From anywhere in the portal, select the **?** (Help) icon in the
-top header, or open **Help + support**, then choose **Create a support request**.
-
-What Microsoft can help with depends on your subscription:
-
-* **Subscription management** — billing, quota increases, and account questions
-  are included for every subscription at no cost.
-* **Technical support** — subscriptions provisioned by the Campus Cloud Team are
-  covered by the campus **Microsoft Unified Support** agreement, so you can open
-  technical support requests for them at no extra cost. When you create a request
-  for one of these subscriptions, select **Unified Support** as the support plan.
-* **Student, MSDN, and Visual Studio subscriptions** are not covered by the
-  campus agreement and receive **Basic** support only — subscription management
-  and billing, but no Microsoft technical support. See
-  [Compare Azure support plans](https://azure.microsoft.com/support/plans) for
-  the difference.
-
-To open a request, you need the **UCSB Subscription Owner** or **UCSB
-Application Owner** role on the subscription (see
-[First Steps]({{ "/docs/azure/first-steps" | relative_url }})).
-
-For step-by-step instructions, see Microsoft's official guide,
-[How to create an Azure support request](https://learn.microsoft.com/azure/azure-portal/supportability/how-to-create-azure-support-request).
-
-{% include alert.html type="info" title="Open a Campus Cloud ticket first for platform issues" content="For issues related to subscription access, networking, guardrails, or Campus Cloud configuration, <a href='https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5'>open a ServiceNow ticket with the Cloud Team</a> rather than a Microsoft support request. Use Microsoft support for service-specific questions about your workloads." %}
-
----
-
 ## Next Steps
 
 * [Request a Subscription]({{ "/getting-started" | relative_url }})
@@ -128,4 +85,5 @@ For step-by-step instructions, see Microsoft's official guide,
 * [Networking]({{ "/docs/azure/networking" | relative_url }})
 * [Guardrails & Policies]({{ "/docs/azure/guardrails" | relative_url }})
 * [Security]({{ "/docs/azure/security" | relative_url }})
+* [Support]({{ "/docs/general/support" | relative_url }})
 

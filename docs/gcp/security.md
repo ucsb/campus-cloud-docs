@@ -35,6 +35,12 @@ restrict manually.
 2. Start with Critical and High severity.
 3. Click a finding to see which resource is affected and how to fix it.
 
+For a simpler overview, [Cloud Hub](https://console.cloud.google.com/cloud-hub/)
+has a **Security & compliance** panel (in preview) that shows findings by
+severity alongside your compliance scores. To see how your project scores
+against a compliance standard such as NIST, open **Security Command Center →
+Compliance Manager**.
+
 Address Critical and High findings promptly. The Cloud Team monitors
 organization-wide findings and may follow up if they remain unresolved.
 
@@ -78,22 +84,15 @@ administrative action in your project — who did what, when, and from where.
 | Log Type | What It Records | Retention |
 |---|---|---|
 | Admin Activity | Changes to resources and settings | 3 years (cannot be deleted or modified) |
-| Data Access | Reads and writes to data (if enabled) | 30 days default (configurable) |
+| Data Access | Reads and writes to data | 30 days default (configurable) |
 | System Events | Automated GCP actions | 30 days default |
 
-**Admin Activity logs are always on** and cannot be disabled.
-
-### Enabling Data Access Logs
-
-Data Access logs are off by default because they can generate high volume.
-To enable them for a specific service:
-
-1. Go to **IAM & Admin → Audit Logs** in the Google Cloud console.
-2. Select a service (e.g., Cloud Storage, BigQuery).
-3. Check **Data Read**, **Data Write**, and/or **Admin Read**.
-4. Save.
-
-For accounts handling sensitive data, Data Access logs are recommended.
+**Admin Activity logs are always on** and cannot be disabled. **Data Access
+logs are enabled for all services by default** as a Campus Cloud guardrail —
+older projects that predate this guardrail may not have it. If you don't see
+Data Access entries for a service you expect, check **IAM & Admin → Audit
+Logs** in the Google Cloud console and contact the Cloud Team if it looks
+disabled.
 
 For details, see the
 [Cloud Audit Logs docs](https://cloud.google.com/logging/docs/audit).

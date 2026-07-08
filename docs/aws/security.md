@@ -2,7 +2,7 @@
 title: AWS Security
 description: Security monitoring, audit logging, and threat detection in Campus Cloud AWS accounts.
 permalink: /docs/aws/security
-last_reviewed: 2026-03-30
+last_reviewed: 2026-07-08
 ---
 
 # AWS Security
@@ -24,12 +24,18 @@ what needs attention.
 
 ### Reviewing Findings
 
-1. Open **Security Hub → Findings** in the AWS console.
+1. In the AWS console search bar, search for **Security Hub CSPM** and open
+   **Findings**. The full name matters — searching for "Security Hub" alone
+   opens a newer, separate AWS service with a different layout.
 2. Filter by severity — start with Critical and High.
 3. Click a finding to see which resource is affected and how to fix it.
 
 Address Critical and High findings promptly. The Cloud Team may follow up if
 they remain unresolved.
+
+To see how your account scores against a compliance standard, open **Security
+standards** in Security Hub CSPM and select a standard (such as NIST) to see
+which controls pass or fail.
 
 For details, see the
 [AWS Security Hub User Guide](https://docs.aws.amazon.com/securityhub/latest/userguide/).

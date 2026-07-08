@@ -2,7 +2,7 @@
 title: AWS Service Catalog
 description: Pre-approved, ready-to-deploy infrastructure products available via the AWS Service Catalog.
 permalink: /docs/aws/service-catalog
-last_reviewed: 2026-05-29
+last_reviewed: 2026-07-08
 redirect_from:
   - /docs/bestpractices/servicecatalog
   - /docs/guidelines/servicecatalog
@@ -26,11 +26,14 @@ common infrastructure because:
 
 ## How to Launch a Product
 
-1. In the AWS Console, navigate to **Service Catalog → Products**.
-2. Select a product and click **Launch Product**.
-3. Fill in the required parameters (name, environment, tags, etc.).
-4. Click **Launch** and wait for the stack to complete (usually 5–10 minutes).
-5. Find your new resources in the **Provisioned Products** list.
+1. In the AWS Console search bar, search for **Service Catalog**. The
+   **Portfolios** screen opens.
+2. Open the **Imported** tab and click **Shared Portfolio Campus Cloud**.
+   This shows the list of products available to you (described below).
+3. Select a product and click **Launch product**.
+4. Fill in the required parameters (name, environment, tags, etc.).
+5. Click **Launch** and wait for the stack to complete (usually 5–10 minutes).
+6. Find your new resources in the **Provisioned Products** list.
 
 You can update or terminate a product from the **Provisioned Products** list.
 
@@ -50,7 +53,7 @@ For full details, see [Launching a product](https://docs.aws.amazon.com/servicec
 | Local Security Notification | An email alert for guardrail violations. Whenever a resource in your account falls out of compliance with an AWS Config rule (a Campus Cloud guardrail), you get an email. Set this up so your team is notified of compliance issues without having to check the console. |
 | Simple VPC with Campus Connectivity | A fully configured private network with subnets across two availability zones, campus network connectivity via Transit Gateway, an S3 endpoint, and optional internet access. You choose the size. **Use this for most workloads.** |
 
-{% include alert.html type="info" title="Product list may change" content="New products are added as the Cloud Team develops them. Log in to the AWS Console and check Service Catalog → Products for the current complete list." %}
+{% include alert.html type="info" title="Product list may change" content="New products are added as the Cloud Team develops them. Log in to the AWS Console and check the Shared Portfolio Campus Cloud portfolio (Service Catalog → Portfolios → Imported) for the current complete list." %}
 
 ---
 

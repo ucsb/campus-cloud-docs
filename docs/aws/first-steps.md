@@ -2,7 +2,7 @@
 title: AWS First Steps
 description: What to do after your AWS account is provisioned — sign in, set up billing, deploy your first resource.
 permalink: /docs/aws/first-steps
-last_reviewed: 2026-05-29
+last_reviewed: 2026-07-08
 redirect_from:
   - /docs/firststeps/awsfirststeps
 ---
@@ -12,6 +12,11 @@ redirect_from:
 
 Your account is ready when you receive the provisioning confirmation email from
 the Cloud Team. Follow the steps below to get set up.
+
+These steps also work as a checklist for an established account — revisit them
+any time, such as after your
+[annual check-in]({{ "/docs/general/support#annual-account-check-ins" | relative_url }}),
+to verify your contacts, budget, and tags are still the way you want them.
 
 * TOC
 {:toc}
@@ -23,7 +28,7 @@ the Cloud Team. Follow the steps below to get set up.
 1. Go to [aws.cloud.ucsb.edu](https://aws.cloud.ucsb.edu).
 2. Sign in with your UCSB NetID and password (Shibboleth SSO).
 3. On the AWS access portal, select your account name from the list.
-4. Choose a permission set:
+4. Choose a role:
    * **PowerUser** for day-to-day work
    * **Administrator** for IAM or billing tasks (use sparingly)
 5. Click **Management Console** to open the AWS Console.
@@ -129,23 +134,41 @@ See the [Tagging]({{ "/docs/general/tagging" | relative_url }}) page for require
 
 ---
 
-## Step 8 — Create a Budget Alarm
+## Step 8 — Set Up or Verify a Budget Alert
 
-Set a Budget alarm so that you are alerted before you exceed your budget (see [AWS docs: Create a billing alarm to monitor your estimated charges](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html)):
+Every account should have a monthly budget that emails you before spending
+exceeds expectations. The easiest way to create one is the **Fixed Monthly
+Budget with Notification** product in the
+[Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }}), which
+alerts you when your forecasted spend is on track to exceed your budget.
 
-1. In the Console, switch to the **US East (N. Virginia)** region, then navigate to **CloudWatch → Alarms → All alarms**.
-2. Verify a billing alarm exists and the threshold is correct.
-3. Confirm the SNS subscription is set to email you or your team.
+To verify your budget later:
+
+1. In the Console, navigate to **Billing and Cost Management → Budgets**.
+2. Confirm a monthly budget exists and the amount is correct.
+3. Open the budget and check that its alert emails you or your team.
+
+If you need a hard spending cap that restricts resource creation — not just a
+notification — use the **Budget Alert and Action on Threshold** product,
+also in the [Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }}).
+
+See [Costs & Billing]({{ "/docs/general/cost-management" | relative_url }}) for
+more on monitoring your spending.
 
 ---
 
 ## Getting Help
 
-| Issue | Where to Go |
-|---|---|
-| Access problems (can't sign in, missing role) | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) |
-| Missing VPC, networking issues | [Networking]({{ "/docs/aws/networking" | relative_url }}) |
-| Policy violations / Access Denied | [Guardrails]({{ "/docs/aws/guardrails" | relative_url }}) |
-| Billing questions | [Cost Management]({{ "/docs/general/cost-management" | relative_url }}) |
-| AWS service questions | [Enterprise Support]({{ "/docs/aws/#enterprise-support" | relative_url }}) — open a case in the AWS Console |
-| Everything else | [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) |
+For all the ways to get help, see the
+[Support]({{ "/docs/general/support" | relative_url }}) page. It covers:
+
+* **Contacting the Cloud Team** — open a
+  [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
+  for anything that needs tracking, or email
+  [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu).
+* **Community and office hours** — the Cloud Impact Hub chat space and weekly
+  drop-in office hours.
+* **AWS Enterprise Support** — included with every Campus Cloud account for
+  service-specific technical questions; open a case from the AWS Console.
+* **Annual check-ins** — schedule a check-in with the Cloud Team to review
+  your account.

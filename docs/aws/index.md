@@ -105,26 +105,6 @@ because the templates are already configured for UCSB compliance requirements.
 
 ---
 
-## Enterprise Support
-
-Every Campus Cloud AWS account is automatically enrolled in **AWS Enterprise
-Support** at no additional cost to your account. This includes:
-
-* **Technical Account Manager (TAM)** — a named AWS technical advisor shared
-  across the UCSB organization. The TAM meets with the Cloud Team twice monthly
-  and can assist with architecture reviews, service limits, and best practices.
-* **AWS Concierge Team** — assists with billing and account questions.
-* **Support Channels** — you can open AWS Support cases via web, email, chat,
-  or phone directly from the AWS Console (Support → Create case).
-
-Response times depend on case severity — see
-[AWS Support Plans](https://aws.amazon.com/premiumsupport/plans/) for SLA
-details.
-
-{% include alert.html type="info" title="Open a Campus Cloud ticket first for platform issues" content="For issues related to account access, networking, guardrails, or Campus Cloud configuration, <a href='https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5'>open a ServiceNow ticket with the Cloud Team</a> rather than an AWS Support case. Use AWS Support for service-specific technical questions about your workloads." %}
-
----
-
 ## Next Steps
 
 * [Request an Account]({{ "/getting-started" | relative_url }})
@@ -134,3 +114,4 @@ details.
 * [Security]({{ "/docs/aws/security" | relative_url }})
 * [Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }})
 * [Cost Management]({{ "/docs/general/cost-management" | relative_url }})
+* [Support]({{ "/docs/general/support" | relative_url }})
