@@ -59,4 +59,4 @@ You will not be able to access your account until all steps are completed and th
 
 ## Troubleshooting Gateway
 
-**Can't enter the CCOA Accounting Codes ?** You may lack the required permissions. Assign your cart to a departmental procurement person who can enter the account string.
+**Can't enter the CCOA Accounting Codes?** You may lack the required permissions. Assign your cart to a departmental procurement person who can enter the account string.
