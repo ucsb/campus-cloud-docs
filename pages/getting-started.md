@@ -22,56 +22,41 @@ managing your cloud budget.
 
 ## Gateway Procurement Process
 
-{% capture alert_content %}AWS accounts requested with @ucsb.edu emails must be created in the Campus Cloud. You will receive an "error processing your request" when requesting an AWS account with a @ucsb.edu email unless it is in the Campus Cloud Landing Zone. <a href='{{ "/docs/general/security#external-collaborators" | relative_url }}'>Learn about the @ucsb.edu account requirement</a>{% endcapture %}
-{% include alert.html type="info" title="Information" content=alert_content %}
-
 All three providers use the same Gateway procurement process. Creating a Purchase Order (PO) is the first step for a new AWS account, Azure subscription, or GCP project — as well as for migrating an existing account.
 
 You will not be able to access your account until all steps are completed and the Campus Cloud Team creates it.
 
 1.  Log in to the [UCSB Gateway Procurement System](https://gateway.procurement.ucsb.edu). If you do not yet have Gateway access, see [About Gateway and how to request access](https://it.ucsb.edu/administration-business/gateway).
-2.  Complete the Campus Cloud Form.
 
-    ![Gateway Procurement System home page showing the Campus Cloud form link]({{ "/assets/img/gatewayhome.png" | relative_url }})
+2.  Select the **UCSB Cloud Services** Form
+    ![Gateway Procurement System home page showing the Campus Cloud form link]({{ "/assets/img/Home.png" | relative_url }})
 
-    * Please note the instructions on the left side of the form, and provide the requested information. Build in lead time for your start date. The estimated expenditure is for the duration of the PO.
+3. Complete the UCSB Cloud Services Form.
+
+    ![Gateway Procurement System home page showing the Campus Cloud form link]({{ "/assets/img/Form.png" | relative_url }})
+
+    * Instructions are on the left side of the form, and provide the requested information. 
+      * Verify that you have set the correct Commodity Code: **81110000**
+      * Object Code is no longer necessary.
+    * Build in lead time for your start date. 
+    * The estimated expenditure is for the duration of the PO.
     * The expected duration is one year. The purchase order should then be renewed annually. If your procurement group is willing to support multi-year blankets, please limit your max duration to three years.
-    * The form is for the one Account. You can not request multiple accounts with a single form. You will want to fill out multiple forms and add them as line items in your cart.
-    * _NOTE: Your Gateway Admin may be needed to input Object Code and Sub Number (See Troubleshooting Section below)_
+    * The form is for the one Account. You can not request multiple accounts with a single form. For muliple accounts, fill out multiple forms and add them as line items in your cart.
 
-    ![Campus Cloud procurement form with fields for account details]({{ "/assets/img/gatewayform.png" | relative_url }})
+4. Add the completed form to your Cart.
 
-3.  Add the completed form to your Cart.
-    
-    Verify that you have set the correct Commodity Code: **81110000**
-    
-    ![Gateway cart showing Commodity Code field set to 81110000]({{ "/assets/img/gatewaycart-commoditycode.png" | relative_url }})
-    
-    and Object Code: **7185**
-    
-    ![Gateway cart showing Object Code field set to 7185]({{ "/assets/img/gatewaycart-objectcode.png" | relative_url }})	 
-    
-    and Sub **3, 5 or 7**. Your requisition will be returned if these codes are not correct. SUBMIT your requisition.
+    ![Gateway Procurement System home page showing the Campus Cloud form link]({{ "/assets/img/Cart.png" | relative_url }})
 
-4.  The Campus Cloud team will receive your Purchase Order and contact you to finalize setting up your account.
-5.  After it is set up, you will receive an activation email with instructions to access your new account.
-6.  Assign users to your Account Groups.
-7.  Your account will be billed through the Master Payer Account with consolidated billing. Any monthly costs will be charged against the Purchase Order you submitted.
+5.  Assign the cart to your department's finanancial or procurement person so they can add in the required CCOA information and finalize the purchase.
+    
+    ![Gateway cart showing Commodity Code field set to 81110000]({{ "/assets/img/Assign.png" | relative_url }})
+    
+6.  The Campus Cloud team will receive your Purchase Order and contact you to finalize setting up your account.
+7.  After the account is set up, you will receive an activation email with instructions to access it. See the First Steps guides for [AWS]({{ "/docs/aws/first-steps" | relative_url }}), [Azure]({{ "/docs/azure/first-steps" | relative_url }}), or [GCP]({{ "/docs/gcp/first-steps" | relative_url }}) on this site for more information.
+8.  Your account will be billed through the Master Payer Account with consolidated billing. Any monthly costs will be charged against the Purchase Order you submitted.
 
 ---
 
 ## Troubleshooting Gateway
 
-**Requisition returned automatically?** Verify all three codes:
-* Commodity Code: **81110000**
-* Object Code: **7185**
-* Sub: **3, 5, or 7**
-
-**Can't enter the Object Code?** You may lack the required permissions. Forward your cart to a departmental procurement person who can enter the account string.
-
----
-
-Once your account is active, follow the First Steps guide for your provider:
-[AWS First Steps]({{ "/docs/aws/first-steps" | relative_url }}) ·
-[Azure First Steps]({{ "/docs/azure/first-steps" | relative_url }}) ·
-[GCP First Steps]({{ "/docs/gcp/first-steps" | relative_url }})
+**Can't enter the CCOA Accounting Codes ?** You may lack the required permissions. Assign your cart to a departmental procurement person who can enter the account string.
