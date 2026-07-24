@@ -2,7 +2,7 @@
 title: Tagging & Labels
 description: Required tags across AWS, Azure, and GCP
 permalink: /docs/general/tagging
-last_reviewed: 2026-05-29
+last_reviewed: 2026-07-24
 redirect_from:
   - /docs/bestpractices/tagging
   - /docs/guidelines/tagging
@@ -96,13 +96,59 @@ Each provider has a different interface for managing tags:
 
 ---
 
-## GCP: Tags vs. Labels
+## Cost Allocation Tags & Labels
+{: #cost-allocation-tags}
 
-GCP has two separate metadata systems. The Campus Cloud uses both:
+The same tags and labels you use for compliance and organization can also break
+your bill down by project, department, service, or environment. How that works
+differs by provider. For how to slice spending by tag once it's set up, see
+[Tracking Your Costs]({{ "/docs/general/cost-management#tracking-your-costs" | relative_url }}).
+
+### AWS
+
+Before a tag can appear in AWS billing reports, AWS requires it to be
+**activated as a cost allocation tag**. The Cloud Team activates these centrally
+in the Campus Cloud management account, so activation applies across every
+Campus Cloud AWS account — you don't (and can't) activate them yourself. Your
+part is simply to **apply the tags to your resources**; once a resource is
+tagged, its costs can be grouped and filtered by that tag.
+
+The following `ucsb:` tags are currently activated as cost allocation tags:
+
+| Tag | Purpose | Who Sets It |
+|---|---|---|
+| `ucsb:po-number` | Purchase Order the account bills against | Cloud Team (at provisioning) |
+| `ucsb:mission` | Mission area (`academic`, `research`, `administrative`, `mixed`) | You |
+| `ucsb:environment` | Environment type (`dev`, `test`, `prod`, `other`) | You |
+| `ucsb:environment:name` | Short name for a specific environment (optional) | You |
+| `ucsb:service` | Groups resources that support the same service | You |
+| `ucsb:costing` | Free-form invoice breakdown — e.g., a Full Accounting Unit (FAU) or cost center | You |
+| `ucsb:business-service` | Legacy tag, replaced by `ucsb:service` — use `ucsb:service` for new resources | You |
+
+The compliance tags (`protection-level`, `availability-level`,
+`recovery-level`) are **not** activated for cost allocation. For more on how
+activation works, see the [AWS cost allocation tags docs](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html).
+
+### Azure
+
+Azure has no activation step. Tags you set on resource groups and resources flow
+into [Cost Management + Billing](https://learn.microsoft.com/en-us/azure/cost-management-billing/)
+automatically, where you can group and filter costs by tag — see
+[Group and filter options in Cost analysis](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/group-filter).
+
+### GCP
+
+GCP has two separate metadata systems, and the Campus Cloud uses both:
 
 * **Resource Manager Tags** — the required tags listed above. Set at the
-  project level, used for governance, compliance, and automation.
-* **Project Labels** — flat key-value pairs on the project that appear in
-  billing exports. Set by the project owner for cost attribution. Labels do
-  not drive policies or automation — they supplement tags for billing
-  visibility.
+  project level and used for governance, compliance, and automation. They do
+  **not** feed billing.
+* **Project Labels** — flat key-value pairs set on a project by its owner for
+  cost attribution. Labels are what appear in billing data; they don't drive
+  policies or automation.
+
+Labels you set on a project appear in
+[Cloud Billing reports](https://cloud.google.com/billing/docs/reports) and the
+[billing export to BigQuery](https://cloud.google.com/billing/docs/how-to/export-data-bigquery)
+automatically, with no activation step. To set them, see
+[Creating and managing labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels).

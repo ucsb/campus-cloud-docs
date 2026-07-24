@@ -2,7 +2,7 @@
 title: Costs & Billing
 description: Cloud pricing, UC discounts, and how to manage your cloud spending
 permalink: /docs/general/cost-management
-last_reviewed: 2026-07-08
+last_reviewed: 2026-07-24
 redirect_from:
   - /docs/bestpractices/costmodels
   - /docs/aws/quicksight
@@ -36,59 +36,74 @@ These baseline services include:
 
 ---
 
-## Monitoring Your Costs
+## Tracking Your Costs
 
-Each provider offers built-in tools for tracking your cloud spending:
+Each provider gives you built-in tools to view your spend, set budget alerts,
+and break costs down by tag. A budget alert **notifies** you as you approach a
+threshold — it does not stop your account from spending — so keep an eye on your
+account, especially in the first few weeks of a new workload.
 
-* **AWS:** [AWS Cost Explorer](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html) —
-  in the console, go to **Billing → Cost Explorer**.
-* **Azure:** [Azure Cost Management + Billing](https://learn.microsoft.com/en-us/azure/cost-management-billing/) —
-  in the portal, go to **Cost Management**.
-* **GCP:** [GCP Billing Reports](https://cloud.google.com/billing/docs/reports) —
-  in the console, go to **Billing → Reports**.
+### AWS
 
-### UCSB Custom Dashboards
+#### Dashboards
 
-The Cloud Team maintains custom cost dashboards that aggregate spending across
-Campus Cloud accounts:
+View your spend in [AWS Cost Explorer](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html) — in the console, go to **Billing → Cost Explorer**. For richer cross-account analytics, the Cloud Team can grant access to the AWS [Cost Intelligence Dashboard](https://catalog.workshops.aws/awscid/en-US/dashboards/foundational/cid-cost-intelligence) and [CUDOS dashboard](https://catalog.workshops.aws/awscid/en-US/dashboards/advanced/cudos); request access through a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
 
-* **AWS — Amazon QuickSight:** A centralized dashboard showing cost and usage
-  data across all Campus Cloud AWS accounts, broken down by account, service,
-  daily trend, and tag. Data is updated daily from AWS Cost and Usage Reports
-  (typically a 24–48 hour lag). The QuickSight account name is
-  `ucsb-campus-cloud`.
+#### Budget Alerts
 
-  To sign in:
-  1. Open [quicksight.aws.amazon.com](https://quicksight.aws.amazon.com) in an **Incognito / Private** browser window (required to avoid SSO session conflicts).
-  2. Enter account name: **ucsb-campus-cloud**
-  3. Sign in with your UCSB email address (`<netid>@ucsb.edu`).
-  4. Navigate to **Shared Folders** to find the Campus Cloud cost dashboards.
+Use the **Fixed Monthly Budget with Notification** product in the [Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }}) — see [AWS First Steps]({{ "/docs/aws/first-steps" | relative_url }}).
 
-  {% capture alert_content %}QuickSight uses a different authentication flow than the AWS Console. Opening it in your normal browser session may redirect you incorrectly. Always use Incognito / Private mode.{% endcapture %}
-  {% include alert.html type="info" title="Use an Incognito window" content=alert_content %}
+#### Categorizing Costs by Tag
 
-* **Azure — Cost Management Dashboard:** A custom Azure cost reporting tool
-  maintained by the Cloud Team.
+A tag only appears in the AWS cost tools after it's **activated as a cost
+allocation tag** — the Cloud Team does this centrally, so you just apply the
+[`ucsb:` tags]({{ "/docs/general/tagging#cost-allocation-tags" | relative_url }})
+to your resources. You can then group or filter costs by a tag in
+[Cost Explorer](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-filtering.html),
+in [Cost and Usage Reports](https://docs.aws.amazon.com/cur/latest/userguide/cur-ta.html)
+(one column per tag), and in the dashboards above.
 
-Dashboard access must be provisioned separately from your cloud account. To
-request access, open a
-[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
-with your cloud account ID and UCSB NetID.
+Tagging isn't retroactive — only usage after a resource is tagged is attributed,
+and new tag data can take up to 24 hours to appear.
 
-### Budget Alerts
+### Azure
 
-Set up a budget alert in your account so you are notified before your spending
-exceeds expectations. Instructions are in each provider's First Steps guide.
+#### Dashboards
 
-* For AWS, use the **Fixed Monthly Budget with Notification** product in the
-  [Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }}) — see
-  [AWS First Steps]({{ "/docs/aws/first-steps" | relative_url }}).
-* For Azure, use **Azure Cost Management** — see [Azure First Steps]({{ "/docs/azure/first-steps" | relative_url }}).
-* For GCP, use **Cloud Billing budgets** — see [GCP First Steps]({{ "/docs/gcp/first-steps" | relative_url }}).
+View your spend in [Azure Cost Management + Billing](https://learn.microsoft.com/en-us/azure/cost-management-billing/) — in the portal, go to **Cost Management**.
 
-A budget alert does not automatically stop your account from spending — it sends
-a notification. Monitor your account regularly during the first few weeks of a
-new workload.
+#### Budget Alerts
+
+Use **Azure Cost Management** budgets — see [Azure First Steps]({{ "/docs/azure/first-steps" | relative_url }}).
+
+#### Categorizing Costs by Tag
+
+Azure needs no activation step — tags appear in cost reports automatically. In
+[Cost analysis](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/group-filter),
+group or filter by the required
+[`ucsb:` tags]({{ "/docs/general/tagging#cost-allocation-tags" | relative_url }}) —
+for example, `ucsb:mission` to split spend across academic, research, and
+administrative work, or `ucsb:environment` to separate `prod` from `dev`. Tag the
+resources themselves, not just their resource groups — Azure attributes cost by
+the tags on each resource.
+
+### GCP
+
+#### Dashboards
+
+View your spend in [GCP Billing Reports](https://cloud.google.com/billing/docs/reports) — in the console, go to **Billing → Reports**.
+
+#### Budget Alerts
+
+Use **Cloud Billing budgets** — see [GCP First Steps]({{ "/docs/gcp/first-steps" | relative_url }}).
+
+#### Categorizing Costs by Tag
+
+GCP bills by **label**, not by the Resource Manager tags used for compliance and
+automation (see [Tags vs. Labels]({{ "/docs/general/tagging#gcp" | relative_url }})).
+Add labels to your projects for cost attribution, then group or filter
+[billing reports](https://cloud.google.com/billing/docs/how-to/reports) by label —
+no activation step needed.
 
 ---
 
