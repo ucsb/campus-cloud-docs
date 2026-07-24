@@ -100,7 +100,7 @@ View your spend in [GCP Billing Reports](https://cloud.google.com/billing/docs/r
 
 Use **Cloud Billing budgets** — see [GCP First Steps]({{ "/docs/gcp/first-steps" | relative_url }}).
 
-#### Categorizing Costs by Tag
+#### Categorizing Costs by Label
 
 GCP bills by **label**, not by the Resource Manager tags used for compliance and
 automation (see [Tags vs. Labels]({{ "/docs/general/tagging#gcp" | relative_url }})).
