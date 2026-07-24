@@ -19,6 +19,7 @@ control. For how cost responsibilities are divided between you, the Cloud Team,
 and the provider, see
 [Shared Responsibility]({{ "/docs/general/shared-responsibility" | relative_url }}).
 
+{::options toc_levels="2..3" /}
 * TOC
 {:toc}
 

@@ -18,6 +18,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #003660;
 }
 
+/* Shrink H4 so it reads as clearly smaller than H3 — the theme default
+   (~21.6px) sits too close to H3's 24px. We don't use H5/H6. */
+h4 {
+  font-size: 1.25rem; /* 20px at the default 16px root */
+}
+
 .td-navbar .navbar-brand span {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 800;
