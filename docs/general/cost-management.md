@@ -47,7 +47,9 @@ account, especially in the first few weeks of a new workload.
 
 #### Dashboards
 
-View your spend in [AWS Cost Explorer](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html) — in the console, go to **Billing → Cost Explorer**. For richer cross-account analytics, the Cloud Team can grant access to the AWS [Cost Intelligence Dashboard](https://catalog.workshops.aws/awscid/en-US/dashboards/foundational/cid-cost-intelligence) and [CUDOS dashboard](https://catalog.workshops.aws/awscid/en-US/dashboards/advanced/cudos); request access through a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
+View your spend in [AWS Cost Explorer](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html) — in the console, go to **Billing → Cost Explorer**. 
+
+For richer cross-account analytics, the Cloud Team can grant access to the AWS [Cost Intelligence Dashboard](https://catalog.workshops.aws/awscid/en-US/dashboards/foundational/cid-cost-intelligence) and [CUDOS dashboard](https://catalog.workshops.aws/awscid/en-US/dashboards/advanced/cudos); request access through a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
 
 #### Budget Alerts
 
