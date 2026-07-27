@@ -2,7 +2,7 @@
 title: GCP First Steps
 description: What to do after your GCP project is provisioned — sign in, verify setup, deploy your first resource.
 permalink: /docs/gcp/first-steps
-last_reviewed: 2026-07-08
+last_reviewed: 2026-07-27
 redirect_from:
   - /docs/firststeps/gcpfirststeps
 ---
@@ -170,7 +170,7 @@ See [Tagging & Labels]({{ "/docs/general/tagging" | relative_url }}) for allowed
 
 ---
 
-## Step 8 — Verify Budget Alert (Funded Projects)
+## Step 8 — Verify Budget Alerts and Limits (Funded Projects)
 
 1. Navigate to **Billing → Budgets & alerts**.
 2. Confirm a billing budget exists for your project.
@@ -178,6 +178,17 @@ See [Tagging & Labels]({{ "/docs/general/tagging" | relative_url }}) for allowed
 4. To change thresholds or recipients, edit the budget.
 
 A budget only sends notifications — it does not stop resources.
+
+### Spend Cap Budgets
+
+A [spend cap budget](https://docs.cloud.google.com/billing/docs/how-to/budgets-spend-caps)
+does stop resources: it pauses the service when spending passes the cap, taking your
+workload offline until the cap is lifted. This is a Google preview feature, and
+it covers only Gemini API, Gemini Enterprise Agent Platform (formerly Vertex AI),
+Cloud Run, and Cloud Run functions.
+
+You can request a spend cap budget via a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
 
 See [Costs & Billing]({{ "/docs/general/cost-management" | relative_url }}) for more information.
 

@@ -96,7 +96,7 @@ the tags on each resource.
 
 View your spend in [GCP Billing Reports](https://cloud.google.com/billing/docs/reports) — in the console, go to **Billing → Reports**.
 
-#### Budget Alerts
+#### Budget Alerts and Limits
 
 Use **Cloud Billing budgets** — see [GCP First Steps]({{ "/docs/gcp/first-steps" | relative_url }}).
 
