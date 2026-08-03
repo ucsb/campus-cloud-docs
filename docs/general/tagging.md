@@ -138,17 +138,21 @@ automatically, where you can group and filter costs by tag — see
 
 ### GCP
 
-GCP has two separate metadata systems, and the Campus Cloud uses both:
+GCP has two separate metadata systems, and the Campus Cloud uses both. Like
+Azure — and unlike AWS — GCP has no activation step: both systems flow into
+billing data automatically.
 
-* **Resource Manager Tags** — the required tags listed above. Set at the
-  project level and used for governance, compliance, and automation. They do
-  **not** feed billing.
-* **Project Labels** — flat key-value pairs set on a project by its owner for
-  cost attribution. Labels are what appear in billing data; they don't drive
-  policies or automation.
+* **Resource Manager Tags** — the required tags listed above. Set at the project
+  level, and used for governance, compliance, and automation *as well as* cost
+  attribution. `environment`, `mission`, and `dept` are the most useful keys for
+  breaking down a bill.
+* **Project Labels** — flat key-value pairs set on a project by its owner.
+  Labels also appear in billing data, but they don't drive policies or
+  automation.
 
-Labels you set on a project appear in
-[Cloud Billing reports](https://cloud.google.com/billing/docs/reports) and the
-[billing export to BigQuery](https://cloud.google.com/billing/docs/how-to/export-data-bigquery)
-automatically, with no activation step. To set them, see
+Both appear in [Cloud Billing reports](https://cloud.google.com/billing/docs/reports)
+and the [billing export to BigQuery](https://cloud.google.com/billing/docs/how-to/export-data-bigquery),
+where you can group and filter costs by either. Because tags are bound to the
+project rather than to individual resources, they appear on each cost row marked
+as *inherited*. To set labels, see
 [Creating and managing labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels).

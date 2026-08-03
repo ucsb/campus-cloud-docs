@@ -100,13 +100,14 @@ View your spend in [GCP Billing Reports](https://cloud.google.com/billing/docs/r
 
 Use **Cloud Billing budgets** — see [GCP First Steps]({{ "/docs/gcp/first-steps" | relative_url }}).
 
-#### Categorizing Costs by Label
+#### Categorizing Costs by Tag or Label
 
-GCP bills by **label**, not by the Resource Manager tags used for compliance and
-automation (see [Tags vs. Labels]({{ "/docs/general/tagging#gcp" | relative_url }})).
-Add labels to your projects for cost attribution, then group or filter
-[billing reports](https://cloud.google.com/billing/docs/how-to/reports) by label —
-no activation step needed.
+GCP cost data carries **both** Resource Manager tags and project labels (see
+[Tags vs. Labels]({{ "/docs/general/tagging#gcp" | relative_url }})), so you can
+group or filter [billing reports](https://cloud.google.com/billing/docs/how-to/reports)
+by either — no activation step needed. The required tags you already set for
+compliance (`environment`, `mission`, `dept`) double as your cost-attribution
+dimensions; add labels when you need a breakdown those don't cover.
 
 ---
 
