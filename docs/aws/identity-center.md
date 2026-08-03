@@ -9,7 +9,11 @@ redirect_from:
 
 # AWS Identity Center (IdC) Overview
 
-UCSB Campus Cloud uses **Identity Center (IdC)** as a centralized service for connecting workforce users to AWS managed applications such as Kiro, Transform, and Quick. The Campus Cloud Team connects Identity Center to an external identity provider (SCIM) to populate a directory of users from the Campus' Identity system. 
+UCSB Campus Cloud uses **Identity Center (IdC)** as a centralized service for connecting workforce users to AWS managed applications such as Kiro, Transform, and Quick. The Campus Cloud Team connects Identity Center to an external identity provider (SCIM) to populate a directory of users from the Campus' Identity system.
+
+https://ucsb-identity-center.awsapps.com/start
+
+The above link can be used to allow users to sign in with their netid credentials (netid@ucsb.edu) to connected services and applications integrated with Identity Center.
 
 * TOC
 {:toc}
