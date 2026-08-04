@@ -9,11 +9,13 @@ redirect_from:
 
 # AWS Identity Center (IdC) Overview
 
-UCSB Campus Cloud uses **Identity Center (IdC)** as a centralized service for connecting workforce users to AWS managed applications such as Kiro, Transform, and Quick. The Campus Cloud Team connects Identity Center to an external identity provider (SCIM) to populate a directory of users from the Campus' Identity system.
+**AWS Identity Center (IdC)** is a centralized service making it possible for your users to sign in with their UCSB credentials to AWS managed services such as Kiro, Transform, and Quick. The Campus Cloud Team populates a directory of users from the Campus' Identity system and manages users and groups centrally from the Organization's management account. The instructions on this page are meant to assist account administrators with integrating the Organization's Shared instance into these supported services.
 
 https://ucsb-identity-center.awsapps.com/start
 
 The above link can be used to allow users to sign in with their netid credentials (netid@ucsb.edu) to connected services and applications integrated with Identity Center.
+
+If you have a need to create a local instance of Identity Center in your account for any purpose, make a request to the Cloud Team via a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
 
 * TOC
 {:toc}
@@ -42,6 +44,10 @@ A known bug during this process is receiving this message:
 ![AWS Console Error Message showing SCP preventing user from Listing Instances of Identity Center]({{ "/assets/img/idc-bug.png" | relative_url }})
 
 Disregard it, and continue by Enabling the Web Application. Once in the dashboard, you can verify the Organization Instance is active by searching an active netid when adding a new user. More in depth information on using Transform as a service in [AWS Transform Documentation](https://docs.aws.amazon.com/transform/latest/userguide/what-is-service.html).
+
+## Implementation with Customer Managed Applications
+
+Account Owners with their own managed applications in AWS that make use of SAML 2.0 or OAuth 2.0 authentication methods can provision Identity Center for provisioning of your users. Refer to the [AWS IAM Identity Center Documentation](https://docs.aws.amazon.com/singlesignon/latest/userguide/customermanagedapps.html) for more information.
 
 
 
