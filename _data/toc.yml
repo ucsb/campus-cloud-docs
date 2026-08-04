@@ -54,6 +54,8 @@
           url: "docs/aws/security"
         - title: Service Catalog
           url: "docs/aws/service-catalog"
+        - title: Identity Center
+          url: "docs/aws/identity-center"
 
     - title: "Azure"
       url: "docs/azure/"
