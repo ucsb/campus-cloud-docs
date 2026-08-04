@@ -36,6 +36,7 @@ navigate or jump directly to a section below.
  - [Guardrails & SCPs]({{ "/docs/aws/guardrails" | relative_url }})
  - [Security]({{ "/docs/aws/security" | relative_url }})
  - [Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }})
+ - [Identity Center]({{ "/docs/aws/identity-center" | relative_url }})
 
 ## Azure
  - [Azure Overview]({{ "/docs/azure/" | relative_url }})
