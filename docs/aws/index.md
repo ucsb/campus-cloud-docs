@@ -113,5 +113,6 @@ because the templates are already configured for UCSB compliance requirements.
 * [Guardrails & SCPs]({{ "/docs/aws/guardrails" | relative_url }})
 * [Security]({{ "/docs/aws/security" | relative_url }})
 * [Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }})
+* [Identity Center]({{ "/docs/aws/identity-center" | relative_url }})
 * [Cost Management]({{ "/docs/general/cost-management" | relative_url }})
 * [Support]({{ "/docs/general/support" | relative_url }})
