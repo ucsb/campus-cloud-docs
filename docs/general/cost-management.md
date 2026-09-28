@@ -48,9 +48,47 @@ account, especially in the first few weeks of a new workload.
 
 #### Dashboards
 
-View your spend in [AWS Cost Explorer](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html) — in the console, go to **Billing → Cost Explorer**. 
+For a quick look at your spend, use [AWS Cost Explorer](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html) — in the console, go to **Billing → Cost Explorer**.
 
-For richer cross-account analytics, the Cloud Team can grant access to the AWS [Cost Intelligence Dashboard](https://catalog.workshops.aws/awscid/en-US/dashboards/foundational/cid-cost-intelligence) and [CUDOS dashboard](https://catalog.workshops.aws/awscid/en-US/dashboards/advanced/cudos); request access through a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
+For a deeper view, the Cloud Team runs AWS's
+[Cloud Intelligence Dashboards](https://docs.aws.amazon.com/guidance/latest/cloud-intelligence-dashboards/dashboards.html)
+in Amazon Quick (formerly QuickSight). Account administrators and billing
+contacts get access automatically, and each person sees only the accounts
+they are responsible for. Three dashboards are available to everyone:
+
+| Dashboard | Use it to | Learn more |
+|---|---|---|
+| **CUDOS** | Find what is driving your bill — by service, account, and resource — with built-in savings recommendations | [AWS overview](https://docs.aws.amazon.com/guidance/latest/cloud-intelligence-dashboards/cudos-cid-kpi.html#foundational-cudos-dashboard) · [Live demo](https://cid.workshops.aws.dev/demo?dashboard=cudos) |
+| **KPI and Modernization** | Track whether your account is becoming more cost-efficient over time | [AWS overview](https://docs.aws.amazon.com/guidance/latest/cloud-intelligence-dashboards/cudos-cid-kpi.html#foundational-kpi-dashboard) · [Live demo](https://cid.workshops.aws.dev/demo?dashboard=kpi) |
+| **UCSB Accounts and Invoicing** | See each account's charges against its Purchase Order (PO), after credits | Built by the Cloud Team for UCSB |
+
+CUDOS and KPI show usage *before* credits. To see what you were actually
+billed, use UCSB Accounts and Invoicing. The data refreshes overnight and
+covers the last 36 months.
+
+To open the dashboards, sign in at
+[quicksight.aws.amazon.com](https://quicksight.aws.amazon.com). If a dashboard
+opens empty, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
+
+<details markdown="1">
+<summary>More dashboards in testing</summary>
+
+The Cloud Team is testing these dashboards on UCSB data to decide whether any
+are useful enough to offer to everyone:
+
+* [Cost Intelligence](https://docs.aws.amazon.com/guidance/latest/cloud-intelligence-dashboards/cudos-cid-kpi.html#foundational-cid-dashboard) · [live demo](https://cid.workshops.aws.dev/demo?dashboard=cid)
+* [Cost Optimization Recommended Actions (CORA)](https://docs.aws.amazon.com/guidance/latest/cloud-intelligence-dashboards/cora-dashboard.html) · [live demo](https://cid.workshops.aws.dev/demo?dashboard=cora)
+* [Compute Optimizer](https://docs.aws.amazon.com/guidance/latest/cloud-intelligence-dashboards/compute-optimizer-dashboard.html) · [live demo](https://cid.workshops.aws.dev/demo?dashboard=compute-optimizer-dashboard)
+* [Trusted Advisor Organizational (TAO)](https://docs.aws.amazon.com/guidance/latest/cloud-intelligence-dashboards/trusted-advisor-dashboard.html) · [live demo](https://cid.workshops.aws.dev/demo?dashboard=tao)
+* [Cost Anomaly](https://docs.aws.amazon.com/guidance/latest/cloud-intelligence-dashboards/cost-anomaly-dashboard.html) · [live demo](https://cid.workshops.aws.dev/demo?dashboard=aws-cost-anomalies)
+* [Data Transfer](https://docs.aws.amazon.com/guidance/latest/cloud-intelligence-dashboards/datatransfer-dashboard.html) · [live demo](https://cid.workshops.aws.dev/demo?dashboard=datatransfer-cost-analysis-dashboard)
+* [Amazon Connect Cost Insights](https://docs.aws.amazon.com/guidance/latest/cloud-intelligence-dashboards/connect-cost-insight.html) · [live demo](https://cid.workshops.aws.dev/demo?dashboard=amazon-connect-cost-insight-dashboard)
+* [FinOps Open Cost and Usage Specification (FOCUS)](https://docs.aws.amazon.com/guidance/latest/cloud-intelligence-dashboards/focus-dashboard.html) · [live demo](https://cid.workshops.aws.dev/demo?dashboard=focus-dashboard&sheet=default)
+
+If you would like to help test them, open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
+
+</details>
 
 #### Budget Alerts
 
@@ -62,9 +100,13 @@ A tag only appears in the AWS cost tools after it's **activated as a cost
 allocation tag** — the Cloud Team does this centrally, so you just apply the
 [`ucsb:` tags]({{ "/docs/general/tagging#cost-allocation-tags" | relative_url }})
 to your resources. You can then group or filter costs by a tag in
-[Cost Explorer](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-filtering.html),
-in [Cost and Usage Reports](https://docs.aws.amazon.com/cur/latest/userguide/cur-ta.html)
-(one column per tag), and in the dashboards above.
+[Cost Explorer](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-filtering.html)
+and in [Cost and Usage Reports](https://docs.aws.amazon.com/cur/latest/userguide/cur-ta.html)
+(one column per tag).
+
+The CUDOS and KPI dashboards above also have a filter for each of these tags.
+Use them to break your spend down the way that suits you — by service,
+environment, cost center, or Purchase Order, for example.
 
 Tagging isn't retroactive — only usage after a resource is tagged is attributed,
 and new tag data can take up to 24 hours to appear.
