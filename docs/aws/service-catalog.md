@@ -2,7 +2,7 @@
 title: AWS Service Catalog
 description: Pre-approved, ready-to-deploy infrastructure products available via the AWS Service Catalog.
 permalink: /docs/aws/service-catalog
-last_reviewed: 2026-07-08
+last_reviewed: 2026-09-30
 redirect_from:
   - /docs/bestpractices/servicecatalog
   - /docs/guidelines/servicecatalog
@@ -46,9 +46,9 @@ For full details, see [Launching a product](https://docs.aws.amazon.com/servicec
 | Product | What it creates |
 |---|---|
 | Advanced VPC | An empty VPC with a large block of campus IP space and the foundation for campus connectivity via Transit Gateway, but **no subnets** — you build the subnet layout yourself. Use this only when you need full control over your network design. |
-| Budget Alert and Action on Threshold (Effectual) | An alternative budget product that applies an IAM policy to your account when a spending threshold is reached, actively restricting further resource creation. Use this when you need a hard spending cap rather than just a notification. Deploy to your home region only. See the [Active Budget Controller docs](https://aws-ia.github.io/cloudformation-effectual-activebudgetcontroller/) for configuration details. |
+| Budget Alert and Action on Threshold (Effectual) | **Not recommended — being retired.** For a spending cap that restricts resources automatically, use an advanced budget with a budget action in AWS Budgets instead. See [Advanced Budgets]({{ "/docs/aws/first-steps#advanced-budgets" | relative_url }}). |
 | Create IAM Role to UCSB Identity Group | Creates an empty IAM role and a matching UCSB Identity group at the same time. Members of that group (managed at [im.ucsb.edu](https://im.ucsb.edu)) can sign in to AWS and assume the role. You add permissions to the role after creation. Role names are limited to 15 characters. |
-| Fixed Monthly Budget with Notification | A monthly spending limit with email alerts. AWS emails you (and an optional second address) when your *forecasted* spend is on track to exceed the limit — by default the alert fires at 120% of your budget, so you get early warning before you actually go over. |
+| Fixed Monthly Budget with Notification | **Not recommended — being retired.** Use the **Monthly cost budget** template in AWS Budgets instead. See [Create a Monthly Cost Budget]({{ "/docs/aws/first-steps#create-a-monthly-cost-budget" | relative_url }}). |
 | Instance Scheduler | Automatically starts and stops your EC2 and RDS instances on a schedule. Use this to avoid paying for instances that run overnight or on weekends when no one needs them. See the [Instance Scheduler on AWS docs](https://docs.aws.amazon.com/solutions/instance-scheduler-on-aws/) for configuration details. |
 | Local Security Notification | An email alert for guardrail violations. Whenever a resource in your account falls out of compliance with an AWS Config rule (a Campus Cloud guardrail), you get an email. Set this up so your team is notified of compliance issues without having to check the console. |
 | Simple VPC with Campus Connectivity | A fully configured private network with subnets across two availability zones, campus network connectivity via Transit Gateway, an S3 endpoint, and optional internet access. You choose the size. **Use this for most workloads.** |

@@ -37,7 +37,7 @@ New here? Start with [General Guidance]({{ "/docs/general/" | relative_url }}) o
 ## Amazon Web Services (AWS)
 
 Your AWS account includes campus SSO login, networking connected to UCSB, a
-Service Catalog of self-service products (VPCs, budgets, IAM roles), and
+Service Catalog of self-service products (VPCs, IAM roles, instance scheduling), and
 security monitoring pre-configured. UC enterprise pricing and Enterprise Support
 are included automatically.
 

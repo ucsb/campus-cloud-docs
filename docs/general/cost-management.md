@@ -2,7 +2,7 @@
 title: Costs & Billing
 description: Cloud pricing, UC discounts, and how to manage your cloud spending
 permalink: /docs/general/cost-management
-last_reviewed: 2026-07-24
+last_reviewed: 2026-09-30
 redirect_from:
   - /docs/bestpractices/costmodels
   - /docs/aws/quicksight
@@ -54,7 +54,7 @@ For richer cross-account analytics, the Cloud Team can grant access to the AWS [
 
 #### Budget Alerts
 
-Use the **Fixed Monthly Budget with Notification** product in the [Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }}) — see [AWS First Steps]({{ "/docs/aws/first-steps" | relative_url }}).
+Use the **Monthly cost budget** template in **AWS Budgets** — see [AWS First Steps]({{ "/docs/aws/first-steps#step-8--set-up-or-verify-a-budget-alert" | relative_url }}).
 
 #### Categorizing Costs by Tag
 
