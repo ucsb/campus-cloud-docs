@@ -49,7 +49,7 @@ that need a campus-specific definition.
 | **Quarantine** | When the Cloud Team isolates a compromised or policy-violating account — network access cut, credentials disabled. |
 | **Recovery Level (r1–r4)** | Backup and disaster-recovery requirements for your workload. Set via the `recovery-level` tag. |
 | **RFC 1918** | Internet standard defining private IP address ranges (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16). Campus Cloud VPCs and VNets use addresses from these ranges. |
-| **Service Catalog** | Pre-approved infrastructure templates you can deploy yourself (VPCs, budgets, EC2 instances, etc.). Currently available in AWS. |
+| **Service Catalog** | Pre-approved infrastructure templates you can deploy yourself (VPCs, IAM roles, instance scheduling, etc.). Currently available in AWS. |
 | **SLO** | Service Level Objective — a target availability percentage (e.g., 99.9% uptime) for a workload. |
 | **Tags / Labels** | Key-value pairs used for billing attribution, compliance, and governance. AWS and Azure call them *Tags* and attach them to resources. GCP uses two systems, both set on the project: required *Resource Manager Tags* (governance and cost attribution) and optional *project labels* (cost attribution only). See [Tagging & Labels]({{ "/docs/general/tagging" | relative_url }}). |
 | **UC Enterprise Discount** | UC system-wide pricing agreements with cloud providers (AWS EDP, Azure EA, GCP negotiated rates). Applied automatically to Campus Cloud accounts. |

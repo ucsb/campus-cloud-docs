@@ -2,7 +2,7 @@
 title: AWS First Steps
 description: What to do after your AWS account is provisioned — sign in, set up billing, deploy your first resource.
 permalink: /docs/aws/first-steps
-last_reviewed: 2026-07-08
+last_reviewed: 2026-09-30
 redirect_from:
   - /docs/firststeps/awsfirststeps
 ---
@@ -137,20 +137,47 @@ See the [Tagging]({{ "/docs/general/tagging" | relative_url }}) page for require
 ## Step 8 — Set Up or Verify a Budget Alert
 
 Every account should have a monthly budget that emails you before spending
-exceeds expectations. The easiest way to create one is the **Fixed Monthly
-Budget with Notification** product in the
-[Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }}), which
-alerts you when your forecasted spend is on track to exceed your budget.
+exceeds expectations. AWS Budgets has a built-in template that sets this up in
+a few clicks.
 
-To verify your budget later:
+### Create a Monthly Cost Budget
 
-1. In the Console, navigate to **Billing and Cost Management → Budgets**.
-2. Confirm a monthly budget exists and the amount is correct.
-3. Open the budget and check that its alert emails you or your team.
+1. In the Console, navigate to **Billing and Cost Management → Budgets** and
+   choose **Create budget**.
+2. Under **Budget setup**, select **Use a template (simplified)**.
+3. Under **Templates**, select **Monthly cost budget**.
+4. Enter a budget name, your monthly budget amount, and up to 10 email
+   recipients. Use a shared team address where you can.
+5. Choose **Create budget**.
 
-If you need a hard spending cap that restricts resource creation — not just a
-notification — use the **Budget Alert and Action on Threshold** product,
-also in the [Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }}).
+The template emails you when your actual spend reaches 85% and 100% of your
+budget, and when your forecasted spend is on track to reach 100%. Each
+recipient must confirm a verification email from AWS before they will receive
+alerts. See AWS's
+[Using a budget template](https://docs.aws.amazon.com/cost-management/latest/userguide/budget-templates.html)
+and
+[Adding email recipients](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-email-recipients.html)
+for details.
+
+### Verify Your Budget
+
+To check your budget later, go to **Billing and Cost Management → Budgets**,
+confirm the amount is still right, and open the budget to check that its alerts
+go to the right people.
+
+### Advanced Budgets
+
+Choose **Customize (advanced)** instead of a template if you need a different
+time period or start month, want to track only certain services or tags, or
+want a
+[budget action](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-controls.html)
+that automatically restricts resources when you pass a threshold. See AWS's
+[Customizing a budget](https://docs.aws.amazon.com/cost-management/latest/userguide/custom-budgets.html)
+guide.
+
+The Cloud Team is happy to help you design an advanced budget. Open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
+or email [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu).
 
 See [Costs & Billing]({{ "/docs/general/cost-management" | relative_url }}) for
 more on monitoring your spending.
