@@ -2,7 +2,7 @@
 title: Costs & Billing
 description: Cloud pricing, UC discounts, and how to manage your cloud spending
 permalink: /docs/general/cost-management
-last_reviewed: 2026-09-30
+last_reviewed: 2026-10-05
 redirect_from:
   - /docs/bestpractices/costmodels
   - /docs/aws/quicksight
@@ -52,9 +52,8 @@ For a quick look at your spend, use [AWS Cost Explorer](https://docs.aws.amazon.
 
 For a deeper view, the Cloud Team runs AWS's
 [Cloud Intelligence Dashboards](https://docs.aws.amazon.com/guidance/latest/cloud-intelligence-dashboards/dashboards.html)
-in Amazon Quick (formerly QuickSight). Account administrators and billing
-contacts get access automatically, and each person sees only the accounts
-they are responsible for. Three dashboards are available to everyone:
+in Amazon Quick (formerly QuickSight). Each person sees only the accounts they
+are responsible for. Three dashboards are available to everyone:
 
 | Dashboard | Use it to | Learn more |
 |---|---|---|
@@ -66,9 +65,16 @@ CUDOS and KPI show usage *before* credits. To see what you were actually
 billed, use UCSB Accounts and Invoicing. The data refreshes overnight and
 covers the last 36 months.
 
-To open the dashboards, sign in at
-[quicksight.aws.amazon.com](https://quicksight.aws.amazon.com). If a dashboard
-opens empty, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
+To get access, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
+and tell us which AWS accounts you need to see.
+
+Once you have access:
+
+1. Go to the [UCSB AWS access portal](https://ucsb-identity-center.awsapps.com/start/#/?tab=applications)
+   and sign in with your UCSB NetID.
+2. On the **Applications** tab, select **ucsb-quick-prod**.
+
+If a dashboard opens empty, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
 
 <details markdown="1">
 <summary>More dashboards in testing</summary>
