@@ -9,18 +9,24 @@ redirect_from:
 
 # AWS Identity Center (IdC) Overview
 
-**AWS Identity Center (IdC)** is a centralized service making it possible for your users to sign in with their UCSB credentials to AWS managed services such as Kiro, Transform, and Quick. The Campus Cloud Team populates a directory of users from the Campus' Identity system and manages users and groups centrally from the Organization's management account. The instructions on this page are meant to assist account administrators with integrating the Organization's Shared instance into these supported services.
+**AWS Identity Center (IdC)** is a centralized service making it possible for your users to sign in with their UCSB credentials to AWS Accounts as well as AWS managed services such as Kiro, Transform, and Quick. The Campus Cloud Team populates a directory of users from the Campus' Identity system and manages users and groups centrally from the university's Identity System and Group Tagger. The instructions on this page are meant to assist account administrators with integrating the Organization's Shared instance into these supported services.
 
 https://ucsb-identity-center.awsapps.com/start
 
-The above link can be used to allow users to sign in with their netid credentials (netid@ucsb.edu) to connected services and applications integrated with Identity Center.
-
-If you have a need to create a local instance of Identity Center in your account for any purpose, make a request to the Cloud Team via a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
+The above link can be used to allow users to sign in with their netid credentials (netid@ucsb.edu) via Campus SSO to AWS Accounts and supported Applications.
 
 * TOC
 {:toc}
 
 ---
+
+## Logging into an Account
+
+Identity Center can be used to administer console and CLI access to your AWS Account. The role-level access is delegated by the which group tag you have affiliated membership with. For information on how to add and remove users, see [these steps](https://docs.cloud.ucsb.edu/docs/aws/first-steps#adding-and-removing-users). If you add administer access to a user and they don't see that account populate in their Identity Center, please wait 10-15min for membership to propagate. 
+
+Note that each console session is set to a limit of 8 hours, after which you will have to authenticate into Identity Center again.
+
+To administer programmatic access to your AWS Account in Identity Center, simply hit the drop down menu on an account you have access to and select the 'Access Keys' menu. Here you will find three different methods to use access keys within to access your account, however it is recommended to use the AWS IAM Identity Center credentials method for any platform (Linux, Windows, Powershell). Find more information at the [AWS Documentation](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile-token-auto-sso).
 
 ## Implementation with Kiro
 
