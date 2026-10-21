@@ -2,7 +2,7 @@
 title: Data Management Plans
 description: DMP guidelines for researchers using the Campus Cloud
 permalink: /docs/general/data-management
-last_reviewed: 2026-04-06
+last_reviewed: 2026-10-21
 redirect_from:
   - /docs/guidelines/dmp
 ---
@@ -24,8 +24,9 @@ in your DMP:
 > Zone, a managed cloud environment operated by UCSB IT (ITS-CCID) on Amazon
 > Web Services / Microsoft Azure / Google Cloud Platform. The Landing Zone
 > provides NIST 800-171-aligned security controls, UC Policy IS-3-compliant
-> guardrails, centralized audit logging, data-at-rest and in-transit encryption,
-> and campus network connectivity. The University of California has negotiated
+> guardrails, centralized audit logging, and data-at-rest and in-transit
+> encryption. On AWS, it also provides private connectivity to the campus
+> network. The University of California has negotiated
 > enterprise agreements with these providers, ensuring data governance under UC
 > Terms & Conditions."
 
@@ -42,7 +43,7 @@ controls (e.g., HIPAA Business Associate Agreement, CUI handling procedures).
 | Framework | Who It Applies To | Next Step |
 |---|---|---|
 | UC Policy IS-3 | All Campus Cloud accounts | Classify your data; apply appropriate tags |
-| NIST 800-171 | Research involving CUI (DoD, NSF, NIH grants) | Request a NIST-compliant account — see [Compliance]({{ "/docs/general/compliance" | relative_url }}) |
+| NIST 800-171 | Research involving CUI (DoD, NSF, NIH grants) | New and imported accounts are NIST-compliant — see [Compliance]({{ "/docs/general/compliance" | relative_url }}) |
 | HIPAA | Research involving protected health information | Contact the Cloud Team; a BAA may be required |
 | FERPA | Work involving student education records | Classify as P3 minimum; limit access |
 

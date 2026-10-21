@@ -2,7 +2,7 @@
 title: Cloud for Research
 description: Using the UCSB Campus Cloud for research computing
 permalink: /docs/general/research
-last_reviewed: 2026-05-29
+last_reviewed: 2026-10-21
 redirect_from:
   - /docs/bestpractices/research
 ---
@@ -20,14 +20,14 @@ pricing.
 ## Why Use the Campus Cloud for Research?
 
 * **Compliance for federal funding.** If your grant requires NIST 800-171
-  compliance (common for DoD, NSF, and NIH grants involving CUI), the Campus
-  Cloud provides a compliant account tier — see
-  [Compliance & Governance]({{ "/docs/general/compliance" | relative_url }}) for details and how to request one.
+  compliance (common for DoD, NSF, and NIH grants involving CUI), every new
+  Campus Cloud account is set up to align with it — see
+  [Compliance & Governance]({{ "/docs/general/compliance" | relative_url }}) for details.
 * **Significant discounts.** UC enterprise agreements give you lower prices
   than retail cloud rates — automatically.
 * **No credit card required.** Billing goes through your UCSB Purchase Order and
-  FAU, not a personal credit card.
-* **Support options.** AWS Business Support and Azure support plans are
+  [Common Chart of Accounts (CCOA)]({{ "/glossary/" | relative_url }}) account string, not a personal credit card.
+* **Support options.** AWS Enterprise Support and Azure support plans are
   available to Campus Cloud accounts. Contact the Cloud Team to discuss the
   right support tier for your workload.
 * **Cloud Team consulting.** The UCSB Cloud Team has supported research groups
@@ -44,7 +44,7 @@ pricing.
 2. **Choose your provider.** Most research groups use AWS. Azure and GCP are
    good choices for teams already using Microsoft or Google tools, or for
    specific services (e.g., Google BigQuery, Azure ML).
-3. **Request an account.** Follow the [procurement guide]({{ "/getting-started" | relative_url }}). Indicate on your form if you need NIST 800-171 compliance.
+3. **Request an account.** Follow the [procurement guide]({{ "/getting-started" | relative_url }}).
 4. **Set up your environment.** Follow the First Steps guide for your provider.
 
 ---
@@ -61,17 +61,9 @@ it — either create a new account or migrate an existing personal account.
 
 ## Personal vs. Campus Cloud Accounts
 
-A personal cloud account uses a personal credit card and is outside the
-Campus Cloud Landing Zone. Personal accounts:
-
-* Do not receive UC enterprise discounts
-* May not meet compliance requirements for federal grants
-* Should not use a `@ucsb.edu` email address (this triggers a restriction —
-  see [Security — External Collaborators]({{ "/docs/general/security#external-collaborators" | relative_url }}))
-* May be subject to review to ensure UC policies are followed
-
-If you have a personal account you want to bring into the Campus Cloud, contact
-the Cloud Team. Migration is a standard process for all three providers.
+If you run research in a personal cloud account (one paid with a personal
+credit card), see [Migrate to Campus Cloud]({{ "/docs/general/migrate" | relative_url }})
+for why and how to bring it into the Campus Cloud.
 
 ---
 

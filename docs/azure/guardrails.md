@@ -2,7 +2,7 @@
 title: Azure Guardrails & Policies
 description: Azure Policy assignments and compliance controls applied to all Campus Cloud Azure subscriptions.
 permalink: /docs/azure/guardrails
-last_reviewed: 2026-05-29
+last_reviewed: 2026-10-21
 redirect_from:
   - /docs/guidelines/guardrails/azure
 ---
@@ -11,7 +11,7 @@ redirect_from:
 
 UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
 Azure subscription aligned with university security policy
-([UC IS-3](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html))
+([UC IS-3](https://security.ucop.edu/policies/it-policies.html))
 and the federal
 [NIST 800-171]({{ "/glossary/" | relative_url }}) standard for
 protecting sensitive research data.

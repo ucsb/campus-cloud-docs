@@ -2,7 +2,7 @@
 title: Security
 description: Security guidance for Campus Cloud accounts — data classification, monitoring, least-privilege, and incident response
 permalink: /docs/general/security/
-last_reviewed: 2026-05-29
+last_reviewed: 2026-10-21
 redirect_from:
   - /docs/general/security
   - /docs/guidelines/security
@@ -45,7 +45,11 @@ account activity):
    service accounts, or rotate secrets before the Cloud Team has been notified.
 3. **Open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) marked Urgent** and describe the incident.
    Include the account or project identifier.
-4. **Contact your department's ISO** (Information Security Officer) if regulated
+4. **Report it to ITS Information Security** at
+   [security@ucsb.edu](mailto:security@ucsb.edu). See UCSB's
+   [Report a Security Incident](https://it.ucsb.edu/security/report-incident)
+   page for what to include.
+5. **Contact your department's Information Security Officer (ISO)** if regulated
    data may be involved.
 
 Each provider page describes platform-specific emergency isolation steps:
@@ -93,11 +97,11 @@ contact the Cloud Team to request it.
 ## External Collaborators
 
 All three providers require a `@ucsb.edu` identity. External collaborators
-without a UCSB NetID cannot be added directly to your account's role structure.
+without a UCSB netID cannot be added directly to your account's role structure.
 
 Options for granting access to external collaborators:
 
-* **Create a sponsored UCSB NetID** for the collaborator through UCSB IT — this
+* **Create a sponsored UCSB netID** for the collaborator through UCSB IT — this
   gives them a `@ucsb.edu` identity that works with all three providers.
 * **Share data without granting account access** — for example, use pre-signed
   S3 URLs, scoped SAS tokens (Azure), or signed URLs (GCP).

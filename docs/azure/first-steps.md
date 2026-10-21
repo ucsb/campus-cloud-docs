@@ -2,7 +2,7 @@
 title: Azure First Steps
 description: What to do after your Azure subscription is provisioned — sign in, verify setup, deploy your first resource.
 permalink: /docs/azure/first-steps
-last_reviewed: 2026-07-08
+last_reviewed: 2026-10-21
 redirect_from:
   - /docs/firststeps/azurefirststeps
   - /docs/azure/roles
@@ -27,9 +27,9 @@ to verify your contacts, budget, and tags are still the way you want them.
 ## Step 1 — Sign In
 
 1. Go to [portal.azure.com](https://portal.azure.com).
-2. Sign in with your UCSB email address (`yournetid@ucsb.edu`).
+2. Sign in with your UCSB email address (`yournetID@ucsb.edu`).
    * If prompted, choose **Work or school account**.
-   * Authenticate with Duo MFA if required.
+   * Complete MFA with Duo if prompted.
 3. In the top-right dropdown, verify you are in the **UC Santa Barbara** directory.
    * If you see a personal directory instead, click your name → **Switch directory**
      → select **UC Santa Barbara**.

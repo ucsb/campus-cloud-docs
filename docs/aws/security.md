@@ -2,7 +2,7 @@
 title: AWS Security
 description: Security monitoring, audit logging, and threat detection in Campus Cloud AWS accounts.
 permalink: /docs/aws/security
-last_reviewed: 2026-07-08
+last_reviewed: 2026-10-21
 ---
 
 # AWS Security
@@ -11,7 +11,7 @@ Every Campus Cloud AWS account comes with security tools already turned on.
 You don't need to set any of this up — it's ready when your account is
 provisioned. The main tools are **CloudTrail** (audit logging),
 **Security Hub** (security checks), **GuardDuty** (threat detection), and
-**AWS Config** (compliance rules).
+**AWS Config** (configuration tracking).
 
 ---
 
@@ -19,8 +19,8 @@ provisioned. The main tools are **CloudTrail** (audit logging),
 
 [Security Hub](https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html)
 checks your account's resources against security best practices and compliance
-standards (including NIST 800-53). It gives you a single dashboard showing
-what needs attention.
+standards. New and imported accounts are checked against the **NIST SP 800-53
+Rev. 5** standard. It gives you a single dashboard showing what needs attention.
 
 ### Reviewing Findings
 
@@ -95,23 +95,15 @@ to S3 buckets), but you cannot modify or delete the organization-wide trail.
 ## AWS Config
 
 [AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html)
-tracks changes to your resources and checks them against compliance rules. The
-following rules are active in all Campus Cloud accounts:
+tracks changes to your resources. Two sets of checks run on top of it:
 
-| Rule | What It Checks |
-|---|---|
-| S3 encryption | S3 buckets have encryption enabled |
-| EFS encryption | EFS file systems are encrypted |
-| No admin IAM policies | IAM policies don't grant unrestricted admin access |
-| CloudWatch log encryption | Log Groups are encrypted |
-| VPC Flow Logs | Network traffic logging is enabled |
-| S3 access logging | S3 bucket access is logged |
-| Unused credentials | Flags IAM credentials unused for 180+ days |
-| Access key rotation | Flags access keys older than 365 days |
-| Password policy | Account password policy meets minimum standards |
-| Redshift encryption & TLS | Redshift clusters use encryption and TLS |
+* **Control Tower detective controls** — rules that flag common
+  misconfigurations. You can't change or delete them.
+* **Security Hub checks** — the checks for the standards enabled on your
+  account (see [AWS Security Hub](#aws-security-hub) above and
+  [Guardrails]({{ "/docs/aws/guardrails#additional-controls-in-new-and-imported-accounts" | relative_url }})).
 
-Resources that don't meet these rules show up as findings in Security Hub.
+Resources that fail these checks show up as findings in Security Hub CSPM.
 
 ---
 
@@ -155,7 +147,7 @@ This is optional but recommended so your team is aware of issues as they arise.
 
 ## Wiz Cloud Security Posture Management
 
-Wiz is available across all Campus Cloud platforms (AWS, Azure, GCP). See
+Wiz is available, on an opt-in basis, across all Campus Cloud platforms (AWS, Azure, GCP). See
 [Security & Shared Responsibility — Wiz]({{ "/docs/general/security#wiz-cloud-security-posture-management" | relative_url }})
 for details.
 

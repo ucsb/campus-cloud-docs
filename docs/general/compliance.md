@@ -1,8 +1,8 @@
 ---
 title: Compliance & Governance
-description: NIST 800-171, UC IS-3, and how to request a compliant account
+description: NIST 800-171, UC IS-3, and the compliance controls built into every Campus Cloud account
 permalink: /docs/general/compliance
-last_reviewed: 2026-07-08
+last_reviewed: 2026-10-21
 redirect_from:
   - /docs/guidelines/compliance
 ---
@@ -42,22 +42,23 @@ remaining controls that depend on your specific workloads and processes.
 
 ---
 
-## Do You Need a NIST 800-171 Compliant Account?
+## New and Imported Accounts Are NIST 800-171 Compliant
 
-If your research involves Controlled Unclassified Information (CUI) — such as
-federally funded research with export controls, or data subject to ITAR, HIPAA,
-or similar frameworks — you should request a NIST-compliant account.
+All new Campus Cloud accounts, and all existing accounts imported into the
+Campus Cloud, are set up to align with NIST 800-171 on **all three providers**.
+You don't need to request it — follow the standard
+[procurement process]({{ "/getting-started" | relative_url }}).
 
-This applies to **all three providers**. The request process is the same:
-follow the standard [procurement process]({{ "/getting-started" | relative_url }})
-and select **"NIST Compliant Account"** on the Campus Cloud form.
-
-A NIST-compliant account is placed in an Organizational Unit (AWS), Management
-Group (Azure), or Folder (GCP) with additional controls enabled:
+On top of the baseline above, these accounts get additional controls:
 
 * Additional detective controls check encryption, access, and network configuration
 * Additional preventive controls block non-compliant configurations
 * Regular automated compliance reports are available on request
+
+If your research involves Controlled Unclassified Information (CUI) — such as
+federally funded research with export controls, or data subject to ITAR, HIPAA,
+or similar frameworks — these controls are a starting point. You are still
+responsible for the controls that depend on your workload.
 
 {% capture alert_content %}Support for P4 (HIPAA/CUI) workloads on GCP is still being finalized. Contact the Cloud Team before starting a P4 project on GCP so we can confirm readiness together.{% endcapture %}
 {% include alert.html type="warning" title="GCP note" content=alert_content %}
@@ -65,12 +66,9 @@ Group (Azure), or Folder (GCP) with additional controls enabled:
 ### Migrating an Existing Account to NIST-Compliant
 
 If you already have a Campus Cloud account that is not in the NIST-compliant
-tier, you have two options:
-
-1. **Migrate your account** to the NIST-compliant OU/folder. The Cloud Team
-   can help with this process.
-2. **Enable additional controls** on your existing account to increase
-   compliance coverage.
+tier, you can **migrate your account** to the NIST-compliant group of
+accounts — an Organizational Unit (OU) on AWS, a management group on Azure, or
+a folder on GCP. The Cloud Team can help with this process.
 
 Email [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu) to discuss your options, or open a
 [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) if you are ready to proceed.

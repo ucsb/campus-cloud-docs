@@ -2,7 +2,7 @@
 title: Azure Networking
 description: Virtual WAN hub-spoke topology, VNet peering, and campus connectivity for Azure subscriptions.
 permalink: /docs/azure/networking
-last_reviewed: 2026-04-06
+last_reviewed: 2026-10-21
 ---
 
 # Azure Networking Overview
@@ -100,11 +100,11 @@ traffic to campus CIDRs will route through the hub automatically.
 
 ## Off-Campus Access
 
-To reach resources in your Azure VNet from off campus:
-
-1. Connect to the [UCSB campus VPN](https://it.ucsb.edu/network-infrastructure-services/ivanti-connect-secure-campus-vpn) on your laptop.
-2. Once on VPN, your traffic routes through the campus network → Virtual WAN
-   hub → your spoke VNet.
+To reach resources in your Azure VNet from off campus, use **Secure Service Access (SSA)**. SSA uses the Zscaler Client Connector,
+which you install on your laptop and sign in to with UCSB SSO. It replaces the
+Campus VPN (Ivanti), which is being retired on January 22, 2027. SSA is
+licensed to faculty, staff, and student employees. To get the connector, see
+[Secure Service Access (SSA)](https://it.ucsb.edu/services/secure-service-access).
 
 VM management should be done via **Azure Bastion** (browser-based SSH/RDP)
 rather than opening SSH/RDP ports to the internet.

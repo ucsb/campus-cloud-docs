@@ -1,59 +1,111 @@
 ---
 title: AWS Identity Center
-description: User guide to implementing Identity Center with supported AWS Services and Application 
+description: How to sign in to AWS accounts and supported AWS applications with AWS IAM Identity Center
 permalink: /docs/aws/identity-center
-last_reviewed: 2026-08-03
+last_reviewed: 2026-10-21
 redirect_from:
   - /docs/firststeps/awsidentitycenter
 ---
 
 # AWS Identity Center (IdC) Overview
 
-**AWS Identity Center (IdC)** is a centralized service making it possible for your users to sign in with their UCSB credentials to AWS Accounts as well as AWS managed services such as Kiro, Transform, and Quick. The Campus Cloud Team populates a directory of users from the Campus' Identity system and manages users and groups centrally from the university's Identity System and Group Tagger. The instructions on this page are meant to assist account administrators with integrating the Organization's Shared instance into these supported services.
+**AWS IAM Identity Center (IdC)** lets you sign in to your AWS accounts with
+your UCSB netID. It also lets you sign in to AWS applications such as Kiro,
+AWS Transform, and Amazon Quick. The Cloud Team connects Identity Center
+to the campus identity system, so you don't need a separate AWS username or
+password.
 
-https://ucsb-identity-center.awsapps.com/start
+This page is for account administrators. It covers signing in, command-line
+access, and connecting AWS applications to UCSB's shared Identity Center.
 
-The above link can be used to allow users to sign in with their netid credentials (netid@ucsb.edu) via Campus SSO to AWS Accounts and supported Applications.
+To sign in, go to the
+[UCSB AWS Identity Center sign-in page](https://ucsb-identity-center.awsapps.com/start)
+and sign in with your UCSB netID and password.
 
 * TOC
 {:toc}
 
 ---
 
-## Logging into an Account
+## Signing In to an Account
 
-Identity Center can be used to administer console and CLI access to your AWS Account. The role-level access is delegated by the which group tag you have affiliated membership with. For information on how to add and remove users, see [these steps](https://docs.cloud.ucsb.edu/docs/aws/first-steps#adding-and-removing-users). If you add administer access to a user and they don't see that account populate in their Identity Center, please wait 10-15min for membership to propagate. 
+After you sign in, you see the AWS accounts you can use. Your access level in
+each account (for example, Administrator or ReadOnly) depends on which account
+groups you belong to. Account owners manage those groups — see
+[AWS First Steps — Adding and Removing Users]({{ "/docs/aws/first-steps#adding-and-removing-users" | relative_url }}).
 
-Note that each console session is set to a limit of 8 hours, after which you will have to authenticate into Identity Center again.
+If you add someone and the account doesn't appear for them, wait 10–15 minutes
+for the change to take effect.
 
-To administer programmatic access to your AWS Account in Identity Center, simply hit the drop down menu on an account you have access to and select the 'Access Keys' menu. Here you will find three different methods to use access keys within to access your account, however it is recommended to use the AWS IAM Identity Center credentials method for any platform (Linux, Windows, Powershell). Find more information at the [AWS Documentation](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile-token-auto-sso).
+Console sessions last up to 8 hours. After that, sign in again.
 
-## Implementation with Kiro
+### Command-Line Access
 
-Account Owners or users with console access can enable Kiro for use within teams:
+To use the AWS Command Line Interface (CLI), open the menu on an account and
+select **Access keys**. AWS offers three options. We recommend
+**AWS IAM Identity Center credentials** on every platform (macOS and Linux,
+Windows, or PowerShell). When the CLI asks for them, use:
 
-1. Navigate to Kiro/Amazon Q Developer in the AWS Console.
-2. Select 'Setup as Admin'.
-3. Use Identity Center as identity provider.
-4. Organization Managed Instance should allow you to search for users (netids) to select for subscriptions.
+* **Start URL:** `https://ucsb-identity-center.awsapps.com/start`
+* **Region:** `us-west-2`
 
-Once the subscription has been set up, the user can now navigate to https://app.kiro.dev/signin and sign in using the “Your Organization” method. Here, they can enter the ‘Start URL’ which can be found in the management console for Kiro (https://ucsb-identity-center.awsapps.com/start). Be sure to advise users to select us-west-2 for the region, as that is where the shared Organization Instance of Identity Center is hosted.
+For the full steps, see the AWS guide to
+[configuring the AWS CLI with IAM Identity Center](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile-token-auto-sso).
 
-It should be clear that the configuration and oversight of the Kiro Instance’s settings/guardrails are of the responsibility of the Administrator. Please review the settings page in the Management Console to adjust Kiro and Shared Settings to your liking. Likewise, all subscription costs will be included in your monthly invoice for all resources, paid to your account's Purchase Order.
+---
 
-## Implementation with Transform
+## Kiro
 
-To set up AWS Transform simply head over to the AWS Transform service and use the ‘Enable Web Application’ setup wizard. Use the manual setup option, making sure to select AWS IAM Identity Center (IdC) as your User Access method.
+Kiro is an AI coding tool from AWS. Account owners, or users with console
+access, can turn it on for their team:
 
-A known bug during this process is receiving this message:
+1. In the AWS Console, open Kiro / Amazon Q Developer.
+2. Select **Setup as Admin**.
+3. Choose Identity Center as the identity provider.
+4. Search for users by netID and assign them subscriptions.
 
-![AWS Console Error Message showing SCP preventing user from Listing Instances of Identity Center]({{ "/assets/img/idc-bug.png" | relative_url }})
+Then each user signs in to Kiro:
 
-Disregard it, and continue by Enabling the Web Application. Once in the dashboard, you can verify the Organization Instance is active by searching an active netid when adding a new user. More in depth information on using Transform as a service in [AWS Transform Documentation](https://docs.aws.amazon.com/transform/latest/userguide/what-is-service.html).
+1. Go to the [Kiro sign-in page](https://app.kiro.dev/signin) and choose
+   **Your Organization**.
+2. Enter the start URL: `https://ucsb-identity-center.awsapps.com/start`.
+3. Choose the **us-west-2** region. That's where UCSB's Identity Center is
+   hosted.
 
-## Implementation with Customer Managed Applications
+You're responsible for Kiro's settings and guardrails in your account. Review
+them in the Kiro management console. Subscription costs appear on your monthly
+invoice and are charged to your account's Purchase Order.
 
-Account Owners with their own managed applications in AWS that make use of SAML 2.0 or OAuth 2.0 authentication methods can provision Identity Center for provisioning of your users. Refer to the [AWS IAM Identity Center Documentation](https://docs.aws.amazon.com/singlesignon/latest/userguide/customermanagedapps.html) for more information.
+---
 
+## AWS Transform
 
+To set up AWS Transform, open the service and start the
+**Enable web application** wizard. Choose **Manual setup**, then choose
+**AWS IAM Identity Center (IdC)** as the user access method.
 
+You may then see a red error box. This is a known issue, and you can ignore
+it. The green message below it confirms that Identity Center is ready:
+
+![AWS Transform setup screen with AWS IAM Identity Center selected, showing a red error box and, below it, a green confirmation message]({{ "/assets/img/idc-bug.png" | relative_url }})
+
+The key lines read:
+
+> Failed to check AWS IAM Identity Center status. … is not authorized to
+> perform: sso:ListInstances … with an explicit deny in a service control policy
+>
+> AWS IAM Identity Center enabled in Org management account. You can now enable
+> the AWS Transform web application.
+
+Select **Enable** to finish. To check that it worked, add a user in the
+Transform dashboard and search for their netID. For more, see the
+[AWS Transform documentation](https://docs.aws.amazon.com/transform/latest/userguide/what-is-service.html).
+
+---
+
+## Your Own Applications
+
+If you run your own application in AWS that signs users in with SAML 2.0 or
+OAuth 2.0 (common sign-in standards), you can connect it to Identity Center so
+UCSB users can sign in with their netID. See the
+[AWS guide to customer managed applications](https://docs.aws.amazon.com/singlesignon/latest/userguide/customermanagedapps.html).

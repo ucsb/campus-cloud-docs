@@ -2,7 +2,7 @@
 title: AWS Guardrails & SCPs
 description: Service Control Policies and Control Tower controls applied to all Campus Cloud AWS accounts.
 permalink: /docs/aws/guardrails
-last_reviewed: 2026-05-29
+last_reviewed: 2026-10-21
 redirect_from:
   - /docs/guidelines/guardrails/aws
 ---
@@ -11,7 +11,7 @@ redirect_from:
 
 UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
 AWS account aligned with university security policy
-([UC IS-3](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html))
+([UC IS-3](https://security.ucop.edu/policies/it-policies.html))
 and the federal
 [NIST 800-171]({{ "/glossary/" | relative_url }}) standard for
 protecting sensitive research data.
@@ -51,14 +51,12 @@ metadata settings on a running instance.
 
 ---
 
-## Root Account Activity
+## Root User
 
-**Direct root account use is blocked by SCP.**
-
-The root credentials for your account exist but are protected. Normal
-operations should always use federated IAM roles. If you believe you need root
-access for a specific task, contact the Cloud Team — most root-only tasks can
-be performed by the organization management account instead.
+**Root credentials are managed centrally by the Cloud Team.** You don't sign
+in as the root user, and creating root access keys is blocked. Use your
+federated IAM roles for all normal work. If a task can only be done as the
+root user, contact the Cloud Team and they will do it for you.
 
 ---
 
@@ -85,7 +83,7 @@ these two regions:
 
 ### You Can
 * Create and manage resources in us-east-1 and us-west-2
-* Create IAM roles and policies (subject to permission boundaries set by Control Tower)
+* Create IAM roles and policies
 * Manage Security Groups, NACLs, and VPC configuration within your account
 * Enable any AWS service not explicitly restricted
 * Configure budget alarms and billing preferences
@@ -96,24 +94,45 @@ these two regions:
 * Modify or delete the Landing Zone AWS Config rules
 * Use IMDSv1 on EC2 instances
 * Act as root without Cloud Team assistance
-* Modify or delete the default IAM roles created by the Cloud Team
+* Modify or delete the Cloud Team's baseline resources (named `UCSB-BASELINE*`)
 * Detach your account from the AWS Organization
 
 ---
 
-## Compliance Controls (NIST Accounts)
+## CloudFormation Checks
 
-Accounts in the UCSB Baseline V2 OU with NIST 800-171 requirements have
-additional controls applied automatically by Control Tower:
+When you deploy with CloudFormation, Control Tower checks your templates before
+creating resources. The deployment fails if a CloudWatch log group:
 
-* Mandatory MFA for console access
-* S3 bucket public-access block enforced
-* EBS/RDS/S3 encryption at rest enforced
-* VPC Flow Logs enabled
-* GuardDuty enabled
+* is not encrypted with an AWS Key Management Service (KMS) key, or
+* keeps logs for less than one year.
 
-See [Compliance]({{ "/docs/general/compliance" | relative_url }}) for more information on requesting a
-NIST-baseline account.
+---
+
+## Additional Controls in New and Imported Accounts
+
+New and imported accounts are set up to align with NIST 800-171 (see
+[Compliance]({{ "/docs/general/compliance" | relative_url }})). In these
+accounts, Control Tower also **blocks** the actions below. Most people never
+run into them:
+
+* EC2 VM Import/Export
+* The Amazon Elastic Block Store (EBS) direct APIs
+* The older `RequestSpotFleet` and `RequestSpotInstances` APIs. Spot Instances
+  still work through `RunInstances` and EC2 Fleet.
+* Creating snapshots of unencrypted EBS volumes, attaching unencrypted volumes,
+  and making EBS snapshots public
+* Lambda function URLs that don't use IAM authentication
+* Public AppSync GraphQL APIs
+* KMS keys that use RSA-2048 for encryption and decryption, and the KMS
+  key-policy lockout bypass flag (`BypassPolicyLockoutSafetyCheck`)
+* Changes to S3 default encryption and S3 server access logging settings
+
+Security Hub also checks these accounts against the **NIST SP 800-53 Rev. 5**
+standard. It reports findings for things like SSH and other common ports open
+to the internet, missing multi-factor authentication (MFA) on the root user or console users, unencrypted
+storage, and public access to S3 buckets, snapshots, and other resources. See
+[AWS Security]({{ "/docs/aws/security" | relative_url }}).
 
 ---
 

@@ -2,7 +2,7 @@
 title: GCP Networking
 description: Networking constraints, current limitations, and how to request network resources for GCP projects.
 permalink: /docs/gcp/networking
-last_reviewed: 2026-07-08
+last_reviewed: 2026-10-21
 ---
 
 # GCP Networking Overview
@@ -102,9 +102,9 @@ See Google's official guide: [Using IAP for TCP forwarding](https://docs.cloud.g
 
 ### Network Tags for IAP Access
 
-Your VM must have the correct **network tag** for IAP to reach it. Without
-these tags, no inbound traffic is allowed — not from the internet, not from
-IAP.
+Your VM must have the correct **network tag** for IAP to reach it. The tags
+admit only IAP traffic on the listed port — they do not open the VM to any
+other traffic.
 
 | Network Tag | What It Enables |
 |---|---|
@@ -136,13 +136,15 @@ IAP.
   --local-host-port=localhost:3389`, then connect your RDP client to
   `localhost:3389`.
 
-### Required IAM Roles
+### IAP Access for Editors
 
-To connect via IAP, users need:
-
-* `roles/iap.tunnelResourceAccessor` — permission to create IAP tunnels
-* `roles/compute.osLogin` (or `roles/compute.osAdminLogin`) — OS Login
-  access to the VM
+Project owners can already open IAP tunnels. The basic Editor role does not
+include this permission. For editors to use SSH or RDP, an owner grants the
+**IAP-secured Tunnel User** role (`roles/iap.tunnelResourceAccessor`) to the
+project's **editors group**. Granting it to the group, not to individuals,
+follows our guidance to
+[manage access with groups]({{ "/docs/gcp/first-steps#adding-and-removing-users" | relative_url }}). Nothing else is needed — the Editor role already covers OS Login. See
+[Using IAP for TCP forwarding](https://cloud.google.com/iap/docs/using-tcp-forwarding).
 
 ### OS Login
 
@@ -166,6 +168,16 @@ If your project has a specific need to disable OS Login (e.g. a Marketplace
 image that is incompatible), open a
 [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
 and the Cloud Team will evaluate an exception.
+
+---
+
+## Traffic Between VMs
+
+VMs cannot receive traffic from other VMs by default — even VMs in the same
+project. The only inbound traffic allowed is SSH and RDP through IAP (see
+above). If your VMs need to talk to each other, open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
+to request a firewall rule.
 
 ---
 
@@ -204,6 +216,11 @@ with
 (Google's WAF and DDoS protection) on your behalf. You cannot create
 external load balancers yourself — they are blocked by org policy. This option
 carries a monthly cost for the load balancer and WAF, billed to your project.
+
+**By default, the Cloud Armor policy allows only UCSB campus and VPN address
+ranges and blocks everything else.** If your app must be reachable from
+partner networks or from the whole internet, say so in your ticket and the
+Cloud Team will widen access.
 
 ---
 

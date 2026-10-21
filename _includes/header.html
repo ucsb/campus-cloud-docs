@@ -8,8 +8,7 @@
             <span class="navbar-logo"></span><span class="text-uppercase font-weight-bold">{{ site.title }}</span>
 	</a>
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
-		<ul class="navbar-nav mt-2 mt-lg-0">{% if site.repo %}
-			</li>{% endif %}{% for link in site.data.navigation %}
+		<ul class="navbar-nav mt-2 mt-lg-0">{% for link in site.data.navigation %}
 			<li class="nav-item mr-4 mb-2 mb-lg-0">
                             <a class="nav-link" href="{% if link.url %}{{ site.baseurl }}/{{ link.url }}{% else %}{{ link.external_url }}{% endif %}" ><span>{{ link.title }}</span></a>
 			</li>{% endfor %}
@@ -22,7 +21,6 @@
             {{ site.github_user }}/{{ site.github_repo }}
           <ul class="gh-source__facts"><li class="gh-source__fact" id='stars'></li><li id="forks" class="gh-source__fact"></li></ul></div></a>
         </div>
-      </div>
 
 
 </nav>

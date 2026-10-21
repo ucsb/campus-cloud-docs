@@ -2,14 +2,14 @@
 title: GCP Guardrails & Org Policies
 description: Organization policy constraints and IAM deny policies applied to all Campus Cloud GCP projects.
 permalink: /docs/gcp/guardrails
-last_reviewed: 2026-07-08
+last_reviewed: 2026-10-21
 ---
 
 # GCP Guardrails
 
 UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
 GCP project aligned with university security policy
-([UC IS-3](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html))
+([UC IS-3](https://security.ucop.edu/policies/it-policies.html))
 and the federal
 [NIST 800-171]({{ "/glossary/" | relative_url }}) standard for
 protecting sensitive research data.
@@ -54,7 +54,7 @@ allowed.
 | Require OS Login | OS Login must be enabled on all Compute Engine instances |
 | Require Shielded VMs | Shielded VM features (Secure Boot, vTPM) required |
 | Restrict VM images | Only approved Google-published images allowed |
-| Detailed audit logging mode | Data Access audit logs enabled for all services |
+| Detailed audit logging mode | Adds request and response details to [Cloud Storage audit logs](https://cloud.google.com/storage/docs/audit-logging); does not turn on any logs by itself |
 
 ---
 
@@ -95,6 +95,25 @@ policies above.
 
 ---
 
+## SSH and RDP From the Internet
+
+Standard Campus Cloud projects (those in the UCSB NIST Baseline folder) block
+SSH (port 22) and RDP (port 3389) from the internet in two ways:
+
+* **A folder-level firewall policy** blocks SSH and RDP from the internet. It
+  is evaluated before any firewall rule in your project, so a project rule
+  cannot override it. Only traffic from Google's Identity-Aware Proxy (IAP)
+  range gets through — see
+  [Accessing Private VMs Without a Public IP]({{ "/docs/gcp/networking#accessing-private-vms-without-a-public-ip" | relative_url }}).
+* **An organization-wide custom constraint** rejects new project firewall
+  rules that open port 22 or 3389 to `0.0.0.0/0`.
+
+Exceptions require Cloud Team approval. Open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
+to request one.
+
+---
+
 ## What You Can and Cannot Do
 
 ### You Can
@@ -111,7 +130,7 @@ policies above.
 * Create auto-mode VPCs
 * Assign external public IPs to VMs
 * Set public access permissions (`allUsers`, `allAuthenticatedUsers`) or expose Cloud Run / Cloud Functions to unauthenticated traffic — both require a per-project exception (see [Public-Facing Services]({{ "/docs/gcp/networking#public-facing-services" | relative_url }}))
-* Disable audit logs
+* Disable Admin Activity audit logs
 * Create resources in regions outside us-central1 / us-west1 (for most services)
 * Attach a billing account to a Sandbox Unfunded project
 * Create resources using unapproved VM images (in NIST folder)

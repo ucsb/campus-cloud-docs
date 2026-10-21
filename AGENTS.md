@@ -15,6 +15,7 @@ The audience is **faculty, researchers, staff (including IT staff), and students
 5. **Keep pages short.** If a page exceeds ~800 words, consider splitting it or trimming content that belongs in provider docs.
 6. **Don't repeat yourself (DRY).** If information already exists on another page of this site, link to it instead of restating it. Duplicated content becomes a maintenance burden and leads to inconsistencies.
 7. **Use the Glossary for definitions.** When a UCSB-specific term needs defining, add it to `pages/glossary.md` in alphabetical order — don't define it inline on the page. The Glossary links to provider glossaries (AWS, Azure, GCP) at the top; never duplicate terms that already appear there unless there is a UCSB-specific reason. Suggest new Glossary entries when it seems sensible.
+8. **Use campus terminology.** When you refer to campus services and sign-in, use the same terms as UCSB's main IT site, <https://it.ucsb.edu/> — for example, "UCSB netID" (not "NetID credentials" or "netid") and "MFA with Duo". Check that site when you're unsure what a campus service is called.
 
 ## Content Structure
 
@@ -92,6 +93,7 @@ Rules for using these repos:
 
 * **Verify accuracy.** These repos are the source of truth. Before writing or updating documentation about guardrails, networking, roles, org policies, or any landing zone behavior, cross-check the relevant repo. Push back on the user if a requested change contradicts what the code actually does.
 * **GCP repo: ignore `/modules` and `/environment` folders.** Those directories are not relevant to documentation. Focus on the other top-level directories.
+* **AWS: read `DOCS-SITE-VERIFICATION.md` first.** The file `DOCS-SITE-VERIFICATION.md` at the root of `campus-cloud-aws-landing-zone` records what has been verified in the live AWS organization: where prod differs from the repo, findings about this site's AWS pages, open questions, and read-only CloudShell scripts for re-checking. Read it before changing AWS content, and update it when you verify something new.
 * **Only document customer-facing information.** Do not expose back-end implementation details such as internal project names, folder IDs, group names, OU IDs, or infrastructure plumbing. The audience cares about what they can see and do in their own accounts — not how the platform is built behind the scenes.
 
 ## Agent Behavior

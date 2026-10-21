@@ -1,0 +1,29 @@
+// markdownlint settings for this Jekyll site.
+// Read automatically by the VS Code markdownlint extension and markdownlint-cli2.
+// Each override below exists because the default rule conflicts with
+// Jekyll/kramdown syntax or with this site's conventions.
+{
+  "default": true,
+
+  // Prose and tables are not hard-wrapped; long URLs and table rows can't be.
+  "MD013": false,
+
+  // Table pipe alignment is cosmetic and churns on every edit.
+  "MD060": false,
+
+  // Every page has a front-matter `title` AND a visible `# Heading`.
+  // The `# Heading` is the page's real H1, so don't count the front matter.
+  "MD025": { "front_matter_title": "" },
+
+  // Liquid's `{{ "/path" | relative_url }}` inside a table cell is counted as
+  // an extra column. Jekyll renders it correctly.
+  "MD056": false,
+
+  // "### AWS", "### Azure" and "### GCP" repeat under different sections.
+  "MD024": { "siblings_only": true },
+
+  // HTML needed inside alert.html include strings and <details> blocks.
+  "MD033": {
+    "allowed_elements": ["a", "strong", "code", "details", "summary", "br"]
+  }
+}

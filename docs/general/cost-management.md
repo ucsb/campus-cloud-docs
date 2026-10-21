@@ -2,7 +2,7 @@
 title: Costs & Billing
 description: Cloud pricing, UC discounts, and how to manage your cloud spending
 permalink: /docs/general/cost-management
-last_reviewed: 2026-10-05
+last_reviewed: 2026-10-21
 redirect_from:
   - /docs/bestpractices/costmodels
   - /docs/aws/quicksight
@@ -71,7 +71,7 @@ and tell us which AWS accounts you need to see.
 Once you have access:
 
 1. Go to the [UCSB AWS access portal](https://ucsb-identity-center.awsapps.com/start/#/?tab=applications)
-   and sign in with your UCSB NetID.
+   and sign in with your UCSB netID.
 2. On the **Applications** tab, select **ucsb-quick-prod**.
 
 If a dashboard opens empty, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
@@ -214,8 +214,8 @@ redeem it — either create a new account or migrate an existing personal accoun
 | **AWS** | [Amazon Research Awards (ARA)](https://www.amazon.science/research-awards) | Unrestricted funds + AWS Promotional Credits | [Apply for ARA](https://www.amazon.science/research-awards) |
 | **GCP** | [Google Cloud Research Credits](https://edu.google.com/programs/credits/research/) | Up to $5,000 in GCP credits (faculty, PhD students, postdocs) | [Apply for GCP Research Credits](https://edu.google.com/programs/credits/research/) |
 | **GCP** | [Google Academic Research Awards (GARA)](https://research.google/programs-and-events/google-academic-research-awards/) | Unrestricted gifts for computing & technology research (professors) | [About GARA](https://research.google/programs-and-events/google-academic-research-awards/) |
-| **Azure** | [Microsoft Research Fellowship](https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/) | Azure compute access for collaborative research (faculty, PhD students, postdocs) | [About the Microsoft Research Fellowship](https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/) |
-| **Azure** | [Accelerating Foundation Models Research (AFMR)](https://www.microsoft.com/en-us/research/collaboration/accelerating-foundation-models-research/) | Azure AI services grants for foundation-model research | [About AFMR](https://www.microsoft.com/en-us/research/collaboration/accelerating-foundation-models-research/) |
+| **Azure** | [Microsoft Research Fellowship](https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/) | Research funding (PhD students, faculty, postdocs) | [About the Microsoft Research Fellowship](https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/) |
+| **Azure** | [Agentic AI Research and Innovation (AARI)](https://www.microsoft.com/en-us/research/academic-program/agentic-ai-research-and-innovation/) | Research collaborations with Microsoft Research on AI agents (successor to the Accelerating Foundation Models Research program) | [About AARI](https://www.microsoft.com/en-us/research/academic-program/agentic-ai-research-and-innovation/) |
 
 ### Teaching & Classroom Credits
 
