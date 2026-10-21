@@ -68,6 +68,7 @@ domain — security, cost, compliance, and data management.
 | **Data** | Data classification, retention planning, access management | Encryption defaults, audit trail of data access | Storage durability, encryption at rest |
 
 For the cloud providers' own descriptions of shared responsibility, see:
+
 * [AWS Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/)
 * [Azure Shared Responsibility](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility)
 * [GCP Shared Responsibility and Shared Fate](https://cloud.google.com/architecture/framework/security/shared-responsibility-shared-fate)

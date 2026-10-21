@@ -86,4 +86,3 @@ regions are blocked by a Deny policy at the management group level.
 * [Guardrails & Policies]({{ "/docs/azure/guardrails" | relative_url }})
 * [Security]({{ "/docs/azure/security" | relative_url }})
 * [Support]({{ "/docs/general/support" | relative_url }})
-

@@ -117,6 +117,7 @@ to request one.
 ## What You Can and Cannot Do
 
 ### You Can
+
 * Create VMs with private IP addresses only
 * SSH or RDP into VMs via Identity-Aware Proxy (IAP) — requires the `allow-iap-ssh` or `allow-iap-rdp` network tag on the VM (see [Accessing Private VMs Without a Public IP]({{ "/docs/gcp/networking#accessing-private-vms-without-a-public-ip" | relative_url }}))
 * Make outbound internet connections from VMs freely (outbound traffic is not restricted)
@@ -126,6 +127,7 @@ to request one.
 * Grant IAM roles to any `@ucsb.edu` user
 
 ### You Cannot
+
 * Create any VPC networks (deny policy blocks `networks.create` for all users)
 * Create auto-mode VPCs
 * Assign external public IPs to VMs
@@ -141,7 +143,7 @@ to request one.
 
 When an org policy blocks an action, you will see an error like:
 
-```
+```text
 ERROR: (gcloud.compute.instances.create) Could not fetch resource:
   - Constraint 'constraints/compute.vmExternalIpAccess' violated for project ...
 ```

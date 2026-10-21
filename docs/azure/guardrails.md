@@ -78,6 +78,7 @@ It does not block resource creation, but it generates compliance findings in
 Microsoft Defender for Cloud for controls that are not met.
 
 Regularly review your compliance posture:
+
 1. Navigate to **Microsoft Defender for Cloud → Regulatory compliance**.
 2. Select **NIST SP 800-171** from the list.
 3. Review and remediate any failing controls.
@@ -87,12 +88,14 @@ Regularly review your compliance posture:
 ## What You Can and Cannot Do
 
 ### You Can
+
 * Create any resource type in **West US 2** (recommended), **West Central US**, **East US 2**, or **Central US**
 * Create custom NSG rules and route tables within your VNet
 * Create additional Resource Groups (with required tags)
 * Enable, configure, and disable most Azure services in your subscription
 
 ### You Cannot
+
 * Create resources in regions other than the four allowed (West US 2, West Central US, East US 2, Central US)
 * Enable public blob access on storage accounts
 * Remove or modify policy assignments (management group level, read-only)

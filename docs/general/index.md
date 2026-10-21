@@ -25,6 +25,7 @@ The following resources can help you get up to speed on cloud concepts before yo
 
 The UCSB [LinkedIn Learning](https://www.learningcenter.ucsb.edu/linkedin-learning)
 library (free with your UCSB netID) includes:
+
 * [Cloud Computing courses](https://www.linkedin.com/learning/topics/cloud-computing-5)
 * [AWS courses](https://www.linkedin.com/learning/search?keywords=aws)
 * [Azure courses](https://www.linkedin.com/learning/search?keywords=azure)

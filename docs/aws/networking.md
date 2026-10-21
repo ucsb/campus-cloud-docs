@@ -8,6 +8,7 @@ redirect_from:
   - /docs/guidelines/networking
 ---
 
+<!-- markdownlint-disable-next-line MD022 -->
 # AWS Networking Overview
 {:.no_toc}
 
@@ -249,4 +250,3 @@ AZs, choose `n4.large.mixed` or `n4.xlarge.mixed`.
 
 Families with a private subnet (`*.private` and `*.mixed`) are attached to the
 Transit Gateway and can reach campus. `*.public` families are not.
-

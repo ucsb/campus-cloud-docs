@@ -15,7 +15,7 @@ centrally managed hub VNet is maintained by the Cloud Team. Subscription VNets
 
 ## Hub-Spoke Topology
 
-```
+```text
 [Campus Network]
        |
 [Azure Virtual WAN Hub — West US 2]
@@ -76,6 +76,7 @@ traffic to campus CIDRs will route through the hub automatically.
 ## Network Security
 
 ### Network Security Groups (NSGs)
+
 * NSGs are your primary mechanism for controlling inbound and outbound traffic.
 * Apply NSGs at the subnet level (recommended) or NIC level.
 * Avoid rules that allow `0.0.0.0/0` on administrative ports (22, 3389).
@@ -83,6 +84,7 @@ traffic to campus CIDRs will route through the hub automatically.
   automatically on provisioning. Do not disable flow logs.
 
 ### Azure Firewall
+
 * A shared Azure Firewall may be deployed in the hub for central egress filtering.
 * Contact the Cloud Team if you need to allow specific outbound traffic that is
   being blocked.

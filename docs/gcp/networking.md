@@ -237,4 +237,3 @@ Many GCP services do not require a VPC at all:
 
 If your workload uses only managed services, you may not need to request
 network provisioning.
-

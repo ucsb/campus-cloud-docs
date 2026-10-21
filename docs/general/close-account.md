@@ -64,14 +64,17 @@ All correspondence about the account closure should be in the ticket.
 ## Provider-Specific Notes
 
 ### AWS
+
 Account deletion severs the root email association and removes the account from
 the organization. Some AWS services retain data for a short period after deletion.
 
 ### Azure
+
 Subscription deletion removes all resources and the subscription from the
 management group hierarchy.
 
 ### GCP
+
 Project deletion enters a 30-day deletion pending state before permanent removal.
 The Cloud Team manages this process to ensure billing sub-accounts are updated
 correctly.

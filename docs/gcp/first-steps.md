@@ -7,6 +7,7 @@ redirect_from:
   - /docs/firststeps/gcpfirststeps
 ---
 
+<!-- markdownlint-disable-next-line MD022 -->
 # Getting Started With Your GCP Project
 {:.no_toc}
 
@@ -113,6 +114,7 @@ project. Before creating resources, review the key constraints on the
 what will be blocked.
 
 Key constraints to know:
+
 * **No external IP addresses** — VMs cannot have public IPs by default
 * **Custom-mode VPCs only** — Auto-mode VPC networks are blocked
 * **Allowed regions:** us-central1 and us-west1 (other regions may be blocked)

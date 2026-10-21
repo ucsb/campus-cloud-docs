@@ -19,7 +19,7 @@ The audience is **faculty, researchers, staff (including IT staff), and students
 
 ## Content Structure
 
-```
+```text
 docs/
   general/   # Cross-provider guidance (identity, security, compliance, cost, etc.)
   aws/       # AWS-specific pages
@@ -37,6 +37,7 @@ assets/      # CSS, images
 * **Provider and section index pages** (e.g., `docs/aws/index.md`, `docs/general/index.md`) often list links to their child pages at the bottom. Update those links when adding or removing pages in that section.
 * Pages in `docs/` use the `docs` collection (defined in `_config.yml`). Their `permalink` frontmatter controls the URL.
 * **When removing a page**, always add a `redirect_from` entry in the YAML frontmatter of whichever page replaces it, so existing bookmarks and search-engine links continue to work:
+
   ```yaml
   redirect_from:
     - /docs/aws/old-page-name
@@ -46,22 +47,29 @@ assets/      # CSS, images
 
 * Every content file starts with YAML frontmatter (`---` delimiters). Required fields: `title`, `description`, `permalink`. Include `last_reviewed` (ISO date) when updating a page. **Update `last_reviewed` to today's date whenever you make substantive changes to a page.**
 * **Internal links** must use the `relative_url` filter so the site works under any `baseurl`:
-  ```
+
+  ```liquid
   {% raw %}[Link text]({{ "/docs/aws/networking" | relative_url }}){% endraw %}
   ```
+
 * **Images** go in `assets/img/`. Reference them with `relative_url`:
-  ```
+
+  ```liquid
   {% raw %}![Alt text]({{ "/assets/img/example.png" | relative_url }}){% endraw %}
   ```
+
 * Use the `alert.html` include for callout boxes:
-  ```
+
+  ```liquid
   {% raw %}{% capture alert_content %}Your message here.{% endcapture %}
   {% include alert.html type="info" title="Note" content=alert_content %}{% endraw %}
   ```
+
   Supported types: `info`, `warning`, `danger`, `success`.
 * Use Markdown tables, headings (`##`, `###`), and bullet lists. Avoid raw HTML unless required for accessibility or layout.
 * Use `---` (horizontal rule) to separate major sections on a page.
 * **ServiceNow links:** When directing users to open a support ticket, always link to the Campus Cloud ServiceNow catalog item:
+
   ```markdown
   [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
   ```
@@ -71,6 +79,7 @@ assets/      # CSS, images
 All content must meet **WCAG 2.1 AA** guidelines (<https://www.w3.org/TR/WCAG21/>). Follow the UCSB Web Accessibility Standards at <https://webguide.ucsb.edu/accessibility-0>.
 
 Key requirements:
+
 * Every image must have meaningful `alt` text. Decorative images use `alt=""`.
 * Use proper heading hierarchy (`##` → `###` → `####`). Never skip levels.
 * Links must have descriptive text — never use "click here" or bare URLs as link text.

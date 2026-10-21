@@ -59,6 +59,7 @@ emergency actions.
 ### Emergency Isolation
 
 If a GCP resource is actively being exploited:
+
 * Remove the compromised user or service account's access to the project.
 * Add a deny-all firewall rule (priority 1) to isolate a compromised VM.
 * **Do not delete the VM** — preserve it for forensics.

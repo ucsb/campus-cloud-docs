@@ -9,6 +9,7 @@ redirect_from:
   - /docs/guidelines/quicksight-dashboards
 ---
 
+<!-- markdownlint-disable-next-line MD022 -->
 # Costs & Billing
 {:.no_toc}
 
@@ -20,6 +21,7 @@ and the provider, see
 [Shared Responsibility]({{ "/docs/general/shared-responsibility" | relative_url }}).
 
 {::options toc_levels="2..3" /}
+
 * TOC
 {:toc}
 
@@ -30,6 +32,7 @@ and the provider, see
 {% include alert.html type="warning" title="Budget for baseline costs" content="Every Campus Cloud account incurs baseline charges even when you are not running workloads. Audit logging, security monitoring, and compliance tools run continuously. For most accounts this is a small amount per month, but factor it into your budget from the start." %}
 
 These baseline services include:
+
 * Audit log storage
 * Security Hub / Defender for Cloud / Security Command Center
 * GuardDuty (AWS)

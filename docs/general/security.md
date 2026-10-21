@@ -73,6 +73,7 @@ Review findings regularly. Critical findings may require a response — the Clou
 Team may contact you for unresolved high-severity items.
 
 For provider-specific security best practices, see:
+
 * [AWS Security Best Practices](https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html)
 * [Azure Security Best Practices](https://learn.microsoft.com/en-us/azure/security/fundamentals/best-practices-and-patterns)
 * [GCP Security Best Practices](https://cloud.google.com/security/best-practices)
@@ -123,7 +124,6 @@ three values using the required tags described in
 How confidential is the data? Based on the
 [UC Data Classification standard](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html).
 
-
 | Level | Description | Examples |
 |---|---|---|
 | P1 — Public | No confidentiality requirement | Published research, public websites |
@@ -159,4 +159,3 @@ How quickly must you recover? Based on the
 
 Use these levels to guide your architecture decisions and to communicate
 requirements to the Cloud Team.
-

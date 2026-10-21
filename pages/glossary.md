@@ -59,4 +59,3 @@ that need a campus-specific definition.
 | **UCSB SSO** | Single sign-on with your UCSB netID. AWS uses Shibboleth SAML; Azure and GCP use Entra ID federation. |
 | **Wiz** | A cloud security posture management (CSPM) tool for agentless vulnerability and misconfiguration scanning. Available on all three providers; accounts are enrolled on an opt-in basis. See [Security]({{ "/docs/general/security#wiz-cloud-security-posture-management" | relative_url }}). |
 | **WORM** | Write Once, Read Many — a storage mode that prevents stored data from being deleted or modified. Used for audit logs in GCP (3-year retention). |
-

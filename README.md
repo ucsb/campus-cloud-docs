@@ -16,7 +16,7 @@ GitHub Pages builds the site using the `vsoch/docsy-jekyll` remote theme (set in
 
 ## Directory Structure
 
-```
+```text
 _config.yml          # Site-wide settings (theme, URL, collections) — rarely changed
 _data/
   toc.yml            # Sidebar table of contents — update when adding/removing/renaming pages
@@ -93,6 +93,7 @@ Keep `AGENTS.md` up to date as site conventions change — it is the single sour
 1. Delete or rename the file.
 2. Remove/update entries in `_data/toc.yml`, `pages/docs.md`, and the section index page.
 3. Add a `redirect_from` entry in the YAML frontmatter of whichever page replaces it, so old bookmarks still work:
+
    ```yaml
    redirect_from:
      - /docs/aws/old-page-name
@@ -105,24 +106,29 @@ Keep `AGENTS.md` up to date as site conventions change — it is the single sour
 These are the key rules. Full details are in `AGENTS.md`.
 
 - **Internal links** must use the `relative_url` Liquid filter:
-  ```
+
+  ```markdown
   [Link text]({{ "/docs/aws/networking" | relative_url }})
   ```
+
   Bare relative paths (e.g., `(networking)`) will break if the `baseurl` changes.
 
 - **Images** go in `assets/img/` and are referenced with `relative_url`:
-  ```
+
+  ```markdown
   ![Alt text]({{ "/assets/img/example.png" | relative_url }})
   ```
 
 - **Callout boxes** use the `alert.html` include:
-  ```
+
+  ```liquid
   {% capture alert_content %}Your message here.{% endcapture %}
   {% include alert.html type="info" title="Note" content=alert_content %}
   ```
 
 - **ServiceNow links** should always point to the Campus Cloud catalog item:
-  ```
+
+  ```markdown
   [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
   ```
 
@@ -138,10 +144,12 @@ The site does not have a Gemfile, so local builds are not configured out of the 
 
 1. Install Ruby and Bundler.
 2. Create a temporary `Gemfile`:
+
    ```ruby
    source "https://rubygems.org"
    gem "github-pages", group: :jekyll_plugins
    ```
+
 3. Run `bundle install && bundle exec jekyll serve`.
 4. Open `http://localhost:4000`.
 
@@ -151,5 +159,4 @@ Alternatively, push to a personal fork and enable GitHub Pages there. The `_conf
 
 ## Questions
 
-Contact the Cloud Team at [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu). 
-
+Contact the Cloud Team at [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu).

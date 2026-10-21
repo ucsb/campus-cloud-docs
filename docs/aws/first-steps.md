@@ -7,6 +7,7 @@ redirect_from:
   - /docs/firststeps/awsfirststeps
 ---
 
+<!-- markdownlint-disable-next-line MD022 -->
 # Getting Started With Your AWS Account
 {:.no_toc}
 

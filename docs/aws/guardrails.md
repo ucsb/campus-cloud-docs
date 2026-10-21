@@ -82,6 +82,7 @@ these two regions:
 ## What You Can and Cannot Do
 
 ### You Can
+
 * Create and manage resources in us-east-1 and us-west-2
 * Create IAM roles and policies
 * Manage Security Groups, NACLs, and VPC configuration within your account
@@ -89,6 +90,7 @@ these two regions:
 * Configure budget alarms and billing preferences
 
 ### You Cannot
+
 * Create resources outside us-east-1 / us-west-2
 * Disable AWS CloudTrail (org-level trail is read-only)
 * Modify or delete the Landing Zone AWS Config rules
