@@ -2,7 +2,7 @@
 title: Compliance & Governance
 description: NIST 800-171, UC IS-3, and the compliance controls built into every Campus Cloud account
 permalink: /docs/general/compliance
-last_reviewed: 2026-10-21
+last_reviewed: 2026-10-22
 redirect_from:
   - /docs/guidelines/compliance
 ---
@@ -42,7 +42,7 @@ remaining controls that depend on your specific workloads and processes.
 
 ---
 
-## New and Imported Accounts Are NIST 800-171 Compliant
+## New and Imported Accounts Align With NIST 800-171
 
 All new Campus Cloud accounts, and all existing accounts imported into the
 Campus Cloud, are set up to align with NIST 800-171 on **all three providers**.
@@ -63,12 +63,12 @@ responsible for the controls that depend on your workload.
 {% capture alert_content %}Support for P4 (HIPAA/CUI) workloads on GCP is still being finalized. Contact the Cloud Team before starting a P4 project on GCP so we can confirm readiness together.{% endcapture %}
 {% include alert.html type="warning" title="GCP note" content=alert_content %}
 
-### Migrating an Existing Account to NIST-Compliant
+### Migrating an Existing Account to NIST 800-171 Controls
 
-If you already have a Campus Cloud account that is not in the NIST-compliant
-tier, you can **migrate your account** to the NIST-compliant group of
-accounts — an Organizational Unit (OU) on AWS, a management group on Azure, or
-a folder on GCP. The Cloud Team can help with this process.
+If you already have a Campus Cloud account that doesn't have these controls,
+you can **migrate your account** to the group of accounts that does — an
+Organizational Unit (OU) on AWS, a management group on Azure, or a folder on
+GCP. The Cloud Team can help with this process.
 
 Email [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu) to discuss your options, or open a
 [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) if you are ready to proceed.

@@ -2,7 +2,7 @@
 title: Data Management Plans
 description: DMP guidelines for researchers using the Campus Cloud
 permalink: /docs/general/data-management
-last_reviewed: 2026-10-21
+last_reviewed: 2026-10-22
 redirect_from:
   - /docs/guidelines/dmp
 ---
@@ -43,7 +43,7 @@ controls (e.g., HIPAA Business Associate Agreement, CUI handling procedures).
 | Framework | Who It Applies To | Next Step |
 |---|---|---|
 | UC Policy IS-3 | All Campus Cloud accounts | Classify your data; apply appropriate tags |
-| NIST 800-171 | Research involving CUI (DoD, NSF, NIH grants) | New and imported accounts are NIST-compliant — see [Compliance]({{ "/docs/general/compliance" | relative_url }}) |
+| NIST 800-171 | Research involving CUI (DoD, NSF, NIH grants) | New and imported accounts include NIST-aligned controls. Assess the remaining requirements for your workload — see [Compliance]({{ "/docs/general/compliance" | relative_url }}) |
 | HIPAA | Research involving protected health information | Contact the Cloud Team; a BAA may be required |
 | FERPA | Work involving student education records | Classify as P3 minimum; limit access |
 
