@@ -2,7 +2,7 @@
 title: Shared Responsibility
 description: How responsibilities are divided between the cloud providers, the Campus Cloud Team, and you
 permalink: /docs/general/shared-responsibility
-last_reviewed: 2026-04-06
+last_reviewed: 2026-10-21
 ---
 
 # Shared Responsibility
@@ -52,7 +52,9 @@ domain — security, cost, compliance, and data management.
 * Physical data center security, hardware, and networking infrastructure
 * The underlying compute, storage, and network systems that managed services
   run on
-* Software patches and updates for managed services (RDS, Cloud SQL, Azure SQL, etc.)
+* Software patches and updates for managed services — for example, managed
+  databases such as Amazon Relational Database Service (RDS), Google Cloud SQL,
+  and Azure SQL Database
 
 ---
 
@@ -66,6 +68,7 @@ domain — security, cost, compliance, and data management.
 | **Data** | Data classification, retention planning, access management | Encryption defaults, audit trail of data access | Storage durability, encryption at rest |
 
 For the cloud providers' own descriptions of shared responsibility, see:
+
 * [AWS Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/)
 * [Azure Shared Responsibility](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility)
 * [GCP Shared Responsibility and Shared Fate](https://cloud.google.com/architecture/framework/security/shared-responsibility-shared-fate)

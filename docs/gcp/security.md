@@ -2,7 +2,7 @@
 title: GCP Security
 description: Security monitoring, audit logging, Security Command Center, and incident response for GCP projects.
 permalink: /docs/gcp/security
-last_reviewed: 2026-07-08
+last_reviewed: 2026-10-21
 ---
 
 # GCP Security
@@ -10,7 +10,7 @@ last_reviewed: 2026-07-08
 Every Campus Cloud GCP project comes with security tools already turned on.
 You don't need to set any of this up — it's ready when your project is
 created. The main tools are **Cloud Audit Logs** (audit logging) and
-**Security Command Center** (security checks and threat detection).
+**Security Command Center** (security configuration checks).
 
 ---
 
@@ -19,7 +19,7 @@ created. The main tools are **Cloud Audit Logs** (audit logging) and
 [Security Command Center](https://cloud.google.com/security-command-center/docs/concepts-security-command-center-overview)
 is enabled at the UCSB organization level. It checks all projects for security
 issues — publicly exposed storage buckets, VM vulnerabilities, IAM
-misconfigurations, unusual API activity, and unsafe network settings.
+misconfigurations, and unsafe network settings.
 
 ### Reviewing Findings
 
@@ -38,7 +38,7 @@ restrict manually.
 For a simpler overview, [Cloud Hub](https://console.cloud.google.com/cloud-hub/)
 has a **Security & compliance** panel (in preview) that shows findings by
 severity alongside your compliance scores. To see how your project scores
-against a compliance standard such as NIST, open **Security Command Center →
+against Google's Security Essentials framework, open **Security Command Center →
 Compliance Manager**.
 
 Address Critical and High findings promptly. The Cloud Team monitors
@@ -59,6 +59,7 @@ emergency actions.
 ### Emergency Isolation
 
 If a GCP resource is actively being exploited:
+
 * Remove the compromised user or service account's access to the project.
 * Add a deny-all firewall rule (priority 1) to isolate a compromised VM.
 * **Do not delete the VM** — preserve it for forensics.
@@ -83,16 +84,17 @@ administrative action in your project — who did what, when, and from where.
 
 | Log Type | What It Records | Retention |
 |---|---|---|
-| Admin Activity | Changes to resources and settings | 3 years (cannot be deleted or modified) |
-| Data Access | Reads and writes to data | 30 days default (configurable) |
+| Admin Activity | Changes to resources and settings | 400 days, set by Google (entries cannot be deleted or modified) |
+| Data Access | Reads and writes to data (off by default, except BigQuery) | 30 days default (configurable) |
 | System Events | Automated GCP actions | 30 days default |
 
 **Admin Activity logs are always on** and cannot be disabled. **Data Access
-logs are enabled for all services by default** as a Campus Cloud guardrail —
-older projects that predate this guardrail may not have it. If you don't see
-Data Access entries for a service you expect, check **IAM & Admin → Audit
-Logs** in the Google Cloud console and contact the Cloud Team if it looks
-disabled.
+logs are off by default**, except for BigQuery, which Google always logs.
+Project owners can turn them on for individual services under **IAM & Admin →
+Audit Logs** — see
+[Configure Data Access audit logs](https://cloud.google.com/logging/docs/audit/configure-data-access).
+Data Access logs are billed to your project at
+[Cloud Logging rates](https://cloud.google.com/stackdriver/pricing).
 
 For details, see the
 [Cloud Audit Logs docs](https://cloud.google.com/logging/docs/audit).
@@ -131,7 +133,7 @@ attempts to do so will fail with a policy error.
 Grant access through your project's **per-project access groups** (owners,
 editors, viewers, billing) rather than adding people directly under IAM — the
 groups also carry billing-data and Shared VPC access. See
-[GCP First Steps — Adding and Removing Users]({{ "/docs/gcp/first-steps#step-2--verify-your-access" | relative_url }})
+[GCP First Steps — Adding and Removing Users]({{ "/docs/gcp/first-steps#adding-and-removing-users" | relative_url }})
 and [Identity & Access]({{ "/docs/general/identity" | relative_url }}).
 
 If an external collaborator needs access, contact the Cloud Team to discuss

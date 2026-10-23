@@ -2,11 +2,12 @@
 title: GCP First Steps
 description: What to do after your GCP project is provisioned — sign in, verify setup, deploy your first resource.
 permalink: /docs/gcp/first-steps
-last_reviewed: 2026-07-27
+last_reviewed: 2026-10-21
 redirect_from:
   - /docs/firststeps/gcpfirststeps
 ---
 
+<!-- markdownlint-disable-next-line MD022 -->
 # Getting Started With Your GCP Project
 {:.no_toc}
 
@@ -26,10 +27,10 @@ to verify your contacts, budget, and tags are still the way you want them.
 ## Step 1 — Sign In
 
 1. Go to [console.cloud.google.com](https://console.cloud.google.com).
-2. Sign in with your UCSB email address (`yournetid@ucsb.edu`).
+2. Sign in with your UCSB email address (`yournetID@ucsb.edu`).
    * UCSB uses Google Workspace managed through Microsoft Entra ID — your
-     UCSB NetID and password work here.
-   * Complete Duo MFA if prompted.
+     UCSB netID and password work here.
+   * Complete MFA with Duo if prompted.
 3. After signing in, click the project selector at the top of the page (next to
    the Google Cloud logo) and find your project by name or ID.
 
@@ -113,6 +114,7 @@ project. Before creating resources, review the key constraints on the
 what will be blocked.
 
 Key constraints to know:
+
 * **No external IP addresses** — VMs cannot have public IPs by default
 * **Custom-mode VPCs only** — Auto-mode VPC networks are blocked
 * **Allowed regions:** us-central1 and us-west1 (other regions may be blocked)
@@ -175,7 +177,13 @@ See [Tagging & Labels]({{ "/docs/general/tagging" | relative_url }}) for allowed
 1. Navigate to **Billing → Budgets & alerts**.
 2. Confirm a billing budget exists for your project.
 3. The budget notifies you at 50%, 90%, and 100% of the budget by default.
-4. To change thresholds or recipients, edit the budget.
+
+The Cloud Team creates this budget on your billing sub-account when your
+project is set up. To change it, open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
+You can also
+[create additional budgets](https://cloud.google.com/billing/docs/how-to/budgets)
+scoped to your own project.
 
 A budget only sends notifications — it does not stop resources.
 

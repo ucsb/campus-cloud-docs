@@ -2,7 +2,7 @@
 title: AWS Overview
 description: Overview of the UCSB Campus Cloud AWS environment — accounts, regions, default configuration, and how to access it.
 permalink: /docs/aws/
-last_reviewed: 2026-04-06
+last_reviewed: 2026-10-23
 ---
 
 # AWS at UCSB
@@ -19,7 +19,7 @@ security infrastructure from scratch.
 | Item | Value |
 |---|---|
 | Sign-in URL | [aws.cloud.ucsb.edu](https://aws.cloud.ucsb.edu) |
-| Identity Provider | Shibboleth (UCSB NetID) |
+| Identity Provider | Shibboleth (UCSB netID) |
 | Supported Regions | us-east-1 (N. Virginia), us-west-2 (Oregon) |
 | New Account Turnaround | ~2 business days after PO is approved |
 
@@ -33,7 +33,7 @@ UCSB Gateway. In addition to the standard form fields, be ready to provide:
 * **Region preference** — us-east-1 (N. Virginia), us-west-2 (Oregon), or both
 * **Campus network connectivity** — whether you need a Transit Gateway
   attachment to reach on-premises UCSB systems
-* **Estimated monthly spend** — used to set your initial billing alarm
+* **Estimated monthly spend**
 * **Use case** — research, coursework, administrative, etc.
 
 After your PO is approved, the Cloud Team will provision the account within
@@ -44,16 +44,12 @@ approximately 2 business days and send a confirmation email.
 ## Account Structure
 
 Accounts live inside an **AWS Organization** managed by the Cloud Team.
-They are organized into Organizational Units (OUs). Policies applied at
-the OU level are inherited by every account inside it.
 
-| OU | Purpose |
-|---|---|
-| UCSB Baseline V2 | Production workloads — research, academic, and administrative accounts with full guardrails and NIST 800-171 controls |
-| Sandbox | Exploration and development — no production data allowed |
-
-New accounts are placed in **UCSB Baseline V2** by default. Contact the
-Cloud Team if your needs change.
+New and imported accounts will have full guardrails and
+[NIST 800-171]({{ "/glossary/" | relative_url }}) controls applied. These
+controls provide robust security and are suitable for most use cases. If they
+do not meet your needs, please contact the Cloud Team by opening a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
 
 ---
 
@@ -62,13 +58,12 @@ Cloud Team if your needs change.
 When your account is provisioned, the Cloud Team will:
 
 * **Attach your account** to the AWS Organization and apply guardrail policies
-* **Enable AWS Security Hub** and configure NIST 800-171 standards
+* **Enable AWS Security Hub** with automated checks for NIST 800-171-aligned accounts
 * **Enable AWS Config** to track configuration changes
 * **Enable AWS CloudTrail** (organization-level, cannot be disabled)
 * **Pre-wire networking** — your account receives a VPC connected to the
   campus network (if requested)
 * **Create four default IAM roles** for your team (see [First Steps]({{ "/docs/aws/first-steps" | relative_url }}))
-* **Set a billing alarm** at the threshold you specify during account request
 
 ---
 
@@ -82,7 +77,7 @@ programmatic-only Amazon Bedrock exception in two additional regions). See
 
 ## Roles
 
-Four roles are created in every account. Assignments are managed via **im.ucsb.edu**.
+Four roles are created in every account. Assignments are managed in [Identity Manager](https://im.ucsb.edu).
 
 | Role | Capabilities |
 |---|---|

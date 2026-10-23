@@ -17,7 +17,7 @@ correctly is one of the first things you should do after account creation.
 
 ## Use Functional Email Addresses
 
-{% include alert.html type="warning" title="Use functional email addresses" content="Avoid setting contacts to a personal email address. When people change roles or leave UCSB, contacts with personal addresses stop working. Use a department or team email (e.g., mylab-cloud@ucsb.edu) that can be managed by multiple people." %}
+{% include alert.html type="warning" title="Use functional email addresses" content="Avoid setting contacts to a personal email address. When people change roles or leave UCSB, contacts with personal addresses stop working. Use a department or team email (e.g., <code>mylab-cloud@ucsb.edu</code>) that can be managed by multiple people." %}
 
 ---
 

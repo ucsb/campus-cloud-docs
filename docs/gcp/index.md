@@ -80,4 +80,3 @@ are tested primarily in these two regions.
 * [Networking]({{ "/docs/gcp/networking" | relative_url }})
 * [Guardrails & Org Policies]({{ "/docs/gcp/guardrails" | relative_url }})
 * [Security]({{ "/docs/gcp/security" | relative_url }})
-

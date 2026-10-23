@@ -2,7 +2,7 @@
 title: Azure Guardrails & Policies
 description: Azure Policy assignments and compliance controls applied to all Campus Cloud Azure subscriptions.
 permalink: /docs/azure/guardrails
-last_reviewed: 2026-05-29
+last_reviewed: 2026-10-23
 redirect_from:
   - /docs/guidelines/guardrails/azure
 ---
@@ -11,7 +11,7 @@ redirect_from:
 
 UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
 Azure subscription aligned with university security policy
-([UC IS-3](https://security.ucop.edu/policies/institutional-information-and-it-resource-classification.html))
+([UC IS-3](https://policy.ucop.edu/advanced-search.html?action=search&op=results&lookup=1&keywords=IS-3&search=Search))
 and the federal
 [NIST 800-171]({{ "/glossary/" | relative_url }}) standard for
 protecting sensitive research data.
@@ -78,6 +78,7 @@ It does not block resource creation, but it generates compliance findings in
 Microsoft Defender for Cloud for controls that are not met.
 
 Regularly review your compliance posture:
+
 1. Navigate to **Microsoft Defender for Cloud → Regulatory compliance**.
 2. Select **NIST SP 800-171** from the list.
 3. Review and remediate any failing controls.
@@ -87,12 +88,14 @@ Regularly review your compliance posture:
 ## What You Can and Cannot Do
 
 ### You Can
+
 * Create any resource type in **West US 2** (recommended), **West Central US**, **East US 2**, or **Central US**
 * Create custom NSG rules and route tables within your VNet
 * Create additional Resource Groups (with required tags)
 * Enable, configure, and disable most Azure services in your subscription
 
 ### You Cannot
+
 * Create resources in regions other than the four allowed (West US 2, West Central US, East US 2, Central US)
 * Enable public blob access on storage accounts
 * Remove or modify policy assignments (management group level, read-only)
@@ -105,8 +108,6 @@ Regularly review your compliance posture:
 If a policy blocks something you believe is legitimate, open a [ServiceNow
 ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5). Explain the use case and the specific policy assignment that is blocking you. The Cloud Team will evaluate the request and, if appropriate,
 create a policy exemption on your subscription.
-
-Exceptions are not granted for controls required by UC IS-3 policy.
 
 ---
 

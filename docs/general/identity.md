@@ -2,13 +2,13 @@
 title: Identity & Access Management
 description: How to grant and manage access to Campus Cloud accounts — UCSB identity, group-based access, and least privilege across AWS, Azure, and GCP.
 permalink: /docs/general/identity
-last_reviewed: 2026-05-29
+last_reviewed: 2026-10-21
 ---
 
 # Identity & Access Management
 
 Every Campus Cloud account uses your **UCSB identity** — you sign in with your
-`@ucsb.edu` NetID, and only `@ucsb.edu` accounts can be granted access. There
+UCSB netID, and only `@ucsb.edu` accounts can be granted access. There
 are no separate cloud passwords to create or manage.
 
 This page covers the principles that apply everywhere. For step-by-step
@@ -27,15 +27,15 @@ grant on a single account or project can silently miss related access such as
 
 | Provider | How access is granted | Where you manage it |
 |---|---|---|
-| **AWS** | Four role groups per account (Administrator, PowerUser, ReadOnly, Billing) | [im.ucsb.edu](https://im.ucsb.edu) → Manage Group Tags |
+| **AWS** | Four role groups per account (Administrator, PowerUser, ReadOnly, Billing) | [Identity Manager](https://im.ucsb.edu) → Manage Group Tags |
 | **GCP** | Four Google Groups per project (owners, editors, viewers, billing) | [groups.google.com](https://groups.google.com) (project owners are group Managers) |
 | **Azure** | Custom RBAC roles assigned to users | Azure portal → Access control (IAM) |
 
 {% include alert.html type="warning" title="GCP: use the project groups" content="On GCP, billing-data access and Shared VPC access are attached to the per-project groups — not to direct IAM grants. Add people to the project's owners/editors/viewers/billing groups so they get the access they actually need. See GCP First Steps." %}
 
-* **AWS** — see [AWS First Steps — Adding and Removing Users]({{ "/docs/aws/first-steps#step-2--review-your-default-roles" | relative_url }}).
-* **GCP** — see [GCP First Steps — Adding and Removing Users]({{ "/docs/gcp/first-steps#step-2--verify-your-access" | relative_url }}).
-* **Azure** — see [Azure First Steps — Adding and Removing Users]({{ "/docs/azure/first-steps#step-3--review-your-roles" | relative_url }}).
+* **AWS** — see [AWS First Steps — Adding and Removing Users]({{ "/docs/aws/first-steps#adding-and-removing-users" | relative_url }}).
+* **GCP** — see [GCP First Steps — Adding and Removing Users]({{ "/docs/gcp/first-steps#adding-and-removing-users" | relative_url }}).
+* **Azure** — see [Azure First Steps — Adding and Removing Users]({{ "/docs/azure/first-steps#adding-and-removing-users" | relative_url }}).
 
 ---
 

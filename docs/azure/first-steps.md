@@ -2,12 +2,13 @@
 title: Azure First Steps
 description: What to do after your Azure subscription is provisioned — sign in, verify setup, deploy your first resource.
 permalink: /docs/azure/first-steps
-last_reviewed: 2026-07-08
+last_reviewed: 2026-10-21
 redirect_from:
   - /docs/firststeps/azurefirststeps
   - /docs/azure/roles
 ---
 
+<!-- markdownlint-disable-next-line MD022 -->
 # Getting Started With Your Azure Subscription
 {:.no_toc}
 
@@ -27,9 +28,9 @@ to verify your contacts, budget, and tags are still the way you want them.
 ## Step 1 — Sign In
 
 1. Go to [portal.azure.com](https://portal.azure.com).
-2. Sign in with your UCSB email address (`yournetid@ucsb.edu`).
+2. Sign in with your UCSB email address (`yournetID@ucsb.edu`).
    * If prompted, choose **Work or school account**.
-   * Authenticate with Duo MFA if required.
+   * Complete MFA with Duo if prompted.
 3. In the top-right dropdown, verify you are in the **UC Santa Barbara** directory.
    * If you see a personal directory instead, click your name → **Switch directory**
      → select **UC Santa Barbara**.
@@ -46,6 +47,7 @@ to verify your contacts, budget, and tags are still the way you want them.
    future support tickets.
 
 If your subscription does not appear, verify that:
+
 * You are in the UC Santa Barbara directory (step 1).
 * Your role assignment is complete (ask the Cloud Team if unsure).
 
@@ -87,6 +89,7 @@ practices.
 The primary billing contact is managed by the Cloud Team. **You configure:**
 
 **Security alerts (Defender for Cloud):**
+
 1. Navigate to **Microsoft Defender for Cloud → Environment settings**.
 2. Click your subscription → **Email notifications**.
 3. Set the email to your team's functional security address.
@@ -97,6 +100,7 @@ The primary billing contact is managed by the Cloud Team. **You configure:**
 (see Step 8 below).
 
 **Service Health alerts:**
+
 1. Navigate to **Service Health → Health alerts → + Create service health alert**.
 2. Scope to your subscription; choose the services and regions you use.
 3. Create an Action Group with an Email action pointing to your team's address.

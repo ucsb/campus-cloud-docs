@@ -2,12 +2,13 @@
 title: AWS Networking
 description: VPC options, campus connectivity, Transit Gateway, and IP address management for AWS accounts.
 permalink: /docs/aws/networking
-last_reviewed: 2026-05-29
+last_reviewed: 2026-10-23
 redirect_from:
   - /docs/bestpractices/vpn
   - /docs/guidelines/networking
 ---
 
+<!-- markdownlint-disable-next-line MD022 -->
 # AWS Networking Overview
 {:.no_toc}
 
@@ -23,20 +24,19 @@ without a Transit Gateway attachment.
 
 ## How to Connect to Campus
 
-UCSB has **two AWS Direct Connect connections** and a **Site-to-Site VPN** between
-the AWS us-east-1 / us-west-2 regions and the UCSB campus network:
+UCSB has **two AWS Direct Connect connections** and a **Site-to-Site VPN**
+between AWS and the UCSB campus network. All three connect in us-west-2.
+VPCs in us-east-1 reach campus through us-west-2.
 
-| Link | Type | Regions | Purpose |
-|---|---|---|---|
-| Direct Connect Circuit 1 | Private VIF | us-east-1, us-west-2 | Primary campus connectivity |
-| Direct Connect Circuit 2 | Private VIF | us-east-1, us-west-2 | Redundancy / failover |
-| Site-to-Site VPN | IPsec over internet | us-east-1, us-west-2 | Tertiary failover |
+| Link | Region | Purpose |
+|---|---|---|
+| Direct Connect Circuit 1 | us-west-2 | Primary campus connectivity |
+| Direct Connect Circuit 2 | us-west-2 | Redundancy / failover |
+| Site-to-Site VPN (IPsec over the internet) | us-west-2 | Backup if both Direct Connect circuits fail |
 
 Routing preference: Direct Connect → Site-to-Site VPN. Failover is automatic
 and transparent to workloads. Traffic from your VPC to campus resources routes
 through the Transit Gateway — you do not need to configure this yourself.
-
-{% include alert.html type="info" title="Campus VPN not needed for cloud workloads" content="If your EC2 instance or Lambda is inside a VPC attached to the Transit Gateway, it can reach campus resources directly — you do not need to run the campus VPN on the server. The VPN is for your laptop, not for cloud workloads." %}
 
 ---
 
@@ -59,6 +59,12 @@ ticket.
   * Avoid `0.0.0.0/0` inbound on sensitive ports (22, 3389, database ports).
   * Prefer inbound rules scoped to campus CIDR ranges for administrative access.
 
+**Other Campus Cloud VPCs can reach yours.** Every VPC attached to the Transit
+Gateway has a network route to every other attached VPC, including VPCs in
+other departments' accounts. Only your Security Groups and network ACLs stand
+between them. Scope inbound rules to the specific sources that need access —
+not the whole Landing Zone range (`10.226.0.0/15`).
+
 ---
 
 ## DNS
@@ -71,19 +77,16 @@ ticket.
 
 ---
 
-## VPN Client Access (Off-Campus Laptops)
+## Off-Campus Access
 
 To reach resources in your Campus Cloud VPC from a laptop that is **not** on the
-UCSB campus network:
+UCSB campus network, use **Secure Service Access (SSA)**. SSA uses the Zscaler Client Connector,
+which you install on your laptop and sign in to with UCSB SSO. It replaces the
+Campus VPN (Ivanti), which is being retired on January 22, 2027. SSA is
+licensed to faculty, staff, and student employees. To get the connector, see
+[Secure Service Access (SSA)](https://it.ucsb.edu/services/secure-service-access).
 
-1. Connect to the **UCSB campus VPN** on your endpoint.
-2. The VPN routes your traffic through the campus network → Direct Connect →
-   Transit Gateway → your VPC.
-
-Download and configure the VPN client at:
-[UCSB Campus VPN](https://it.ucsb.edu/network-infrastructure-services/ivanti-connect-secure-campus-vpn)
-
-{% include alert.html type="info" title="VPN is for your laptop, not for servers" content="Cloud workloads (EC2, Lambda, containers) inside a campus-connected VPC can reach campus resources directly through the Transit Gateway. The campus VPN is only for your laptop or workstation when working off-campus." %}
+{% include alert.html type="info" title="SSA is for your laptop, not for servers" content="Cloud workloads (EC2, Lambda, containers) inside a campus-connected VPC can reach campus resources directly through the Transit Gateway. SSA is only for your laptop or workstation when working off campus." %}
 
 ---
 
@@ -113,17 +116,17 @@ If you need to allow traffic from AWS to a specific campus host or service:
 
 ### Cannot Reach a Private IP in AWS from Your Laptop
 
-1. Confirm you are connected to the
-   [UCSB campus VPN](https://it.ucsb.edu/network-infrastructure-services/ivanti-connect-secure-campus-vpn).
+1. Confirm the Zscaler Client Connector is turned on and signed in (see
+   [Off-Campus Access](#off-campus-access)).
 2. Confirm the resource's Security Group allows inbound traffic from the campus
    CIDR ranges (`128.111.0.0/16` and `169.231.0.0/16`).
 3. Confirm the VPC has a Transit Gateway attachment
    (Console → VPC → Transit Gateway Attachments).
 4. Ping or traceroute from your laptop to inspect where the path breaks.
 5. If all of the above are correct, the issue may be a campus host-based firewall
-   or the campus Palo Alto UTM. Contact the
-   [Network Operations Center (NOC)](https://www.ets.ucsb.edu/network-infrastructure-services/network-operations)
-   for assistance.
+   or the campus network firewall. Contact the
+   [ITS Service Desk](https://ithelp.ucsb.edu) and ask for the Network
+   Operations Center (NOC).
 
 ### High Latency Between Campus and AWS
 
@@ -141,7 +144,7 @@ If you need to allow traffic from AWS to a specific campus host or service:
 
 This section provides technical details about the Landing Zone network
 infrastructure for users who need them for firewall rules, troubleshooting, or
-vendor whitelisting.
+vendor allowlisting.
 
 ### Architecture Diagram
 
@@ -178,7 +181,7 @@ break routing.
 Traffic leaving your private subnets to the internet appears to come from
 centrally managed NAT Gateway IP addresses. These IPs can change but rarely do.
 
-{% include alert.html type="warning" title="These IPs may change without notice" content="NAT Gateway Elastic IPs are dynamically allocated. If you need the current list for vendor whitelisting or firewall rules, confirm with the Cloud Team via a ServiceNow ticket." %}
+{% include alert.html type="warning" title="These IPs may change without notice" content="NAT Gateway Elastic IPs are dynamically allocated. If you need the current list for vendor allowlisting or firewall rules, confirm with the Cloud Team via a ServiceNow ticket." %}
 
 **Current NAT Gateway IPs (us-west-2):**
 
@@ -208,8 +211,8 @@ product types from the
 
 | VPC Type | Subnets | Campus Network Access | Use When |
 |---|---|---|---|
-| Simple VPC with Campus Connectivity | Yes — multi-AZ; you choose a family (below) | Yes (via Transit Gateway) | Most workloads — running servers, databases, or anything needing network connectivity |
-| Advanced VPC | No — an empty VPC you build out yourself | Yes (Transit Gateway foundation) | You need full control over your network design from scratch |
+| Simple VPC with Campus Connectivity | Yes — you choose a family (below) | Yes, via Transit Gateway, for families with a private subnet. `*.public` families have no campus connection | Most workloads — running servers, databases, or anything needing network connectivity |
+| Advanced VPC | No — an empty VPC you build out yourself | Not by default — the product does not create a Transit Gateway attachment, so you configure any campus connection yourself | You need full control over your network design from scratch |
 
 Specify which type you need in your account request or
 [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
@@ -230,17 +233,20 @@ the number of subnets, their type, and the total IP address space:
 | n1.large.private | 1 | 128 | 1 private | 1 |
 | n2.medium.public | 2 | 64 | 2 public | 2 |
 | n2.medium.private | 2 | 64 | 2 private | 2 |
-| n2.medium.mixed | 2 | 64 | 1 public, 1 private | 2 |
+| n2.medium.mixed | 2 | 64 | 1 public, 1 private | 1 |
 | n2.large.public | 2 | 128 | 2 public | 2 |
 | n2.large.private | 2 | 128 | 2 private | 2 |
-| n2.large.mixed | 2 | 128 | 1 public, 1 private | 2 |
+| n2.large.mixed | 2 | 128 | 1 public, 1 private | 1 |
 | n4.large.mixed | 4 | 128 | 2 public, 2 private | 2 |
 | n2.xlarge.public | 2 | 256 | 2 public | 2 |
 | n2.xlarge.private | 2 | 256 | 2 private | 2 |
-| n2.xlarge.mixed | 2 | 256 | 1 public, 1 private | 2 |
+| n2.xlarge.mixed | 2 | 256 | 1 public, 1 private | 1 |
 | n4.xlarge.mixed | 4 | 256 | 2 public, 2 private | 2 |
 
-Multi-AZ families (n2.\* and n4.\*) spread subnets across two Availability Zones
-for higher availability. If you're not sure which family to pick, `n2.large.mixed`
-is a good general-purpose starting point.
+The `n2.*.public`, `n2.*.private`, and `n4.*` families spread subnets across two
+Availability Zones (AZs) for higher availability. The `n2.*.mixed` families put
+both subnets in a **single AZ**. If you need public and private subnets in two
+AZs, choose `n4.large.mixed` or `n4.xlarge.mixed`.
 
+Families with a private subnet (`*.private` and `*.mixed`) are attached to the
+Transit Gateway and can reach campus. `*.public` families are not.

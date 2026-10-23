@@ -2,7 +2,7 @@
 title: Support
 description: How to reach the Campus Cloud Team, join the community, attend office hours, and schedule an annual account check-in.
 permalink: /docs/general/support
-last_reviewed: 2026-07-08
+last_reviewed: 2026-10-23
 ---
 
 # Support
@@ -120,12 +120,13 @@ A typical check-in covers:
   renewal date and whether the annual amount still matches your expected
   spending. See [Costs & Billing]({{ "/docs/general/cost-management" | relative_url }}).
 * **Security & compliance** — open findings in your account's security
-  dashboard and a compliance summary we pull from
-  [Wiz]({{ "/docs/general/security#wiz-cloud-security-posture-management" | relative_url }}).
+  dashboard and, if your account is enrolled in
+  [Wiz]({{ "/docs/general/security#wiz-cloud-security-posture-management" | relative_url }}),
+  a compliance summary we pull from it.
   We also ask whether the account holds any sensitive or regulated data
-  (protection levels P3 or P4) and whether a
-  [NIST-compliant account]({{ "/docs/general/compliance" | relative_url }})
-  would fit your work.
+  (protection levels P3 or P4) and, if it doesn't have
+  [NIST 800-171 controls]({{ "/docs/general/compliance#migrating-an-existing-account-to-nist-800-171-controls" | relative_url }})
+  yet, whether it should move to them.
 * **Tagging** — keeping resources organized and tagged consistently. See
   [Tagging & Labels]({{ "/docs/general/tagging" | relative_url }}).
 * **Feedback** — your experience with Campus Cloud and the Landing Zone service.

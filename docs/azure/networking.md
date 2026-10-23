@@ -2,7 +2,7 @@
 title: Azure Networking
 description: Virtual WAN hub-spoke topology, VNet peering, and campus connectivity for Azure subscriptions.
 permalink: /docs/azure/networking
-last_reviewed: 2026-04-06
+last_reviewed: 2026-10-21
 ---
 
 # Azure Networking Overview
@@ -15,7 +15,7 @@ centrally managed hub VNet is maintained by the Cloud Team. Subscription VNets
 
 ## Hub-Spoke Topology
 
-```
+```text
 [Campus Network]
        |
 [Azure Virtual WAN Hub — West US 2]
@@ -76,6 +76,7 @@ traffic to campus CIDRs will route through the hub automatically.
 ## Network Security
 
 ### Network Security Groups (NSGs)
+
 * NSGs are your primary mechanism for controlling inbound and outbound traffic.
 * Apply NSGs at the subnet level (recommended) or NIC level.
 * Avoid rules that allow `0.0.0.0/0` on administrative ports (22, 3389).
@@ -83,6 +84,7 @@ traffic to campus CIDRs will route through the hub automatically.
   automatically on provisioning. Do not disable flow logs.
 
 ### Azure Firewall
+
 * A shared Azure Firewall may be deployed in the hub for central egress filtering.
 * Contact the Cloud Team if you need to allow specific outbound traffic that is
   being blocked.
@@ -100,11 +102,11 @@ traffic to campus CIDRs will route through the hub automatically.
 
 ## Off-Campus Access
 
-To reach resources in your Azure VNet from off campus:
-
-1. Connect to the [UCSB campus VPN](https://it.ucsb.edu/network-infrastructure-services/ivanti-connect-secure-campus-vpn) on your laptop.
-2. Once on VPN, your traffic routes through the campus network → Virtual WAN
-   hub → your spoke VNet.
+To reach resources in your Azure VNet from off campus, use **Secure Service Access (SSA)**. SSA uses the Zscaler Client Connector,
+which you install on your laptop and sign in to with UCSB SSO. It replaces the
+Campus VPN (Ivanti), which is being retired on January 22, 2027. SSA is
+licensed to faculty, staff, and student employees. To get the connector, see
+[Secure Service Access (SSA)](https://it.ucsb.edu/services/secure-service-access).
 
 VM management should be done via **Azure Bastion** (browser-based SSH/RDP)
 rather than opening SSH/RDP ports to the internet.

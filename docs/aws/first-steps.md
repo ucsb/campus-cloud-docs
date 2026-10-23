@@ -2,11 +2,12 @@
 title: AWS First Steps
 description: What to do after your AWS account is provisioned — sign in, set up billing, deploy your first resource.
 permalink: /docs/aws/first-steps
-last_reviewed: 2026-09-30
+last_reviewed: 2026-10-21
 redirect_from:
   - /docs/firststeps/awsfirststeps
 ---
 
+<!-- markdownlint-disable-next-line MD022 -->
 # Getting Started With Your AWS Account
 {:.no_toc}
 
@@ -26,7 +27,7 @@ to verify your contacts, budget, and tags are still the way you want them.
 ## Step 1 — Sign In
 
 1. Go to [aws.cloud.ucsb.edu](https://aws.cloud.ucsb.edu).
-2. Sign in with your UCSB NetID and password (Shibboleth SSO).
+2. Sign in with your UCSB netID and password (Shibboleth SSO).
 3. On the AWS access portal, select your account name from the list.
 4. Choose a role:
    * **PowerUser** for day-to-day work
@@ -54,11 +55,11 @@ changes and initial setup.
 
 ### Adding and Removing Users
 
-Use the "Manage Group Tags" tool at [im.ucsb.edu](https://im.ucsb.edu):
+Use the **Manage Group Tags** tool in [Identity Manager](https://im.ucsb.edu):
 
-1. Log in with your UCSB NetID.
+1. Sign in with your UCSB netID.
 2. Go to **Admin Tools → Manage Group Tags**.
-3. Find the group for your account role (e.g., `ucsb-idp-administrator-123456789012`).
+3. Find the group for your account role (e.g., `aws_123456789012-administrator`).
 4. Owners can add and remove Members. Members are authorized for the role.
 
 Only account owners have permission to add members. Owners are not granted the
@@ -112,23 +113,16 @@ Use the [Service Catalog]({{ "/docs/aws/service-catalog" | relative_url }}) to d
 pre-approved infrastructure templates. This is the fastest way to get
 compliant resources up and running.
 
-For custom infrastructure, the AWS Console and CLI are both available.
-CLI access requires configuring the AWS SSO credential helper:
-
-```bash
-aws configure sso --profile my-ucsb-account
-# SSO start URL: https://aws.cloud.ucsb.edu
-# SSO region: us-east-1
-# Choose your account and role when prompted
-aws s3 ls --profile my-ucsb-account
-```
+For custom infrastructure, the AWS Console and the AWS Command Line Interface
+(CLI) are both available. To set up the CLI, see
+[Identity Center — Command-Line Access]({{ "/docs/aws/identity-center#command-line-access" | relative_url }}).
 
 ---
 
 ## Step 7 — Tag Your Resources
 
-All resources must be tagged with the required tags. Missing tags will
-eventually trigger compliance alerts or resource removal.
+Tag all resources with the required tags, using the allowed values. The tag
+policy reports tags with other values as non-compliant.
 
 See the [Tagging]({{ "/docs/general/tagging" | relative_url }}) page for required tags and allowed values.
 

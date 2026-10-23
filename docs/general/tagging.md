@@ -2,7 +2,7 @@
 title: Tagging & Labels
 description: Required tags across AWS, Azure, and GCP
 permalink: /docs/general/tagging
-last_reviewed: 2026-07-24
+last_reviewed: 2026-10-21
 redirect_from:
   - /docs/bestpractices/tagging
   - /docs/guidelines/tagging
@@ -14,7 +14,7 @@ Tags are key-value pairs you attach to cloud resources.
 The Campus Cloud uses them for billing attribution, compliance monitoring, and
 operational automation.
 
-Some tags are required — the Cloud Team enforces them. Others are set by you.
+Some tags are required. Others are optional.
 
 ---
 
@@ -61,7 +61,7 @@ organization).
 
 | Provider | Consequence |
 |---|---|
-| AWS | Compliance alert in Security Hub; resource may show as non-compliant |
+| AWS | Nothing happens automatically. The tag policy only checks the values of tags you set. Missing tags leave gaps in cost reports |
 | Azure | Resource group flagged as non-compliant (Audit policy) |
 | GCP | Audit finding; platform automation skips untagged projects |
 
@@ -96,6 +96,7 @@ Each provider has a different interface for managing tags:
 
 ---
 
+<!-- markdownlint-disable-next-line MD022 -->
 ## Cost Allocation Tags & Labels
 {: #cost-allocation-tags}
 
@@ -122,7 +123,7 @@ The following `ucsb:` tags are currently activated as cost allocation tags:
 | `ucsb:environment` | Environment type (`dev`, `test`, `prod`, `other`) | You |
 | `ucsb:environment:name` | Short name for a specific environment (optional) | You |
 | `ucsb:service` | Groups resources that support the same service | You |
-| `ucsb:costing` | Free-form invoice breakdown — e.g., a Full Accounting Unit (FAU) or cost center | You |
+| `ucsb:costing` | Free-form invoice breakdown — e.g., a Common Chart of Accounts (CCOA) account string or cost center | You |
 | `ucsb:business-service` | Legacy tag, replaced by `ucsb:service` — use `ucsb:service` for new resources | You |
 
 The compliance tags (`protection-level`, `availability-level`,

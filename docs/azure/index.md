@@ -2,7 +2,7 @@
 title: Azure Overview
 description: Overview of the UCSB Campus Cloud Azure environment — subscriptions, management groups, regions, and what is pre-configured.
 permalink: /docs/azure/
-last_reviewed: 2026-06-25
+last_reviewed: 2026-10-23
 ---
 
 # Azure at UCSB
@@ -33,14 +33,13 @@ below it.
 
 | Management Group | Purpose |
 |---|---|
-| UCSB Baseline V1 | Production workloads — research, administrative, and departmental subscriptions with full guardrails |
+| Standard (default) | Production workloads — research, administrative, and departmental subscriptions with full guardrails |
 | UCSB Learning | Coursework, labs, and student projects |
 | UCSB Sponsorship | Subscriptions funded through Microsoft sponsorship credits |
 | UCSB Legacy | Pre-existing subscriptions that predate the Campus Cloud |
 
-Your subscription is placed in the management group that matches your use
-case. Policies applied to the management group govern all resources in
-your subscription.
+Your subscription gets the policies for its use case, and they apply to every
+resource in it.
 
 ---
 
@@ -86,4 +85,3 @@ regions are blocked by a Deny policy at the management group level.
 * [Guardrails & Policies]({{ "/docs/azure/guardrails" | relative_url }})
 * [Security]({{ "/docs/azure/security" | relative_url }})
 * [Support]({{ "/docs/general/support" | relative_url }})
-

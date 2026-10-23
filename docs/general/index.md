@@ -2,7 +2,7 @@
 title: General Guidance
 description: Cross-provider guidance for security, identity, tagging, compliance, cost management, and more.
 permalink: /docs/general/
-last_reviewed: 2026-05-29
+last_reviewed: 2026-10-21
 redirect_from:
   - /docs/bestpractices
   - /docs/firststeps
@@ -23,8 +23,9 @@ The following resources can help you get up to speed on cloud concepts before yo
 
 ### Campus Resources
 
-The UCSB [LinkedIn Learning](https://www.learningcenter.ucsb.edu/content/linkedin-learning)
-library (free with UCSB NetID) includes:
+The UCSB [LinkedIn Learning](https://www.learningcenter.ucsb.edu/linkedin-learning)
+library (free with your UCSB netID) includes:
+
 * [Cloud Computing courses](https://www.linkedin.com/learning/topics/cloud-computing-5)
 * [AWS courses](https://www.linkedin.com/learning/search?keywords=aws)
 * [Azure courses](https://www.linkedin.com/learning/search?keywords=azure)
@@ -42,7 +43,7 @@ library (free with UCSB NetID) includes:
 
 ### GCP
 
-* [Google Cloud Skills Boost](https://www.cloudskillsboost.google/) (free learning paths)
+* [Google Skills](https://www.skills.google/) (formerly Google Cloud Skills Boost; some free learning)
 * [Google Cloud documentation](https://cloud.google.com/docs)
 
 ---
@@ -55,7 +56,8 @@ library (free with UCSB NetID) includes:
 | [Identity & Access]({{ "/docs/general/identity" | relative_url }}) | Granting access with groups, least privilege, and `@ucsb.edu` identity across all providers |
 | [Security]({{ "/docs/general/security" | relative_url }}) | Data classification, security monitoring, least-privilege, and incident response |
 | [Tagging]({{ "/docs/general/tagging" | relative_url }}) | Required tags, naming conventions, and how tags are enforced |
-| [Compliance]({{ "/docs/general/compliance" | relative_url }}) | UC IS-3, NIST 800-171, and how to request a compliant account |
+| [Account Contacts]({{ "/docs/general/contacts" | relative_url }}) | Setting billing, security, and operations contacts on your account |
+| [Compliance]({{ "/docs/general/compliance" | relative_url }}) | UC IS-3, NIST 800-171, and the compliance controls in every account |
 | [Cost Management]({{ "/docs/general/cost-management" | relative_url }}) | Budgets, alerts, and strategies for controlling cloud spend |
 | [Support]({{ "/docs/general/support" | relative_url }}) | How to reach the Cloud Team, join the community, attend office hours, and schedule an annual check-in |
 | [Research]({{ "/docs/general/research" | relative_url }}) | Guidance for faculty and researchers using cloud for grants and sponsored work |

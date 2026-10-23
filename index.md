@@ -3,7 +3,7 @@ layout: page
 title: "Campus Cloud Docs - Home"
 description: UCSB Campus Cloud documentation — managed, policy-compliant AWS, Azure, and GCP environments for the campus community.
 permalink: /
-last_reviewed: 2026-06-08
+last_reviewed: 2026-10-23
 redirect_from:
   - /about/
 ---
@@ -21,11 +21,11 @@ Using the Campus Cloud means:
   (Enterprise Discount Program), Azure (Enterprise Agreement), and GCP. You
   benefit automatically.
 * **Compliance built in.** Every account includes guardrails aligned with UC
-  Policy IS-3 and, for research accounts, NIST 800-171.
+  Policy IS-3 and NIST 800-171.
 * **Campus network connectivity.** AWS accounts can communicate with UCSB
   on-premises systems over private networking. If you need campus connectivity
   for Azure or GCP, contact us to discuss options.
-* **Support options.** AWS Business Support and Azure support plans are
+* **Support options.** AWS Enterprise Support and Azure support plans are
   available to Campus Cloud accounts. Contact the Cloud Team to discuss the
   right support tier for your workload.
 
@@ -36,7 +36,7 @@ New here? Start with [General Guidance]({{ "/docs/general/" | relative_url }}) o
 
 ## Amazon Web Services (AWS)
 
-Your AWS account includes campus SSO login, networking connected to UCSB, a
+Your AWS account includes UCSB SSO sign-in, networking connected to UCSB, a
 Service Catalog of self-service products (VPCs, IAM roles, instance scheduling), and
 security monitoring pre-configured. UC enterprise pricing and Enterprise Support
 are included automatically.
@@ -47,9 +47,9 @@ are included automatically.
 
 ## Microsoft Azure
 
-Your Azure Subscription is placed inside the UCSB management hierarchy with
-pre-configured policies, Defender for Cloud monitoring, and network connectivity
-via Virtual WAN. UC enterprise pricing through the Azure EA applies automatically.
+Your Azure subscription comes with pre-configured policies, Defender for Cloud
+monitoring, and network connectivity via Virtual WAN. UC enterprise pricing
+through the Azure EA applies automatically.
 
 [Azure Overview]({{ "/docs/azure" | relative_url }}) · [Azure First Steps]({{ "/docs/azure/first-steps" | relative_url }})
 

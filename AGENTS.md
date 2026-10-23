@@ -15,10 +15,11 @@ The audience is **faculty, researchers, staff (including IT staff), and students
 5. **Keep pages short.** If a page exceeds ~800 words, consider splitting it or trimming content that belongs in provider docs.
 6. **Don't repeat yourself (DRY).** If information already exists on another page of this site, link to it instead of restating it. Duplicated content becomes a maintenance burden and leads to inconsistencies.
 7. **Use the Glossary for definitions.** When a UCSB-specific term needs defining, add it to `pages/glossary.md` in alphabetical order — don't define it inline on the page. The Glossary links to provider glossaries (AWS, Azure, GCP) at the top; never duplicate terms that already appear there unless there is a UCSB-specific reason. Suggest new Glossary entries when it seems sensible.
+8. **Use campus terminology.** When you refer to campus services and sign-in, use the same terms as UCSB's main IT site, <https://it.ucsb.edu/> — for example, "UCSB netID" (not "NetID credentials" or "netid") and "MFA with Duo". Check that site when you're unsure what a campus service is called.
 
 ## Content Structure
 
-```
+```text
 docs/
   general/   # Cross-provider guidance (identity, security, compliance, cost, etc.)
   aws/       # AWS-specific pages
@@ -36,6 +37,7 @@ assets/      # CSS, images
 * **Provider and section index pages** (e.g., `docs/aws/index.md`, `docs/general/index.md`) often list links to their child pages at the bottom. Update those links when adding or removing pages in that section.
 * Pages in `docs/` use the `docs` collection (defined in `_config.yml`). Their `permalink` frontmatter controls the URL.
 * **When removing a page**, always add a `redirect_from` entry in the YAML frontmatter of whichever page replaces it, so existing bookmarks and search-engine links continue to work:
+
   ```yaml
   redirect_from:
     - /docs/aws/old-page-name
@@ -45,22 +47,29 @@ assets/      # CSS, images
 
 * Every content file starts with YAML frontmatter (`---` delimiters). Required fields: `title`, `description`, `permalink`. Include `last_reviewed` (ISO date) when updating a page. **Update `last_reviewed` to today's date whenever you make substantive changes to a page.**
 * **Internal links** must use the `relative_url` filter so the site works under any `baseurl`:
-  ```
+
+  ```liquid
   {% raw %}[Link text]({{ "/docs/aws/networking" | relative_url }}){% endraw %}
   ```
+
 * **Images** go in `assets/img/`. Reference them with `relative_url`:
-  ```
+
+  ```liquid
   {% raw %}![Alt text]({{ "/assets/img/example.png" | relative_url }}){% endraw %}
   ```
+
 * Use the `alert.html` include for callout boxes:
-  ```
+
+  ```liquid
   {% raw %}{% capture alert_content %}Your message here.{% endcapture %}
   {% include alert.html type="info" title="Note" content=alert_content %}{% endraw %}
   ```
+
   Supported types: `info`, `warning`, `danger`, `success`.
 * Use Markdown tables, headings (`##`, `###`), and bullet lists. Avoid raw HTML unless required for accessibility or layout.
 * Use `---` (horizontal rule) to separate major sections on a page.
 * **ServiceNow links:** When directing users to open a support ticket, always link to the Campus Cloud ServiceNow catalog item:
+
   ```markdown
   [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
   ```
@@ -70,6 +79,7 @@ assets/      # CSS, images
 All content must meet **WCAG 2.1 AA** guidelines (<https://www.w3.org/TR/WCAG21/>). Follow the UCSB Web Accessibility Standards at <https://webguide.ucsb.edu/accessibility-0>.
 
 Key requirements:
+
 * Every image must have meaningful `alt` text. Decorative images use `alt=""`.
 * Use proper heading hierarchy (`##` → `###` → `####`). Never skip levels.
 * Links must have descriptive text — never use "click here" or bare URLs as link text.
@@ -92,6 +102,7 @@ Rules for using these repos:
 
 * **Verify accuracy.** These repos are the source of truth. Before writing or updating documentation about guardrails, networking, roles, org policies, or any landing zone behavior, cross-check the relevant repo. Push back on the user if a requested change contradicts what the code actually does.
 * **GCP repo: ignore `/modules` and `/environment` folders.** Those directories are not relevant to documentation. Focus on the other top-level directories.
+* **AWS: read `DOCS-SITE-VERIFICATION.md` first.** The file `DOCS-SITE-VERIFICATION.md` at the root of `campus-cloud-aws-landing-zone` records what has been verified in the live AWS organization: where prod differs from the repo, findings about this site's AWS pages, open questions, and read-only CloudShell scripts for re-checking. Read it before changing AWS content, and update it when you verify something new.
 * **Only document customer-facing information.** Do not expose back-end implementation details such as internal project names, folder IDs, group names, OU IDs, or infrastructure plumbing. The audience cares about what they can see and do in their own accounts — not how the platform is built behind the scenes.
 
 ## Agent Behavior

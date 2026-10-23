@@ -2,7 +2,7 @@
 title: Azure Security
 description: Security monitoring, Defender for Cloud, and log management in Campus Cloud Azure subscriptions.
 permalink: /docs/azure/security
-last_reviewed: 2026-07-08
+last_reviewed: 2026-10-21
 ---
 
 # Azure Security
@@ -145,9 +145,9 @@ in application code or configuration files.
 
 ## Multi-Factor Authentication
 
-All UCSB accounts use MFA via Duo for Azure access. This applies to the Azure
+All UCSB accounts use MFA with Duo for Azure access. This applies to the Azure
 portal and all API access.
 
 If you're locked out of MFA, contact the
-[UCSB Help Desk](https://www.it.ucsb.edu/get-help) — the Cloud Team cannot
+[ITS Service Desk](https://ithelp.ucsb.edu) — the Cloud Team cannot
 bypass MFA.
