@@ -39,7 +39,9 @@ for the change to take effect.
 
 Console sessions last up to 8 hours. After that, sign in again.
 
-### Command-Line Access
+---
+
+## Command-Line Access
 
 To use the AWS Command Line Interface (CLI), open the menu on an account and
 select **Access keys**. AWS offers three options. We recommend
