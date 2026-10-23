@@ -15,7 +15,7 @@ controls that depend on your specific workloads and processes.
 
 The Campus Cloud is designed to align with two key standards:
 
-* **[UC Policy IS-3](https://security.ucop.edu/policies/it-policies.html)** —
+* **[UC Policy IS-3](https://policy.ucop.edu/advanced-search.html?action=search&op=results&lookup=1&keywords=IS-3&search=Search)** —
   University of California information security policy. All Campus Cloud
   accounts must comply.
 * **[NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final)** —
@@ -36,16 +36,17 @@ Every Campus Cloud account gets a baseline set of controls at creation:
 * Guardrails that prevent high-risk actions (deploying outside allowed regions,
   disabling audit logging, using root credentials)
 
-These controls satisfy a significant portion of IS-3 and NIST 800-171
-requirements, but they do not cover everything. You are responsible for the
-remaining controls that depend on your specific workloads and processes.
+These controls cover part of the NIST 800-171 requirements, but not all of
+them. You are responsible for the remaining controls that depend on your
+specific workloads and processes.
 
 ---
 
-## New and Imported Accounts Align With NIST 800-171
+## New and Imported Accounts Have NIST 800-171 Controls
 
-All new Campus Cloud accounts, and all existing accounts imported into the
-Campus Cloud, are set up to align with NIST 800-171 on **all three providers**.
+New Campus Cloud accounts, and existing accounts imported into the Campus
+Cloud, will have full guardrails and NIST 800-171 controls applied on **all
+three providers**.
 You don't need to request it — follow the standard
 [procurement process]({{ "/getting-started" | relative_url }}).
 
@@ -60,20 +61,25 @@ federally funded research with export controls, or data subject to ITAR, HIPAA,
 or similar frameworks — these controls are a starting point. You are still
 responsible for the controls that depend on your workload.
 
-If a NIST 800-171 control gets in the way of a specific workload, open a
+### Needing a Different Compliance Level
+
+If you need a different compliance level — for example, a NIST 800-171 control
+gets in the way of your work, or your project has other requirements — contact
+the Cloud Team **before** you request or change your account. Email
+[info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu) or open a
 [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
 and explain what you're trying to do. The Cloud Team will work with you on
-options.
+options, and will bring in ITS Information Security if needed.
 
 {% capture alert_content %}Support for P4 (HIPAA/CUI) workloads on GCP is still being finalized. Contact the Cloud Team before starting a P4 project on GCP so we can confirm readiness together.{% endcapture %}
 {% include alert.html type="warning" title="GCP note" content=alert_content %}
 
 ### Migrating an Existing Account to NIST 800-171 Controls
 
-If you already have a Campus Cloud account that doesn't have these controls,
-you can **migrate your account** to the group of accounts that does — an
-Organizational Unit (OU) on AWS, a management group on Azure, or a folder on
-GCP. The Cloud Team can help with this process.
+If you already have a Campus Cloud account that doesn't have the NIST 800-171
+controls, you can **migrate your account** to the group of accounts that
+does — an Organizational Unit (OU) on AWS, a management group on Azure, or a
+folder on GCP. The Cloud Team can help with this process.
 
 Email [info@cloud.ucsb.edu](mailto:info@cloud.ucsb.edu) to discuss your options, or open a
 [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) if you are ready to proceed.

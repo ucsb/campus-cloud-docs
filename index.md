@@ -3,7 +3,7 @@ layout: page
 title: "Campus Cloud Docs - Home"
 description: UCSB Campus Cloud documentation — managed, policy-compliant AWS, Azure, and GCP environments for the campus community.
 permalink: /
-last_reviewed: 2026-10-21
+last_reviewed: 2026-10-23
 redirect_from:
   - /about/
 ---
@@ -47,9 +47,9 @@ are included automatically.
 
 ## Microsoft Azure
 
-Your Azure Subscription is placed inside the UCSB management hierarchy with
-pre-configured policies, Defender for Cloud monitoring, and network connectivity
-via Virtual WAN. UC enterprise pricing through the Azure EA applies automatically.
+Your Azure subscription comes with pre-configured policies, Defender for Cloud
+monitoring, and network connectivity via Virtual WAN. UC enterprise pricing
+through the Azure EA applies automatically.
 
 [Azure Overview]({{ "/docs/azure" | relative_url }}) · [Azure First Steps]({{ "/docs/azure/first-steps" | relative_url }})
 

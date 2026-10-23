@@ -38,12 +38,13 @@ that need a campus-specific definition.
 | **Guardrails** | Policy controls enforced across all provider accounts. Implemented as SCPs (AWS), Azure Policy (Azure), or Org Policies (GCP). |
 | **HIPAA** | Health Insurance Portability and Accountability Act — federal law governing protected health information (PHI). Accounts handling PHI need additional controls; classified as Protection Level p4. |
 | **IAP** | Identity-Aware Proxy — GCP service that controls access to applications based on user identity rather than network location. Used for browser-based SSH/RDP connections. |
+| **IS-3 (UC Policy)** | University of California [Electronic Information Security Policy](https://policy.ucop.edu/advanced-search.html?action=search&op=results&lookup=1&keywords=IS-3&search=Search). Requires data classification and appropriate protections. |
 | **ITAR** | International Traffic in Arms Regulations — U.S. export-control regulations for defense-related data and services. Classified as Protection Level p4. |
 | **LDAP** | Lightweight Directory Access Protocol — protocol for accessing directory services such as Active Directory. |
 | **NAT** | Network Address Translation — allows resources in a private subnet to reach the internet without a public IP address. Implemented as NAT Gateway (AWS) or Cloud NAT (GCP). |
 | **NIST 800-171** | Federal security standard for protecting CUI. New and imported Campus Cloud accounts include controls aligned to this standard. |
 | **NSG** | Network Security Group — Azure firewall rules that filter inbound and outbound traffic to resources in a virtual network. |
-| **Organizational Unit (OU)** | An AWS group of accounts that share the same policies. Azure *management groups* and GCP *folders* play the same role. New and imported Campus Cloud accounts are placed in one that applies the NIST 800-171 controls. See [Compliance]({{ "/docs/general/compliance" | relative_url }}). |
+| **Organizational Unit (OU)** | An AWS group of accounts that share the same policies. Azure *management groups* and GCP *folders* play the same role. New and imported Campus Cloud accounts have the NIST 800-171 controls applied. See [Compliance]({{ "/docs/general/compliance" | relative_url }}). |
 | **PII** | Personally Identifiable Information — data that can identify an individual (e.g., name, SSN, email). Classified as Protection Level p3 or higher. |
 | **Protection Level (p1–p4)** | Data sensitivity: p1 = public, p2 = internal university data, p3 = sensitive (PII/FERPA), p4 = regulated (HIPAA/CUI). |
 | **Purchase Order (PO)** | Funding authorization from UCSB Gateway. Required before a cloud account is created. |
@@ -55,7 +56,6 @@ that need a campus-specific definition.
 | **SLO** | Service Level Objective — a target availability percentage (e.g., 99.9% uptime) for a workload. |
 | **Tags / Labels** | Key-value pairs used for billing attribution, compliance, and governance. AWS and Azure call them *Tags* and attach them to resources. GCP uses two systems, both set on the project: required *Resource Manager Tags* (governance and cost attribution) and optional *project labels* (cost attribution only). See [Tagging & Labels]({{ "/docs/general/tagging" | relative_url }}). |
 | **UC Enterprise Discount** | UC system-wide pricing agreements with cloud providers (AWS EDP, Azure EA, GCP negotiated rates). Applied automatically to Campus Cloud accounts. |
-| **UC Policy IS-3** | University of California Electronic Information Security Policy. Requires data classification and appropriate protections. |
 | **UCSB SSO** | Single sign-on with your UCSB netID. AWS uses Shibboleth SAML; Azure and GCP use Entra ID federation. |
 | **Wiz** | A cloud security posture management (CSPM) tool for agentless vulnerability and misconfiguration scanning. Available on all three providers; accounts are enrolled on an opt-in basis. See [Security]({{ "/docs/general/security#wiz-cloud-security-posture-management" | relative_url }}). |
 | **WORM** | Write Once, Read Many — a storage mode that prevents stored data from being deleted or modified. Used for audit logs in GCP (3-year retention). |

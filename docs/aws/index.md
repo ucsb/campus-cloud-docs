@@ -44,13 +44,12 @@ approximately 2 business days and send a confirmation email.
 ## Account Structure
 
 Accounts live inside an **AWS Organization** managed by the Cloud Team.
-They are organized into Organizational Units (OUs). Policies applied at
-the OU level are inherited by every account inside it.
 
-New and imported accounts are placed in an OU that applies full guardrails and
-[NIST 800-171]({{ "/glossary/" | relative_url }}) controls. It is set up for
-research, academic, and administrative work. Contact the Cloud Team if your
-needs change.
+New and imported accounts will have full guardrails and
+[NIST 800-171]({{ "/glossary/" | relative_url }}) controls applied. These
+controls provide robust security and are suitable for most use cases. If they
+do not meet your needs, please contact the Cloud Team by opening a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
 
 ---
 

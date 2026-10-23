@@ -2,7 +2,7 @@
 title: AWS Service Catalog
 description: Pre-approved, ready-to-deploy infrastructure products available via the AWS Service Catalog.
 permalink: /docs/aws/service-catalog
-last_reviewed: 2026-10-21
+last_reviewed: 2026-10-23
 redirect_from:
   - /docs/bestpractices/servicecatalog
   - /docs/guidelines/servicecatalog
@@ -44,7 +44,7 @@ For full details, see [Launching a product](https://docs.aws.amazon.com/servicec
 
 | Product | What it creates |
 |---|---|
-| Advanced VPC | An empty VPC with a large block of campus IP space, but **no subnets** and **no Transit Gateway attachment**, so it has no campus connection — you build the network layout yourself. Use this only when you need full control over your network design. |
+| Advanced VPC | An empty VPC with a large block of campus IP space, but **no subnets** and **no Transit Gateway attachment**, so it has no campus connection by default. You configure the networking yourself, including campus connectivity if you need it. Use this only when you need full control over your network design. |
 | Budget Alert and Action on Threshold (Effectual) | **Not recommended — being retired.** For a spending cap that restricts resources automatically, use an advanced budget with a budget action in AWS Budgets instead. See [Advanced Budgets]({{ "/docs/aws/first-steps#advanced-budgets" | relative_url }}). |
 | Create IAM Role to UCSB Identity Group | Creates an empty IAM role and a matching UCSB Identity group at the same time. Members of that group (managed in [Identity Manager](https://im.ucsb.edu)) can sign in to AWS and assume the role. You add permissions to the role after creation. Role names are limited to 15 characters. |
 | Fixed Monthly Budget with Notification | **Not recommended — being retired.** Use the **Monthly cost budget** template in AWS Budgets instead. See [Create a Monthly Cost Budget]({{ "/docs/aws/first-steps#create-a-monthly-cost-budget" | relative_url }}). |
@@ -63,7 +63,7 @@ Both VPC products reserve IP space from the campus-wide IP Address Manager (IPAM
 | Product | Subnets included | Campus network access | Internet access | Use when |
 |---|---|---|---|---|
 | Simple VPC with Campus Connectivity | Yes — you choose a family, in one or two availability zones | Yes, via Transit Gateway, for families with a private subnet | Optional, via Internet Gateway | You need to run servers, databases, or anything that requires network connectivity |
-| Advanced VPC | No — you create subnets yourself | No — no Transit Gateway attachment | You build it yourself | You need full control over your network design from scratch |
+| Advanced VPC | No — you create subnets yourself | Not by default — you configure it yourself | You build it yourself | You need full control over your network design from scratch |
 
 For most workloads, use **Simple VPC with Campus Connectivity**. See [Networking]({{ "/docs/aws/networking" | relative_url }}) for more details.
 

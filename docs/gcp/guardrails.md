@@ -9,7 +9,7 @@ last_reviewed: 2026-10-23
 
 UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
 GCP project aligned with university security policy
-([UC IS-3](https://security.ucop.edu/policies/it-policies.html))
+([UC IS-3](https://policy.ucop.edu/advanced-search.html?action=search&op=results&lookup=1&keywords=IS-3&search=Search))
 and the federal
 [NIST 800-171]({{ "/glossary/" | relative_url }}) standard for
 protecting sensitive research data.
@@ -151,11 +151,6 @@ ERROR: (gcloud.compute.instances.create) Could not fetch resource:
 If you believe the block is in error or need a specific exception, open a
 [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5). Describe the use case and the specific constraint. The
 Cloud Team will evaluate whether an exemption is appropriate.
-
-Exceptions that conflict with UC IS-3 also need approval from ITS Information
-Security. You request that approval yourself, through the campus
-[Policy Exceptions and Risk Acceptance](https://it.ucsb.edu/security/compliance)
-process. The Cloud Team can help you prepare the request.
 
 ---
 

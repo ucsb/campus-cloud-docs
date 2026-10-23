@@ -2,7 +2,7 @@
 title: AWS Security
 description: Security monitoring, audit logging, and threat detection in Campus Cloud AWS accounts.
 permalink: /docs/aws/security
-last_reviewed: 2026-10-21
+last_reviewed: 2026-10-23
 ---
 
 # AWS Security
@@ -20,7 +20,8 @@ provisioned. The main tools are **CloudTrail** (audit logging),
 [Security Hub](https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html)
 checks your account's resources against security best practices and compliance
 standards. New and imported accounts are checked against the **NIST SP 800-53
-Rev. 5** standard. It gives you a single dashboard showing what needs attention.
+Rev. 5** standard. It gives you a single dashboard showing
+what needs attention.
 
 ### Reviewing Findings
 

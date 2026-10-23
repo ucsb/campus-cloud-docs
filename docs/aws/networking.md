@@ -2,7 +2,7 @@
 title: AWS Networking
 description: VPC options, campus connectivity, Transit Gateway, and IP address management for AWS accounts.
 permalink: /docs/aws/networking
-last_reviewed: 2026-10-21
+last_reviewed: 2026-10-23
 redirect_from:
   - /docs/bestpractices/vpn
   - /docs/guidelines/networking
@@ -212,7 +212,7 @@ product types from the
 | VPC Type | Subnets | Campus Network Access | Use When |
 |---|---|---|---|
 | Simple VPC with Campus Connectivity | Yes — you choose a family (below) | Yes, via Transit Gateway, for families with a private subnet. `*.public` families have no campus connection | Most workloads — running servers, databases, or anything needing network connectivity |
-| Advanced VPC | No — an empty VPC you build out yourself | No — the product does not create a Transit Gateway attachment | You need full control over your network design from scratch |
+| Advanced VPC | No — an empty VPC you build out yourself | Not by default — the product does not create a Transit Gateway attachment, so you configure any campus connection yourself | You need full control over your network design from scratch |
 
 Specify which type you need in your account request or
 [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).

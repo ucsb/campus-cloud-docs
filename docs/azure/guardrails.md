@@ -11,7 +11,7 @@ redirect_from:
 
 UCSB Campus Cloud enforces guardrails — automatic restrictions that keep every
 Azure subscription aligned with university security policy
-([UC IS-3](https://security.ucop.edu/policies/it-policies.html))
+([UC IS-3](https://policy.ucop.edu/advanced-search.html?action=search&op=results&lookup=1&keywords=IS-3&search=Search))
 and the federal
 [NIST 800-171]({{ "/glossary/" | relative_url }}) standard for
 protecting sensitive research data.
@@ -108,11 +108,6 @@ Regularly review your compliance posture:
 If a policy blocks something you believe is legitimate, open a [ServiceNow
 ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5). Explain the use case and the specific policy assignment that is blocking you. The Cloud Team will evaluate the request and, if appropriate,
 create a policy exemption on your subscription.
-
-Exceptions that conflict with UC IS-3 also need approval from ITS Information
-Security. You request that approval yourself, through the campus
-[Policy Exceptions and Risk Acceptance](https://it.ucsb.edu/security/compliance)
-process. The Cloud Team can help you prepare the request.
 
 ---
 
