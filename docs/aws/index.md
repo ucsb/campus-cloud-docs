@@ -2,7 +2,7 @@
 title: AWS Overview
 description: Overview of the UCSB Campus Cloud AWS environment — accounts, regions, default configuration, and how to access it.
 permalink: /docs/aws/
-last_reviewed: 2026-10-21
+last_reviewed: 2026-10-23
 ---
 
 # AWS at UCSB
@@ -47,9 +47,10 @@ Accounts live inside an **AWS Organization** managed by the Cloud Team.
 They are organized into Organizational Units (OUs). Policies applied at
 the OU level are inherited by every account inside it.
 
-New and imported accounts are placed in **UCSB Baseline V2**, an OU for
-research, academic, and administrative workloads with full guardrails and
-NIST 800-171 controls. Contact the Cloud Team if your needs change.
+New and imported accounts are placed in an OU that applies full guardrails and
+[NIST 800-171]({{ "/glossary/" | relative_url }}) controls. It is set up for
+research, academic, and administrative work. Contact the Cloud Team if your
+needs change.
 
 ---
 

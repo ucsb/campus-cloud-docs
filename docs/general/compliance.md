@@ -2,7 +2,7 @@
 title: Compliance & Governance
 description: NIST 800-171, UC IS-3, and the compliance controls built into every Campus Cloud account
 permalink: /docs/general/compliance
-last_reviewed: 2026-10-22
+last_reviewed: 2026-10-23
 redirect_from:
   - /docs/guidelines/compliance
 ---
@@ -59,6 +59,11 @@ If your research involves Controlled Unclassified Information (CUI) — such as
 federally funded research with export controls, or data subject to ITAR, HIPAA,
 or similar frameworks — these controls are a starting point. You are still
 responsible for the controls that depend on your workload.
+
+If a NIST 800-171 control gets in the way of a specific workload, open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
+and explain what you're trying to do. The Cloud Team will work with you on
+options.
 
 {% capture alert_content %}Support for P4 (HIPAA/CUI) workloads on GCP is still being finalized. Contact the Cloud Team before starting a P4 project on GCP so we can confirm readiness together.{% endcapture %}
 {% include alert.html type="warning" title="GCP note" content=alert_content %}

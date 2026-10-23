@@ -2,7 +2,7 @@
 title: GCP Guardrails & Org Policies
 description: Organization policy constraints and IAM deny policies applied to all Campus Cloud GCP projects.
 permalink: /docs/gcp/guardrails
-last_reviewed: 2026-10-21
+last_reviewed: 2026-10-23
 ---
 
 # GCP Guardrails
@@ -152,8 +152,10 @@ If you believe the block is in error or need a specific exception, open a
 [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5). Describe the use case and the specific constraint. The
 Cloud Team will evaluate whether an exemption is appropriate.
 
-Exceptions are never granted for constraints that directly support UC IS-3 or
-NIST 800-171 compliance requirements.
+Exceptions that conflict with UC IS-3 also need approval from ITS Information
+Security. You request that approval yourself, through the campus
+[Policy Exceptions and Risk Acceptance](https://it.ucsb.edu/security/compliance)
+process. The Cloud Team can help you prepare the request.
 
 ---
 

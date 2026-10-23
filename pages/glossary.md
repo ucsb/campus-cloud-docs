@@ -2,7 +2,7 @@
 title: Glossary
 description: Definitions of terms specific to the UCSB Campus Cloud.
 permalink: /glossary/
-last_reviewed: 2026-10-21
+last_reviewed: 2026-10-23
 ---
 
 # Glossary
@@ -41,7 +41,7 @@ that need a campus-specific definition.
 | **ITAR** | International Traffic in Arms Regulations — U.S. export-control regulations for defense-related data and services. Classified as Protection Level p4. |
 | **LDAP** | Lightweight Directory Access Protocol — protocol for accessing directory services such as Active Directory. |
 | **NAT** | Network Address Translation — allows resources in a private subnet to reach the internet without a public IP address. Implemented as NAT Gateway (AWS) or Cloud NAT (GCP). |
-| **NIST 800-171** | Federal security standard for protecting CUI. Accounts handling CUI receive additional guardrails aligned to this standard. |
+| **NIST 800-171** | Federal security standard for protecting CUI. New and imported Campus Cloud accounts include controls aligned to this standard. |
 | **NSG** | Network Security Group — Azure firewall rules that filter inbound and outbound traffic to resources in a virtual network. |
 | **Organizational Unit (OU)** | An AWS group of accounts that share the same policies. Azure *management groups* and GCP *folders* play the same role. New and imported Campus Cloud accounts are placed in one that applies the NIST 800-171 controls. See [Compliance]({{ "/docs/general/compliance" | relative_url }}). |
 | **PII** | Personally Identifiable Information — data that can identify an individual (e.g., name, SSN, email). Classified as Protection Level p3 or higher. |

@@ -2,7 +2,7 @@
 title: AWS Guardrails & SCPs
 description: Service Control Policies and Control Tower controls applied to all Campus Cloud AWS accounts.
 permalink: /docs/aws/guardrails
-last_reviewed: 2026-10-21
+last_reviewed: 2026-10-23
 redirect_from:
   - /docs/guidelines/guardrails/aws
 ---
@@ -145,4 +145,7 @@ ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf3989
 you. The Cloud Team will evaluate the request and, if appropriate, grant a
 targeted exception or suggest an alternative approach.
 
-Exceptions are never granted for controls required by UC IS-3 or NIST 800-171.
+Exceptions that conflict with UC IS-3 also need approval from ITS Information
+Security. You request that approval yourself, through the campus
+[Policy Exceptions and Risk Acceptance](https://it.ucsb.edu/security/compliance)
+process. The Cloud Team can help you prepare the request.
