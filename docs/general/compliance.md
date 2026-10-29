@@ -105,7 +105,7 @@ Each provider's security monitoring tools send findings to consolidated views:
 * **Azure:** Microsoft Defender for Cloud provides the unified security posture.
 * **GCP:** Security Command Center provides organization-wide findings.
 
-In addition, [Wiz]({{ "/docs/general/security#wiz-cloud-security-posture-management" | relative_url }})
+In addition, [Wiz]({{ "/docs/general/security/#wiz-cloud-security-posture-management" | relative_url }})
 is available for cross-provider security posture scanning. Contact the Cloud
 Team for details.
 

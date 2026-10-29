@@ -41,7 +41,7 @@ Service Catalog of self-service products (VPCs, IAM roles, instance scheduling),
 security monitoring pre-configured. UC enterprise pricing and Enterprise Support
 are included automatically.
 
-[AWS Overview]({{ "/docs/aws" | relative_url }}) · [AWS First Steps]({{ "/docs/aws/first-steps" | relative_url }})
+[AWS Overview]({{ "/docs/aws/" | relative_url }}) · [AWS First Steps]({{ "/docs/aws/first-steps" | relative_url }})
 
 ---
 
@@ -51,7 +51,7 @@ Your Azure subscription comes with pre-configured policies, Defender for Cloud
 monitoring, and network connectivity via Virtual WAN. UC enterprise pricing
 through the Azure EA applies automatically.
 
-[Azure Overview]({{ "/docs/azure" | relative_url }}) · [Azure First Steps]({{ "/docs/azure/first-steps" | relative_url }})
+[Azure Overview]({{ "/docs/azure/" | relative_url }}) · [Azure First Steps]({{ "/docs/azure/first-steps" | relative_url }})
 
 ---
 
@@ -61,7 +61,7 @@ Your GCP Project lives in the UCSB organization with org-wide policies,
 centralized audit logging, Security Command Center monitoring, and billing
 sub-accounts for cost attribution. UC enterprise pricing is included.
 
-[GCP Overview]({{ "/docs/gcp" | relative_url }}) · [GCP First Steps]({{ "/docs/gcp/first-steps" | relative_url }})
+[GCP Overview]({{ "/docs/gcp/" | relative_url }}) · [GCP First Steps]({{ "/docs/gcp/first-steps" | relative_url }})
 
 ---
 

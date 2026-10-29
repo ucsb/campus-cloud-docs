@@ -25,7 +25,7 @@ domain — security, cost, compliance, and data management.
 
 * **Security:** Configuring your workloads securely (storage bucket permissions,
   security groups, firewall rules) and responding to security findings in your
-  account — see [Security]({{ "/docs/general/security" | relative_url }})
+  account — see [Security]({{ "/docs/general/security/" | relative_url }})
 * **Cost:** Monitoring your spending, setting up budget alerts, and rightsizing
   resources — see [Costs & Billing]({{ "/docs/general/cost-management" | relative_url }})
 * **Compliance:** Classifying your data, applying required tags, and ensuring

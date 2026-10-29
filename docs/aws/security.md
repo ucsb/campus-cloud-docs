@@ -46,7 +46,7 @@ For details, see the
 ## Incident Response
 
 Follow the general
-[incident response steps]({{ "/docs/general/security#reporting-a-security-incident" | relative_url }})
+[incident response steps]({{ "/docs/general/security/#reporting-a-security-incident" | relative_url }})
 for all suspected security events. The section below covers AWS-specific
 emergency actions.
 
@@ -149,7 +149,7 @@ This is optional but recommended so your team is aware of issues as they arise.
 ## Wiz Cloud Security Posture Management
 
 Wiz is available, on an opt-in basis, across all Campus Cloud platforms (AWS, Azure, GCP). See
-[Security & Shared Responsibility — Wiz]({{ "/docs/general/security#wiz-cloud-security-posture-management" | relative_url }})
+[Security & Shared Responsibility — Wiz]({{ "/docs/general/security/#wiz-cloud-security-posture-management" | relative_url }})
 for details.
 
 ---

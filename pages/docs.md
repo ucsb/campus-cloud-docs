@@ -20,7 +20,7 @@ navigate or jump directly to a section below.
 - [General Guidance Overview]({{ "/docs/general/" | relative_url }})
 - [Shared Responsibility]({{ "/docs/general/shared-responsibility" | relative_url }})
 - [Identity & Access]({{ "/docs/general/identity" | relative_url }})
-- [Security]({{ "/docs/general/security" | relative_url }})
+- [Security]({{ "/docs/general/security/" | relative_url }})
 - [Compliance]({{ "/docs/general/compliance" | relative_url }})
 - [Tagging]({{ "/docs/general/tagging" | relative_url }})
 - [Cost Management]({{ "/docs/general/cost-management" | relative_url }})

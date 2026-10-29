@@ -105,4 +105,4 @@ Yes, with appropriate access controls. For P3/P4 data involving CUI or regulated
 data, consult the Cloud Team before sharing externally. All three providers
 require a `@ucsb.edu` identity for account access, so external collaborators
 may need a sponsored UCSB account — see
-[Security — External Collaborators]({{ "/docs/general/security#external-collaborators" | relative_url }}).
+[Security — External Collaborators]({{ "/docs/general/security/#external-collaborators" | relative_url }}).

@@ -54,7 +54,7 @@ library (free with your UCSB netID) includes:
 |---|---|
 | [Shared Responsibility]({{ "/docs/general/shared-responsibility" | relative_url }}) | How responsibilities are divided between the cloud providers, the Campus Cloud Team, and you |
 | [Identity & Access]({{ "/docs/general/identity" | relative_url }}) | Granting access with groups, least privilege, and `@ucsb.edu` identity across all providers |
-| [Security]({{ "/docs/general/security" | relative_url }}) | Data classification, security monitoring, least-privilege, and incident response |
+| [Security]({{ "/docs/general/security/" | relative_url }}) | Data classification, security monitoring, least-privilege, and incident response |
 | [Tagging]({{ "/docs/general/tagging" | relative_url }}) | Required tags, naming conventions, and how tags are enforced |
 | [Account Contacts]({{ "/docs/general/contacts" | relative_url }}) | Setting billing, security, and operations contacts on your account |
 | [Compliance]({{ "/docs/general/compliance" | relative_url }}) | UC IS-3, NIST 800-171, and the compliance controls in every account |

@@ -121,7 +121,7 @@ A typical check-in covers:
   spending. See [Costs & Billing]({{ "/docs/general/cost-management" | relative_url }}).
 * **Security & compliance** — open findings in your account's security
   dashboard and, if your account is enrolled in
-  [Wiz]({{ "/docs/general/security#wiz-cloud-security-posture-management" | relative_url }}),
+  [Wiz]({{ "/docs/general/security/#wiz-cloud-security-posture-management" | relative_url }}),
   a compliance summary we pull from it.
   We also ask whether the account holds any sensitive or regulated data
   (protection levels P3 or P4) and, if it doesn't have

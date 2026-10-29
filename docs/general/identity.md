@@ -43,7 +43,7 @@ grant on a single account or project can silently miss related access such as
 
 Assign each person the **minimum role** for their responsibilities, and reserve
 the most powerful roles for setup and access-management tasks. See the
-[Least-Privilege Principle]({{ "/docs/general/security#least-privilege-principle" | relative_url }})
+[Least-Privilege Principle]({{ "/docs/general/security/#least-privilege-principle" | relative_url }})
 on the Security page for the recommended role for each provider.
 
 ---
@@ -55,7 +55,7 @@ accounts cannot be granted access, and attempts to share an account publicly are
 blocked by guardrails.
 
 For collaborators outside UCSB, see
-[External Collaborators]({{ "/docs/general/security#external-collaborators" | relative_url }}).
+[External Collaborators]({{ "/docs/general/security/#external-collaborators" | relative_url }}).
 
 ---
 
