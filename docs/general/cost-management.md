@@ -110,7 +110,7 @@ allocation tag** — the Cloud Team does this centrally, so you just apply the
 [`ucsb:` tags]({{ "/docs/general/tagging#cost-allocation-tags" | relative_url }})
 to your resources. You can then group or filter costs by a tag in
 [Cost Explorer](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-filtering.html)
-and in [Cost and Usage Reports](https://docs.aws.amazon.com/cur/latest/userguide/cur-ta.html)
+and in [Cost and Usage Reports](https://docs.aws.amazon.com/cur/latest/userguide/resource-tags-columns.html)
 (one column per tag).
 
 The CUDOS and KPI dashboards above also have a filter for each of these tags.

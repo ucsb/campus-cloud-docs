@@ -11,7 +11,7 @@ For general cloud terminology, see:
 
 - [AWS Glossary](https://docs.aws.amazon.com/glossary/latest/reference/glos-chap.html) (Amazon)
 - [AWS ↔ Azure ↔ GCP service comparison](https://cloud.google.com/docs/get-started/aws-azure-gcp-service-comparison) (Google)
-- [AWS ↔ Azure service comparison](https://learn.microsoft.com/en-us/azure/architecture/aws-professional/services) (Microsoft)
+- [AWS ↔ Azure service comparison](https://learn.microsoft.com/en-us/azure/architecture/aws-professional/#technology-categories) (Microsoft)
 
 The table below covers terms that are specific to the UCSB Campus Cloud or
 that need a campus-specific definition.
