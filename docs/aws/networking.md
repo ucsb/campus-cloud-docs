@@ -2,7 +2,7 @@
 title: AWS Networking
 description: VPC options, campus connectivity, Transit Gateway, and IP address management for AWS accounts.
 permalink: /docs/aws/networking
-last_reviewed: 2026-10-23
+last_reviewed: 2026-10-30
 redirect_from:
   - /docs/bestpractices/vpn
   - /docs/guidelines/networking
@@ -14,7 +14,8 @@ redirect_from:
 
 UCSB Campus Cloud uses **AWS Transit Gateway** as the central hub for network
 connectivity. Every account that needs to reach the campus network receives a
-VPC attached to the Transit Gateway. Internet-only accounts use standalone VPCs
+Virtual Private Cloud (VPC), a private network in AWS, attached to the Transit
+Gateway. Internet-only accounts use standalone VPCs
 without a Transit Gateway attachment.
 
 * TOC
@@ -30,9 +31,9 @@ VPCs in us-east-1 reach campus through us-west-2.
 
 | Link | Region | Purpose |
 |---|---|---|
-| Direct Connect Circuit 1 | us-west-2 | Primary campus connectivity |
-| Direct Connect Circuit 2 | us-west-2 | Redundancy / failover |
-| Site-to-Site VPN (IPsec over the internet) | us-west-2 | Backup if both Direct Connect circuits fail |
+| Direct Connect connection 1 | us-west-2 | Campus connectivity |
+| Direct Connect connection 2 | us-west-2 | Campus connectivity, from a second location, so one connection can fail without an outage |
+| Site-to-Site VPN (an encrypted tunnel over the internet) | us-west-2 | Backup if both Direct Connect connections fail |
 
 Routing preference: Direct Connect → Site-to-Site VPN. Failover is automatic
 and transparent to workloads. Traffic from your VPC to campus resources routes
@@ -42,18 +43,28 @@ through the Transit Gateway — you do not need to configure this yourself.
 
 ## Requesting Networking Changes
 
-All persistent networking changes (new CIDR, new Transit Gateway attachment,
-firewall rule changes at the Transit Gateway level) require a
-[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
-Day-to-day Security Group and NACL changes within your account do not require a
-ticket.
+Open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
+for any lasting change to how your VPC connects to other networks:
+
+* **More IP addresses** for your VPC (a new IP address range, also called a
+  Classless Inter-Domain Routing (CIDR) block).
+* **Connecting a VPC** to the Transit Gateway, so it can reach campus.
+* **Changing which networks your VPC can reach** through the Transit Gateway,
+  such as campus or another VPC. The Cloud Team makes these changes to the
+  Transit Gateway's routing, which works like a shared address book of where to
+  send traffic.
+
+Day-to-day changes to Security Groups and network access control lists (NACLs)
+within your account do not need a ticket. To open access on the campus side,
+see [Campus Network Firewall](#campus-network-firewall).
 
 ---
 
 ## Security Groups and NACLs
 
 * You manage Security Groups for your own resources.
-* Network ACLs are available but Security Groups are the preferred method.
+* NACLs are available but Security Groups are the preferred method.
 * [Service Control Policies (SCPs)]({{ "/docs/aws/guardrails" | relative_url }})
   do not restrict Security Group rules, but best practices apply:
   * Avoid `0.0.0.0/0` inbound on sensitive ports (22, 3389, database ports).
@@ -69,9 +80,18 @@ not the whole Landing Zone range (`10.226.0.0/15`).
 
 ## DNS
 
+* VPCs the Cloud Team creates look up names with the Domain Name System (DNS)
+  service that AWS provides. It finds public names, including public
+  `ucsb.edu` names.
 * Private hosted zones in Route 53 are available for internal service discovery.
 * There is no UCSB-managed internal DNS zone shared by default. Each team
   manages its own private hosted zones.
+* Names that exist only on the campus network don't resolve from AWS by
+  default. If your workload needs them, you can set up
+  [Route 53 Resolver forwarding](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-forwarding-outbound-queries.html)
+  in your account to send those lookups to campus. Open a
+  [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
+  if you need help.
 * Contact the Cloud Team if you need a CNAME or A record in a UCSB-owned public
   DNS zone.
 
@@ -95,8 +115,15 @@ licensed to faculty, staff, and student employees. To get the connector, see
 Traffic from AWS to campus resources passes through the UCSB campus firewall.
 If you need to allow traffic from AWS to a specific campus host or service:
 
-1. Identify the AWS egress IP range (see [Egress IP Addresses](#egress-ip-addresses) below, or ask the
-   Cloud Team for the current list).
+1. Identify the source addresses the campus host will see:
+   * From a **private subnet**, traffic reaches campus through Direct Connect
+     with its private IP address. Use your VPC's IP address range (its CIDR
+     block, shown in the VPC console, within `10.226.0.0/16` or
+     `10.227.0.0/16`). Do not use the shared Network Address Translation (NAT)
+     Gateway IPs listed under [Egress IP Addresses](#egress-ip-addresses); those
+     apply only to internet traffic.
+   * From a **public subnet**, traffic reaches campus over the internet, from
+     the resource's public IP address.
 2. Submit a firewall rule request through the appropriate campus IT process for
    your department.
 
@@ -106,13 +133,14 @@ If you need to allow traffic from AWS to a specific campus host or service:
 
 ### Cannot Reach a Campus Resource from AWS
 
-1. Verify the EC2 instance is in a campus-connected VPC (not an internet-only
-   VPC).
+1. Verify the EC2 instance is in a **private subnet** of a campus-connected
+   VPC. Public subnets have no route to campus over Direct Connect.
 2. Check the Security Group allows outbound to the campus IP range.
-3. Verify the campus firewall allows inbound from the AWS egress IP range.
-   Request firewall changes through your department IT if needed.
-4. Check that the campus host's local firewall accepts traffic from the
-   `10.226.0.0/16` or `10.227.0.0/16` private ranges used by the Landing Zone.
+3. Verify the campus firewall allows inbound from your VPC's IP address range
+   (see [Campus Network Firewall](#campus-network-firewall)). Request firewall
+   changes through your department IT if needed.
+4. Check that the campus host's local firewall accepts traffic from your VPC's
+   IP address range.
 
 ### Cannot Reach a Private IP in AWS from Your Laptop
 
@@ -148,7 +176,21 @@ vendor allowlisting.
 
 ### Architecture Diagram
 
-![UCSB AWS Landing Zone Network Architecture showing Transit Gateway, NAT Gateway, Direct Connect, and VPN connectivity between campus and AWS]({{ "/assets/img/UCSB-AWS-LZ-Network-Architecture-Production-Organization-v2.png" | relative_url }})
+![Diagram of the Campus Cloud AWS network. The same information is described in text in the paragraph below the diagram.]({{ "/assets/img/UCSB-AWS-LZ-Network-Architecture-v3.png" | relative_url }})
+
+The diagram shows two regions. In us-west-2, the campus network connects to
+the Cloud Team's Transit Gateway through two Direct Connect connections, with a
+Site-to-Site VPN as backup. The us-east-1 Transit Gateway reaches campus
+through us-west-2. Private subnets in your VPC send traffic that leaves the VPC
+to the Transit Gateway, which sends internet traffic out through the shared NAT
+Gateways. The exception is Amazon S3 in the same region, which private subnets
+reach through an S3 gateway endpoint. Public subnets use your VPC's own
+Internet Gateway. They have no route to campus through the Transit Gateway, so
+they reach campus only over the internet. The
+sections [How to Connect to Campus](#how-to-connect-to-campus),
+[How Traffic Flows](#how-traffic-flows), and
+[Egress IP Addresses](#egress-ip-addresses) give the details.
+[View the diagram at full size]({{ "/assets/img/UCSB-AWS-LZ-Network-Architecture-v3.png" | relative_url }}).
 
 ### Regions and IP Address Space
 
@@ -159,9 +201,10 @@ The Landing Zone is deployed in two regions:
 | us-west-2 | Oregon | 10.226.0.0/16 |
 | us-east-1 | N. Virginia | 10.227.0.0/16 |
 
-These RFC 1918 private addresses are routed between AWS and the UCSB campus
-network. Individual account VPCs receive a smaller block (e.g., /24) from these
-ranges via the Cloud Team's IPAM system.
+These private addresses ([RFC 1918]({{ "/glossary/" | relative_url }})) are routed between AWS and the UCSB campus
+network. Individual account VPCs receive a smaller block (from /27 to /24,
+depending on the [VPC family](#vpc-families)) from these ranges via the Cloud
+Team's IP address management system.
 
 Do **not** manually assign a CIDR that overlaps with these ranges or with the
 UCSB campus address space (`128.111.0.0/16`, `169.231.0.0/16`). Conflicts will
@@ -170,27 +213,36 @@ break routing.
 ### How Traffic Flows
 
 * **Public subnet** traffic in your account goes directly through the account's
-  Internet Gateway — it does not travel through the Transit Gateway.
-* **Private subnet** traffic routes to the Transit Gateway, which sends it
-  either to:
-  * The **NAT Gateway** (for internet-bound traffic), or
-  * **Direct Connect / VPN** (for campus-bound traffic).
+  Internet Gateway — it does not travel through the Transit Gateway, so it
+  cannot reach campus or other Campus Cloud VPCs over private addresses.
+* **Private subnet** traffic that leaves your VPC routes to the Transit
+  Gateway, which sends it
+  to one of:
+  * The central **NAT Gateway** (for internet-bound traffic),
+  * **Direct Connect / VPN** (for campus-bound traffic), or
+  * Another Campus Cloud VPC.
+* **Amazon S3** traffic from private subnets to buckets in the same region
+  uses a
+  [gateway endpoint](https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-s3.html)
+  in your VPC. It stays on the AWS network and does not use the NAT Gateway.
+  Requests to buckets in another region go through the NAT Gateway like other
+  internet traffic.
 
 ### Egress IP Addresses
 
 Traffic leaving your private subnets to the internet appears to come from
-centrally managed NAT Gateway IP addresses. These IPs can change but rarely do.
+centrally managed NAT Gateway IP addresses.
 
-{% include alert.html type="warning" title="These IPs may change without notice" content="NAT Gateway Elastic IPs are dynamically allocated. If you need the current list for vendor allowlisting or firewall rules, confirm with the Cloud Team via a ServiceNow ticket." %}
+{% include alert.html type="warning" title="These IPs may change" content="The NAT Gateway addresses change only if the Cloud Team replaces the NAT Gateways, which is rare. Before you use them for vendor allowlisting or firewall rules, confirm the current list with the Cloud Team via a ServiceNow ticket. Amazon S3 requests from private subnets to buckets in the same region do not come from these addresses; requests to buckets in another region do (see How Traffic Flows)." %}
 
-**Current NAT Gateway IPs (us-west-2):**
-
-* `44.231.186.204`
-* `44.232.156.254`
+| Region | NAT Gateway IPs |
+|---|---|
+| us-west-2 | `44.231.186.204`, `44.232.156.254` |
+| us-east-1 | `3.213.17.213`, `54.86.139.106` |
 
 **Campus-side VPN endpoint (us-west-2):** `128.111.38.197`
 
-If you need IPs for other regions or the most current values, open a
+For the most current values, open a
 [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
 
 ### Public IP Addresses
@@ -199,7 +251,8 @@ If you need IPs for other regions or the most current values, open a
   can use Elastic IPs or auto-assigned public IPs.
 * If your workload needs a persistent public IP, allocate an Elastic IP in your
   account.
-* IPv6 is not currently available in Campus Cloud accounts.
+* IPv6 is not set up. The VPCs the Cloud Team creates use IPv4 addresses only,
+  and the connection to campus carries IPv4 only.
 
 ---
 
