@@ -43,12 +43,21 @@ through the Transit Gateway — you do not need to configure this yourself.
 
 ## Requesting Networking Changes
 
-All persistent networking changes (a new IP address range, also called a
-Classless Inter-Domain Routing (CIDR) block; a new Transit Gateway attachment;
-Transit Gateway routing changes) require a
-[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
+Open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
+for any lasting change to how your VPC connects to other networks:
+
+* **More IP addresses** for your VPC (a new IP address range, also called a
+  Classless Inter-Domain Routing (CIDR) block).
+* **Connecting a VPC** to the Transit Gateway, so it can reach campus.
+* **Changing which networks your VPC can reach** through the Transit Gateway,
+  such as campus or another VPC. The Cloud Team makes these changes to the
+  Transit Gateway's routing, which works like a shared address book of where to
+  send traffic.
+
 Day-to-day changes to Security Groups and network access control lists (NACLs)
-within your account do not require a ticket.
+within your account do not need a ticket. To open access on the campus side,
+see [Campus Network Firewall](#campus-network-firewall).
 
 ---
 
@@ -71,8 +80,9 @@ not the whole Landing Zone range (`10.226.0.0/15`).
 
 ## DNS
 
-* Your VPC looks up names with the Domain Name System (DNS) service that AWS
-  provides. It finds public names, including public `ucsb.edu` names.
+* VPCs the Cloud Team creates look up names with the Domain Name System (DNS)
+  service that AWS provides. It finds public names, including public
+  `ucsb.edu` names.
 * Private hosted zones in Route 53 are available for internal service discovery.
 * There is no UCSB-managed internal DNS zone shared by default. Each team
   manages its own private hosted zones.
@@ -171,10 +181,11 @@ vendor allowlisting.
 The diagram shows two regions. In us-west-2, the campus network connects to
 the Cloud Team's Transit Gateway through two Direct Connect connections, with a
 Site-to-Site VPN as backup. The us-east-1 Transit Gateway reaches campus
-through us-west-2. Private subnets in your VPC send all traffic to the Transit
-Gateway, which sends internet traffic out through the shared NAT Gateways.
-Public subnets use your VPC's own Internet Gateway and have no route to campus.
-Amazon S3 traffic from private subnets uses an S3 gateway endpoint. The
+through us-west-2. Private subnets in your VPC send traffic that leaves the VPC
+to the Transit Gateway, which sends internet traffic out through the shared NAT
+Gateways. The exception is Amazon S3 in the same region, which private subnets
+reach through an S3 gateway endpoint. Public subnets use your VPC's own
+Internet Gateway and have no route to campus. The
 sections [How to Connect to Campus](#how-to-connect-to-campus),
 [How Traffic Flows](#how-traffic-flows), and
 [Egress IP Addresses](#egress-ip-addresses) give the details.
@@ -203,21 +214,25 @@ break routing.
 * **Public subnet** traffic in your account goes directly through the account's
   Internet Gateway — it does not travel through the Transit Gateway, so it
   cannot reach campus or other Campus Cloud VPCs over private addresses.
-* **Private subnet** traffic routes to the Transit Gateway, which sends it
+* **Private subnet** traffic that leaves your VPC routes to the Transit
+  Gateway, which sends it
   to one of:
   * The central **NAT Gateway** (for internet-bound traffic),
   * **Direct Connect / VPN** (for campus-bound traffic), or
   * Another Campus Cloud VPC.
-* **Amazon S3** traffic from private subnets uses a
+* **Amazon S3** traffic from private subnets to buckets in the same region
+  uses a
   [gateway endpoint](https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-s3.html)
   in your VPC. It stays on the AWS network and does not use the NAT Gateway.
+  Requests to buckets in another region go through the NAT Gateway like other
+  internet traffic.
 
 ### Egress IP Addresses
 
 Traffic leaving your private subnets to the internet appears to come from
 centrally managed NAT Gateway IP addresses.
 
-{% include alert.html type="warning" title="These IPs may change" content="The NAT Gateway addresses change only if the Cloud Team replaces the NAT Gateways, which is rare. Before you use them for vendor allowlisting or firewall rules, confirm the current list with the Cloud Team via a ServiceNow ticket. Amazon S3 requests from private subnets do not come from these addresses (see How Traffic Flows)." %}
+{% include alert.html type="warning" title="These IPs may change" content="The NAT Gateway addresses change only if the Cloud Team replaces the NAT Gateways, which is rare. Before you use them for vendor allowlisting or firewall rules, confirm the current list with the Cloud Team via a ServiceNow ticket. Amazon S3 requests from private subnets to buckets in the same region do not come from these addresses; requests to buckets in another region do (see How Traffic Flows)." %}
 
 | Region | NAT Gateway IPs |
 |---|---|

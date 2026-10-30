@@ -78,7 +78,7 @@ with Diagram("UCSB Campus Cloud: AWS network", filename=out, outformat="png",
     campus = icon(GenericOfficeBuilding, "UCSB campus network")
 
     internet = icon(InternetAlt1, "Internet")
-    s3 = icon(SimpleStorageServiceS3, "Amazon S3")
+    s3 = icon(SimpleStorageServiceS3, "Amazon S3\n(same region)")
 
     # Campus links: both Direct Connect connections and the VPN end in us-west-2 only
     campus >> Edge(label="Direct Connect", **DX) >> [dx1, dx2]
@@ -88,14 +88,14 @@ with Diagram("UCSB Campus Cloud: AWS network", filename=out, outformat="png",
     tgw_w - Edge(label="peering: us-east-1 reaches\ncampus through us-west-2",
                  constraint="false", color="darkgreen", penwidth="2.5", fontsize="20") - tgw_e
 
-    # Private subnets send all traffic to the Transit Gateway
-    priv_w >> Edge(label="all traffic", **PRIV) >> tgw_w
-    priv_e >> Edge(label="all traffic", **PRIV) >> tgw_e
+    # Private subnets send everything else leaving the VPC to the Transit Gateway
+    priv_w >> Edge(label="all other\ntraffic", **PRIV) >> tgw_w
+    priv_e >> Edge(label="all other\ntraffic", **PRIV) >> tgw_e
 
     # Central egress to the internet
     tgw_w >> Edge(label="internet-bound", **NET) >> nat_w >> Edge(**NET) >> internet
     tgw_e >> Edge(label="internet-bound", **NET) >> nat_e >> Edge(**NET) >> internet
 
-    # Public subnets go straight to the internet; S3 traffic skips the NAT
+    # Public subnets go straight to the internet; same-region S3 traffic skips the NAT
     pub_w >> Edge(**NET) >> igw_w >> Edge(label="public traffic", **NET) >> internet
-    priv_w >> Edge(label="S3 traffic", style="dotted", **NET) >> s3e >> Edge(style="dotted", **NET) >> s3
+    priv_w >> Edge(label="S3 traffic\n(same region)", style="dotted", **NET) >> s3e >> Edge(style="dotted", **NET) >> s3
