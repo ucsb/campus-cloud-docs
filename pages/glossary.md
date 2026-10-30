@@ -2,7 +2,7 @@
 title: Glossary
 description: Definitions of terms specific to the UCSB Campus Cloud.
 permalink: /glossary/
-last_reviewed: 2026-10-23
+last_reviewed: 2026-10-30
 ---
 
 # Glossary
@@ -57,5 +57,6 @@ that need a campus-specific definition.
 | **Tags / Labels** | Key-value pairs used for billing attribution, compliance, and governance. AWS and Azure call them *Tags* and attach them to resources. GCP uses two systems, both set on the project: required *Resource Manager Tags* (governance and cost attribution) and optional *project labels* (cost attribution only). See [Tagging & Labels]({{ "/docs/general/tagging" | relative_url }}). |
 | **UC Enterprise Discount** | UC system-wide pricing agreements with cloud providers (AWS EDP, Azure EA, GCP negotiated rates). Applied automatically to Campus Cloud accounts. |
 | **UCSB SSO** | Single sign-on with your UCSB netID. AWS uses Shibboleth SAML; Azure and GCP use Entra ID federation. |
+| **VPC Family** | A preset network size and layout you pick when you launch the AWS Simple VPC product, named like `n2.medium.private`: the number of subnets (`n1`, `n2`, `n4`), the total IP addresses (`small` = 32 up to `xlarge` = 256), and whether the subnets are public, private, or mixed. Defined by the Cloud Team, not by AWS. See [VPC Families]({{ "/docs/aws/networking/#vpc-families" | relative_url }}). |
 | **Wiz** | A cloud security posture management (CSPM) tool for agentless vulnerability and misconfiguration scanning. Available on all three providers; accounts are enrolled on an opt-in basis. See [Security]({{ "/docs/general/security/#wiz-cloud-security-posture-management" | relative_url }}). |
 | **WORM** | Write Once, Read Many — a storage mode that prevents stored data from being deleted or modified. Used for audit logs in GCP (3-year retention). |
