@@ -185,7 +185,8 @@ through us-west-2. Private subnets in your VPC send traffic that leaves the VPC
 to the Transit Gateway, which sends internet traffic out through the shared NAT
 Gateways. The exception is Amazon S3 in the same region, which private subnets
 reach through an S3 gateway endpoint. Public subnets use your VPC's own
-Internet Gateway and have no route to campus. The
+Internet Gateway. They have no route to campus through the Transit Gateway, so
+they reach campus only over the internet. The
 sections [How to Connect to Campus](#how-to-connect-to-campus),
 [How Traffic Flows](#how-traffic-flows), and
 [Egress IP Addresses](#egress-ip-addresses) give the details.
