@@ -2,7 +2,7 @@
 title: GCP First Steps
 description: What to do after your GCP project is provisioned — sign in, verify setup, deploy your first resource.
 permalink: /docs/gcp/first-steps
-last_reviewed: 2026-10-21
+last_reviewed: 2026-11-18
 redirect_from:
   - /docs/firststeps/gcpfirststeps
 ---
@@ -191,12 +191,12 @@ A budget only sends notifications — it does not stop resources.
 
 A [spend cap budget](https://docs.cloud.google.com/billing/docs/how-to/budgets-spend-caps)
 does stop resources: it pauses the service when spending passes the cap, taking your
-workload offline until the cap is lifted. This is a Google preview feature, and
-it covers only Gemini API, Gemini Enterprise Agent Platform (formerly Vertex AI),
-Cloud Run, and Cloud Run functions.
+workload offline until the cap is lifted.
 
-You can request a spend cap budget via a
-[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
+**Spend caps are not available for UCSB projects yet.** Google
+[made spend caps generally available](https://cloud.google.com/blog/topics/cost-management/google-cloud-spend-caps-now-generally-available)
+in October 2026, but they do not yet support the way UCSB's billing accounts
+are set up. We will update this page when they do.
 
 See [Costs & Billing]({{ "/docs/general/cost-management" | relative_url }}) for more information.
 

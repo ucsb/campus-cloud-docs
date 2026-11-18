@@ -2,55 +2,46 @@
 title: GCP Networking
 description: Networking constraints, current limitations, and how to request network resources for GCP projects.
 permalink: /docs/gcp/networking
-last_reviewed: 2026-10-21
+last_reviewed: 2026-11-18
 ---
 
 # GCP Networking Overview
 
-Networking in the GCP Campus Cloud is centrally managed. **You cannot create
-VPC networks yourself** — a deny policy blocks VPC creation for all users. Only
-the Cloud Team's automation account can provision network resources.
+The Cloud Team manages networking for all GCP Campus Cloud projects. Your
+project is attached to the campus Shared VPC when it is created, so your VMs
+get outbound internet access through Cloud NAT right away. You cannot create
+VPC networks of your own.
 
-Your project is automatically attached to the campus Shared VPC at provisioning,
-giving you outbound internet access via Cloud NAT immediately. For anything
-beyond that, open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
+Many services need no VPC at all, including Cloud Storage, BigQuery, Pub/Sub,
+Cloud Run, Cloud Functions, and Vertex AI. If you use only services like these,
+you can skip most of this page.
 
 ---
 
-## Current State
+## What's Available
 
 | Capability | Available? |
 |---|---|
-| User-created VPCs | No — blocked by policy |
-| Shared VPC attachment | Yes — your project is attached to the campus Shared VPC automatically at provisioning |
-| Internet egress via Cloud NAT | Yes — provided via the Shared VPC; no ticket required |
-| VPC peering | Not available (contact Cloud Team if needed) |
-| Campus connectivity (VPN/Interconnect) | Not available — no direct path to the UCSB campus network exists at this time |
+| Outbound internet from VMs (Cloud NAT) | Yes. Automatic, no ticket needed. |
+| Your own VPC networks | No. Blocked by policy. |
+| Public IP addresses on VMs | No. Use a load balancer instead. |
+| Public website or API on VMs | Yes. Build your own load balancer. See [Public-Facing Services](#public-facing-services). |
+| Public Cloud Run or Cloud Functions | No. Every caller must log in. |
+| VPC peering | Not available. Contact the Cloud Team if you need it. |
+| Connection to the UCSB campus network (VPN or Interconnect) | Not available yet. Contact the Cloud Team to discuss options. |
 
-{% include alert.html type="warning" title="Campus connectivity not available" content="There is currently no VPN or Interconnect between GCP and the UCSB campus network. If your workload requires campus connectivity, contact the Cloud Team to discuss options." %}
-
----
-
-## Org Policy Networking Constraints
-
-The following constraints are enforced across all projects:
-
-* **No VPC creation** — users cannot create VPC networks; only the Cloud
-  Team's automation can provision them.
-* **Custom-mode VPCs only** — auto-mode VPCs (which create subnets in every
-  region) are blocked by a custom constraint.
-* **No external IP addresses on VMs** — VMs may not have public IPs.
-  Outbound internet access is provided via Cloud NAT.
-* **Allowed regions:** us-central1 (Iowa) and us-west1 (Oregon) only.
-* **VPC flow logs required** — subnets without flow logs cannot be created.
+You can create resources only in us-central1 (Iowa) and us-west1 (Oregon). See
+[GCP Guardrails]({{ "/docs/gcp/guardrails" | relative_url }}) for every policy
+that applies to your project.
 
 ---
 
 ## Requesting Network Resources
 
-Your project is automatically attached to the campus Shared VPC at provisioning and receives outbound internet access via Cloud NAT — no ticket is needed for basic connectivity.
-
-For anything beyond standard outbound access (additional subnets, VPC peering, firewall rule changes), open a [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) (Cloud Services) with:
+For anything beyond outbound internet access, such as more subnets, VPC
+peering, or firewall rule changes, open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
+with:
 
 * Your GCP project ID
 * What you need and why
@@ -61,9 +52,10 @@ For anything beyond standard outbound access (additional subnets, VPC peering, f
 
 ## Creating Compute Instances
 
-When creating a VM in the Cloud Console, the **Network interfaces** section
-defaults to **Networks in this project**. Because your project has no local VPC
-(blocked by org policy), this view is always empty.
+When you create a VM in the Cloud Console, the **Network interfaces** section
+shows **Networks in this project** by default. That list is always empty,
+because your project has no VPC of its own. If you see "No more networks
+available in this project," this is why.
 
 To place your VM on the campus Shared VPC, on the **Networking** tab:
 
@@ -72,110 +64,81 @@ To place your VM on the campus Shared VPC, on the **Networking** tab:
 3. Choose a subnet from the **Shared subnetwork** dropdown.
 4. Click **Done**.
 
-{% capture alert_content %}If you see "No more networks available in this project," you have not switched the selector yet. Click <strong>Networks shared with me</strong> in the Network interfaces panel to reveal the campus Shared VPC.{% endcapture %}
-{% include alert.html type="warning" title="Network selector defaults to the wrong option" content=alert_content %}
-
-If **Networks shared with me** shows no subnets, your identity may not have
-Shared VPC access. See
-[Adding Team Members to the Shared VPC](#adding-team-members-to-the-shared-vpc)
-below.
+If **Networks shared with me** shows no subnets, you may not have Shared VPC
+access yet. See the next section.
 
 ---
 
 ## Adding Team Members to the Shared VPC
 
-Your project and its default service accounts can use the campus Shared VPC right away — no request needed.
+Your project and its default service accounts can use the Shared VPC right
+away. To give a person access, add them to the project's
+`-owners@gcp.cloud.ucsb.edu` or `-editors@gcp.cloud.ucsb.edu` Google Group.
+They get Shared VPC access automatically, and no ticket is needed. See
+[Adding and Removing Users]({{ "/docs/gcp/first-steps#adding-and-removing-users" | relative_url }}).
+Allow up to 30 minutes for access to take effect.
 
-Shared VPC access for other people is granted through the project's `-owners@gcp.cloud.ucsb.edu` and `-editors@gcp.cloud.ucsb.edu` Google Groups — anyone added to either group gets Shared VPC access automatically. No ServiceNow ticket is needed.
+---
 
-See [Adding and Removing Users]({{ "/docs/gcp/first-steps#adding-and-removing-users" | relative_url }}) for how to manage group membership. Allow up to 30 minutes for access to propagate after adding someone.
+## Network Tags
+
+Shared VPC firewall rules apply only to VMs that carry the right **network
+tag**. Each tag lets in only the traffic listed below. See Google's guide to
+[adding and removing network tags](https://cloud.google.com/vpc/docs/add-remove-network-tags).
+
+| Network Tag | What It Allows |
+|---|---|
+| `allow-iap-ssh` | SSH (port 22) through IAP |
+| `allow-iap-rdp` | RDP (port 3389) through IAP |
+| `allow-lb-backend` | Traffic from Google Cloud load balancers and their health checks |
+| `allow-win-activation` | Windows license activation |
+
+Network tags are not the same as the tags described in
+[Tagging & Labels]({{ "/docs/general/tagging" | relative_url }}).
 
 ---
 
 ## Accessing Private VMs Without a Public IP
 
-Since VMs cannot have external IPs, use **Identity-Aware Proxy (IAP)** for
-SSH and RDP access. IAP tunnels traffic securely without requiring a VPN or
-public IP.
+Use **Identity-Aware Proxy (IAP)** to SSH or RDP into your VMs. IAP tunnels
+your connection through Google, so you need no VPN or public IP. Give the VM
+the `allow-iap-ssh` or `allow-iap-rdp` [network tag](#network-tags), then
+connect:
 
-See Google's official guide: [Using IAP for TCP forwarding](https://docs.cloud.google.com/iap/docs/using-tcp-forwarding)
+* **SSH:** Click **SSH** on the VM in the Cloud Console, or run
+  `gcloud compute ssh VM_NAME --tunnel-through-iap`.
+* **RDP:** Use [IAP Desktop](https://googlecloudplatform.github.io/iap-desktop/),
+  a free Windows app that needs no `gcloud` install.
 
-### Network Tags for IAP Access
-
-Your VM must have the correct **network tag** for IAP to reach it. The tags
-admit only IAP traffic on the listed port — they do not open the VM to any
-other traffic.
-
-| Network Tag | What It Enables |
-|---|---|
-| `allow-iap-ssh` | SSH access (port 22) via IAP |
-| `allow-iap-rdp` | RDP access (port 3389) via IAP |
-| `allow-win-activation` | Windows license activation (KMS egress) |
-
-**How to add a network tag** — see Google's guide for [full instructions](https://cloud.google.com/vpc/docs/add-remove-network-tags):
-
-* **Console:** VM instance → **Edit** → **Networking** → **Network tags** field → **Save**.
-* **gcloud:** `gcloud compute instances add-tags INSTANCE --zone=ZONE --tags=allow-iap-ssh`
-* **Terraform:** Add `tags = ["allow-iap-ssh"]` to your `google_compute_instance` resource.
-
-{% include alert.html type="info" title="Network tags are not Resource Manager Tags" content="Network tags are simple strings on a VM used for firewall targeting. They are separate from Resource Manager Tags (the structured key-value pairs like <code>environment=prod</code> used for billing and compliance)." %}
-
-### SSH Access
-
-* **Console SSH button:** Open the VM in the Cloud Console and click
-  **SSH**. This uses IAP automatically — no local software needed.
-* **gcloud:** `gcloud compute ssh VM_NAME --tunnel-through-iap`
-
-### RDP Access
-
-* **IAP Desktop (recommended):** Download
-  [IAP Desktop](https://googlecloudplatform.github.io/iap-desktop/) — a
-  free Windows app that handles IAP tunneling and RDP in a single window. No
-  `gcloud` installation required.
-* **gcloud tunnel:** `gcloud compute start-iap-tunnel VM_NAME 3389
-  --local-host-port=localhost:3389`, then connect your RDP client to
-  `localhost:3389`.
+See Google's guide to
+[using IAP for TCP forwarding](https://docs.cloud.google.com/iap/docs/using-tcp-forwarding)
+for other options.
 
 ### IAP Access for Editors
 
-Project owners can already open IAP tunnels. The basic Editor role does not
-include this permission. For editors to use SSH or RDP, an owner grants the
-**IAP-secured Tunnel User** role (`roles/iap.tunnelResourceAccessor`) to the
-project's **editors group**. Granting it to the group, not to individuals,
-follows our guidance to
-[manage access with groups]({{ "/docs/gcp/first-steps#adding-and-removing-users" | relative_url }}). Nothing else is needed — the Editor role already covers OS Login. See
-[Using IAP for TCP forwarding](https://cloud.google.com/iap/docs/using-tcp-forwarding).
+Project owners can open IAP tunnels already. The Editor role cannot. For
+editors to use SSH or RDP, an owner grants the **IAP-secured Tunnel User** role
+(`roles/iap.tunnelResourceAccessor`) to the project's editors group. Grant it
+to the group, not to individuals, as described in
+[Adding and Removing Users]({{ "/docs/gcp/first-steps#adding-and-removing-users" | relative_url }}).
 
 ### OS Login
 
 [OS Login](https://docs.cloud.google.com/compute/docs/oslogin/set-up-oslogin)
-is **enforced by org policy** across all GCP Campus Cloud projects. This
-means SSH access uses your Google identity — there are no project-wide SSH
-keys to manage, share, or rotate.
-
-What this means for you:
-
-* **Console SSH just works.** Click the SSH button in the Cloud Console; it
-  handles OS Login automatically.
-* **gcloud SSH just works.** `gcloud compute ssh` uses your Google identity
-  by default.
-* **You cannot disable OS Login** in project metadata. The org policy
-  overrides any project-level setting.
-* **Traditional SSH keys** (project metadata or instance metadata) are
-  ignored when OS Login is enforced.
-
-If your project has a specific need to disable OS Login (e.g. a Marketplace
-image that is incompatible), open a
-[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
-and the Cloud Team will evaluate an exception.
+is enforced by org policy. You sign in over SSH with your Google identity, so
+there are no SSH keys to manage. SSH keys in project or instance metadata are
+ignored, and you cannot turn OS Login off. If your project needs an exception
+(for example, a Marketplace image that does not support OS Login), open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
 
 ---
 
 ## Traffic Between VMs
 
-VMs cannot receive traffic from other VMs by default — even VMs in the same
-project. The only inbound traffic allowed is SSH and RDP through IAP (see
-above). If your VMs need to talk to each other, open a
+VMs cannot receive traffic from other VMs by default, even in the same project.
+The only inbound traffic allowed is SSH and RDP through IAP, and load balancer
+traffic to VMs tagged `allow-lb-backend`. If your VMs need to talk to each
+other, open a
 [ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5)
 to request a firewall rule.
 
@@ -183,57 +146,24 @@ to request a firewall rule.
 
 ## Public-Facing Services
 
-**Public access is not allowed by default — even for serverless services.** Two
-org policies work together to keep your services private: one requires
-authenticated (IAM-based) access to Cloud Run and Cloud Functions, and a
-separate one blocks granting access to `allUsers`. By default these services are
-reachable only by identities you authorize, not the open internet.
-
-Public traffic **is supported** when a workload genuinely needs it — you just
-have to request it. There are two paths, depending on what you're running.
-
-### Public Cloud Run or Cloud Functions (no load balancer)
-
-If you need a serverless service to accept unauthenticated public traffic
-(a public website, an API, a webhook receiver), open a
-[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
-The Cloud Team relaxes both guardrails **for that one project**, after which you
-can publish the service on its built-in HTTPS URL. This is free — no additional
-infrastructure.
-
-{% capture alert_content %}A public serverless endpoint set up this way has <strong>no Web Application Firewall (WAF) in front of it</strong>. Protection depends entirely on your own application — validate all input, require authentication where you can, and keep dependencies patched. If you want a WAF and DDoS protection in front of a public app, request the load-balancer option below instead.{% endcapture %}
-{% include alert.html type="warning" title="No WAF by default" content=alert_content %}
-
-### VM-based apps, or a WAF in front of a public app
-
-For **VM-based workloads** that need a public-facing endpoint, or if you want a
-WAF and DDoS protection in front of a public Cloud Run service, open a
-[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).
-The Cloud Team will provision an external
+**You can publish a public website or API on VMs yourself, with no ticket.**
+Build a global external
 [Application Load Balancer](https://docs.cloud.google.com/load-balancing/docs/application-load-balancer)
-with
-[Cloud Armor](https://docs.cloud.google.com/armor/docs/cloud-armor-overview)
-(Google's WAF and DDoS protection) on your behalf. You cannot create
-external load balancers yourself — they are blocked by org policy. This option
-carries a monthly cost for the load balancer and WAF, billed to your project.
+in your project, in front of your VMs. This is the only load balancer type
+open to the internet. It costs about $18–25 a month plus traffic, billed to
+your project.
 
-**By default, the Cloud Armor policy allows only UCSB campus and VPN address
-ranges and blocks everything else.** If your app must be reachable from
-partner networks or from the whole internet, say so in your ticket and the
-Cloud Team will widen access.
+1. **Tag your VMs** with the [network tag](#network-tags) `allow-lb-backend`.
+2. **Build the load balancer** with
+   [Google's guide for a VM backend](https://docs.cloud.google.com/load-balancing/docs/https/setup-global-ext-https-compute).
+   Org policy requires logging on the backend service (`--enable-logging`).
+   If you add a custom SSL policy, it must require TLS 1.2 or later.
+3. **Point your DNS name** at the load balancer's IP address.
 
----
+{% capture alert_content %}Your load balancer has <strong>no Web Application Firewall (WAF)</strong> unless you add one. <a href="https://docs.cloud.google.com/armor/docs/cloud-armor-overview">Cloud Armor</a> (Google's WAF and DDoS protection) attaches to your backend service. Consider it for anything with a login or a form. For an internal tool, a policy that allows only UCSB campus and VPN addresses (<code>128.111.0.0/16</code> and <code>169.231.0.0/16</code>) is a good start. Cloud Armor adds a small monthly cost, billed to your project.{% endcapture %}
+{% include alert.html type="info" title="Consider adding a WAF" content=alert_content %}
 
-## Services That Work Without a VPC
-
-Many GCP services do not require a VPC at all:
-
-* Cloud Storage
-* BigQuery
-* Pub/Sub
-* Cloud Functions
-* Cloud Run
-* Vertex AI
-
-If your workload uses only managed services, you may not need to request
-network provisioning.
+**Cloud Run and Cloud Functions cannot be public.** Every caller must log in
+with a Google identity. If you need a public serverless app, or help designing
+any public app, open a
+[ServiceNow ticket](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5).

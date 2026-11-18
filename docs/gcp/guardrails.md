@@ -2,7 +2,7 @@
 title: GCP Guardrails & Org Policies
 description: Organization policy constraints and IAM deny policies applied to all Campus Cloud GCP projects.
 permalink: /docs/gcp/guardrails
-last_reviewed: 2026-10-23
+last_reviewed: 2026-11-18
 ---
 
 # GCP Guardrails
@@ -30,7 +30,8 @@ allowed.
 | Deny external IPs on VMs (`vmExternalIpAccess`) | VMs cannot have public IP addresses |
 | Require custom-mode VPCs only (custom constraint) | Auto-mode VPC creation is blocked |
 | Restrict protocol forwarding | Both external and internal protocol forwarding blocked |
-| Restrict external load balancers | All external load balancer types are blocked (`in:EXTERNAL`) |
+| Restrict external load balancers | Only the global external Application Load Balancer is allowed. Every other external type is blocked. |
+| Restrict Cloud Run ingress | Cloud Run services take traffic only from inside Google Cloud or through a load balancer, not from the internet on their `run.app` URL |
 | Restrict resource locations | Only us-central1 and us-west1 allowed for most resources |
 | Restrict Compute storage resources | Disk/image sharing restricted to within the org |
 
@@ -121,6 +122,7 @@ to request one.
 * Create VMs with private IP addresses only
 * SSH or RDP into VMs via Identity-Aware Proxy (IAP) — requires the `allow-iap-ssh` or `allow-iap-rdp` network tag on the VM (see [Accessing Private VMs Without a Public IP]({{ "/docs/gcp/networking#accessing-private-vms-without-a-public-ip" | relative_url }}))
 * Make outbound internet connections from VMs freely (outbound traffic is not restricted)
+* Build a global external Application Load Balancer for a public website or API on VMs, with optional Cloud Armor (see [Public-Facing Services]({{ "/docs/gcp/networking#public-facing-services" | relative_url }}))
 * Request VPC and networking resources via [ServiceNow](https://ucsb.service-now.com/it?id=it_sc_cat_item&sys_id=c60e6bf2dbf398900c2e38f0ad961908&sysparm_category=eb1eaff2dbf398900c2e38f0ad9619d5) (provisioned by Cloud Team)
 * Enable any GCP API not explicitly restricted
 * Create Cloud Storage buckets with bucket-level IAM (no ACLs)
@@ -131,7 +133,8 @@ to request one.
 * Create any VPC networks (deny policy blocks `networks.create` for all users)
 * Create auto-mode VPCs
 * Assign external public IPs to VMs
-* Set public access permissions (`allUsers`, `allAuthenticatedUsers`) or expose Cloud Run / Cloud Functions to unauthenticated traffic — both require a per-project exception (see [Public-Facing Services]({{ "/docs/gcp/networking#public-facing-services" | relative_url }}))
+* Set public access permissions (`allUsers`, `allAuthenticatedUsers`)
+* Make a Cloud Run service or Cloud Function public (see [Public-Facing Services]({{ "/docs/gcp/networking#public-facing-services" | relative_url }}))
 * Disable Admin Activity audit logs
 * Create resources in regions outside us-central1 / us-west1 (for most services)
 * Attach a billing account to a Sandbox Unfunded project
